@@ -1,8 +1,8 @@
-import "./POUcontBasic.css";
+import "./PostAdminBasic.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 
-const PostOrgUserCont = () => {
+const PostAdminCont = () => {
   return (
     <>
         <section className='POU-Container'>
@@ -56,4 +56,4 @@ const PostOrgUserCont = () => {
   )
 }
 
-export default PostOrgUserCont
+export default PostAdminCont
