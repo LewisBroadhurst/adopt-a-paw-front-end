@@ -22,30 +22,30 @@ const Footer = () => {
                 <section className="SocialMedia-Footer">
                     <h3>Social Media</h3>
                     <ul>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>Snapchat</li>
-                        <li>TikTok</li>
+                        <li className="text_link"><a href="https://twitter.com/">Twitter</a></li>
+                        <li className="text_link"><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li className="text_link"><a href="https://en-gb.facebook.com/">Facebook</a></li>
+                        <li className="text_link"><a href="https://www.snapchat.com/en-GB">Snapchat</a></li>
+                        <li className="text_link"><a href="https://www.tiktok.com/en/">TikTok</a></li>
                     </ul>
                 </section>
 
                 <section className="About-Us-Footer">
                     <h3>About Us</h3>
                     <ul>
-                        <li>Contact Us</li>
-                        <li>Our History</li>
-                        <li>Careers</li>
-                        <li>FAQ</li>
+                        <li className="text_link">Contact Us</li>
+                        <li className="text_link">Our History</li>
+                        <li className="text_link">Careers</li>
+                        <li className="text_link">FAQ</li>
                     </ul>
                 </section>
 
                 <section className="Legal-Footer">
                     <h3>Legal</h3>
                     <ul>
-                        <li>Terms and Conditions</li>
-                        <li>Cookies</li>
-                        <li>Privacy Notice</li>
+                        <li className="text_link">Terms and Conditions</li>
+                        <li className="text_link">Cookies</li>
+                        <li className="text_link">Privacy Notice</li>
                     </ul>
                 </section>
 

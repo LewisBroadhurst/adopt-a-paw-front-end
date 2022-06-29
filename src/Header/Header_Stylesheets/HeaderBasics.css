@@ -17,8 +17,21 @@
     font-family: 'Mitr', sans-serif;
 }
 
+.text_link{
+    background-color: #003E1F;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+}
+
+.text_link:hover{
+    background-color: #003E1F;
+    color: #E07A5F;
+    font-family: 'Mitr', sans-serif;
+}
+
 .AAP-Header-Title {
     font-size: 2rem;
+    color: #E07A5F;
 }
 
 .DropDown-Button-Header {
@@ -34,7 +47,7 @@
     width: 2.5rem;
 
     border-radius: 50%;
-    background-color: white;
+    background-color: #E07A5F;
     padding: 0.25rem;
     border: 2px black solid;
 }

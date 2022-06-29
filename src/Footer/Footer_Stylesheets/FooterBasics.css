@@ -57,3 +57,15 @@
     background-color: white;
     color: black;
 }
+
+.text_link{
+    background-color: #003E1F;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+}
+
+.text_link:hover{
+    background-color: #003E1F;
+    color: #E07A5F;
+    font-family: 'Mitr', sans-serif;
+}

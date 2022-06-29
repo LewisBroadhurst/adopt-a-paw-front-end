@@ -31,30 +31,30 @@ const Header = () => {
 
             <nav className="Expanded-Navbar-Header">
               <ul>
-                <li><Link to="/adopt">Adopt</Link></li>
+                <li className="text_link"><Link to="/adopt">Adopt</Link></li>
                 <li>|</li>
-                <li>Animals</li>
+                <li className="text_link">Advice</li>
                 <li>|</li>
-                <li><Link to="/organisations">Organisations</Link></li>
+                <li className="text_link"><Link to="/organisations">Organisations</Link></li>
                 <li>|</li>
-                <li>Success Stories</li>
+                <li  className="text_link">Success Stories</li>
                 <li>|</li>
-                <li><Link to="/news">News</Link></li>
+                <li  className="text_link"><Link to="/news">News</Link></li>
               </ul>
             </nav>
-
-            <Link to="/account"><span className="Account-Link">Account</span></Link>
+ 
+            <Link to="/account"  className="text_link"><span className="Account-Link">Account</span></Link>
 
             <button type="button" onClick={toggleMenuDisplay} className="Menu-Button-Header"><FontAwesomeIcon icon={faBars} /></button>
 
         </header>
 
         <ul className="ScrollDown-Menu">
-          <li>Adopt</li>
-          <li>Animals</li>
-          <li>Organisations</li>
-          <li>Success Stories</li>
-          <li>News</li>
+          <li className="text_link">Adopt</li>
+          <li className="text_link">Animals</li>
+          <li className="text_link">Organisations</li>
+          <li className="text_link">Success Stories</li>
+          <li className="text_link">News</li>
         </ul>
 
     </>
