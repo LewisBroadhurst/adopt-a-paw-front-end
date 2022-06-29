@@ -1,0 +1,11 @@
+#AdminLandPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AdminWelcome {
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: #BBDBB4;
+}
