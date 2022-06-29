@@ -1,0 +1,59 @@
+/* Positioning */
+
+.Generic-Footer,
+.SocialMedia-Footer,
+.Newsletter-Footer,
+.Legal-Footer,
+.About-Us-Footer {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+}
+
+.Subscribe-Footer-Form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Colouring and final touches*/
+
+.Generic-Footer {
+    background-color: #003E1F;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+}
+
+.Generic-Footer h3 {
+    color: #E07A5F;
+    font-size: 1.4rem;
+    padding-bottom: 0.125rem;
+}
+
+.Subscribe-Footer-Form>button {
+    background-color: #E07A5F;
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+}
+
+.Subscribe-Footer-Form>button,
+.Subscribe-Footer-Form>input {
+    margin: 0.5rem;
+}
+
+.Subscribe-Footer-Form>button:hover {
+    background-color: #e3562f;
+    cursor: pointer;
+}
+
+.Subscribe-Footer-Form>input {
+    border: 1px solid black;
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: white;
+    color: black;
+}

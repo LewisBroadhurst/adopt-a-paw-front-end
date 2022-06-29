@@ -1,0 +1,10 @@
+#Organisation-Page-Main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#Organisation-Page-Main>h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+}

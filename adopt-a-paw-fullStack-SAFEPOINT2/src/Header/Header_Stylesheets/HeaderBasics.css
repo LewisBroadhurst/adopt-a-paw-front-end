@@ -1,0 +1,71 @@
+/* Positioning */
+
+.Header-Mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+
+/* Colouring and Text */
+
+.Header-Mobile {
+    background-color: #003E1F;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+}
+
+.AAP-Header-Title {
+    font-size: 2rem;
+}
+
+.DropDown-Button-Header {
+    font-size: 1.8rem;
+}
+
+
+
+/* Image Formatting */
+
+.Logo-Header {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    border-radius: 50%;
+    background-color: white;
+    padding: 0.25rem;
+    border: 2px black solid;
+}
+
+/* Hiding Tablet+ Elements */
+
+.Expanded-Navbar-Header,
+.Account-Link,
+.Menu-Dropdown-List {
+    display: none;
+}
+
+
+/* DropDown Menu */
+
+.Menu-Button-Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    font-size: 1.6rem;
+}
+
+.ScrollDown-Menu {
+    background-color: #003E1F;
+    color: white;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+
+    display: none;
+    flex-direction: column;
+
+}

@@ -1,0 +1,51 @@
+.Org-Filter-Bar {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0.3rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+
+    background-color: #BBDBB4;
+}
+
+
+.Org-Filter-Bar>h4 {
+    padding-right: 2rem;
+}
+
+.Org-Filter-Form {
+    display: flex;
+    flex-direction: row;
+}
+
+.Name-Check-Label,
+.Location-Check-Label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Name-Check-Label {
+    padding-right: 1rem;
+}
+
+.Org-Filter-Form label {
+    padding-left: 0.5rem;
+}
+
+.Filt-Input-Org {
+    border-radius: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #E07A5F;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+
+    transition: width 1s 0s ease-in-out;
+}
+
+.Filt-Input-Org:focus-within {
+    width: 10rem;
+}

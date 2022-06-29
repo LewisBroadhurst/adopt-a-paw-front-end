@@ -1,0 +1,73 @@
+#Account-Main-Page {
+    background-color: #DEDEE0;
+    padding: 2rem 0;
+}
+
+.Animal-Image-Acc {
+    display: none;
+}
+
+.LogIn-Section,
+.LogIn-Section>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.LogIn-Section>h3 {
+    margin: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.6rem;
+}
+
+.LogIn-Section>form>input,
+.LogIn-Section>form>button,
+.New-Acc-BTN {
+    background-color: white;
+    margin: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: #DEDEE0;
+}
+
+.LogIn-Section>form>button {
+    text-align: center;
+    background-color: #E07A5F;
+}
+
+.LogIn-Section>form>button:hover {
+    background-color: #a3533d;
+}
+
+.Forgot-Password-Acc {
+    text-align: center;
+    color: #4267B2;
+    text-decoration: underline;
+    padding: 0.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #003E1F;
+    margin: 0 2rem;
+}
+
+.Forgot-Password-Acc:hover {
+    cursor: pointer;
+    color: #0e2a62;
+}
+
+.New-Acc-BTN {
+    margin: 1rem 4rem;
+    text-align: center;
+    background-color: #BBDBB4;
+    color: black;
+}
+
+.New-Acc-BTN:hover {
+    cursor: pointer;
+    background-color: #8fe07d;
+}
+
+@media (min-width: 700px) {
+    #Account-Main-Page {
+        padding: 0 5rem;
+    }
+}

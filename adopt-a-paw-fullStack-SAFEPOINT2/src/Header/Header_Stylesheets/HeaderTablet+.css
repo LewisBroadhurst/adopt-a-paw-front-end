@@ -1,0 +1,64 @@
+@media (min-width: 1250px) {
+
+    /* Implementing Grid */
+
+    .Header-Mobile {
+        display: grid;
+        grid-template-columns: 3rem 1fr 3fr 1fr;
+    }
+
+    .Logo-Header {
+        grid-column: 1;
+    }
+
+    .AAP-Header-Title {
+        grid-column: 2;
+    }
+
+    .Expanded-Navbar-Header {
+        grid-column: 3;
+    }
+
+    .Account-Link {
+        grid-column: 4;
+    }
+
+    .Menu-Button-Header {
+        display: none;
+    }
+
+    /* Sorting positioning and Details */
+
+    .Tablet-Title-Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .Expanded-Navbar-Header,
+    .Expanded-Navbar-Header>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .Expanded-Navbar-Header>ul>li {
+        padding: 0 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .Account-Link {
+        display: flex;
+        font-size: 1.4rem;
+        justify-content: flex-end;
+    }
+
+    .DropDown-Button-Header {
+        display: none;
+    }
+
+    .ScrollDown-Menu {
+        display: none;
+    }
+
+}

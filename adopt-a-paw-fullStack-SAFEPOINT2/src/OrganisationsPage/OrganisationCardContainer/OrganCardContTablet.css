@@ -1,0 +1,19 @@
+@media (min-width: 750px) {
+
+    .Organ-Container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+        padding: 1rem 1rem;
+        margin: 1rem 1rem;
+    }
+
+    .Organ-Text-Div {
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+    }
+
+}

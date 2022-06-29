@@ -1,0 +1,14 @@
+@media (min-width: 500px) {
+
+    .Social-About-Legal-Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .SocialMedia-Footer {
+        align-content: center;
+        align-items: flex-start;
+    }
+
+}
