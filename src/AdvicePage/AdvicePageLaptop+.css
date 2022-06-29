@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
 
-    .advice_container {
+    .advice_container.class {
         margin: 1rem 10rem;
     }
 
@@ -11,6 +11,7 @@
     .advice_text_div>p {
         font-size: 1rem;
     }
+
 
 }
 

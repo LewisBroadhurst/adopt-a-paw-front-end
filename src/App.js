@@ -8,6 +8,7 @@ import AdoptPage from "./Components/Pages/AdoptPage";
 import AccountPage from "./AccountPage/AccountPage";
 import NewsPage from "./NewsPage/NewsPage";
 import AdvicePage from "./AdvicePage/AdvicePage";
+import SuccessStoriesPage from "./SuccessStoriesPage/SuccessStoriesPage"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path ='/' exact element={<Home />}/>
             <Route path='/advice' exact element={<AdvicePage />}/>
+            <Route path='/successStories' exact element={<SuccessStoriesPage />}/>
             <Route path ='/organisations' exact element={<OrganisationsPage />}/>
             <Route path='/adopt' exact element={<AdoptPage />}/>
             <Route path ='/news' exact element={<NewsPage />}/>
