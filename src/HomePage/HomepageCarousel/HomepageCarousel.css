@@ -6,7 +6,7 @@
 
 .inner {
   white-space: nowrap;
-  transition: transform 3s;
+  transition: transform 2s;
 }
 
 .carousel_item {
@@ -31,26 +31,30 @@
   color: white;
 }
 
-
-button {
+.previous {
+  background-color: #E07A5F;
+  color: black;
   text-decoration: none;
   display: inline-block;
   padding: 4px 12px;
 }
 
-button:hover {
+.previous:hover{
   background-color: #24262b;
   color: white;
-}
-
-.previous {
-  background-color: #E07A5F;
-  color: black;
 }
 
 .next {
   background-color: #E07A5F;
   color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 12px;
+}
+
+.next:hover{
+  background-color: #24262b;
+  color: white;
 }
 
 .round {

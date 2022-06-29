@@ -39,7 +39,7 @@ const Header = () => {
                 <li>|</li>
                 <li>Success Stories</li>
                 <li>|</li>
-                <li>News</li>
+                <li><Link to="/news">News</Link></li>
               </ul>
             </nav>
 
