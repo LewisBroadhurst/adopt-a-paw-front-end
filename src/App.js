@@ -10,6 +10,7 @@ import NewsPage from "./NewsPage/NewsPage";
 import AdvicePage from "./AdvicePage/AdvicePage";
 import SuccessStoriesPage from "./SuccessStoriesPage/SuccessStoriesPage"
 import GetInvolvedPage from "./GetInvolvedPage/GetInvolvedPage";
+import AdminLandPage from "./AccountPage/AdminLandingPage/AdminLandPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/getInvolved' exact element={<GetInvolvedPage />}/>
             <Route path ='/news' exact element={<NewsPage />}/>
             <Route path="/account" exact element={<AccountPage />} />
+            <Route path="/accountadmin" exact element={<AdminLandPage />} />
           </Routes>
           
         <Footer />
