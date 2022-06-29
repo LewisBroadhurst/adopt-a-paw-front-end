@@ -6,6 +6,7 @@
     justify-content: space-between;
     padding: 0.5rem 1rem;
     align-items: center;
+    align-content: center;
 }
 
 
@@ -14,33 +15,30 @@
 .Header-Mobile {
     background-color: #003E1F;
     color: white;
-    font-family: 'Mitr', sans-serif;
 }
 
-.text_link{
+.text_link {
     background-color: #003E1F;
     color: white;
-    font-family: 'Mitr', sans-serif;
 }
 
-.text_link:hover{
+.text_link:hover {
     background-color: #003E1F;
     color: #E07A5F;
-    font-family: 'Mitr', sans-serif;
 }
 
 .AAP-Header-Title {
     font-size: 2rem;
     color: #E07A5F;
-}
+    text-align: center;
+    min-width: 60%;
 
-.DropDown-Button-Header {
-    font-size: 1.8rem;
+    justify-content: center
 }
-
 
 
 /* Image Formatting */
+
 
 .Logo-Header {
     height: 2.5rem;
@@ -50,13 +48,16 @@
     background-color: #E07A5F;
     padding: 0.25rem;
     border: 2px black solid;
+
+    min-width: 20%;
 }
 
 /* Hiding Tablet+ Elements */
 
 .Expanded-Navbar-Header,
 .Account-Link,
-.Menu-Dropdown-List {
+.Menu-Dropdown-List,
+.AAP-Header-Title-Desktop {
     display: none;
 }
 
@@ -67,6 +68,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    min-width: 20%;
 
     font-size: 1.6rem;
 }
@@ -80,5 +82,18 @@
 
     display: none;
     flex-direction: column;
+}
 
+/* Flexbox Extras */
+
+.Desktop-Logo {
+    flex: 1;
+}
+
+.AAP-Header-Title {
+    flex: 1;
+}
+
+.Menu-Button-Header {
+    flex: 1;
 }

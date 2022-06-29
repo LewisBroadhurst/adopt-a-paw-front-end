@@ -25,9 +25,13 @@ const Header = () => {
     <>
         <header className="Header-Mobile">
            
-            <img src={PawLogo} alt="Adopt A Paw Logo" className="Logo-Header"/>
+            <div className="Desktop-Logo">
+              <img src={PawLogo} alt="Adopt A Paw Logo" className="Logo-Header"/>
+              <h1 className="AAP-Header-Title-Desktop"><Link to="/">Adopt A Paw</Link></h1>
+            </div>
             
-            <Link to="/"><h1 className="AAP-Header-Title">Adopt A Paw</h1></Link>
+            
+            <h1 className="AAP-Header-Title"><Link to="/">Adopt A Paw</Link></h1>
 
             <nav className="Expanded-Navbar-Header">
               <ul>
