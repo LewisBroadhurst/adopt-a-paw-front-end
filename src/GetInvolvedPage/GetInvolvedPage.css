@@ -1,0 +1,51 @@
+.header{
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: flex wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: all 10s ease-in 5s;
+    width: 70%;
+}
+
+
+.flexbox_div{
+    width: 300px;
+    height: 400px;
+    background-color: #BBDBB4;
+    margin-bottom: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox_div:hover{
+    transform: scale(1.2);
+}
+
+.get_involved_image{
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.title {
+    color: #E07A5F;
+    font-size: 1.4rem;
+    padding-bottom: 0.125rem;
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+}
