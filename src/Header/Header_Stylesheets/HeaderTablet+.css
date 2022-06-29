@@ -2,15 +2,9 @@
 
     /* Sorting positioning and Details */
 
-    .Desktop-Logo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
     .AAP-Header-Title-Desktop {
         display: flex;
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #E07A5F;
         padding-left: 0.5rem;
     }
@@ -45,6 +39,29 @@
     /* Flexbox Extras */
 
     .Desktop-Logo {
+        flex: 0;
+    }
+
+    .AAP-Header-Title {
+        flex: 0;
+    }
+
+    .Menu-Button-Header {
+        flex: 0;
+    }
+
+    .Header-Mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .Desktop-Logo {
+        align-self: start;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
         flex: 1;
     }
 
@@ -56,12 +73,15 @@
         flex: 1;
     }
 
-    .Header-Mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    div>.Logo-Header {
+        height: 2.5rem;
+        width: 2.5rem;
+
+        border-radius: 50%;
+        background-color: #E07A5F;
+        padding: 0.25rem;
+        border: 2px black solid;
+
     }
-
-
 
 }
