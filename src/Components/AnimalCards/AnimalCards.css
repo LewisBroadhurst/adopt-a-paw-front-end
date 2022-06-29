@@ -1,0 +1,11 @@
+.paginationContainer{
+    align-content: center;
+}
+
+.gridContainer{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
