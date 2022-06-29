@@ -45,6 +45,7 @@ const DisplayCarousel = () => {
           </table>
           </CarouselItem>
       </HomepageCarousel>
+      
       </>
 
     );

@@ -34,12 +34,12 @@
 
     .Expanded-Navbar-Header>ul>li {
         padding: 0 0.5rem;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .Account-Link {
         display: flex;
-        font-size: 1.4rem;
+        font-size: 1rem;
         justify-content: flex-end;
     }
 
