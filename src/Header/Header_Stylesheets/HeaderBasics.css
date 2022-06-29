@@ -1,12 +1,47 @@
 /* Positioning */
 
 .Header-Mobile {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+}
+
+.Desktop-Logo {
+    grid-column: 1;
+    grid-row: 1;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+    justify-content: flex-start;
     align-items: center;
-    align-content: center;
+
+    padding: 0.5rem;
+}
+
+.AAP-Header-Title {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* font-size: ; */
+    padding: 0.5rem;
+}
+
+.Menu-Button-Header {
+    grid-column: 3;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 1.4rem;
+    padding: 0.5rem;
 }
 
 
@@ -28,7 +63,7 @@
 }
 
 .AAP-Header-Title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #E07A5F;
     text-align: center;
 
@@ -62,14 +97,6 @@
 
 /* DropDown Menu */
 
-.Menu-Button-Header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    font-size: 1.6rem;
-}
-
 .ScrollDown-Menu {
     background-color: #003E1F;
     color: white;
@@ -81,16 +108,13 @@
     flex-direction: column;
 }
 
-/* Flexbox Extras */
 
-.Desktop-Logo {
-    flex: 1;
-}
+/* Media Query */
 
-.AAP-Header-Title {
-    flex: 1;
-}
+@media (max-width: 360px) {
 
-.Menu-Button-Header {
-    flex: 1;
+    .AAP-Header-Title {
+        font-size: 1.4rem;
+    }
+
 }
