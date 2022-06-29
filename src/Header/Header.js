@@ -31,7 +31,7 @@ const Header = () => {
 
             <nav className="Expanded-Navbar-Header">
               <ul>
-                <li>Adopt</li>
+                <li><Link to="/adopt">Adopt</Link></li>
                 <li>|</li>
                 <li>Animals</li>
                 <li>|</li>
