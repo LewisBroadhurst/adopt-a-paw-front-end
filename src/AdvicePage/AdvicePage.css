@@ -1,0 +1,60 @@
+#Advice-Page-Main>h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.advice_text_div>h3 {
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    text-decoration: solid;
+    color: #E07A5F;
+    text-align: left;
+}
+
+.advice_text_div>p {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.advice_text_div>h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header{
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.advice_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    background-color: #BBDBB4;
+    padding: 1rem 2rem;
+    margin: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+.advice_image {
+    
+    border-radius: 0.3rem;
+}
+
+.advice_text_div>p {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.advice_text_div>h3 {
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    text-decoration: solid;
+    color: #E07A5F;
+    text-align: left;
+}
