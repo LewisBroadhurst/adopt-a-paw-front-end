@@ -3,7 +3,7 @@ import AnimalCardItem from './AnimalCardItem'
 import { Grid, TableContainer } from '@mui/material'
 import { useEffect, useState } from 'react'
 import TablePagination from '@mui/material/TablePagination';
-import { fontSize } from '@mui/system';
+import { Box, fontSize } from '@mui/system';
 import './AnimalCards.css';
 
 const AnimalCards = () => {
@@ -35,13 +35,13 @@ const AnimalCards = () => {
   return (
     <>
       <div className='gridContainer'>
-        <Grid container spacing={2} columns={3}>
+        <Grid container spacing={2} columns={3} alignItems="center" justifyContent="center">
           {cards && calculateCurrentCards().map(card => <Grid item>
             <AnimalCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'} name={card.name} />
           </Grid>)}
         </Grid>
       </div>
-      <div className='paginationContainer'>
+      <Box display="flex" justifyContent="center">
         <TablePagination
           labelRowsPerPage="Items per page"
           component="div"
@@ -51,7 +51,7 @@ const AnimalCards = () => {
           rowsPerPage={itemsPerPage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </div>
+      </Box>
     </>
   )
 }
