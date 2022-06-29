@@ -31,7 +31,6 @@
     font-size: 2rem;
     color: #E07A5F;
     text-align: center;
-    min-width: 60%;
 
     justify-content: center
 }
@@ -49,7 +48,6 @@
     padding: 0.25rem;
     border: 2px black solid;
 
-    min-width: 20%;
 }
 
 /* Hiding Tablet+ Elements */
@@ -68,7 +66,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    min-width: 20%;
 
     font-size: 1.6rem;
 }

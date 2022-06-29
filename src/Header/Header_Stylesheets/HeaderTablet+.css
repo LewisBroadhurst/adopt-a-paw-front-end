@@ -15,17 +15,10 @@
         padding-left: 0.5rem;
     }
 
-    .AAP-Header-Title {
-        display: none;
-    }
-
-    .Tablet-Title-Header {
+    .Expanded-Navbar-Header {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
     }
 
-    .Expanded-Navbar-Header,
     .Expanded-Navbar-Header>ul {
         display: flex;
         flex-direction: row;
@@ -40,13 +33,35 @@
     .Account-Link {
         display: flex;
         font-size: 1.4rem;
-        justify-content: flex-end;
     }
 
     .DropDown-Button-Header,
     .ScrollDown-Menu,
-    .Menu-Button-Header {
+    .Menu-Button-Header,
+    .AAP-Header-Title {
         display: none;
     }
+
+    /* Flexbox Extras */
+
+    .Desktop-Logo {
+        flex: 1;
+    }
+
+    .Expanded-Navbar-Header {
+        flex: 2;
+    }
+
+    .Account-Link {
+        flex: 1;
+    }
+
+    .Header-Mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
 
 }
