@@ -29,13 +29,10 @@ function Home() {
                 <br></br>
                 You find each other.
               </h2>
-              <div className='c-hero-adopt button'>
+              <div className='c-hero-adopt-button'>
                 <a href='http://localhost:3000/adopt' className='hero-button'>Adopt today!</a>
               </div>
             </div>
-          </div>
-          <div className='c-hero-illustration'>
-            <img src={require("./images/dogcat.jpeg")}></img>
           </div>
         </section>
 
