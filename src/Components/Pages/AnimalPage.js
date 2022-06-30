@@ -11,7 +11,7 @@ function AnimalPage() {
 
     useEffect(() => {
         getAnimalByID(setAnimal, params.id);
-    })
+    }, [])
 
   return (
     <>
