@@ -30,4 +30,120 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-bottom: 50px;
+}
+
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0;
+    overflow: hidden;
+    background-color: white;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+}
+
+section{
+    display: block;
+}
+
+div{
+    display: block;
+}
+
+.hero-shape{
+    max-height: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #006935;
+    margin: 0;
+}
+
+.hero-video{
+    position: relative;
+    object-fit: fill;
+    margin: 0;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero__content-container{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    padding-top: 250px;
+}
+
+.hero-content{
+    padding-top: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 25px;
+    background-color: #008241;
+    color: #002714;
+    width: 100%;
+    max-width: 622px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero-title{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 3.15rem;
+    letter-spacing: -.02em;
+    font-weight: 700;
+}
+
+.hero-subtitle{
+    padding-bottom: 30px;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    letter-spacing: -.01em;
+    color: #002714;
+    font-weight: 500;
+}
+
+.hero-adopt-button{
+    background-color: #fff;
+    border: 3px solid #fff;
+    color: #007d00;
+    transition: .4s;
+    display: block;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-radius: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.hero-adopt-button:hover {
+    background-color: #003E1F;
+    color: #fff;
 }
