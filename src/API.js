@@ -25,7 +25,7 @@ export function getOrganisations(setOrganisations) {
     axios.get(`http://127.0.0.1:8080/findAllOrganisations`)
         .then(res => {
             const organisations = res.data;
-            setOrganisations(organisations)
+            setOrganisations(organisations);
         })
         .catch((err) => console.log(err))
 }
