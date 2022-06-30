@@ -67,7 +67,7 @@
     padding: 0.25rem 2rem;
 }
 
-#Donate-AAP {
+.Donate-Form {
     border-radius: 0.5rem;
     flex-grow: 2;
 
@@ -77,20 +77,22 @@
     align-items: stretch;
 
     background-color: #ededed;
-
     padding: 1rem 2rem;
     margin: 1rem 2.5rem;
     margin-top: 0;
+
+    margin-right: 2rem;
 }
 
-#Donate-AAP>input {
+
+.Donate-Form>input {
     background-color: white;
     margin-bottom: 0.5rem;
     border-radius: 0.25rem;
 }
 
-#Donate-AAP>span,
-#Donate-AAP>button {
+.Donate-Form>span,
+.Donate-Form>button {
     align-self: center;
 }
 
@@ -104,14 +106,19 @@
     color: #07964e;
 }
 
-#Donate-AAP>button {
+.Donate-Form>button {
     background-color: #BBDBB4;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     color: black;
 }
 
-#Donate-AAP>button:hover {
+.Donate-Form>button:hover {
     background-color: #019b4e;
     color: white;
+    cursor: pointer;
+}
+
+.DonForm-ImgCont>img {
+    display: none;
 }
