@@ -26,3 +26,18 @@ export function getOrganisations(setOrganisations) {
         .catch((err) => console.log(err))
 }
 
+export function getCustomers(setCustomers) {
+    axios.get(`http://127.0.0.1:8080/findAllCustomers`)
+        .then(res => {
+            const customers = res.data;
+            setCustomers(customers)
+        })
+        .catch((err) => console.log(err))
+}
+
+export function deleteCustomer(id) {
+    axios.get(`http://127.0.0.1:8080/deleteCustomer/${id}`)
+        .then(res => console.log(res))
+        .catch((err) => console.log(err))
+}
+
