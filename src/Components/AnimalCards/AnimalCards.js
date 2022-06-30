@@ -44,7 +44,7 @@ const AnimalCards = () => {
       <div className='gridContainer'>
         <Grid container spacing={2} columns={3} alignItems="center" justifyContent="center">
           {animals && calculateCurrentCards().map(card => <Grid item>
-            <AnimalCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'} name={card.name} id={card.id}/>
+            <AnimalCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'} animalobj={card}/>
           </Grid>)}
         </Grid>
       </div>
