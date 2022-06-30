@@ -17,7 +17,7 @@ function AnimalCardItem(props) {
                         />
                 </div>
                 <div className='cardright'>
-                    <h1 className='animalcards_item_text'>Hi, my name is: {animal.name}</h1>
+                    <p className='animalcards_item_text'>Hi, my name is: {animal.name}</p>
                         <p>Species: {animal.species}</p>
                         <p>Breed: {animal.breed}</p>
                         <p>Age: {animal.age}</p>
