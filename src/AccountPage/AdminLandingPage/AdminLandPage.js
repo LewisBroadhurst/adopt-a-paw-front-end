@@ -1,4 +1,3 @@
-import ApplicationContainer from "./PostOrgUser Container/ApplicationAdmin/ApplicationContainer/ApplicationContainer.js";
 import OrgAdminCont from "./PostOrgUser Container/OrgAdmin/OrgList.js";
 import PostAdminCont from "./PostOrgUser Container/PostAdmin/PostAdminCont.js";
 import UserAdminCont from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
@@ -10,6 +9,7 @@ import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { getCustomers, getOrganisations } from "../../API.js";
 import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
+import { getAllApplications } from "../../API.js";
 
 
 const AdminLandPage = () => {
@@ -25,6 +25,10 @@ const AdminLandPage = () => {
   useEffect(() => {
     getCustomers(setCustomers);
   }, []);
+
+  useEffect( () => {
+    getAllApplications(setApplications)
+}, []);
 
   return (
     <>
