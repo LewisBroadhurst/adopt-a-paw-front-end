@@ -15,6 +15,7 @@ const ApplicationList = ({applications, setApplications}) => {
                                                 id={app.id} 
                                                 animalName={app.animal.name} 
                                                 animalLocation={app.animal.location} 
+                                                applicationStatus={app.application_type_id}
                                                 setApplications={setApplications}/>
                 })
             }

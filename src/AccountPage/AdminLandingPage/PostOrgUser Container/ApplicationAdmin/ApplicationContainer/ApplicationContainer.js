@@ -2,13 +2,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { deleteAdoptionApplication, getAllApplications } from "../../../../../API";
 
-const ApplicationContainer = ( {animalName, animalLocation, id, setApplications} ) => {
+const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus} ) => {
 
     const handleApplicationDelete = event => {
         event.preventDefault();
 
         deleteAdoptionApplication(id);
         getAllApplications(setApplications)
+    }
+
+    const appStatusConverter = (id) => {
+        if (applicationStatus === 0) {
+            return "Pending";
+        } 
+        else if (applicationStatus === 1) {
+            return "Accepted";
+        }
+        else {
+            return "Rejected";
+        }
     }
 
 
@@ -21,6 +33,8 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications}
             <span>Animal Name: {animalName}</span>
 
             <span>Location: {animalLocation}</span>
+
+            <span>Application Status: {appStatusConverter()}</span>
 
             <div className='Approve-Post-Admin'>
                 <button type='button' className="Accept-Post">Accept <FontAwesomeIcon icon={faPaw} /></button>
