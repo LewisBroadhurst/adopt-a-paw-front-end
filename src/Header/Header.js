@@ -39,17 +39,17 @@ const Header = () => {
             <nav className="Expanded-Navbar-Header">
               <ul>
                 <li className="text_link"><Link to="/adopt">Adopt</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li className="text_link"><Link to="/advice">Advice</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li className="text_link"><Link to="/organisations">Organisations</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li className="text_link"><Link to="/getInvolved">Get Involved</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li className="text_link"><Link to="/donate">Donate</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li className="text_link"><Link to="/successStories">Success Stories</Link></li>
-                <li>|</li>
+                <li className="standard_text">|</li>
                 <li  className="text_link"><Link to="/news">News</Link></li>
               </ul>
             </nav>
