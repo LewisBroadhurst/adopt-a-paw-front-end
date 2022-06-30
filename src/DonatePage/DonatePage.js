@@ -2,6 +2,7 @@ import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./DonatePageBasic.css";
 import "./DPTablet+.css";
+import "./DPLaptop+.css";
 import FamDog1 from "./images/img1.jpeg";
 import Tab1 from "./images/tab1.jpeg";
 import Tab2 from "./images/tab5.jpeg";
@@ -80,16 +81,15 @@ const DonatePage = () => {
 
                         <button type="submit">Donate Now <FontAwesomeIcon icon={faPaw} /></button>
                     </section>
+
                 </form>
 
                 <section className="DonForm-ImgCont G8">
-                        <img src={Form1} alt="happy dog" />
+                    <img src={Form1} alt="happy dog" />
                 </section>
-
             </section>
 
             
-                
 
         </main>
     </>
