@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const OrgContainer = ( {name, id} ) => {
 
     const handleDeleteOrganisation = () => {
-        
+        console.log(id);
     }
 
   return (
