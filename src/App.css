@@ -3,3 +3,11 @@
     align-items: center;
     background-color: black;
 }
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-family: 'Mitr', sans-serif;
+}

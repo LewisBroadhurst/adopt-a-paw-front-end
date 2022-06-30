@@ -51,7 +51,7 @@ const updateIndex = (newIndex) => {
             </div>
             <div className="indicators">
                 <button
-                    class ="leftButton previous round"
+                    className="leftButton previous round"
                     onClick={() => {
                         updateIndex(activeIndex -1);
                     }}
