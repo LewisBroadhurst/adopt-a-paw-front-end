@@ -1,8 +1,6 @@
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./DonatePageBasic.css";
-import "./DPTablet+.css";
-import "./DPLaptop+.css";
 import FamDog1 from "./images/img1.jpeg";
 import Tab1 from "./images/tab1.jpeg";
 import Tab2 from "./images/tab5.jpeg";
