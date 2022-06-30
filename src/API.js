@@ -8,3 +8,11 @@ export function getAnimalsFilter (setAnimals, name, minAge, maxAge, sex, locatio
     setAnimals(animals)
     }).catch((err) => console.log(err));
 }
+
+export function getAnimalByID (setAnimal, id){
+    axios.get(`http://127.0.0.1:8080/animal/${id}`)
+    .then(res => {
+        const animal = res.data;
+        setAnimal(animal);
+    }).catch((err) => console.log(err))
+}
