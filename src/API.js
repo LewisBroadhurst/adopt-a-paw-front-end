@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// ANIMALS
+
 export function getAnimalsFilter (setAnimals, name, minAge, maxAge, sex, location, availableOnly){
     axios.get('http://127.0.0.1:8080/animal/filteranimals', null, {params: name, minAge, maxAge, sex, location, availableOnly})
     .then(res => {
@@ -17,6 +19,8 @@ export function getAnimalByID (setAnimal, id){
     }).catch((err) => console.log(err))
 }
 
+// ORGANISATIONS
+
 export function getOrganisations(setOrganisations) {
     axios.get(`http://127.0.0.1:8080/findAllOrganisations`)
         .then(res => {
@@ -25,6 +29,8 @@ export function getOrganisations(setOrganisations) {
         })
         .catch((err) => console.log(err))
 }
+
+// CUSTOMERS
 
 export function getCustomers(setCustomers) {
     axios.get(`http://127.0.0.1:8080/findAllCustomers`)
@@ -41,3 +47,19 @@ export function deleteCustomer(id) {
         .catch((err) => console.log(err))
 }
 
+// APPLICATIONS
+
+export function getAllApplications(setApplications) {
+    axios.get(`http://127.0.0.1:8080/findAllApplications`)
+        .then(res => {
+            console.log(res)
+            const applications = res.data;
+            setApplications(applications)})
+        .catch((err) => console.log(err))
+}
+
+export function deleteAdoptionApplication(id) {
+    axios.get(`http://127.0.0.1:8080/deleteApplication/${id}`)
+        .then(res => console.log(res))
+        .catch((err) => console.log(err))
+}

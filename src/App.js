@@ -30,7 +30,7 @@ function App() {
             <Route path='/getinvolved' exact element={<GetInvolvedPage />}/>
             <Route path ='/news' exact element={<NewsPage />}/>
             <Route path="/account" exact element={<AccountPage />} />
-            <Route path="/accountadmin" exact element={<AdminLandPage />} />
+            <Route path="/account/admin" exact element={<AdminLandPage />} />
             <Route path="/donate" exact element={<DonatePage />} />
           </Routes>
           

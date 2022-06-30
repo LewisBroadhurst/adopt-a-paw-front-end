@@ -1,10 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import "./AccountPage.css";
+import { Link } from "react-router-dom";
 
 
 
 const AccountPage = () => {
+
+    const handleLogIn = event => {
+        event.preventDefault()
+    }
+
   return (
     <>
         <main id="Account-Main-Page">
@@ -18,7 +24,7 @@ const AccountPage = () => {
                 <form>
                     <input type="text" placeholder="Email Address" />
                     <input type="text" placeholder="Password" />
-                    <button type="submit">Log In</button>
+                    <button type="submit" onClick={handleLogIn}><Link to="/account/admin">Log In</Link></button>
                 </form>
 
                 <span className="Forgot-Password-Acc">Forgot your password?</span>
