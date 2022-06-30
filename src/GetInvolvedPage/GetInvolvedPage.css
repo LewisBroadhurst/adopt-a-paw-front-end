@@ -4,18 +4,27 @@
     text-align: center;
 }
 
+.GIMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .flexbox{
     display: flex;
     flex-flow: flex wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1rem 1rem;
     padding: 1rem 1rem;
     border-radius: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
-    transition: all 10s ease-in 5s;
+    transition: transform 0.2s;
     width: 70%;
+    align-content: center;
+    flex-direction: row;
 }
 
 
@@ -28,6 +37,8 @@
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    transition: transform 0.4s;
 }
 
 .flexbox_div:hover{

@@ -12,6 +12,7 @@ import SuccessStoriesPage from "./SuccessStoriesPage/SuccessStoriesPage"
 import GetInvolvedPage from "./GetInvolvedPage/GetInvolvedPage";
 import AdminLandPage from "./AccountPage/AdminLandingPage/AdminLandPage";
 import DonatePage from "./DonatePage/DonatePage";
+import AnimalPage from "./Components/Pages/AnimalPage";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             <Route path='/advice' exact element={<AdvicePage />}/>
             <Route path='/successstories' exact element={<SuccessStoriesPage />}/>
             <Route path ='/organisations' exact element={<OrganisationsPage />}/>
-            <Route path='/adopt' exact element={<AdoptPage />}/>
+            <Route path='/adopt' exact element={<AdoptPage />} />
+            <Route path='/adopt/:id' exact element={<AnimalPage />}/>
             <Route path='/getinvolved' exact element={<GetInvolvedPage />}/>
             <Route path ='/news' exact element={<NewsPage />}/>
             <Route path="/account" exact element={<AccountPage />} />
