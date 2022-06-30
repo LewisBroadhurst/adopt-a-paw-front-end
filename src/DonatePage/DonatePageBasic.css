@@ -111,6 +111,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     color: black;
+    font-size: 1.4rem;
 }
 
 .Donate-Form>button:hover {
@@ -120,5 +121,9 @@
 }
 
 .DonForm-ImgCont>img {
+    display: none;
+}
+
+.LaptopDogImage+ {
     display: none;
 }

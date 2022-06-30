@@ -11,6 +11,7 @@ import Tab4 from "./images/tab4.jpeg";
 import Tab5 from "./images/tab2.jpeg";
 import Tab6 from "./images/tab6.jpeg";
 import Form1 from "./images/form1.jpeg";
+import Form2 from "./images/form2.jpeg";
 
 const DonatePage = () => {
   return (
@@ -82,10 +83,19 @@ const DonatePage = () => {
                         <button type="submit">Donate Now <FontAwesomeIcon icon={faPaw} /></button>
                     </section>
 
+                    <section className="DonForm-ImgCont G8 LaptopDogImg">
+                        <img src={Form1} alt="happy dog" />
+                    </section>
+
                 </form>
 
-                <section className="DonForm-ImgCont G8">
+
+                <section className="DonForm-ImgCont G8 TabletDogImg">
                     <img src={Form1} alt="happy dog" />
+                </section>
+
+                <section className="DonForm-ImgCont G9 TabletDogImg">
+                    <img src={Form2} alt="happy dog" />
                 </section>
             </section>
 

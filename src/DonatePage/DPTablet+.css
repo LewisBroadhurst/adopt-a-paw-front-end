@@ -1,4 +1,4 @@
-@media (min-width: 700px) {
+@media (min-width: 900px) {
 
     #Donate-FlexGrid-Cont {
         display: grid;
@@ -92,6 +92,10 @@
 
     #Donate-Page-Main {
         margin: 0 5rem;
+    }
+
+    .LaptopDogImg>img {
+        display: none;
     }
 
 
