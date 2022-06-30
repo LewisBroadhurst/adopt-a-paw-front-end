@@ -2,8 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import PawLogo from "./Images/white-paw-print-transparent-background-17.png";
 
-import "./Header_Stylesheets/HeaderBasics.css";
-import "./Header_Stylesheets/HeaderTablet+.css";
+import "./Header_Stylesheets/Header.css";
 
 import { NavLink as Link } from "react-router-dom";
 

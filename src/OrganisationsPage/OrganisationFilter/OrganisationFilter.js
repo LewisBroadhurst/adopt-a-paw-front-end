@@ -1,5 +1,5 @@
-import "./OrgansFiltBasic.css";
-import "./OrgansFiltTablet+.css";
+import "./OrgansFilt.css";
+
 
 const OrganisationFilter = () => {
 

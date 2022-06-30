@@ -1,6 +1,5 @@
-import "./Footer_Stylesheets/FooterBasics.css";
-import "./Footer_Stylesheets/FooterTablet.css";
-import "./Footer_Stylesheets/FooterLaptop+.css";
+import "./Footer_Stylesheets/Footer.css";
+
 
 const Footer = () => {
   return (

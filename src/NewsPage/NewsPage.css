@@ -18,7 +18,7 @@
 .News-Img {
     height: 150px;
     border-radius: 0.3rem;
-    
+
 }
 
 .News-Text-Div>h3 {
@@ -44,4 +44,41 @@
     font-size: 3rem;
     padding: 1rem 0;
     text-align: center;
+}
+
+
+@media (min-width: 750px) {
+
+    .News-Container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: left;
+        align-content: left;
+
+        padding: 1rem 1rem;
+        margin: 1rem 1rem;
+    }
+
+    .News-Text-Div {
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .News-Container {
+        margin: 1rem 10rem;
+    }
+
+    .News-Text-Div>h3 {
+        font-size: 2rem;
+    }
+
+    .News-Text-Div>p {
+        font-size: 1rem;
+    }
+
 }
