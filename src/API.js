@@ -7,7 +7,7 @@ export function getAnimalsFilter (setAnimals, name, minAge, maxAge, sex, locatio
     .then(res => {
         const animals = res.data;
         console.log(animals)
-    setAnimals(animals)
+        setAnimals(animals)
     }).catch((err) => console.log(err));
 }
 
@@ -52,14 +52,13 @@ export function deleteCustomer(id) {
 export function getAllApplications(setApplications) {
     axios.get(`http://127.0.0.1:8080/findAllApplications`)
         .then(res => {
-            console.log(res)
             const applications = res.data;
             setApplications(applications)})
         .catch((err) => console.log(err))
 }
 
 export function deleteAdoptionApplication(id) {
-    axios.get(`http://127.0.0.1:8080/deleteApplication/${id}`)
+    axios.delete(`http://127.0.0.1:8080/deleteApplication/${id}`)
         .then(res => console.log(res))
-        .catch((err) => console.log(err))
+        .catch((err) => console.log(err));
 }

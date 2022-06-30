@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import { deleteAdoptionApplication, getAllApplications } from "../../../../../API";
 
-const ApplicationContainer = ( {animalName, animalLocation} ) => {
+const ApplicationContainer = ( {animalName, animalLocation, id, setApplications} ) => {
 
     const handleApplicationDelete = event => {
         event.preventDefault();
 
-        
+        deleteAdoptionApplication(id);
+        getAllApplications(setApplications)
     }
 
 

@@ -1,7 +1,7 @@
 import ApplicationContainer from "./ApplicationContainer/ApplicationContainer";
 import "./ApplicationList.css";
 
-const ApplicationList = ({applications}) => {
+const ApplicationList = ({applications, setApplications}) => {
 
   return (
     <>
@@ -11,7 +11,11 @@ const ApplicationList = ({applications}) => {
 
             {
                 applications.map( (app, index) => {
-                    return <ApplicationContainer key={index} animalName={app.animal.name} animalLocation={app.animal.location}/>
+                    return <ApplicationContainer key={index} 
+                                                id={app.id} 
+                                                animalName={app.animal.name} 
+                                                animalLocation={app.animal.location} 
+                                                setApplications={setApplications}/>
                 })
             }
 

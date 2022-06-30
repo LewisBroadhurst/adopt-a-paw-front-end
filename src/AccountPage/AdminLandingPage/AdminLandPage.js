@@ -20,15 +20,10 @@ const AdminLandPage = () => {
 
   useEffect(() => {
     getOrganisations(setOrganisations);
-  }, []);
-
-  useEffect(() => {
+    getAllApplications(setApplications);
     getCustomers(setCustomers);
   }, []);
 
-  useEffect( () => {
-    getAllApplications(setApplications)
-}, []);
 
   return (
     <>
@@ -37,7 +32,7 @@ const AdminLandPage = () => {
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>
 
           <div className="Split-Admin-AppPost">
-            <ApplicationList applications={applications}/>
+            <ApplicationList applications={applications} setApplications={setApplications}/>
             <PostAdminCont />
           </div>
 
