@@ -71,7 +71,7 @@
     .Account-Link {
         grid-column: 3;
         grid-row: 1;
-
+        
         display: flex;
         justify-content: flex-end;
         align-items: center;

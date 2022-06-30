@@ -34,7 +34,7 @@
 .Menu-Button-Header {
     grid-column: 3;
     grid-row: 1;
-
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -44,6 +44,9 @@
     padding: 0.5rem;
 }
 
+.Menu-Button-Header:hover {
+    color:#E07A5F;
+}
 
 /* Colouring and Text */
 
@@ -55,6 +58,7 @@
 .text_link {
     background-color: #003E1F;
     color: white;
+    font-size: 1rem;
 }
 
 .text_link:hover {
