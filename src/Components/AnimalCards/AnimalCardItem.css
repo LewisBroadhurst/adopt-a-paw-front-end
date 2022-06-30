@@ -21,7 +21,7 @@
 }
 
 .cardleft {
-    width: 50%;
+    width: 40%;
     position: relative;
     padding: 0.5em;
     display: flex;
@@ -30,7 +30,7 @@
 }
 
 .cardright {
-    width: 50%;
+    width: 60%;
     padding: 0.5em;
 }
 
@@ -50,4 +50,5 @@
     display: flex;
     align-self: center;
     justify-self: center;
+    border-radius: 0.5rem;
 }

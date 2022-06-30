@@ -1,12 +1,12 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './AnimalCardItem.css';
 
 function AnimalCardItem(props) {
   return (
     <>
         <li className='animalcards_item'>
-            <div className='animalcards_item_link'>
+            <Link className='animalcards_item_link' to={`${props.id}`}>
                 <div className='cardleft'>
                         <img
                         className='animalcards_item_img'
@@ -21,7 +21,7 @@ function AnimalCardItem(props) {
                         <p>Location:</p>
                     </h1>
                 </div>
-            </div>
+            </Link>
         </li>
     </>
   )
