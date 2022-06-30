@@ -7,6 +7,8 @@ import "./Header_Stylesheets/HeaderTablet+.css";
 
 import { NavLink as Link } from "react-router-dom";
 
+
+
 const Header = () => {
 
   const toggleMenuDisplay = () => {
@@ -23,6 +25,7 @@ const Header = () => {
 
   return (
     <>
+    
         <header className="Header-Mobile">
            
             <div className="Desktop-Logo">
@@ -52,17 +55,26 @@ const Header = () => {
             </nav>
  
             <Link to="/account"  className="text_link"><span className="Account-Link">Account</span></Link>
+            
 
             <button type="button" onClick={toggleMenuDisplay} className="Menu-Button-Header"><FontAwesomeIcon icon={faBars} /></button>
 
         </header>
 
         <ul className="ScrollDown-Menu">
-          <li className="text_link">Adopt</li>
-          <li className="text_link">Animals</li>
-          <li className="text_link">Organisations</li>
-          <li className="text_link">Success Stories</li>
-          <li className="text_link">News</li>
+                <li className="text_link"><Link to="/adopt">Adopt</Link></li>
+              
+                <li className="text_link"><Link to="/advice">Advice</Link></li>
+                
+                <li className="text_link"><Link to="/organisations">Organisations</Link></li>
+                
+                <li className="text_link"><Link to="/getInvolved">Get Involved</Link></li>
+                
+                <li className="text_link"><Link to="/donate">Donate</Link></li>
+               
+                <li className="text_link"><Link to="/successStories">Success Stories</Link></li>
+                
+                <li  className="text_link"><Link to="/news">News</Link></li>
         </ul>
 
     </>
