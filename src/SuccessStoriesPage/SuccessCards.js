@@ -1,9 +1,9 @@
 import React from 'react'
-import AnimalCardItem from './AnimalCardItem'
 import { Grid, TableContainer } from '@mui/material'
 import { useEffect, useState } from 'react'
+import SuccessCardItem from './SuccessCardItem'
 
-const AnimalCards = () => {
+const SuccessCards = () => {
  
   const animalArray = [
     {name: "a"},
@@ -18,10 +18,10 @@ const AnimalCards = () => {
   return (
       <Grid container spacing={2} columns={3}>
           {cards && cards.map(card => <Grid item>
-            <AnimalCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'}/>
+            <SuccessCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'}/>
             </Grid>)}
       </Grid>
   )
 }
 
-export default AnimalCards
+export default SuccessCards
