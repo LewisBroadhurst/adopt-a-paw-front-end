@@ -1,7 +1,5 @@
 import React from 'react'
 import "./SuccessStories.css"
-import "./SuccessStoriesTablet.css"
-import "./SuccessStoriesLaptop+.css"
 
 const SuccessStoriesPage = () => {
   return (

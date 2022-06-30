@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
-import "./AccountPageBasic.css";
-import "./AccPageTablet+.css";
+import "./AccountPage.css";
+
 
 
 const AccountPage = () => {

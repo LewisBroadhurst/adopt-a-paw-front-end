@@ -1,8 +1,4 @@
-import "./NewsPageBasic.css";
-import "./NewsPageTablet.css";
-import "./NewsPageLaptop+.css";
-
-
+import "./NewsPage.css";
 
 const NewsPage = () => {
   return (

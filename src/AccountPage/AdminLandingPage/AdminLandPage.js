@@ -4,7 +4,6 @@ import PostAdminCont from "./PostOrgUser Container/PostAdmin/PostAdminCont.js";
 import UserAdminCont from "./PostOrgUser Container/UserAdmin/UserAdminCont.js";
 
 import "./AdminLandPageBasic.css";
-import "./AdminLandPageTablet+.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";

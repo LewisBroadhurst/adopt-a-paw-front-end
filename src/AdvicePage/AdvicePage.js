@@ -1,6 +1,4 @@
 import "./AdvicePage.css";
-import "./AdvicePageLaptop+.css";
-import "./AdvicePageTablet.css";
 
 const AdvicePage = () => {
     return (
