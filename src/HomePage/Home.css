@@ -56,7 +56,7 @@ div{
 }
 
 .hero-shape{
-    height: 550px;
+    max-height: 550px;
     position: absolute;
     top: 0;
     right: 0;
@@ -69,9 +69,16 @@ div{
 }
 
 .hero-video{
-    position: absolute;
+    position: relative;
     object-fit: fill;
     margin: 0;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    width: 100%;
 }
 
 .hero__content-container{
