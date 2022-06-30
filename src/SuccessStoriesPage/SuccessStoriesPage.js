@@ -1,15 +1,15 @@
 import React from 'react'
-import AnimalCards from './AnimalCards'
+import SuccessCards from './SuccessCards'
 
-function AdoptPage() {
+function SuccessStoriesPage() {
   return (
     <>
       <h1 className='adoptTitle'>
         Success Stories
       </h1>
-      <AnimalCards />
+      <SuccessCards />
     </>
   )
 }
 
-export default AdoptPage
+export default SuccessStoriesPage

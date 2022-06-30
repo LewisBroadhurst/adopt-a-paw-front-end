@@ -1,4 +1,4 @@
-.animalcards_item {
+.successcards_item {
     height: 300px;
     width: 400px;
     background-color: antiquewhite;
@@ -9,7 +9,7 @@
     border-color: black;
 }
 
-.animalcards_item_link {
+.successcards_item_link {
     display: flex;
     width: 400px;
 }
@@ -36,7 +36,7 @@
     display: flex;
 } */
 
-.animalcards_item_img {
+.successcards_item_img {
     position: absolute;
     height: 150px;
     width: 150px;

@@ -22,10 +22,10 @@ function App() {
           <Routes>
             <Route path ='/' exact element={<Home />}/>
             <Route path='/advice' exact element={<AdvicePage />}/>
-            <Route path='/successStories' exact element={<SuccessStoriesPage />}/>
+            <Route path='/successstories' exact element={<SuccessStoriesPage />}/>
             <Route path ='/organisations' exact element={<OrganisationsPage />}/>
             <Route path='/adopt' exact element={<AdoptPage />}/>
-            <Route path='/getInvolved' exact element={<GetInvolvedPage />}/>
+            <Route path='/getinvolved' exact element={<GetInvolvedPage />}/>
             <Route path ='/news' exact element={<NewsPage />}/>
             <Route path="/account" exact element={<AccountPage />} />
             <Route path="/accountadmin" exact element={<AdminLandPage />} />
