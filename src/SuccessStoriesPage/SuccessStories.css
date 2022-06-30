@@ -1,4 +1,55 @@
-.adoptTitle{
+.SuccessTitle{
     text-align: center;
-    font-size: 60px;
+    font-size: 3rem;
+}
+
+.SS-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    background-color: #8B2635;
+    padding: 1rem 2rem;
+    margin: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    color: black;
+    transition: transform .2s;
+}
+
+.SS-Container:hover {
+    transform: scale(1.1);
+}
+
+.SS-Img {
+    width: 300px;
+    border-radius: 0.3rem;
+    
+}
+
+.SS-Text-Div>h3 {
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    text-decoration: solid;
+    color: #DEDEE0;
+    text-align: left;
+}
+
+.SS-Text-Div>p {
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+    font-style: normal;
+}
+
+#SS-Page-Main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+#SS-Page-Main>h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
 }
