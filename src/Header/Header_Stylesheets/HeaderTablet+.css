@@ -1,31 +1,18 @@
-@media (min-width: 1250px) {
+@media (min-width: 1350px) {
 
-    /* Sorting positioning and Details */
-
-    .Desktop-Logo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    /* Details */
 
     .AAP-Header-Title-Desktop {
         display: flex;
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #E07A5F;
         padding-left: 0.5rem;
     }
 
-    .AAP-Header-Title {
-        display: none;
-    }
-
-    .Tablet-Title-Header {
+    .Expanded-Navbar-Header {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
     }
 
-    .Expanded-Navbar-Header,
     .Expanded-Navbar-Header>ul {
         display: flex;
         flex-direction: row;
@@ -39,14 +26,60 @@
 
     .Account-Link {
         display: flex;
-        font-size: 1rem;
-        justify-content: flex-end;
+        font-size: 1.4rem;
     }
 
     .DropDown-Button-Header,
     .ScrollDown-Menu,
-    .Menu-Button-Header {
+    .Menu-Button-Header,
+    .AAP-Header-Title {
         display: none;
     }
+
+    /* Grid */
+
+    .Header-Mobile {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 100%;
+    }
+
+    .Desktop-Logo {
+        grid-column: 1;
+        grid-row: 1;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 0.5rem;
+        padding-left: 2rem;
+    }
+
+    .Expanded-Navbar-Header {
+        grid-column: 2;
+        grid-row: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.5rem;
+    }
+
+    .Account-Link {
+        grid-column: 3;
+        grid-row: 1;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding: 0.5rem;
+        padding-right: 2rem;
+    }
+
+
 
 }
