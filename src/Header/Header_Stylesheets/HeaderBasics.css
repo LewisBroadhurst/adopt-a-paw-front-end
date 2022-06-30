@@ -118,3 +118,11 @@
     }
 
 }
+
+@media (min-width: 600px) {
+
+    .AAP-Header-Title {
+        font-size: 1.8rem;
+    }
+
+}
