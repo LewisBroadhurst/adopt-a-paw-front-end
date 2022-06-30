@@ -1,0 +1,29 @@
+.animalname {
+    font-size: 50px;
+    text-align: center;
+}
+
+.animalpage_container{
+    display: flex;
+    flex-flow: flex wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 1rem;
+}
+
+.basic_info_container{
+    width: 300px;
+    height: 300px;
+    background-color: #BBDBB4;
+    border-radius: 1rem;
+}
+
+.picture_container{
+    width: 300px;
+    height: 300px;
+    background-color: #BBDBB4;
+    border-radius: 1rem;
+}
