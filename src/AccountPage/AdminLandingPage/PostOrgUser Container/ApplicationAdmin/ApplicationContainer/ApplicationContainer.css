@@ -1,0 +1,28 @@
+.AC__form--formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AC__form--updateApp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.AC__form--updateApp>button,
+.AC__form--updateApp>select {
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.AC__form--updateApp>button {
+    background-color: lightgoldenrodyellow;
+}
+
+.AC__form--updateApp>select {
+    background-color: white;
+}
