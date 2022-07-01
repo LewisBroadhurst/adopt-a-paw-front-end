@@ -12,27 +12,48 @@
     margin: 1rem 2rem 0rem 2rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.cap__main--positioning>p {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.cap__main--positioning>p+p {
+    text-align: left;
+    padding-bottom: 0.75rem;
+}
+
+.cap__imgCont--positioning>img {
+    border-radius: 0.5rem;
 }
 
 .cap__form--positioning>div>input {
-    background-color: bisque;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    border: 0.5px solid green;
+    border-radius: 0.25rem;
+
+    padding-left: 0.25rem;
 }
 
 .cap__form--positioning>div>label {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding-left: 0.25rem;
 }
 
 .cap__form--positioning>div {
     display: flex;
     flex-direction: column;
     padding: 0.25rem 0;
+    align-items: stretch;
 }
 
 .cap__form--positioning>button {
@@ -40,4 +61,5 @@
     padding: 0.5rem;
     border-radius: 0.25rem;
     margin-top: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
