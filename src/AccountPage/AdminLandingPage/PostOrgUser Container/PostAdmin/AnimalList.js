@@ -7,7 +7,7 @@ const AnimalList = ( {animals} ) => {
     <>
         <section className='POU-Container'>
 
-            <h3>Latest Adoption Posts</h3>
+            <h3>Animals</h3>
 
             {
               animals.slice(0, 3).map((animal, index) => {
@@ -23,7 +23,7 @@ const AnimalList = ( {animals} ) => {
               })
             }
 
-            <span className="LAP-Admin">All posts</span>
+            <span className="LAP-Admin">All Animals</span>
 
         </section>
     </>

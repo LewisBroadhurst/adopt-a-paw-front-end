@@ -8,11 +8,16 @@ const CustomerAdminCont = ( {customers} ) => {
     <>
         <section className='POU-Container'>
 
-            <h3>Newest Users</h3>
+            <h3>Users</h3>
 
             {
                 customers.map( (cust, index) => {
-                    return <CustomerAdminContainer key={index} firstName={cust.firstName} id={cust.id} />
+                    return <CustomerAdminContainer key={index} 
+                                                  firstName={cust.firstName}
+                                                  lastName={cust.lastName}
+                                                  location={cust.location}
+                                                  prevAdopted={cust.previousAdoptions}
+                                                  id={cust.id} />
                 })
             }
 

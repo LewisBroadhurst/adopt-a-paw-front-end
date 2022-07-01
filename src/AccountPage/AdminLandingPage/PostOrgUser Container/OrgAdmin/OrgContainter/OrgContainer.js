@@ -11,9 +11,9 @@ const OrgContainer = ( {name, id} ) => {
   return (
     <>
         <section className='Post-Admin-Cont'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at libero ultrices, condimentum tellus sit amet, tempus metus. Aenean id tortor at nisi consequat facilisis.</p>
-
             <span>{name}</span>
+
+            <p>A world where all animals are respected and treated with kindness and compassion.</p>
 
             <span>Posted: 11/22/3333</span>
 

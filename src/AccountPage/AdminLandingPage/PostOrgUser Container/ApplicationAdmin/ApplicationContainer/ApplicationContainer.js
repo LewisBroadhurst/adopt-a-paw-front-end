@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { deleteAdoptionApplication, getAllApplications } from "../../../../../API";
 
-const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus} ) => {
+const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus, firstName, lastName} ) => {
 
     const handleApplicationDelete = event => {
         event.preventDefault();
@@ -28,7 +28,8 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
     <>
         <section className='Post-Admin-Cont'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at libero ultrices, condimentum tellus sit amet, tempus metus. Aenean id tortor at nisi consequat facilisis.</p>
+            
+            <span>Name of applicant: {firstName} {lastName}</span>
 
             <span>Animal Name: {animalName}</span>
 

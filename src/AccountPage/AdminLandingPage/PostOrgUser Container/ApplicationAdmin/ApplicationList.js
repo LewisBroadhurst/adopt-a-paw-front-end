@@ -7,7 +7,7 @@ const ApplicationList = ({applications, setApplications}) => {
     <>
         <section className='POU-Container'>
 
-            <h3>Latest Adoption Applications</h3>
+            <h3>Adoption Applications</h3>
 
             {
                 applications.length > 0 ?
@@ -15,6 +15,8 @@ const ApplicationList = ({applications, setApplications}) => {
                   applications.slice(0, 3).map( (app, index) => {
                       return <ApplicationContainer key={index} 
                                                   id={app.id} 
+                                                  firstName={app.customer.firstName}
+                                                  lastName={app.customer.lastName}
                                                   animalName={app.animal.name} 
                                                   animalLocation={app.animal.location} 
                                                   applicationStatus={app.application_type_id}
