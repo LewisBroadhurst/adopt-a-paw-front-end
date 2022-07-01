@@ -1,13 +1,7 @@
-import "./OrgList.css";
 import OrgContainer from "./OrgContainter/OrgContainer";
 
 const OrgList = ( {organisations} ) => {
 
-    // const reducedOrgList = () => {
-    //     let startSplice = organisations.length - 3;
-
-    //     return organisations.splice(startSplice, 3);
-    // }
 
   return (
     <>

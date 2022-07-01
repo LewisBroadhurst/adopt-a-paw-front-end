@@ -1,6 +1,5 @@
 import OrgAdminCont from "./PostOrgUser Container/OrgAdmin/OrgList.js";
 import UserAdminCont from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
-import "./AdminLandPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
@@ -8,6 +7,8 @@ import { getCustomers, getOrganisations, getAllAnimals } from "../../API.js";
 import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
 import { getAllApplications } from "../../API.js";
 import AnimalList from "./PostOrgUser Container/PostAdmin/AnimalList.js";
+import "./AdminContainers.css";
+import "./ApplicationList.css";
 
 
 
@@ -32,16 +33,14 @@ const AdminLandPage = () => {
 
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>
 
-          <div className="Split-Admin-AppPost">
-            <ApplicationList applications={applications} setApplications={setApplications}/>
-            <AnimalList animals={animals}/>
-          </div>
+          <ApplicationList applications={applications} setApplications={setApplications}/>
 
-          <div className="Split-Admin-UserOrg">
-            <UserAdminCont customers={customers}/>
-            <OrgAdminCont organisations={organisations} />
-          </div>
- 
+          <AnimalList animals={animals}/>
+        
+          <UserAdminCont customers={customers}/>
+
+          <OrgAdminCont organisations={organisations} />
+
         </main>
     </>
   )

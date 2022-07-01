@@ -1,5 +1,4 @@
 import CustomerAdminContainer from "./CustomerContainer/CustomerAdminContainer";
-import "./CustomerList.css";
 
 const CustomerAdminCont = ( {customers} ) => {
 

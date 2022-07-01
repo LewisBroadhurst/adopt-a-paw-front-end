@@ -1,5 +1,4 @@
 import ApplicationContainer from "./ApplicationContainer/ApplicationContainer";
-import "./ApplicationList.css";
 
 const ApplicationList = ({applications, setApplications}) => {
 
