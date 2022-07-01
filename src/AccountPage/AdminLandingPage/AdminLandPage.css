@@ -12,21 +12,31 @@
     background-color: #BBDBB4;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 750px) {
 
     #AdminLandPage {
         display: flex;
         flex-direction: column;
     }
+}
 
-    .Split-Admin-AppPost,
-    .Split-Admin-UserOrg {
-        display: flex;
-        flex-direction: row;
+@media (min-width: 900px) {
+
+    .alp__containers--positioning {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    .AdminWelcome {
-        font-size: 2.4rem;
+}
+
+
+@media (min-width: 1400px) {
+
+    .alp__containers--positioning {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
 }

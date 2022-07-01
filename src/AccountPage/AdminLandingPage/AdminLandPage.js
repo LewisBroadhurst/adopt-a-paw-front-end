@@ -33,13 +33,17 @@ const AdminLandPage = () => {
 
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>
 
-          <ApplicationList applications={applications} setApplications={setApplications}/>
+          <section className="alp__containers--positioning">
 
-          <AnimalList animals={animals}/>
-        
-          <UserAdminCont customers={customers}/>
+            <ApplicationList className="al1__container--p" applications={applications} setApplications={setApplications}/>
 
-          <OrgAdminCont organisations={organisations} />
+            <AnimalList className="al2__container--p" animals={animals}/>
+          
+            <UserAdminCont className="uac__container--p" customers={customers}/>
+
+            <OrgAdminCont className="oac__container--p" organisations={organisations} />
+
+          </section>
 
         </main>
     </>

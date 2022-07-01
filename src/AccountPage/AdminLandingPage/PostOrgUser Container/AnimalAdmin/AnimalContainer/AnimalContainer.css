@@ -5,10 +5,12 @@
     border-radius: 0.25rem;
 }
 
-
 .AC__form--animalCont {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.AC__details--animalCont>span {
+    text-align: center;
 }
