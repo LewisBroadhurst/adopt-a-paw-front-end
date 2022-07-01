@@ -13,7 +13,8 @@
 }
 
 .AC__form--updateApp>button,
-.AC__form--updateApp>select {
+.AC__form--updateApp>select,
+.AC__form--formContainer>button {
     margin: 0.5rem 0.5rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
@@ -23,6 +24,15 @@
     background-color: lightgoldenrodyellow;
 }
 
+.AC__form--updateApp>button:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
 .AC__form--updateApp>select {
     background-color: white;
+}
+
+.AC__form--formContainer>button {
+    background-color: lightcoral;
 }
