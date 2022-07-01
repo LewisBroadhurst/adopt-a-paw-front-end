@@ -21,6 +21,7 @@ function AnimalCardItem(props) {
                         <p>Species: {animal.species}</p>
                         <p>Breed: {animal.breed}</p>
                         <p>Age: {animal.age}</p>
+                        <p>Sex: {animal.sex}</p>
                         <p>Location: {animal.location}</p>
                 </div>
             </Link>
