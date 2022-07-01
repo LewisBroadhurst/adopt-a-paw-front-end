@@ -1,0 +1,42 @@
+.OC__form--formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.OC__form--updateName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.OC__form--updateName>button,
+.OC__form--updateName>input,
+.OC__form--formContainer>button {
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.OC__form--updateName>button {
+    background-color: lightgoldenrodyellow;
+}
+
+.OC__form--updateName>button:hover {
+    background-color: yellow;
+    cursor: pointer;
+    text-align: center;
+}
+
+.OC__form--formContainer>button {
+    background-color: lightcoral;
+    text-align: center;
+}
+
+.OC__form--formContainer>button:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}

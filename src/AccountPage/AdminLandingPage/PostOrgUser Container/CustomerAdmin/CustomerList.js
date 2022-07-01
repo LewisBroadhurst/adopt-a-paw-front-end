@@ -7,7 +7,7 @@ const CustomerAdminCont = ( {customers} ) => {
     <>
         <section className='POU-Container'>
 
-            <h3>Users</h3>
+            <h3>Customers</h3>
 
             {
                 customers.map( (cust, index) => {
@@ -20,7 +20,7 @@ const CustomerAdminCont = ( {customers} ) => {
                 })
             }
 
-            <span className="LAP-Admin">All Users</span>
+            <span className="LAP-Admin">All Customers</span>
 
         </section>
     

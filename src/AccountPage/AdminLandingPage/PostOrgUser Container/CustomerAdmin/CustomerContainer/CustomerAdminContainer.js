@@ -22,9 +22,8 @@ const CustomerAdminContainer = ( {firstName, id, lastName, location, prevAdopted
 
             <span>Previously adopted? {prevAdopted}</span>
 
-            <div className='Approve-Post-Admin'>
-                <button type='button' className="Accept-Post">Accept <FontAwesomeIcon icon={faPaw} /></button>
-                <button type='button' className="Decline-Post" onClick={handleDeleteCustomer}>Decline ❌</button>
+            <div className='AC__form--animalCont'>
+                <button type='button' onClick={handleDeleteCustomer}>Remove from system</button>
             </div>
         </section>
     </>

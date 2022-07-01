@@ -1,5 +1,4 @@
-import { faPaw } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "./OrgContainer.css";
 
 
 const OrgContainer = ( {name, id} ) => {
@@ -17,9 +16,13 @@ const OrgContainer = ( {name, id} ) => {
 
             <span>Posted: 11/22/3333</span>
 
-            <div className='Approve-Post-Admin'>
-                <button type='button' className="Accept-Post">Accept <FontAwesomeIcon icon={faPaw} /></button>
-                <button type='button' className="Decline-Post" onClick={handleDeleteOrganisation}>Decline ❌</button>
+            <div className='OC__form--formContainer'>
+                <div className="OC__form--updateName">
+                    <button type='button'>Update name</button>
+                    <input type="text"></input>
+                </div>
+                
+                <button type='button'>Reject and Delete</button>
             </div>
         </section>
     </>
