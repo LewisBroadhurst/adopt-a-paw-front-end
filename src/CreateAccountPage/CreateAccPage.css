@@ -1,0 +1,43 @@
+.cap__main--positioning {
+    background-color: #DEDEE0;
+    padding: 1rem 1rem;
+}
+
+.cap__form--positioning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    margin: 1rem 2rem 0rem 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.cap__form--positioning>div>input {
+    background-color: bisque;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap__form--positioning>div>label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.cap__form--positioning>div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0;
+}
+
+.cap__form--positioning>button {
+    background-color: greenyellow;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}

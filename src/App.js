@@ -13,6 +13,7 @@ import GetInvolvedPage from "./GetInvolvedPage/GetInvolvedPage";
 import AdminLandPage from "./AccountPage/AdminLandingPage/AdminLandPage";
 import DonatePage from "./DonatePage/DonatePage";
 import AnimalPage from "./Components/Pages/AnimalPage";
+import CreateAccPage from "./CreateAccountPage/CreateAccPage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/account" exact element={<AccountPage />} />
             <Route path="/account/admin" exact element={<AdminLandPage />} />
             <Route path="/donate" exact element={<DonatePage />} />
+            <Route path="/account/createAccount" exact element={<CreateAccPage />} />
           </Routes>
           
         <Footer />
