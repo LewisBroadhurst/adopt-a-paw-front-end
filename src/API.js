@@ -47,8 +47,8 @@ export function deleteCustomer(id) {
         .catch((err) => console.log(err))
 }
 
-export function addNewCustomer() {
-    axios.post(`http://127.0.0.1:8080/addNewCustomer/`)
+export function addNewCustomer(custData) {
+    axios.post(`http://127.0.0.1:8080/addNewCustomer`, custData)
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
 }

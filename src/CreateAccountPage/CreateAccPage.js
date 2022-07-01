@@ -8,7 +8,18 @@ import { addNewCustomer } from "../API";
 const CreateAccPage = () => {
 
     const handleCreateNewCustomer = event => {
-        addNewCustomer()
+        event.preventDefault();
+
+        const custData = {
+            "id": 300,
+            "firstName": "Lewiss",
+            "lastName": "Broadhurst",
+            "age": 27,
+            "location": "Shirley",
+            "previousAdoptions": false
+        }
+
+        addNewCustomer(custData)
     }
 
 
