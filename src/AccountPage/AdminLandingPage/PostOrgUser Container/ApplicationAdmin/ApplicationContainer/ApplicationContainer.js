@@ -42,7 +42,9 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
                 <div className="AC__form--updateApp">
                     <button type='button'>Update <FontAwesomeIcon icon={faPaw} /></button>
                     <select>
-                        <option>xyz</option>
+                        <option>Accepted</option>
+                        <option>Rejected</option>
+                        <option>Pending</option>
                     </select>
                 </div>
                 

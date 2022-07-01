@@ -1,6 +1,6 @@
 .POU-Container {
     margin: 1rem;
-    background-color: blanchedalmond;
+    background-color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -13,13 +13,15 @@
     font-size: 1.6rem;
     text-align: center;
     padding-bottom: 0.5rem;
+    color: #4267B2;
 }
 
 .Post-Admin-Cont {
-    background-color: burlywood;
-    padding: 0rem 0.75rem 0.25rem 0.75rem;
+    background-color: #BBDBB4;
+    padding: 0.5rem 0.75rem;
     margin: 0rem 0.5rem 1rem 0.5rem;
     border-radius: 0.25rem;
+    font-size: 1.2rem;
 
     display: flex;
     flex-direction: column;
@@ -43,22 +45,6 @@
     border-radius: 0.25rem;
     background-color: #BBDBB4;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.Accept-Post:hover {
-    background-color: #579349;
-    cursor: pointer;
-    color: white;
-}
-
-.Approve-Post-Admin>button+button {
-    background-color: #f26161;
-}
-
-.Decline-Post:hover {
-    background-color: #bf2a2a;
-    cursor: pointer;
-    color: white;
 }
 
 .LAP-Admin {

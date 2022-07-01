@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #DEDEE0;
 }
 
 .AdminWelcome {
     text-align: center;
     font-size: 1.6rem;
+    padding: 0.5rem 0;
     background-color: #BBDBB4;
 }
 
