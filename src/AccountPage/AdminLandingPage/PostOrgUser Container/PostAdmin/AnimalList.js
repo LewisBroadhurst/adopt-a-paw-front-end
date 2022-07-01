@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import AnimalContainer from "./AnimalContainer/AnimalContainer"
+import AnimalContainer from "./AnimalContainer/AnimalContainer";
 
 
 const AnimalList = ( {animals} ) => {
@@ -17,6 +16,9 @@ const AnimalList = ( {animals} ) => {
                                         organisationId={animal.organisation_id}
                                         name={animal.name}
                                         age={animal.age}
+                                        reserved={animal.reserved}
+                                        adopted={animal.adopted}
+                                        breed={animal.breed}
                                         location={animal.location}/>
               })
             }
