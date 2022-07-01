@@ -3,8 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./CreateAccPage.css";
 
 import gpMobForm from "./images/gpMobForm.jpeg";
+import { addNewCustomer } from "../API";
 
 const CreateAccPage = () => {
+
+    const handleCreateNewCustomer = event => {
+        addNewCustomer()
+    }
+
 
   return (
     <>
@@ -47,7 +53,7 @@ const CreateAccPage = () => {
                     <input type="text" placeholder="Adopted before?"></input>
                 </div>
 
-                <button type="submit">Create Account</button>
+                <button type="submit" onClick={handleCreateNewCustomer}>Create Account</button>
             </form>
 
             
