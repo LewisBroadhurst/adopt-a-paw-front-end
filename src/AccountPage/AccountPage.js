@@ -29,7 +29,7 @@ const AccountPage = () => {
 
                 <span className="Forgot-Password-Acc">Forgot your password?</span>
 
-                <button className="New-Acc-BTN" type="button">Create New Account</button>
+                <button className="New-Acc-BTN" type="button"><Link to="/account/createAccount">Create New Account</Link></button>
             </section>
         </main>
     </>

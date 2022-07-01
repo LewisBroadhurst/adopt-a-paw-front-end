@@ -42,9 +42,15 @@ export function getCustomers(setCustomers) {
 }
 
 export function deleteCustomer(id) {
-    axios.get(`http://127.0.0.1:8080/deleteCustomer/${id}`)
-        .then(res => console.log(res))
+    axios.delete(`http://127.0.0.1:8080/deleteCustomer/${id}`)
+        .then(res => console.log(res.data))
         .catch((err) => console.log(err))
+}
+
+export function addNewCustomer() {
+    axios.post(`http://127.0.0.1:8080/addNewCustomer/`)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
 }
 
 // APPLICATIONS
