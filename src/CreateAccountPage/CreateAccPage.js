@@ -4,18 +4,29 @@ import "./CreateAccPage.css";
 
 import gpMobForm from "./images/gpMobForm.jpeg";
 import { addNewCustomer } from "../API";
+import { useState } from "react";
 
 const CreateAccPage = () => {
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [age, setAge] = useState(0);
+    const [location, setLocation] = useState('');
+    const [prevAdopted, setPrevAdopted] = useState(false);
+
+
 
     const handleCreateNewCustomer = event => {
         event.preventDefault();
 
+        console.log(age);
+
         const custData = {
-            "id": 300,
-            "firstName": "Lewiss",
-            "lastName": "Broadhurst",
-            "age": 27,
-            "location": "Shirley",
+            "id": 0,
+            "firstName": `${firstName}`,
+            "lastName": `${lastName}`,
+            "age": `${age}`,
+            "location": `${location}`,
             "previousAdoptions": false
         }
 
@@ -34,29 +45,25 @@ const CreateAccPage = () => {
             </section>
 
             <form className="cap__form--positioning">
-                <div className="cap__form--id">
-                    <label>ID</label>
-                    <input type="text" placeholder="ID number"></input>
-                </div>
 
                 <div className="cap__form--firstName">
                     <label>First Name</label>
-                    <input type="text" placeholder="First Name"></input>
+                    <input type="text" placeholder="First Name" onChange={(e) => setFirstName(e.target.value)}></input>
                 </div>
 
                 <div className="cap__form--lastName">
                     <label>Last Name</label>
-                    <input type="text" placeholder="Last Name"></input>
+                    <input type="text" placeholder="Last Name" onChange={(e) => setLastName(e.target.value)}></input>
                 </div>
 
                 <div className="cap__form--age">
                     <label>Age</label>
-                    <input type="text" placeholder="Age"></input>
+                    <input type="text" placeholder="Age" onChange={(e) => setAge(parseInt(e.target.value))}></input>
                 </div>
 
                 <div className="cap__form--location">
                     <label>Location</label>
-                    <input type="text" placeholder="Location"></input>
+                    <input type="text" placeholder="Location" onChange={(e) => setLocation(e.target.value)}></input>
                 </div>
 
                 <div className="cap__form--prevAdopted">
@@ -65,6 +72,7 @@ const CreateAccPage = () => {
                 </div>
 
                 <button type="submit" onClick={handleCreateNewCustomer}>Create Account</button>
+
             </form>
 
             
