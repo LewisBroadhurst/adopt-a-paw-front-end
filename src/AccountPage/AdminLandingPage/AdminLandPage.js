@@ -1,15 +1,14 @@
 import OrgAdminCont from "./PostOrgUser Container/OrgAdmin/OrgList.js";
-import PostAdminCont from "./PostOrgUser Container/PostAdmin/PostAdminCont.js";
 import UserAdminCont from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
-
 import "./AdminLandPage.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import { getCustomers, getOrganisations } from "../../API.js";
+import { getCustomers, getOrganisations, getAllAnimals } from "../../API.js";
 import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
 import { getAllApplications } from "../../API.js";
+import AnimalList from "./PostOrgUser Container/PostAdmin/AnimalList.js";
+
 
 
 const AdminLandPage = () => {
@@ -17,11 +16,13 @@ const AdminLandPage = () => {
   const [organisations, setOrganisations] = useState([]);
   const [customers, setCustomers] = useState([]);
   const [applications, setApplications] = useState([])
+  const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
     getOrganisations(setOrganisations);
     getAllApplications(setApplications);
     getCustomers(setCustomers);
+    getAllAnimals(setAnimals);
   }, []);
 
 
@@ -33,7 +34,7 @@ const AdminLandPage = () => {
 
           <div className="Split-Admin-AppPost">
             <ApplicationList applications={applications} setApplications={setApplications}/>
-            <PostAdminCont />
+            <AnimalList animals={animals}/>
           </div>
 
           <div className="Split-Admin-UserOrg">
