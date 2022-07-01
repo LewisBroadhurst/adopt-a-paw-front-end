@@ -1,30 +1,75 @@
-#AdminLandPage {
+.POU-Container {
+    margin: 1rem;
+    background-color: blanchedalmond;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     display: flex;
     flex-direction: column;
+}
+
+.POU-Container>h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.Post-Admin-Cont {
+    background-color: burlywood;
+    padding: 0rem 0.75rem 0.25rem 0.75rem;
+    margin: 0rem 0.5rem 1rem 0.5rem;
+    border-radius: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Post-Admin-Cont>p,
+.Post-Admin-Cont>span,
+.Post-Admin-Cont>div {
+    padding: 0.25rem;
+}
+
+.Approve-Post-Admin {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
-.AdminWelcome {
-    text-align: center;
-    font-size: 1.6rem;
+.Approve-Post-Admin>button {
+    padding: 0 1rem;
+    margin: 0 0.25rem;
+    border-radius: 0.25rem;
     background-color: #BBDBB4;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-@media (min-width: 800px) {
+.Accept-Post:hover {
+    background-color: #579349;
+    cursor: pointer;
+    color: white;
+}
 
-    #AdminLandPage {
-        display: flex;
-        flex-direction: column;
-    }
+.Approve-Post-Admin>button+button {
+    background-color: #f26161;
+}
 
-    .Split-Admin-AppPost,
-    .Split-Admin-UserOrg {
-        display: flex;
-        flex-direction: row;
-    }
+.Decline-Post:hover {
+    background-color: #bf2a2a;
+    cursor: pointer;
+    color: white;
+}
 
-    .AdminWelcome {
-        font-size: 2.4rem;
-    }
+.LAP-Admin {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #4267B2;
+    margin-top: -0.25rem;
+    align-self: center;
+}
 
+.LAP-Admin:hover {
+    color: #0E2A62;
+    cursor: pointer;
 }

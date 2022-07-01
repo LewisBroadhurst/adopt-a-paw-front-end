@@ -1,0 +1,30 @@
+#AdminLandPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AdminWelcome {
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: #BBDBB4;
+}
+
+@media (min-width: 800px) {
+
+    #AdminLandPage {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Split-Admin-AppPost,
+    .Split-Admin-UserOrg {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .AdminWelcome {
+        font-size: 2.4rem;
+    }
+
+}

@@ -8,7 +8,7 @@ import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/Applicatio
 import { getAllApplications } from "../../API.js";
 import AnimalList from "./PostOrgUser Container/PostAdmin/AnimalList.js";
 import "./AdminContainers.css";
-import "./ApplicationList.css";
+import "./AdminLandPage.css";
 
 
 
