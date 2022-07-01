@@ -11,7 +11,7 @@ const ApplicationList = ({applications, setApplications}) => {
             {
                 applications.length > 0 ?
                 
-                  applications.slice(0, 3).map( (app, index) => {
+                  applications.map( (app, index) => {
                       return <ApplicationContainer key={index} 
                                                   id={app.id} 
                                                   firstName={app.customer.firstName}

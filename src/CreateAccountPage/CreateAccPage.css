@@ -4,9 +4,9 @@
 }
 
 .cap__form--positioning {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr;
 
     background-color: white;
     margin: 1rem 2rem 0rem 2rem;
@@ -16,12 +16,12 @@
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-.cap__main--positioning>p {
+.cap__para--section>p {
     padding: 0.5rem;
     font-size: 1.4rem;
 }
 
-.cap__main--positioning>p+p {
+.cap__para--section>p+p {
     text-align: left;
     padding-bottom: 0.75rem;
 }
@@ -36,10 +36,14 @@
     justify-content: center;
     align-items: center;
 
-    border: 0.5px solid green;
+    border: 1px solid green;
     border-radius: 0.25rem;
 
+    padding: 0.25rem;
     padding-left: 0.25rem;
+
+    font-size: 1.2rem;
+    color: #DEDEE0;
 }
 
 .cap__form--positioning>div>label {
@@ -47,6 +51,8 @@
     flex-direction: row;
     justify-content: flex-start;
     padding-left: 0.25rem;
+
+    font-size: 1.4rem;
 }
 
 .cap__form--positioning>div {
@@ -60,6 +66,37 @@
     background-color: greenyellow;
     padding: 0.5rem;
     border-radius: 0.25rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 2rem;
+    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 700px) {
+
+    .cap__main--positioning {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+
+    .cap__form--positioning {
+        min-width: 40%;
+    }
+
+    .cap__nonFormContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50%;
+    }
+
+    .cap__para--section>p {
+        font-size: 2rem;
+    }
+
+
+
 }
