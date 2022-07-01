@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { getCustomers, getOrganisations, getAllAnimals } from "../../API.js";
 import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
 import { getAllApplications } from "../../API.js";
-import AnimalList from "./PostOrgUser Container/PostAdmin/AnimalList.js";
+import AnimalList from "./PostOrgUser Container/AnimalAdmin/AnimalList.js";
 import "./AdminContainers.css";
 import "./AdminLandPage.css";
 

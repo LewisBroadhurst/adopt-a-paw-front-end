@@ -48,7 +48,7 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
                     </select>
                 </div>
                 
-                <button type='button' className="Decline-Post" onClick={handleApplicationDelete}>Remove from system</button>
+                <button type='button' className="Decline-Post" onClick={handleApplicationDelete}>Reject and Delete</button>
             </div>
         </section>
     </>

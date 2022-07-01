@@ -1,0 +1,14 @@
+.AC__form--animalCont>button {
+    background-color: lightcoral;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+
+.AC__form--animalCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
