@@ -7,6 +7,7 @@
 
 .orgPage__mainHeader--pos {
     background-color: #BBDBB4;
+    /* color: white; */
     font-size: 3rem;
 }
 
@@ -16,11 +17,36 @@
     justify-content: center;
 }
 
-.orgPage__searchBar--pos {
-    background-color: black;
+.orgPage__orgList--pos {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    /* background-color: #BBDBB4; */
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
 }
 
-.orgPage__searchBar--pos>button {
-    background-color: white;
-    margin: 0.25rem 0.25rem;
+.orgPage__orgContV1>h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.orgPage__orgContV1>p {
+    text-align: left;
+    margin: 1rem 2rem;
+    font-size: 1.4rem;
+}
+
+.OP__imgCont--pos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OP__imgCont--pos>img {
+    border-radius: 0.25rem;
 }
