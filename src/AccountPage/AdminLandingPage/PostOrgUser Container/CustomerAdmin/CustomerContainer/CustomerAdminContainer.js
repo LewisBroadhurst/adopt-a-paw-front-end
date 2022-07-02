@@ -1,15 +1,15 @@
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { deleteCustomer } from '../../../../../API';
+import { deleteCustomer, getCustomers } from '../../../../../API';
 
 
 
-const CustomerAdminContainer = ( {firstName, id, lastName, location, prevAdopted} ) => {
+const CustomerAdminContainer = ( {firstName, id, lastName, location, prevAdopted, setCustomers} ) => {
 
-  const handleDeleteCustomer = event => {
+  const handleDeleteCustomer = async event => {
     event.preventDefault()
 
-    deleteCustomer(id);
+    await deleteCustomer(id);
+
+    await getCustomers(setCustomers);
   }
 
 

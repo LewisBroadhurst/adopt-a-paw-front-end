@@ -1,5 +1,4 @@
 import OrgAdminCont from "./PostOrgUser Container/OrgAdmin/OrgList.js";
-import UserAdminCont from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
@@ -9,6 +8,7 @@ import { getAllApplications } from "../../API.js";
 import AnimalList from "./PostOrgUser Container/AnimalAdmin/AnimalList.js";
 import "./AdminContainers.css";
 import "./AdminLandPage.css";
+import CustomerList from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
 
 
 
@@ -43,9 +43,9 @@ const AdminLandPage = () => {
 
             <AnimalList className="al2__container--p" animals={animals} setAnimals={setAnimals}/>
           
-            <UserAdminCont className="uac__container--p" customers={customers}/>
+            <CustomerList className="uac__container--p" customers={customers} setCustomers={setCustomers}/>
 
-            <OrgAdminCont className="oac__container--p" organisations={organisations} />
+            <OrgAdminCont className="oac__container--p" organisations={organisations} setOrganisations={setOrganisations} />
 
           </section>
 

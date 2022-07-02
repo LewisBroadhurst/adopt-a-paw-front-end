@@ -19,7 +19,6 @@ export function getAnimalByID(setAnimal, id){
     }).catch((err) => console.log(err))
 }
 
-// ASYNC
 
 export const getAllAnimals = async (setAnimals) => {
     try {
@@ -43,61 +42,70 @@ export const deleteAnimal = async (id) => {
     }
 }
 
-// ASYNC
-
 
 // ORGANISATIONS
 
-export function getOrganisations(setOrganisations) {
-    axios.get(`http://127.0.0.1:8080/findAllOrganisations`)
-        .then(res => {
-            const organisations = res.data;
-            setOrganisations(organisations);
-        })
-        .catch((err) => console.log(err))
+export const getOrganisations = async (setOrganisations) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/organisation/findAllOrganisations`);
+        const organisations = response.data;
+        console.log(response.data);
+        setOrganisations(organisations);
+    } catch (err) {
+        console.log(err);
+    }   
 }
 
 export function changeOrganisationName(id, orgData) {
-    axios.put(`http://127.0.0.1:8080/updateOrganisation/${id}`, orgData)
+    axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData)
         .then(res => console.log(res.data))
         .catch((err) => console.log(err))
 }
 
 // CUSTOMERS
 
-export function getCustomers(setCustomers) {
-    axios.get(`http://127.0.0.1:8080/findAllCustomers`)
-        .then(res => {
-            const customers = res.data;
-            setCustomers(customers)
-        })
-        .catch((err) => console.log(err))
+export const getCustomers = async (setCustomers) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/customer/findAllCustomers`);
+        const customers = response.data;
+        setCustomers(customers);
+    } catch (err) {
+        console.log(err);
+    }     
 }
 
-export function deleteCustomer(id) {
-    axios.delete(`http://127.0.0.1:8080/deleteCustomer/${id}`)
-        .then(res => console.log(res.data))
-        .catch((err) => console.log(err))
+export const deleteCustomer = async (id) => {
+    try {
+        const response = await axios.delete(`http://127.0.0.1:8080/customer/deleteCustomer/${id}`);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
 }
 
-export function addNewCustomer(custData) {
-    axios.post(`http://127.0.0.1:8080/addNewCustomer`, custData)
+export const addNewCustomer = async (custData) => {
+    axios.post(`http://127.0.0.1:8080/customer/addNewCustomer`, custData)
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
 }
 
 // APPLICATIONS
 
-export function getAllApplications(setApplications) {
-    axios.get(`http://127.0.0.1:8080/findAllApplications`)
-        .then(res => {
-            const applications = res.data;
-            setApplications(applications)})
-        .catch((err) => console.log(err))
+export const getAllApplications = async (setApplications) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/application/findAllApplications`);
+        const applications = response.data;
+        setApplications(applications);
+    } catch (err) {
+        console.log(err);
+    }
 }
 
-export function deleteAdoptionApplication(id) {
-    axios.delete(`http://127.0.0.1:8080/deleteApplication/${id}`)
-        .then(res => console.log(res))
-        .catch((err) => console.log(err));
+export const deleteAdoptionApplication = async (id) => {
+    try {
+        const response = await axios.delete(`http://127.0.0.1:8080/application/deleteApplication/${id}`);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
 }

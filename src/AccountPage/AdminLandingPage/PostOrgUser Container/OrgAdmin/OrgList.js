@@ -1,6 +1,6 @@
 import OrgContainer from "./OrgContainter/OrgContainer";
 
-const OrgList = ( {organisations} ) => {
+const OrgList = ( {organisations, setOrganisations} ) => {
 
 
   return (
@@ -14,7 +14,8 @@ const OrgList = ( {organisations} ) => {
 
                     return <OrgContainer key={index} 
                                         name={org.name} 
-                                        id={org.id} />;
+                                        id={org.id}
+                                        setOrganisations={setOrganisations} />;
                     
                 })
             }

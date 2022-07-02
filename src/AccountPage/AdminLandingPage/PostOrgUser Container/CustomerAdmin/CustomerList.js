@@ -1,6 +1,6 @@
 import CustomerAdminContainer from "./CustomerContainer/CustomerAdminContainer";
 
-const CustomerAdminCont = ( {customers} ) => {
+const CustomerList = ( {customers, setCustomers} ) => {
 
 
   return (
@@ -16,7 +16,8 @@ const CustomerAdminCont = ( {customers} ) => {
                                                   lastName={cust.lastName}
                                                   location={cust.location}
                                                   prevAdopted={cust.previousAdoptions}
-                                                  id={cust.id} />
+                                                  id={cust.id}
+                                                  setCustomers={setCustomers} />
                 })
             }
 
@@ -28,4 +29,4 @@ const CustomerAdminCont = ( {customers} ) => {
   )
 }
 
-export default CustomerAdminCont
+export default CustomerList
