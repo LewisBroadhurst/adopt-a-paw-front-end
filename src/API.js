@@ -19,19 +19,29 @@ export function getAnimalByID(setAnimal, id){
     }).catch((err) => console.log(err))
 }
 
-export function getAllAnimals(setAnimals) {
-    axios.get(`http://127.0.0.1:8080/animal/getAllAnimals`)
-    .then(res => {
-        const animals = res.data;
+// ASYNC
+
+export const getAllAnimals = async (setAnimals) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/animal/getAllAnimals`);
+        const animals = response.data;
         setAnimals(animals);
-    }).catch((err) => console.log(err))
+    } catch (err) {
+        console.log(err)
+    } 
 }
 
-export function deleteAnimal(id) {
-    axios.delete(`http://127.0.0.1:8080/animal/deleteAnimal/${id}`)
-        .then( res => console.log(res.data))
-        .catch( err => console.log(err))
+
+export const deleteAnimal = async (id) => {
+    try {
+        const response = axios.delete(`http://127.0.0.1:8080/animal/deleteAnimal/${id}`);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err);
+    }
 }
+
+// ASYNC
 
 
 // ORGANISATIONS

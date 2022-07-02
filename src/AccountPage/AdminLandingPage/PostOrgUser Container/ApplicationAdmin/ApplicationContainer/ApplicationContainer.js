@@ -5,11 +5,11 @@ import "./ApplicationContainer.css";
 
 const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus, firstName, lastName} ) => {
 
-    const handleApplicationDelete = event => {
+    const handleApplicationDelete = async event => {
         event.preventDefault();
 
-        deleteAdoptionApplication(id);
-        getAllApplications(setApplications)
+        await deleteAdoptionApplication(id);
+        await getAllApplications(setApplications)
     }
 
     const appStatusConverter = (id) => {
