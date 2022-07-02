@@ -3,17 +3,11 @@ import { deleteAnimal, getAllAnimals } from "../../../../../API";
 
 const AnimalContainer = ( {name, age, location, id, organisationId, reserved, adopted, breed, animals, setAnimals} ) => {
 
-  const handleDeleteAnimal = (event) => {
+  const handleDeleteAnimal = async (event) => {
     event.preventDefault()
 
-    deleteAnimal(id);
-
-    // Get all animals post deletion
-
-
-    getAllAnimals(setAnimals)
-
-    // Update displayed animals on form
+    await deleteAnimal(id);
+    await getAllAnimals(setAnimals);
   }
 
   return (

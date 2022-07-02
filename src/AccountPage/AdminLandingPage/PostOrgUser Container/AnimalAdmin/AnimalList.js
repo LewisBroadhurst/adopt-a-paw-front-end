@@ -20,6 +20,7 @@ const AnimalList = ( {animals, setAnimals} ) => {
                                         adopted={animal.adopted}
                                         breed={animal.breed}
                                         location={animal.location}
+                                        animals={animals}
                                         setAnimals={setAnimals}/>
               })
             }
