@@ -1,6 +1,10 @@
 #Account-Main-Page {
     background-color: #DEDEE0;
-    padding: 2rem 0;
+    padding: 1rem 0;
+}
+
+.ap__background--color>h2 {
+    text-align: center;
 }
 
 .Animal-Image-Acc {
@@ -76,15 +80,14 @@
 
     #Account-Main-Page {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
-        padding: 5rem 0;
-
+        padding-bottom: 2rem;
     }
 
     .LogIn-Section {
-        background-color: rgb(246, 238, 226);
+        background-color: white;
         border-radius: 0.5rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin: 0;
@@ -112,13 +115,28 @@
 
 @media (min-width: 1400px) {
 
-    .LogIn-Section {
-        transform: scale(1.7);
-    }
-
     .Animal-Image-Acc>img {
         border-radius: 0.25rem;
-        height: 600px;
+        max-height: 400px;
+    }
+
+    #Account-Main-Page {
+        max-width: 70%;
+        margin: 0 auto;
+        background-color: #DEDEE0;
+    }
+
+    .ap__background--color {
+        background-color: #DEDEE0;
+    }
+
+    .LogIn-Section>h3 {
+        font-size: 2.4rem;
+    }
+
+    .ap__background--color>h2 {
+        font-size: 3rem;
+        padding: 2rem;
     }
 
 }
