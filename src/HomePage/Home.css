@@ -240,3 +240,31 @@ div {
     font-size: 1.8rem;
     text-align: left;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+
+    .homePage__aboutUs--container p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .homePage__aboutUs--container span,
+    .homePage__aboutUs--container h3 {
+        font-size: 2.4rem;
+    }
+
+    .homePage__logoContainer {
+        height: 150px;
+        width: 150px;
+    }
+
+    .homePage__aboutUs--container {
+        max-width: 90%;
+    }
+
+}
