@@ -39,6 +39,12 @@ export function getOrganisations(setOrganisations) {
         .catch((err) => console.log(err))
 }
 
+export function changeOrganisationName(id, orgData) {
+    axios.put(`http://127.0.0.1:8080/updateOrganisation/${id}`, orgData)
+        .then(res => console.log(res.data))
+        .catch((err) => console.log(err))
+}
+
 // CUSTOMERS
 
 export function getCustomers(setCustomers) {

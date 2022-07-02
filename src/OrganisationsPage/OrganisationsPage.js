@@ -1,5 +1,3 @@
-import OrganisationCardContainer from "./OrganisationCardContainer/OrganisationCardContainer.js";
-import OrganisationFilter from "./OrganisationFilter/OrganisationFilter.js";
 import "./OrganisationsPage.css";
 
 
@@ -8,16 +6,32 @@ const OrganisationsPage = () => {
     <>
         <main id="Organisation-Page-Main">
 
-            <h2>Organisations</h2>
+          <section className="orgPage__mainHeader--pos">
+            <span>Our Partner Organisations</span>
 
-            <OrganisationFilter />
+            <section className="orgPage__logoBar--pos">
+              <ul>
+                <li>img</li>
+                <li>img</li>
+                <li>img</li>
+                <li>img</li>
+                <li>img</li>
+              </ul>
+            </section>
+  
+          </section>
 
-            <OrganisationCardContainer />
+          <form className="orgPage__searchBar--pos">
+            <input type="text" placeholder="Enter Organisation Name"></input>
+            <input type="text" placeholder="Enter Keyword"></input>
+            <button>Search</button>
+          </form>
 
-            <OrganisationCardContainer />
+          <section className="orgPage__orgList--pos">
 
-            <OrganisationCardContainer />
+            
 
+          </section>
 
         </main>
     </>

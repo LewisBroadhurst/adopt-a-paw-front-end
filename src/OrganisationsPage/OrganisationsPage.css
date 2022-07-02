@@ -1,10 +1,26 @@
-#Organisation-Page-Main {
+#Organisation-Page-Main,
+.orgPage__mainHeader--pos {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-#Organisation-Page-Main>h2 {
+.orgPage__mainHeader--pos {
+    background-color: #BBDBB4;
     font-size: 3rem;
-    padding: 1rem 0;
+}
+
+.orgPage__logoBar--pos>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.orgPage__searchBar--pos {
+    background-color: black;
+}
+
+.orgPage__searchBar--pos>button {
+    background-color: white;
+    margin: 0.25rem 0.25rem;
 }
