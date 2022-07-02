@@ -56,6 +56,15 @@ export const getOrganisations = async (setOrganisations) => {
     }   
 }
 
+export const deleteOrgansation = async (id) => {
+    try {
+        const response = await axios.delete(`http://127.0.0.1:8080/organisation/deleteOrganisation/${id}`);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err);
+    }  
+}
+
 export function changeOrganisationName(id, orgData) {
     axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData)
         .then(res => console.log(res.data))

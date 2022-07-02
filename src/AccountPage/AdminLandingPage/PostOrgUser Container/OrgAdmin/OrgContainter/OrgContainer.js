@@ -1,10 +1,13 @@
 import "./OrgContainer.css";
+import { getOrganisations, deleteOrgansation } from "../../../../../API";
 
 
-const OrgContainer = ( {name, id} ) => {
+const OrgContainer = ( {name, id, setOrganisations} ) => {
 
-    const handleDeleteOrganisation = () => {
-        console.log(id);
+    const handleDeleteOrganisation = async (event) => {
+        event.preventDefault();
+        await deleteOrgansation(id);
+        await getOrganisations(setOrganisations)
     }
 
   return (
@@ -22,7 +25,7 @@ const OrgContainer = ( {name, id} ) => {
                     <input type="text"></input>
                 </div>
                 
-                <button type='button'>Reject and Delete</button>
+                <button type='button' onClick={handleDeleteOrganisation}>Reject and Delete</button>
             </div>
         </section>
     </>
