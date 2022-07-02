@@ -9,8 +9,10 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
         event.preventDefault();
 
         await deleteAdoptionApplication(id);
-        await getAllApplications(setApplications)
+
+        getAllApplications(setApplications)
     }
+
 
     const appStatusConverter = (id) => {
         if (applicationStatus === 1) {
