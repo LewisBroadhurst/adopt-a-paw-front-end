@@ -37,7 +37,7 @@ const AdminLandPage = () => {
 
             <ApplicationList className="al1__container--p" applications={applications} setApplications={setApplications}/>
 
-            <AnimalList className="al2__container--p" animals={animals}/>
+            <AnimalList className="al2__container--p" animals={animals} setAnimals={setAnimals}/>
           
             <UserAdminCont className="uac__container--p" customers={customers}/>
 

@@ -1,7 +1,7 @@
 import AnimalContainer from "./AnimalContainer/AnimalContainer";
 
 
-const AnimalList = ( {animals} ) => {
+const AnimalList = ( {animals, setAnimals} ) => {
 
   return (
     <>
@@ -19,7 +19,9 @@ const AnimalList = ( {animals} ) => {
                                         reserved={animal.reserved}
                                         adopted={animal.adopted}
                                         breed={animal.breed}
-                                        location={animal.location}/>
+                                        location={animal.location}
+                                        animals={animals}
+                                        setAnimals={setAnimals}/>
               })
             }
 

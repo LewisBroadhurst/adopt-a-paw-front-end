@@ -5,6 +5,12 @@
     border-radius: 0.25rem;
 }
 
+.AC__form--animalCont>button:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
 .AC__form--animalCont {
     display: flex;
     flex-direction: column;

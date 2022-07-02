@@ -20,11 +20,17 @@ export function getAnimalByID(setAnimal, id){
 }
 
 export function getAllAnimals(setAnimals) {
-    axios.get(`http://127.0.0.1:8080/animal/animal`)
+    axios.get(`http://127.0.0.1:8080/animal/getAllAnimals`)
     .then(res => {
         const animals = res.data;
         setAnimals(animals);
     }).catch((err) => console.log(err))
+}
+
+export function deleteAnimal(id) {
+    axios.delete(`http://127.0.0.1:8080/animal/deleteAnimal/${id}`)
+        .then( res => console.log(res.data))
+        .catch( err => console.log(err))
 }
 
 
