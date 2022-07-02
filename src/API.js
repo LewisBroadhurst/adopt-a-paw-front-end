@@ -34,7 +34,7 @@ export const getAllAnimals = async (setAnimals) => {
 
 export const deleteAnimal = async (id) => {
     try {
-        const response = axios.delete(`http://127.0.0.1:8080/animal/deleteAnimal/${id}`);
+        const response = await axios.delete(`http://127.0.0.1:8080/animal/deleteAnimal/${id}`);
         console.log(response.data);
     } catch (err) {
         console.log(err);
