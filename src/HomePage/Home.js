@@ -4,8 +4,9 @@ import React from 'react'
 import './Home.css';
 import DisplayCarousel from "./HomepageCarousel/DisplayCarousel";
 import wwf_logo from "./images/wwf_logo.jpeg";
-import rspca_logo from "./images/rspca_logo.png";
+// import rspca_logo from "./images/rspca_logo.png";
 import battersea_gif from "./images/battersea.gif";
+import paw_prints from "./images/clipart385352.png";
 
 function Home() {
   return (
@@ -36,43 +37,47 @@ function Home() {
           </div>
         </section>
 
-        <section className='homePage__ourMission--container'>
+        <section className='homePage__aboutUs--container'>
 
-          <span>Our Mission</span>
+          <section className='homePage__ourMission--container'>
+            <span>Our Mission</span>
 
-          <p>At Adopt A Paw, we believe all animals have the right to live in a happy home, with a loving family.</p>
-          <p>This is why we work with reputable shelters to rehome the wonderful animals they have to offer.</p>
-          <p>Our goal is to match these beautiful animals with caring owners (you!), so they can live a life of joy <FontAwesomeIcon icon={faPaw} /></p>
-
-
-        </section>
-
-        <section className='homePage__ourPartners--container'>
-
-          <span>Our Partners</span>
-
-          <p>We only work with the best in the industry. The RSPCA, WWF, Battersea Cats & Dogs Shelter, and more, are all close partners who trust us with their rehoming needs.</p>
-
-          <section className='homePage__parentLogoCont'>
-            <div className='homePage__logoContainer'>
-              <img src={wwf_logo} alt='' />
-            </div>
-
-            <div className='homePage__logoContainer'>
-              <img src={battersea_gif} alt='' />
-            </div>
-
-            {/* <div className='homePage__logoContainer'>
-              <img src={rspca_logo} alt='' />
-            </div> */}
+            <p>At Adopt A Paw, we believe all animals have the right to live in a happy home, with a loving family. This is why we work with reputable shelters to rehome the wonderful animals they have to offer. Our goal is to match these beautiful animals with caring owners (you!), so they can live a life of joy <FontAwesomeIcon icon={faPaw} /></p>
           </section>
+
+          <img className='joining_pawPrints' src={paw_prints} alt='' />
+
+          <section className='homePage__ourPartners--container'>
+
+            <span>Our Partners</span>
+
+            <p>We only work with the best in the industry. The RSPCA, WWF, Battersea Cats & Dogs Shelter, and more, are all close partners who trust us with their rehoming needs.</p>
+
+            <section className='homePage__parentLogoCont'>
+              <div className='homePage__logoContainer'>
+                <img src={wwf_logo} alt='' />
+              </div>
+
+              <div className='homePage__logoContainer'>
+                <img src={battersea_gif} alt='' />
+              </div>
+            </section>
+
+          </section>
+
         
+
+          <img className='joining_pawPrints paw2' src={paw_prints} alt='' />
+
+
+          <div className='display_carousel'>
+            <h3>Success Stories</h3>
+
+            <p>Click on the carousel pictures below to learn more about our many success stories!</p>
+            <DisplayCarousel />
+          </div>
+
         </section>
-
-
-        <div className='display_carousel'>
-        <DisplayCarousel />
-        </div>
     </>
   )
 }
