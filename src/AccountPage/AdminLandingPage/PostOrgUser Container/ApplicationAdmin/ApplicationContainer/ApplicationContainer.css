@@ -42,3 +42,16 @@
     color: white;
     cursor: pointer;
 }
+
+.AL__actioned {
+    padding: 1rem;
+}
+
+.AL__actioned>p {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.AL__actioned>img {
+    border-radius: 0.25rem;
+}
