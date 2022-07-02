@@ -26,14 +26,14 @@
     background-clip: text;
 }
 
-.display_carousel{
+.display_carousel {
     display: flex;
     justify-content: center;
     text-align: center;
     padding-bottom: 50px;
 }
 
-.hero{
+.hero {
     position: relative;
     display: flex;
     align-items: center;
@@ -47,15 +47,15 @@
     padding-left: 0px;
 }
 
-section{
+section {
     display: block;
 }
 
-div{
+div {
     display: block;
 }
 
-.hero-shape{
+.hero-shape {
     max-height: 550px;
     position: absolute;
     top: 0;
@@ -68,7 +68,7 @@ div{
     margin: 0;
 }
 
-.hero-video{
+.hero-video {
     position: relative;
     object-fit: fill;
     margin: 0;
@@ -81,7 +81,7 @@ div{
     width: 100%;
 }
 
-.hero__content-container{
+.hero__content-container {
     position: relative;
     z-index: 2;
     display: flex;
@@ -91,7 +91,7 @@ div{
     padding-top: 250px;
 }
 
-.hero-content{
+.hero-content {
     padding-top: 30px;
     padding-right: 32px;
     padding-left: 32px;
@@ -104,7 +104,7 @@ div{
     text-align: center;
 }
 
-.hero-title{
+.hero-title {
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
@@ -114,7 +114,7 @@ div{
     font-weight: 700;
 }
 
-.hero-subtitle{
+.hero-subtitle {
     padding-bottom: 30px;
     font-size: 1.3rem;
     line-height: 1.7rem;
@@ -123,7 +123,7 @@ div{
     font-weight: 500;
 }
 
-.hero-adopt-button{
+.hero-adopt-button {
     background-color: #fff;
     border: 3px solid #fff;
     color: #007d00;
@@ -143,4 +143,51 @@ div{
 .hero-adopt-button:hover {
     background-color: #003E1F;
     color: #fff;
+}
+
+/* OUR MISSION */
+
+.homePage__ourMission--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    max-width: 40rem;
+    margin-bottom: 2.5rem;
+}
+
+.homePage__ourMission--container>span {
+    font-size: 3rem;
+}
+
+.homePage__ourMission--container>p {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+/* OUR PARTNERS */
+
+.homePage__logoContainer {
+    height: 200px;
+    width: 200px;
+    margin: 0 5rem;
+}
+
+.homePage__logoContainer>img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    height: auto;
+    width: auto;
+    border: 3px solid #008241;
+    object-fit: cover;
+}
+
+.homePage__parentLogoCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
