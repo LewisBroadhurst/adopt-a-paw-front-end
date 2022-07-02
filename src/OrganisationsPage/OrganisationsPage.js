@@ -5,6 +5,8 @@ import battersea_1 from "./images/battersea_1.jpeg";
 import wwf_logo from "./images/wwf_logo1.jpg";
 import battersea_gif from "./images/battersea_gif_crop.gif";
 import dogs_trust_logo from "./images/dogs_trust.webp";
+import blue_cross_logo from "./images/blue_cross_logo.png";
+import woodgreen_logo from "./images/woodgreen_logo.png";
 
 
 const OrganisationsPage = () => {
@@ -20,8 +22,8 @@ const OrganisationsPage = () => {
                 <li><img src={wwf_logo} alt='' /></li>
                 <li><img src={battersea_gif} alt='' /></li>
                 <li><img src={dogs_trust_logo} alt='' /></li>
-                <li></li>
-                <li></li>
+                <li><img src={blue_cross_logo} alt='' /></li>
+                <li> <img src={woodgreen_logo} alt='' /></li>
               </ul>
             </section>
   

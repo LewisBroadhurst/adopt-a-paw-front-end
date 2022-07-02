@@ -6,9 +6,16 @@
 }
 
 .orgPage__mainHeader--pos {
-    background-color: #BBDBB4;
-    /* color: white; */
-    font-size: 3rem;
+    /* background-color: #8B2635; */
+    background-color: #003E1F;
+    /* background-color: #0E2A62; */
+    color: white;
+    font-size: 5rem;
+    /* padding-bottom: 1rem; */
+}
+
+.orgPage__mainHeader--pos>span {
+    padding: 2rem 0;
 }
 
 .orgPage__logoBar--pos>ul {
@@ -49,6 +56,12 @@
 
 /* LOGO HEADER */
 
+.orgPage__logoBar--pos {
+    /* background-color: black; */
+    background-color: #0E2A62;
+    padding: 1rem 0;
+}
+
 .orgPage__logoBar--pos>ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -56,6 +69,8 @@
 
     max-width: 80%;
     margin: 0 auto;
+
+    padding: 0 1rem;
 }
 
 .OP__imgCont--pos>img {
@@ -63,18 +78,8 @@
 }
 
 .orgPage__logoBar--pos>ul>li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
-
     height: 200px;
     width: 200px;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .orgPage__logoBar--pos>ul>li>img {
@@ -83,8 +88,6 @@
     width: 200px;
     height: auto;
     width: auto;
-    border: 1px solid #008241;
+    border: 6px solid #4267B2;
     object-fit: cover;
-    padding-bottom: 0;
-    margin-bottom: 0;
 }
