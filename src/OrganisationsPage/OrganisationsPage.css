@@ -47,6 +47,44 @@
     justify-content: center;
 }
 
+/* LOGO HEADER */
+
+.orgPage__logoBar--pos>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 .OP__imgCont--pos>img {
     border-radius: 0.25rem;
+}
+
+.orgPage__logoBar--pos>ul>li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    height: 200px;
+    width: 200px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.orgPage__logoBar--pos>ul>li>img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    height: auto;
+    width: auto;
+    border: 1px solid #008241;
+    object-fit: cover;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }

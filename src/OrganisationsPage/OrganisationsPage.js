@@ -1,8 +1,10 @@
 import "./OrganisationsPage.css";
-import OrganisationCardContainer from "./OrganisationCardContainer/OrganisationCardContainer.js";
 import rspca_1 from "./images/rspca_1.jpeg";
 import dogs_trust1 from "./images/dogs_trust1.jpeg";
 import battersea_1 from "./images/battersea_1.jpeg";
+import wwf_logo from "./images/wwf_logo1.jpg";
+import battersea_gif from "./images/battersea_gif_crop.gif";
+import dogs_trust_logo from "./images/dogs_trust.webp";
 
 
 const OrganisationsPage = () => {
@@ -14,12 +16,12 @@ const OrganisationsPage = () => {
             <span>Our Partner Organisations</span>
 
             <section className="orgPage__logoBar--pos">
-              <ul>
-                <li>img</li>
-                <li>img</li>
-                <li>img</li>
-                <li>img</li>
-                <li>img</li>
+              <ul className="op_lb_pos">
+                <li><img src={wwf_logo} alt='' /></li>
+                <li><img src={battersea_gif} alt='' /></li>
+                <li><img src={dogs_trust_logo} alt='' /></li>
+                <li></li>
+                <li></li>
               </ul>
             </section>
   
