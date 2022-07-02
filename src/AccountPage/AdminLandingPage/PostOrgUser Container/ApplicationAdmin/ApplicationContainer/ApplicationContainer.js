@@ -8,9 +8,18 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
     const handleApplicationDelete = async event => {
         event.preventDefault();
 
-        await deleteAdoptionApplication(id);
+        const animalId = await getId();
+
+        deleteAdoptionApplication(animalId);
 
         getAllApplications(setApplications)
+    }
+
+    const getId = () => {
+        return new Promise ( (resolve) => {
+            const outputId = id;
+            resolve(outputId);
+        })
     }
 
 

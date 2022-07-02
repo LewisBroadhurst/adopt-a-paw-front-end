@@ -19,12 +19,16 @@ const AdminLandPage = () => {
   const [applications, setApplications] = useState([])
   const [animals, setAnimals] = useState([]);
 
+  
+
   useEffect(() => {
     getOrganisations(setOrganisations);
     getAllApplications(setApplications);
     getCustomers(setCustomers);
-    getAllAnimals(setAnimals);
+    getAllAnimals(setAnimals)
   }, []);
+
+  
 
 
   return (
