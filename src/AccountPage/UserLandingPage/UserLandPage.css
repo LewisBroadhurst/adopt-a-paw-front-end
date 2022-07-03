@@ -1,4 +1,4 @@
-/* DESKTOP */
+/* DESKTOP POSITIONING */
 
 #ulp__mainContainer {
     display: flex;
@@ -43,11 +43,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center
 }
 
 .ulp__leftSideBar {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     position: sticky;
     top: 10rem;
     left: 0;
@@ -57,28 +60,94 @@
 }
 
 .ulp__center {
-    flex: 2;
-}
-
-.ulp__center>ul>li {
-    padding: 10rem 0;
+    flex: 3;
+    margin: 0 2rem;
 }
 
 .ulp__rightSideBar {
-    display: flex;
     position: sticky;
     top: 10rem;
     left: 0;
     right: 0;
     flex: 1;
     overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.ulp__form {
+/* ANIMAL LIST */
+
+.ulp__center>h2 {
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+}
+
+.ulp__center>ul>li {
+    background-color: #EDEDED;
+    background-color: #003E1F;
+    color: white;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+/* ANIMAL CONTAINERS */
+
+.ulp__animalCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.ulp__animalCont__text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    max-width: 50%;
 }
 
-/* ANIMAL LIST */
+.ulp__animalCont__text>h3 {
+    font-size: 2.6rem;
+}
+
+.ulp__animalCont__text>h3>span {
+    color: #EDEDED;
+}
+
+.ulp__animalCont__text>span {
+    font-size: 1.6rem;
+}
+
+.ulp__animalCont__img>img {
+    border-radius: 0.25rem;
+}
+
+/* ULP FORMS */
+
+.ulp__form__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulp__form,
+.ulp__form>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.ulp__form>form>button {
+    align-self: center;
+}
