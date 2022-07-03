@@ -1,7 +1,8 @@
 /* POSITIONING */
 
 .aap__header {
-    background-color: antiquewhite;
+    background-color: #4267B2;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -64,6 +65,7 @@
 
 .aap__header>h2 {
     font-size: 3rem;
+    padding: 1rem 0;
 }
 
 .aap__searchBar {
@@ -102,14 +104,26 @@
 }
 
 .aap__applicationList>.aap__appContainer {
-    background-color: bisque;
+    background-color: #EDEDED;
+    color: black;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    border-radius: 0.25rem;
+    padding: 1rem 0;
 }
 
 /* FORMS */
+
+.aap__forms {
+    position: sticky;
+    top: 10rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 .aap__forms,
 .aap__form,
@@ -124,5 +138,41 @@
 }
 
 .aap__form>form>button {
+    background-color: black;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
     align-self: center;
+    border: 1px solid black;
+    transition: all 0.75s 0s;
+}
+
+.aap__form>form>button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.ulp__form__header {
+    padding: 0.5rem;
+}
+
+.ulp__form__header>h3 {
+    font-size: 1.4rem;
+}
+
+.aap__form>form {
+    padding: 0 0.5rem;
+}
+
+.aap__form>form>select,
+.aap__form>form>input {
+    font-size: 1.4rem;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.aap__form {
+    margin-bottom: 2rem;
 }

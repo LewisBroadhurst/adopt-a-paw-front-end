@@ -61,14 +61,24 @@ const AApplicationsPage = () => {
             <section className="aap__forms">
                 <section className="aap__form">
                     <div className="ulp__form__header">
-                        <h3>Update Application Status</h3>
+                        <h3>Update Application</h3>
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <button type="button">Press me!</button>
+                        <select>
+                            {
+                                applications.map( (app, index) => {
+                                    return <option key={index}>{app.id}</option>
+                                })
+                            }
+                        </select>
+                        
+                        <select>
+                            <option>Rejected</option>
+                            <option>Pending</option>
+                            <option>Approved</option>
+                        </select>
+                        <button type="button">Update Application</button>
                     </form>
                 </section>
 
@@ -78,10 +88,15 @@ const AApplicationsPage = () => {
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <button type="button">Press me!</button>
+                         <select>
+                            {
+                                applications.map( (app, index) => {
+                                    return <option key={index}>{app.id}</option>
+                                })
+                            }
+                        </select>
+                        <input type="text" placeholder="Reason" required></input>
+                        <button type="button">Delete Application</button>
                     </form>
                 </section>
             </section>
