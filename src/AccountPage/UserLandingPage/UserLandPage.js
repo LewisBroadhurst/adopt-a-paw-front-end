@@ -40,7 +40,7 @@ const UserLandPage = () => {
 
                 <section className="ulp__center">
                     <h2>Available Animals!</h2>
-                    <ul>
+                    <ul className="ulp__animalList">
                     {
                         animals.map( (animal, index) => {
                             return <li key={index}>{animal.name}, {animal.location}, {animal.breed}, {animal.sex}, {animal.dateOfBirth}, {animal.organisation.name}
