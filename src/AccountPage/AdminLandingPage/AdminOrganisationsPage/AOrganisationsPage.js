@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
 import "./ACustomersPage.css";
-import memeAppCrop from "./Images/memeAppCrop.png";
 
 
 
@@ -95,7 +94,7 @@ const AOrganisationsPage = () => {
                                         <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
                                     </section>
                                 </section>
-                }) : <><p>No applications match your search filters!</p> <img src={memeAppCrop} className="aap__noAppSearch" alt="" /></>}
+                }) : <><p>No applications match your search filters!</p> <img className="aap__noAppSearch" alt="" /></>}
 
             </section>
 

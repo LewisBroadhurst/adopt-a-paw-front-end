@@ -1,72 +1,61 @@
-import { useEffect, useState } from "react";
-import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
 import "./AAnimalsPage.css";
-import memeAppCrop from "./Images/memeAppCrop.png";
+import { getAllAnimals, getOrganisations } from "../../../API";
+import { useEffect, useState } from "react";
 
 
 
 const AAnimalsPage = () => {
 
-    const [applications, setApplications] = useState([]);
-    const [appicationDeleteId, setApplicationDeleteId] = useState(-1);
-    const [applicationUpdateId, setApplicationUpdateId] = useState(-1);
-    const [applicationStatus, setApplicationStatus] = useState('');
-    const [adopteeNameSearch, setAdopteeNameSearch] = useState('');
-    const [animalLocationSearch, setAnimalLocationSearch] = useState('');
-    const [applicationStatusSearch, setApplicationStatusSearch] = useState('');
+    const [animals, setAnimals] = useState([]);
+    const [organisations, setOrganisations] = useState([]);
 
     useEffect( () => {
-        getAllApplications(setApplications)
+        getAllAnimals(setAnimals)
+        getOrganisations(setOrganisations)
+    }, []);
 
-        let refreshApplicationsAfterSearch = async () => {
-            setApplications(applications)
-        }
+    // const handleApplicationDelete = async (event) => {
+    //     event.preventDefault()
 
-        refreshApplicationsAfterSearch()
-    }, [applications]);
+    //     if (appicationDeleteId === -1) {
+    //         return alert("Please select an ID");
+    //     }
 
-    const handleApplicationDelete = async (event) => {
-        event.preventDefault()
+    //     await deleteAdoptionApplication(appicationDeleteId)
 
-        if (appicationDeleteId === -1) {
-            return alert("Please select an ID");
-        }
+    //     await getAllApplications(setApplications)
 
-        await deleteAdoptionApplication(appicationDeleteId)
+    //     document.querySelector("select").value = "default";
+    //     document.querySelector("#aap_dr").innerText = "blank";
+    // }
 
-        await getAllApplications(setApplications)
+    // const handleApplicationUpdate = async (event) => {
+    //     event.preventDefault();
 
-        document.querySelector("select").value = "default";
-        document.querySelector("#aap_dr").innerText = "blank";
-    }
+    //     await updateAdoptionApplication(applicationUpdateId, applicationStatus);
 
-    const handleApplicationUpdate = async (event) => {
-        event.preventDefault();
+    //     await getAllApplications(setApplications);
+    // }
 
-        await updateAdoptionApplication(applicationUpdateId, applicationStatus);
+    // const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
 
-        await getAllApplications(setApplications);
-    }
+    // const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
 
-    const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
-
-    const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
-
-    const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
+    // const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
 
   return (
     <>  
         <section className="aap__headContainer">
             <section className="aap__header">
-                <h2>Applications</h2>
+                <h2>Animals</h2>
             </section>
 
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Adoptee Name" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" placeholder="Animal Location" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" placeholder="Application Status" onChange={(e) => (e.target.value)}></input>
             </form>
         </section>
 
@@ -75,53 +64,85 @@ const AAnimalsPage = () => {
             <section className="aap__applicationList">
 
                 {
-                   
-                    getFilteredApplicationsByStatus().length > 0 ? getFilteredApplicationsByStatus().map( (app, index) => {
-                        return  <section key={index} className="aap__appContainer">
-                                    <section className="aap__customerInfo">
-                                        <h3>Customer Info.</h3>
-                                        <span>Application number: {app.id}</span>
-                                        <span>{app.customer.firstName} {app.customer.lastName}</span>
-                                        <span>{app.customer.location}</span>
-                                        <span>Previously adopted? {app.customer.previousAdoptions.toString()}</span>
-                                        <span>App. Status: {app.customer.application[0].applicationStatus}</span>
-                                    </section>
-                    
-                                    <section className="aap__animalInfo">
-                                        <h3>Animal Info.</h3>
-                                        <span>Name: {app.customer.application[0].animal.name}</span>
-                                        <span>DOB: {app.customer.application[0].animal.dateOfBirth}</span>
-                                        <span>Location: {app.customer.application[0].animal.location}</span>
-                                        <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
-                                    </section>
-                                </section>
-                }) : <><p>No applications match your search filters!</p> <img src={memeAppCrop} className="aap__noAppSearch" alt="" /></>}
+                    animals.map( (animal, index) => {
+                        return <section key={index} className="aap__appContainer">
+                        <section className="aap__customerInfo">
+                            <h3>Animal Info.</h3>
+                            <span>Reference number: {animal.id}</span>
+                            <span>Name: {animal.name}</span>
+                            <span>DOB: {animal.dateOfBirth}</span>
+                            <span>Location: {animal.location}</span>
+                            <span>Organisation: {animal.organisation.name}</span>
+                            <span>Adoption status: {animal.availableStatus}</span>
+                        </section>
+        
+                        <section className="aap__animalInfo">
+                            {/* <h3>Animal Info.</h3>
+                            <span>Name: {app.customer.application[0].animal.name}</span>
+                            <span>DOB: {app.customer.application[0].animal.dateOfBirth}</span>
+                            <span>Location: {app.customer.application[0].animal.location}</span>
+                            <span>Organisation: {app.customer.application[0].animal.organisation.name}</span> */}
+                        </section>
+                    </section>
+                    })
+                }
 
             </section>
 
             <section className="aap__forms">
+
                 <section className="aap__form">
                     <div className="ulp__form__header">
-                        <h3>Update Application</h3>
+                        <h3>Add Animal</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
-                        <option value="default" disabled hidden>Application ID</option>
+                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <option value="default" disabled hidden>Animal Reference No.</option>
                             {
-                                applications.map( (app, index) => {
+                                animals.map( (app, index) => {
                                     return <option key={index}>{app.id}</option>
                                 })
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
+                        <input type="text" placeholder="Name" required></input>
+                        <input type="text" placeholder="Date Of Birth" required></input>
+                        <input type="text" placeholder="Sex (Male or Female)" required></input>
+                        <input type="text" placeholder="Location" required></input>
+                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <option value="default" disabled hidden>Organisation</option>
+                            {
+                                organisations.map( (org, index) => {
+                                    return <option key={index}>{org.name}, ID: {org.id}</option>
+                                })
+                            }
+                        </select>
+                        <button type="button" onClick="">Add Animal</button>
+                    </form>
+                </section>
+
+                <section className="aap__form">
+                    <div className="ulp__form__header">
+                        <h3>Update Animal</h3>
+                    </div>
+                    <form>
+                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <option value="default" disabled hidden>Animal Reference No.</option>
+                            {
+                                animals.map( (app, index) => {
+                                    return <option key={index}>{app.id}</option>
+                                })
+                            }
+                        </select>
+                        
+                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
                             <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>
                             <option>Approved</option>
                         </select>
                         <input type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick={handleApplicationUpdate}>Update Application</button>
+                        <button type="button" onClick="">Update Animal</button>
                     </form>
                 </section>
 
@@ -130,16 +151,16 @@ const AAnimalsPage = () => {
                         <h3>Delete Application</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
-                            <option value="default" disabled hidden>Application ID</option>
+                         <select defaultValue="default" onChange={(e) => (e.target.value)}>
+                            <option value="default" disabled hidden>Animal Reference No.</option>
                             {
-                                applications.map( (app, index) => {
+                                animals.map( (app, index) => {
                                     return <option key={index}>{app.id}</option>
                                 })
                             }
                         </select>
                         <input id="aap_dr" type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick={handleApplicationDelete}>Delete Application</button>
+                        <button type="button" onClick="{handleApplicationDelete}">Delete Animal</button>
                     </form>
                 </section>
             </section>

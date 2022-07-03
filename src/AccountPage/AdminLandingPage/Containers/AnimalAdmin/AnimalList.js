@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AnimalContainer from "./AnimalContainer/AnimalContainer";
 
 
@@ -25,7 +26,7 @@ const AnimalList = ( {animals, setAnimals} ) => {
               })
             }
 
-            <span className="LAP-Admin">All Animals</span>
+            <span className="LAP-Admin"><Link to="/account/admin/animals">All Animals</Link></span>
 
         </section>
     </>
