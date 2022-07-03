@@ -12,10 +12,17 @@ const AApplicationsPage = () => {
     const [appicationDeleteId, setApplicationDeleteId] = useState(-1);
     const [applicationUpdateId, setApplicationUpdateId] = useState(-1);
     const [applicationStatus, setApplicationStatus] = useState('');
+    const [adopteeNameSearch, setAdopteeNameSearch] = useState('');
 
     useEffect( () => {
         getAllApplications(setApplications)
-    }, []);
+
+        let refreshApplicationsAfterSearch = async () => {
+            setApplications(applications)
+        }
+
+        refreshApplicationsAfterSearch()
+    }, [applications]);
 
     const handleApplicationDelete = async (event) => {
         event.preventDefault()
@@ -40,6 +47,8 @@ const AApplicationsPage = () => {
         await getAllApplications(setApplications);
     }
 
+    const getFilteredApplications = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
+
   return (
     <>  
         <section className="aap__headContainer">
@@ -50,7 +59,7 @@ const AApplicationsPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Animal Name"></input>
+                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
                     <input type="text" placeholder="Animal Location"></input>
                     <input type="text" placeholder="Application Status"></input>
             </form>
@@ -61,7 +70,8 @@ const AApplicationsPage = () => {
             <section className="aap__applicationList">
 
                 {
-                    applications.map( (app, index) => {
+                   
+                    getFilteredApplications().map( (app, index) => {
                         return  <section key={index} className="aap__appContainer">
                                     <section className="aap__customerInfo">
                                         <h3>Customer Info.</h3>
@@ -80,8 +90,7 @@ const AApplicationsPage = () => {
                                         <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
                                     </section>
                                 </section>
-                    })
-                }
+                })}
 
             </section>
 
