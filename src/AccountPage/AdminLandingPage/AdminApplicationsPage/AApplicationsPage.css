@@ -1,12 +1,5 @@
 /* POSITIONING */
 
-.aap__pageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .aap__header {
     background-color: antiquewhite;
     display: flex;
@@ -21,7 +14,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    max-width: 80%;
+    max-width: 60%;
     margin: 2rem auto;
 
 }
@@ -29,7 +22,9 @@
 .aap__applicationList {
     flex: 3;
     padding-right: 2rem;
-    border-right: 2px solid black
+    /* border-right: 3px solid black;
+    border-image: linear-gradient(90deg, #EDEDED, black, #EDEDED) 1;
+    */
 }
 
 .aap__forms {
@@ -57,6 +52,42 @@
     align-items: flex-start;
 }
 
+.aap__headContainer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+/* HEADER */
+
+.aap__header>h2 {
+    font-size: 3rem;
+}
+
+.aap__searchBar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem 2rem;
+}
+
+.aap__searchBar>span {
+    font-size: 1.4rem;
+    padding-right: 1rem;
+}
+
+.aap__searchBar>input {
+    font-size: 1.2rem;
+    max-width: 200px;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
 /* APPLICATION CONTAINERS */
 
 .aap__customerInfo>h3,
@@ -70,13 +101,28 @@
     font-size: 1.4rem;
 }
 
-.aap__appContainer {
+.aap__applicationList>.aap__appContainer {
     background-color: bisque;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
+/* FORMS */
+
 .aap__forms,
-.aap__form {
+.aap__form,
+.aap__form>form {
     margin-top: 0;
     padding-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.aap__form>form>button {
+    align-self: center;
 }
