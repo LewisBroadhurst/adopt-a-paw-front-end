@@ -42,7 +42,7 @@ const UserLandPage = () => {
                             applications.map( (app, index) => {
                                 return <li key={index}>{app.id} {app.customer.firstName} {app.customer.lastName}
                                                     {app.customer.application.map((application, index) => {
-                                                        return <li key={index}>{application.animal.name}, {application.animal.location}</li>
+                                                        return <li key={index}>{application.animal.name}, {application.animal.location}, {application.animal.id}</li>
                                                     })}</li>
                             })
                         }
