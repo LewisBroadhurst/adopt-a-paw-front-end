@@ -1,5 +1,10 @@
 /* POSITIONING */
 
+/* .aap__headContainer,
+.aap__mainContent {
+    font-family: 'Roboto', sans-serif;
+} */
+
 .aap__header {
     background-color: #4267B2;
     color: white;
@@ -69,7 +74,7 @@
 }
 
 .aap__searchBar {
-    background-color: black;
+    background-color: #0E2A62;
     color: white;
     display: flex;
     justify-content: center;
@@ -94,8 +99,9 @@
 
 .aap__customerInfo>h3,
 .aap__animalInfo>h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-decoration: underline;
+    padding-bottom: 0.25rem;
 }
 
 .aap__customerInfo>span,
@@ -113,6 +119,7 @@
 
     border-radius: 0.25rem;
     padding: 1rem 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 /* FORMS */
@@ -123,6 +130,11 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    background-color: #EDEDED;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .aap__forms,
@@ -138,19 +150,19 @@
 }
 
 .aap__form>form>button {
-    background-color: black;
+    background-color: #4267B2;
     color: white;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     align-self: center;
-    border: 1px solid black;
+    border: 3px solid #4267B2;
     transition: all 0.75s 0s;
 }
 
 .aap__form>form>button:hover {
     background-color: white;
-    color: black;
+    color: #4267B2;
     cursor: pointer;
 }
 
@@ -175,4 +187,8 @@
 
 .aap__form {
     margin-bottom: 2rem;
+}
+
+.aap__form input {
+    color: #c5c1c1;
 }

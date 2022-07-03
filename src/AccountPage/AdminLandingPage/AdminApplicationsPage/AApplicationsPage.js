@@ -65,7 +65,8 @@ const AApplicationsPage = () => {
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                        <select>
+                        <select defaultValue="default">
+                        <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
                                     return <option key={index}>{app.id}</option>
@@ -73,11 +74,13 @@ const AApplicationsPage = () => {
                             }
                         </select>
                         
-                        <select>
+                        <select defaultValue="default">
+                            <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>
                             <option>Approved</option>
                         </select>
+                        <input type="text" placeholder="Reason" required></input>
                         <button type="button">Update Application</button>
                     </form>
                 </section>
@@ -88,7 +91,8 @@ const AApplicationsPage = () => {
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                         <select>
+                         <select defaultValue="default">
+                            <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
                                     return <option key={index}>{app.id}</option>
