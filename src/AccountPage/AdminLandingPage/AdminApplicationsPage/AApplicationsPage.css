@@ -1,0 +1,82 @@
+/* POSITIONING */
+
+.aap__pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aap__header {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.aap__mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    max-width: 80%;
+    margin: 2rem auto;
+
+}
+
+.aap__applicationList {
+    flex: 3;
+    padding-right: 2rem;
+    border-right: 2px solid black
+}
+
+.aap__forms {
+    flex: 1;
+    padding-top: 1rem;
+}
+
+.aap__applicationList,
+.aap__forms {
+    margin: 0 1rem;
+}
+
+.aap__applicationList>section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.aap__customerInfo,
+.aap__animalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* APPLICATION CONTAINERS */
+
+.aap__customerInfo>h3,
+.aap__animalInfo>h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.aap__customerInfo>span,
+.aap__animalInfo>span {
+    font-size: 1.4rem;
+}
+
+.aap__appContainer {
+    background-color: bisque;
+    margin-bottom: 1rem;
+}
+
+.aap__forms,
+.aap__form {
+    margin-top: 0;
+    padding-top: 0;
+}
