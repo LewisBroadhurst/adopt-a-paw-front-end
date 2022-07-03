@@ -10,13 +10,31 @@
     margin: 0 auto;
 }
 
+.ulp__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: blue;
+    z-index: 100;
+
+    margin-bottom: 2rem;
+}
+
+.ulp__header>h2 {
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
 .ulp__mainContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-
-
 }
 
 .ulp__leftSideBar,
@@ -29,13 +47,36 @@
 }
 
 .ulp__leftSideBar {
+    display: flex;
+    position: sticky;
+    top: 10rem;
+    left: 0;
+    right: 0;
     flex: 1;
+    overflow-y: hidden;
 }
 
 .ulp__center {
     flex: 2;
 }
 
+.ulp__center>ul>li {
+    padding: 10rem 0;
+}
+
 .ulp__rightSideBar {
+    display: flex;
+    position: sticky;
+    top: 10rem;
+    left: 0;
+    right: 0;
     flex: 1;
+    overflow-y: hidden;
+}
+
+.ulp__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
