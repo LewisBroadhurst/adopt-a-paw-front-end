@@ -1,7 +1,7 @@
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { getAllApplications, deleteAdoptionApplication } from "../../../API";
+import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
 import "./AApplicationsPage.css";
 
 
@@ -10,7 +10,7 @@ const AApplicationsPage = () => {
 
     const [applications, setApplications] = useState([]);
     const [appicationDeleteId, setApplicationDeleteId] = useState(-1);
-    const [appicationUpdateId, setApplicationUpdateId] = useState(-1);
+    const [applicationUpdateId, setApplicationUpdateId] = useState(-1);
     const [applicationStatus, setApplicationStatus] = useState('');
 
     useEffect( () => {
@@ -35,7 +35,9 @@ const AApplicationsPage = () => {
     const handleApplicationUpdate = async (event) => {
         event.preventDefault();
 
-        
+        await updateAdoptionApplication(applicationUpdateId, applicationStatus);
+
+        await getAllApplications(setApplications);
     }
 
   return (
@@ -67,6 +69,7 @@ const AApplicationsPage = () => {
                                         <span>{app.customer.firstName} {app.customer.lastName}</span>
                                         <span>{app.customer.location}</span>
                                         <span>Previously adopted? {app.customer.previousAdoptions.toString()}</span>
+                                        <span>App. Status: {app.customer.application[0].applicationStatus}</span>
                                     </section>
                     
                                     <section className="aap__animalInfo">
@@ -98,7 +101,7 @@ const AApplicationsPage = () => {
                             }
                         </select>
                         
-                        <select defaultValue="default">
+                        <select defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
                             <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>

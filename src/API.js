@@ -118,3 +118,12 @@ export const deleteAdoptionApplication = async (id) => {
         console.log(err)
     }
 }
+
+export const updateAdoptionApplication = async (id, application_status) => {
+    try {
+        const response = await axios.put(`http://127.0.0.1:8080/application/updateApplicationStatus/${id}`, null, {params: {application_status}});
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
+}
