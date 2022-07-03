@@ -2,7 +2,7 @@ import "./OrgContainer.css";
 import { getOrganisations, deleteOrgansation } from "../../../../../API";
 
 
-const OrgContainer = ( {name, id, setOrganisations} ) => {
+const OrgContainer = ( {name, id, setOrganisations, slogan} ) => {
 
     const handleDeleteOrganisation = async (event) => {
         event.preventDefault();
@@ -14,6 +14,8 @@ const OrgContainer = ( {name, id, setOrganisations} ) => {
     <>
         <section className='Post-Admin-Cont'>
             <span>{name}</span>
+
+            <p>{slogan}</p>
 
             <p>A world where all animals are respected and treated with kindness and compassion.</p>
 

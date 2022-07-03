@@ -1,0 +1,41 @@
+/* DESKTOP */
+
+#ulp__mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.ulp__mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+}
+
+.ulp__leftSideBar,
+.ulp__center,
+.ulp__rightSideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ulp__leftSideBar {
+    flex: 1;
+}
+
+.ulp__center {
+    flex: 2;
+}
+
+.ulp__rightSideBar {
+    flex: 1;
+}

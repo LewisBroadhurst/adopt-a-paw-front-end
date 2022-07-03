@@ -25,7 +25,7 @@ const AccountPage = () => {
                         <button type="submit" onClick={handleLogIn}><Link to="/account/admin">Log In</Link></button>
                     </form>
 
-                    <span className="Forgot-Password-Acc">Forgot your password?</span>
+                    <span className="Forgot-Password-Acc"><Link to="/account/userLandPage">Forgot your password?</Link></span>
 
                     <button className="New-Acc-BTN" type="button"><Link to="/account/createAccount">Create New Account</Link></button>
                 </section>

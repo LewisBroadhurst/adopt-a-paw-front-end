@@ -10,12 +10,14 @@ const OrgList = ( {organisations, setOrganisations} ) => {
             <h3>Organisations</h3>
 
             {
-                organisations.splice(0, 3).map( (org, index) => {
+                organisations.map( (org, index) => {
 
                     return <OrgContainer key={index} 
                                         name={org.name} 
                                         id={org.id}
-                                        setOrganisations={setOrganisations} />;
+                                        slogan={org.slogan}
+                                        setOrganisations={setOrganisations}
+                                         />;
                     
                 })
             }
