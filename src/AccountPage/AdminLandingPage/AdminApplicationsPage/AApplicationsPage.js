@@ -1,7 +1,7 @@
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { getAllApplications } from "../../../API";
+import { getAllApplications, deleteAdoptionApplication } from "../../../API";
 import "./AApplicationsPage.css";
 
 
@@ -9,10 +9,34 @@ import "./AApplicationsPage.css";
 const AApplicationsPage = () => {
 
     const [applications, setApplications] = useState([]);
+    const [appicationDeleteId, setApplicationDeleteId] = useState(-1);
+    const [appicationUpdateId, setApplicationUpdateId] = useState(-1);
+    const [applicationStatus, setApplicationStatus] = useState('');
 
     useEffect( () => {
         getAllApplications(setApplications)
-    }, [])
+    }, []);
+
+    const handleApplicationDelete = async (event) => {
+        event.preventDefault()
+
+        if (appicationDeleteId === -1) {
+            return alert("Please select an ID");
+        }
+
+        await deleteAdoptionApplication(appicationDeleteId)
+
+        await getAllApplications(setApplications)
+
+        document.querySelector("select").value = "default";
+        document.querySelector("#aap_dr").innerText = "blank";
+    }
+
+    const handleApplicationUpdate = async (event) => {
+        event.preventDefault();
+
+        
+    }
 
   return (
     <>  
@@ -65,7 +89,7 @@ const AApplicationsPage = () => {
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                        <select defaultValue="default">
+                        <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
@@ -81,7 +105,7 @@ const AApplicationsPage = () => {
                             <option>Approved</option>
                         </select>
                         <input type="text" placeholder="Reason" required></input>
-                        <button type="button">Update Application</button>
+                        <button type="button" onClick={handleApplicationUpdate}>Update Application</button>
                     </form>
                 </section>
 
@@ -91,7 +115,7 @@ const AApplicationsPage = () => {
                         <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
-                         <select defaultValue="default">
+                         <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
@@ -99,8 +123,8 @@ const AApplicationsPage = () => {
                                 })
                             }
                         </select>
-                        <input type="text" placeholder="Reason" required></input>
-                        <button type="button">Delete Application</button>
+                        <input id="aap_dr" type="text" placeholder="Reason" required></input>
+                        <button type="button" onClick={handleApplicationDelete}>Delete Application</button>
                     </form>
                 </section>
             </section>
