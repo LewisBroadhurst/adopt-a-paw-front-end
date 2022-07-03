@@ -1,10 +1,5 @@
 /* POSITIONING */
 
-/* .aap__headContainer,
-.aap__mainContent {
-    font-family: 'Roboto', sans-serif;
-} */
-
 .aap__header {
     background-color: #4267B2;
     color: white;
@@ -28,9 +23,6 @@
 .aap__applicationList {
     flex: 3;
     padding-right: 2rem;
-    /* border-right: 3px solid black;
-    border-image: linear-gradient(90deg, #EDEDED, black, #EDEDED) 1;
-    */
 }
 
 .aap__forms {
@@ -122,6 +114,12 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.aap__applicationList,
+.aap__appContainer,
+.aap__mainContent {
+    transition: all 1s 0s;
+}
+
 /* FORMS */
 
 .aap__forms {
@@ -168,6 +166,7 @@
 
 .ulp__form__header {
     padding: 0.5rem;
+    align-self: center;
 }
 
 .ulp__form__header>h3 {
@@ -191,4 +190,18 @@
 
 .aap__form input {
     color: #c5c1c1;
+}
+
+.aap__noAppSearch {
+    max-height: 600px;
+}
+
+.aap__applicationList>p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aap__footer {
+    height: 50px;
+    background-color: #0E2A62;
 }

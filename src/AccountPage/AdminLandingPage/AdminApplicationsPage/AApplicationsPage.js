@@ -1,8 +1,7 @@
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
 import "./AApplicationsPage.css";
+import memeAppCrop from "./Images/memeAppCrop.png";
 
 
 
@@ -13,6 +12,8 @@ const AApplicationsPage = () => {
     const [applicationUpdateId, setApplicationUpdateId] = useState(-1);
     const [applicationStatus, setApplicationStatus] = useState('');
     const [adopteeNameSearch, setAdopteeNameSearch] = useState('');
+    const [animalLocationSearch, setAnimalLocationSearch] = useState('');
+    const [applicationStatusSearch, setApplicationStatusSearch] = useState('');
 
     useEffect( () => {
         getAllApplications(setApplications)
@@ -47,7 +48,11 @@ const AApplicationsPage = () => {
         await getAllApplications(setApplications);
     }
 
-    const getFilteredApplications = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
+    const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
+
+    const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
+
+    const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
 
   return (
     <>  
@@ -60,8 +65,8 @@ const AApplicationsPage = () => {
                     <span>Filter by:</span>
 
                     <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location"></input>
-                    <input type="text" placeholder="Application Status"></input>
+                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
             </form>
         </section>
 
@@ -71,7 +76,7 @@ const AApplicationsPage = () => {
 
                 {
                    
-                    getFilteredApplications().map( (app, index) => {
+                    getFilteredApplicationsByStatus().length > 0 ? getFilteredApplicationsByStatus().map( (app, index) => {
                         return  <section key={index} className="aap__appContainer">
                                     <section className="aap__customerInfo">
                                         <h3>Customer Info.</h3>
@@ -90,7 +95,7 @@ const AApplicationsPage = () => {
                                         <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
                                     </section>
                                 </section>
-                })}
+                }) : <><p>No applications match your search filters!</p> <img src={memeAppCrop} className="aap__noAppSearch" alt="" /></>}
 
             </section>
 
@@ -98,7 +103,6 @@ const AApplicationsPage = () => {
                 <section className="aap__form">
                     <div className="ulp__form__header">
                         <h3>Update Application</h3>
-                        <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
                         <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
@@ -124,7 +128,6 @@ const AApplicationsPage = () => {
                 <section className="aap__form">
                     <div className="ulp__form__header">
                         <h3>Delete Application</h3>
-                        <button><FontAwesomeIcon icon={faArrowUp} /></button>
                     </div>
                     <form>
                          <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
@@ -142,6 +145,8 @@ const AApplicationsPage = () => {
             </section>
 
         </main>
+
+        <div className="aap__footer"></div>
     </>
   )
 }
