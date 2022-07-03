@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AnimalList from "../AdminLandingPage/PostOrgUser Container/AnimalAdmin/AnimalList";
 import "./UserLandPage.css";
 import { getAllAnimals, getAllApplications } from "../../API";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

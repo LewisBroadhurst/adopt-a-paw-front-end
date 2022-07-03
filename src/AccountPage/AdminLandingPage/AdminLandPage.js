@@ -2,13 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { getCustomers, getOrganisations, getAllAnimals } from "../../API.js";
-import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
+import ApplicationList from "./Containers/ApplicationAdmin/ApplicationList.js";
 import { getAllApplications } from "../../API.js";
-import AnimalList from "./PostOrgUser Container/AnimalAdmin/AnimalList.js";
+import AnimalList from "./Containers/AnimalAdmin/AnimalList.js";
 import "./AdminContainers.css";
 import "./AdminLandPage.css";
-import CustomerList from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
-import OrgList from "./PostOrgUser Container/OrgAdmin/OrgList.js";
+import CustomerList from "./Containers/CustomerAdmin/CustomerList.js";
+import OrgList from "./Containers/OrgAdmin/OrgList.js";
 
 
 
