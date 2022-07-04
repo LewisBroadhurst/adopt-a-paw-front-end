@@ -2,6 +2,8 @@ import "./AAnimalsPage.css";
 import { getAllAnimals, getOrganisations } from "../../../API";
 import { useEffect, useState } from "react";
 import AdminHeader from "../AdminHeader/AdminHeader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -9,6 +11,11 @@ const AAnimalsPage = () => {
 
     const [animals, setAnimals] = useState([]);
     const [organisations, setOrganisations] = useState([]);
+
+    const [animalNameSearch, setAnimalNameSearch] = useState('');
+    const [animalLocationSearch, setAnimalLocationSearch] = useState('');
+    const [animalAvailableStatus, setAnimalAvailableStatus] = useState('');
+    const [animalOrganisationSearch, setAnimalOrganisationSearch] = useState('');
 
     useEffect( () => {
         getAllAnimals(setAnimals)
@@ -38,11 +45,40 @@ const AAnimalsPage = () => {
     //     await getAllApplications(setApplications);
     // }
 
-    // const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
+    // Menu Toggle
 
-    // const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
+    const handleMenuToggle = (event) => {
+        event.preventDefault()
 
-    // const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
+        const element = document.getElementById("aap__aaForm");
+
+        if (element.style.display === "none") {
+            element.style.display = "flex";
+        } else {
+            element.style.display = "none";
+        }
+    }
+
+    // Search Bar
+
+    const handleSearchReset = (event) => {
+        event.preventDefault();
+
+        document.getElementById("aap__searchName").innerText = '';
+
+        // setAnimalAvailableStatus('')
+        // setAnimalLocationSearch('')
+        // setAnimalNameSearch('')
+        // setAnimalOrganisationSearch('')
+    }
+
+    const getFilteredAnimalsByName = () => animals.filter( animal => animal.name.toLowerCase().includes(animalNameSearch.toLowerCase()));
+
+    const getFilteredAnimalsByLocation = () => getFilteredAnimalsByName().filter( animal => animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
+
+    const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
+
+    const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
   return (
     <>  
@@ -55,9 +91,12 @@ const AAnimalsPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => (e.target.value)}></input>
+                    <input id="aap__searchName" type="text" placeholder="Name" onChange={(e) => setAnimalNameSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Adoption Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
+                    <input type="text" placeholder="Organisation" onChange={(e) => setAnimalOrganisationSearch(e.target.value)}></input>
+
+                    <button type="button" onClick={handleSearchReset}>Reset</button>
             </form>
         </section>
 
@@ -66,7 +105,7 @@ const AAnimalsPage = () => {
             <section className="aap__applicationList">
 
                 {
-                    animals.map( (animal, index) => {
+                    getFilteredAnimalsByOrg().map( (animal, index) => {
                         return <section key={index} className="aap__appContainer">
                         <section className="aap__customerInfo">
                             <h3>Animal Info.</h3>
@@ -79,11 +118,6 @@ const AAnimalsPage = () => {
                         </section>
         
                         <section className="aap__animalInfo">
-                            {/* <h3>Animal Info.</h3>
-                            <span>Name: {app.customer.application[0].animal.name}</span>
-                            <span>DOB: {app.customer.application[0].animal.dateOfBirth}</span>
-                            <span>Location: {app.customer.application[0].animal.location}</span>
-                            <span>Organisation: {app.customer.application[0].animal.organisation.name}</span> */}
                         </section>
                     </section>
                     })
@@ -94,10 +128,11 @@ const AAnimalsPage = () => {
             <section className="aap__forms">
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
+                    <div id="aap__header__addA" className="ulp__form__header aap__arrow">
                         <h3>Add Animal</h3>
+                        <span onClick={handleMenuToggle}><FontAwesomeIcon icon={faArrowUp} /></span>
                     </div>
-                    <form>
+                    <form id="aap__aaForm">
                         <select defaultValue="default" onChange={(e) => (e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
                             {
