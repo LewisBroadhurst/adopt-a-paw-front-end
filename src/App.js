@@ -18,6 +18,7 @@ import UserLandPage from "./AccountPage/UserLandingPage/UserLandPage";
 import AApplicationsPage from "./AccountPage/AdminLandingPage/AdminApplicationsPage/AApplicationsPage";
 import AAnimalsPage from "./AccountPage/AdminLandingPage/AdminAnimalsPage/AAnimalsPage";
 import ACustomersPage from "./AccountPage/AdminLandingPage/AdminCustomersPage/ACustomersPage";
+import AOrganisationsPage from "./AccountPage/AdminLandingPage/AdminOrganisationsPage/AOrganisationsPage"
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/donate" exact element={<DonatePage />} />
             <Route path="/account/createAccount" exact element={<CreateAccPage />} />
             <Route path="/account/userLandpage" exact element={<UserLandPage />} />
+            <Route path="/account/admin/organisations" exact element={<AOrganisationsPage />} />
           </Routes>
           
         <Footer />

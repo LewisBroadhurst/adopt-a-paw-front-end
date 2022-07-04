@@ -1,4 +1,5 @@
 import OrgContainer from "./OrgContainter/OrgContainer";
+import { Link } from "react-router-dom";
 
 const OrgList = ( {organisations, setOrganisations} ) => {
 
@@ -22,7 +23,7 @@ const OrgList = ( {organisations, setOrganisations} ) => {
                 })
             }
 
-            <span className="LAP-Admin">All Organisations</span>
+            <span className="LAP-Admin"><Link to="/account/admin/organisations">All Organisations</Link></span>
 
         </section>
     
