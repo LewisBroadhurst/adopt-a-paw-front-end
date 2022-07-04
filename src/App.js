@@ -16,7 +16,8 @@ import AnimalPage from "./Components/Pages/AnimalPage";
 import CreateAccPage from "./CreateAccountPage/CreateAccPage";
 import UserLandPage from "./AccountPage/UserLandingPage/UserLandPage";
 import AApplicationsPage from "./AccountPage/AdminLandingPage/AdminApplicationsPage/AApplicationsPage";
-import AAnimalsPage from "./AccountPage/AdminLandingPage/AdminAnimalsPage/AAnimalsPage"
+import AAnimalsPage from "./AccountPage/AdminLandingPage/AdminAnimalsPage/AAnimalsPage";
+import ACustomersPage from "./AccountPage/AdminLandingPage/AdminCustomersPage/ACustomersPage";
 
 function App() {
   return (
@@ -38,11 +39,17 @@ function App() {
             <Route path="/donate" exact element={<DonatePage />} />
             <Route path="/account/createAccount" exact element={<CreateAccPage />} />
             <Route path="/account/userLandpage" exact element={<UserLandPage />} />
-            <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
-            <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
           </Routes>
           
         <Footer />
+      </Router>
+
+      <Router>
+        <Routes>
+          <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
+          <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
+          <Route path="/account/admin/customers" exact element={<ACustomersPage />} />
+        </Routes>
       </Router>
     </>
   );

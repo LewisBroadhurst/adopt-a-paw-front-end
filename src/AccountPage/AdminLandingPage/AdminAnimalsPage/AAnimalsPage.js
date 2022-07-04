@@ -148,7 +148,7 @@ const AAnimalsPage = () => {
 
                 <section className="aap__form">
                     <div className="ulp__form__header">
-                        <h3>Delete Application</h3>
+                        <h3>Remove Animal</h3>
                     </div>
                     <form>
                          <select defaultValue="default" onChange={(e) => (e.target.value)}>

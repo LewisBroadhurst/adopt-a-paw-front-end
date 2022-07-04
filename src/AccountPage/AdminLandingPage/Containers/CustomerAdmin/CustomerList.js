@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import CustomerAdminContainer from "./CustomerContainer/CustomerAdminContainer";
 
 const CustomerList = ( {customers, setCustomers} ) => {
@@ -21,7 +22,7 @@ const CustomerList = ( {customers, setCustomers} ) => {
                 })
             }
 
-            <span className="LAP-Admin">All Customers</span>
+            <span className="LAP-Admin"><Link to="/account/admin/customers">All Customers</Link></span>
 
         </section>
     
