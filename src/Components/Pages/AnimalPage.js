@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { getAnimalByID, getOrganisations } from '../../API';
+import { getAnimalByID, getAnimalsFilter, getOrganisations } from '../../API';
 import {useEffect, useState} from 'react';
 import './AnimalPage.css';
 import Header from "../../Header/Header";
@@ -33,9 +33,12 @@ function AnimalPage() {
         return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 
-
+    if (Object.keys(animal).length === 0) {
+        return <div></div>
+    } 
   return (
     <>  
+
         <Header />
         <h1 className='animalname'>{animal.name}</h1>
         <section className="animalpage_container">
@@ -65,7 +68,7 @@ function AnimalPage() {
         </section>
         <br/>
         <Footer />
-        
+  
     </>
     
   )
