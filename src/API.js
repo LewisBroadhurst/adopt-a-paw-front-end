@@ -51,6 +51,15 @@ export const addAnimal = async (animalData) => {
     }
 }
 
+export const updateAnimal = async (id, animalData) => {
+    try {
+        const response = await axios.put(`http://127.0.0.1:8080/animal/updateAnimal/${id}`, animalData)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // ORGANISATIONS
 
