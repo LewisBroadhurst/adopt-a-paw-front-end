@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getCustomers } from "../../../API";
-import AdminHeader from "../AdminHeader/AdminHeader";
+import { getCustomers } from "../../../../API";
+import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
 
 

@@ -15,10 +15,10 @@ import DonatePage from "./DonatePage/DonatePage";
 import AnimalPage from "./Components/Pages/AnimalPage";
 import CreateAccPage from "./CreateAccountPage/CreateAccPage";
 import UserLandPage from "./AccountPage/UserLandingPage/UserLandPage";
-import AApplicationsPage from "./AccountPage/AdminLandingPage/AdminApplicationsPage/AApplicationsPage";
-import AAnimalsPage from "./AccountPage/AdminLandingPage/AdminAnimalsPage/AAnimalsPage";
-import ACustomersPage from "./AccountPage/AdminLandingPage/AdminCustomersPage/ACustomersPage";
-import AOrganisationsPage from "./AccountPage/AdminLandingPage/AdminOrganisationsPage/AOrganisationsPage"
+import AApplicationsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminApplicationsPage/AApplicationsPage";
+import AAnimalsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminAnimalsPage/AAnimalsPage";
+import ACustomersPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminCustomersPage/ACustomersPage";
+import AOrganisationsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminOrganisationsPage/AOrganisationsPage"
 
 function App() {
   return (

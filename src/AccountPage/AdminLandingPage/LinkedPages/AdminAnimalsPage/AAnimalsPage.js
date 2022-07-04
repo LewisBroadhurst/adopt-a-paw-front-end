@@ -1,7 +1,7 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations, addAnimal } from "../../../API";
+import { getAllAnimals, getOrganisations, addAnimal } from "../../../../API";
 import { useEffect, useState } from "react";
-import AdminHeader from "../AdminHeader/AdminHeader";
+import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
