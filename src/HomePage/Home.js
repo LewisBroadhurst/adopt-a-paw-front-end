@@ -76,7 +76,7 @@ function Home() {
           <div className='display_carousel'>
             <h3>Success Stories</h3>
 
-            <p>Click on the carousel pictures below to learn more about our many success stories!</p>
+            <p>Click on the images below to find your new best friend!</p>
             <DisplayCarousel />
           </div>
 
