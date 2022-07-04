@@ -43,15 +43,6 @@ export const deleteAnimal = async (id) => {
 }
 
 
-export function getAnimalPhotoUrlByID(setAnimal, id, photoUrl){
-    axios.get(`http://127.0.0.1:8080/animal/${id}/photourl`)
-    .then(res => {
-        const animal = res.data;
-        setAnimal(animal, photoUrl);
-    }).catch((err) => console.log(err))
-}
-
-
 // ORGANISATIONS
 
 export const getOrganisations = async (setOrganisations) => {
