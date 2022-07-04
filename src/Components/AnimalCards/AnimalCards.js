@@ -7,20 +7,20 @@ import { Box, fontSize } from '@mui/system';
 import './AnimalCards.css';
 import { getAnimalsFilter } from '../../API';
 
-const AnimalCards = () => {
+const AnimalCards = (props) => {
 
-  const animalArray = [...Array(50).keys()].map((n) => { return { name: "dog" + n, id: n } })
+  // const animalArray = [...Array(50).keys()].map((n) => { return { name: "dog" + n, id: n } })
 
   const [page, setPage] = React.useState(0);
   const [itemsPerPage, setItemsPerPage] = React.useState(10);
   const [animals, setAnimals] = useState([]);
 
+  console.log(props.filter);
+
   useEffect(() => {
-    getAnimalsFilter(setAnimals);
-  }, []);
+    getAnimalsFilter(setAnimals, props.filter);
+  }, [props]);
 
-
-  // const [cards, setCards] = useState([animals]);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
