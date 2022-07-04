@@ -1,4 +1,4 @@
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 import CustomerAdminContainer from "./CustomerContainer/CustomerAdminContainer";
 
 const CustomerList = ( {customers, setCustomers} ) => {

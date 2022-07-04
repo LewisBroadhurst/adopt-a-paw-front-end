@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCustomers } from "../../../../API";
+import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
 
@@ -11,10 +11,20 @@ const ACustomersPage = () => {
 
 
     useEffect( () => {
-        
         getCustomers(setCustomers)
-
     }, []);
+
+    // Delete Customer
+
+    const [dcID, setDcID] = useState(-1);
+
+    const handleDeleteCustomer = async (event) => {
+        event.preventDefault();
+
+        await deleteCustomer(dcID);
+
+        await getCustomers(setCustomers);
+    }
 
 
   return (
@@ -68,7 +78,7 @@ const ACustomersPage = () => {
                         <h3>Delete Customer</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => (e.target.value)}>
+                         <select defaultValue="default" onChange={(e) => setDcID(e.target.value)}>
                             <option value="default" disabled hidden>Customer ID</option>
                             {
                                 customers.map( (customer, index) => {
@@ -77,7 +87,7 @@ const ACustomersPage = () => {
                             }
                         </select>
                         <input id="aap_dr" type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="">Delete Customer</button>
+                        <button type="button" onClick={handleDeleteCustomer}>Delete Customer</button>
                     </form>
                 </section>
             </section>
