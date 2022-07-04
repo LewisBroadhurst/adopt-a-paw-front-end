@@ -141,7 +141,7 @@ export const addNewCustomer = async (custData) => {
 
 export const getAllApplications = async (setApplications) => {
     try {
-        const response = await axios.get(`http://127.0.0.1:8080/application/findAllApplications`);
+        const response = await axios.get(`http://127.0.0.1:8080/application/findAll`);
         const applications = response.data;
         setApplications(applications);
     } catch (err) {
