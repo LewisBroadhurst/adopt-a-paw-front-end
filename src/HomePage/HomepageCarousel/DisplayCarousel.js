@@ -42,9 +42,9 @@ const DisplayCarousel = () => {
           <table>
             <tbody>
             <tr>
-            <td><a href="../adopt/10"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"  alt="Snowdrop" width="90%" justify-content="center"/></a></td>
-            <td><a href="../adopt/11"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"  alt="Dobby" width="90%" justify-content="center"/></a></td>
-            <td><a href="../adopt/12"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"  alt="Sonny" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/10"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"  alt="Biggles" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/11"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"  alt="Spaghetti" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/12"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"  alt="Rascals" width="90%" justify-content="center"/></a></td>
             </tr>
             </tbody>
           </table>
