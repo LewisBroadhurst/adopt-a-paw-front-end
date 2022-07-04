@@ -52,7 +52,7 @@ function AnimalPage() {
             <div className='org_info_container'>
                 <h3>Contact your local centre or branch to find out more about this animal:</h3>
                 <br/>
-                <p>Name: {organisation.name}</p>
+                <p>Name: {animal.organisation.name}</p>
                 <p>Email: </p>
                 <p>Contact Number:</p>
                 <br/>
