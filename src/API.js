@@ -94,10 +94,13 @@ export const deleteOrgansation = async (id) => {
     }  
 }
 
-export function changeOrganisationName(id, orgData) {
-    axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData)
-        .then(res => console.log(res.data))
-        .catch((err) => console.log(err))
+export const updateOrganisation = async (id, orgData) => {
+    try{
+        const response = await axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 // CUSTOMERS
