@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
 import "./AApplicationsPage.css";
 import memeAppCrop from "./Images/memeAppCrop.png";
+import AdminHeader from "../AdminHeader/AdminHeader.js"
 
 
 
@@ -56,6 +57,7 @@ const AApplicationsPage = () => {
 
   return (
     <>  
+        <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
                 <h2>Applications</h2>

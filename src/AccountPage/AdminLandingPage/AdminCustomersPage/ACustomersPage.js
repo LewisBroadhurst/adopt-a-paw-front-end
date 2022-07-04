@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCustomers } from "../../../API";
+import AdminHeader from "../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
 
 
@@ -18,6 +19,7 @@ const ACustomersPage = () => {
 
   return (
     <>  
+        <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
                 <h2>Customers</h2>

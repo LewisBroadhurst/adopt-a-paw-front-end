@@ -9,6 +9,7 @@ import "./AdminContainers.css";
 import "./AdminLandPage.css";
 import CustomerList from "./Containers/CustomerAdmin/CustomerList.js";
 import OrgList from "./Containers/OrgAdmin/OrgList.js";
+import AdminHeader from "./AdminHeader/AdminHeader.js";
 
 
 
@@ -33,6 +34,7 @@ const AdminLandPage = () => {
 
   return (
     <>
+    <AdminHeader />
         <main id="AdminLandPage">
 
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>

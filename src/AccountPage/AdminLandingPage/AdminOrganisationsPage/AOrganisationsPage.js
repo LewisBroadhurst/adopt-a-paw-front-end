@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getOrganisations } from "../../../API";
+import AdminHeader from "../AdminHeader/AdminHeader";
 import "./AOrganisationsPage.css";
 
 
@@ -13,6 +14,7 @@ const AOrganisationsPage = () => {
 
   return (
     <>  
+    <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
                 <h2>Organisations</h2>
