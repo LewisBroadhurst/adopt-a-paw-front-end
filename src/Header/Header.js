@@ -22,10 +22,21 @@ const Header = () => {
 
   }
 
+window.onscroll = function() {myFunction()};
+var Header = document.getElementById("Header");
+var sticky = Header.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    Header.classList.add("sticky")
+  } else {
+    Header.classList.remove("sticky");
+  }
+}
+
   return (
     <>
     
-        <header className="Header-Mobile">
+        <header id="Header" className="Header-Mobile">
            
             <div className="Desktop-Logo">
               <img src={PawLogo} alt="Adopt A Paw Logo" className="Logo-Header"/>
