@@ -1,29 +1,711 @@
 /* DESKTOP POSITIONING */
 
-#ulp__mainContainer {
+.backgroundPage{
+
+    background-color: white;
+
+
+
+}
+
+.ulp__pageContainer{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    max-width: 85%;
+    max-width: 100%;
+    width: 1020px;
     margin: 0 auto;
+    background-color: white;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.35);
+    overflow-y: scroll;
+    
+    
 }
 
-.ulp__header {
+.ulp__header{
+
+    
+    height: 220px;
+    width: 1020px;
+    margin-bottom: 4rem;
+    background-color: #ecbb00;
+    
+    
+    
+    
+}
+
+.ulp__header__catTable{
+
+    background-color: white;
+    z-index: 1;
+    height: 124px;
+    width: 1020px;
+    margin-top: 9.9rem;
+    
+}
+
+.ulp__header__picture{
+    
+    
+    margin-top: 5rem;
+    /* position: sticky; */
+    top: 10;
+    left: 0;
+    right: 0;
+    height: 200px;
+    /* background-color: blue; */
+    z-index: 100;
+    background-image: url("../paws.jpeg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow-y: hidden;
+    
+    
+    
+    
+    
+}
+
+.ulp__header__welcome{
+
+    
+    font-size: 40px;
+    margin-bottom: 150px;
+    
+
+
+}
+
+
+.ulp__cardContainer{
+
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: blue;
-    z-index: 100;
+    max-width: 100%;
+    width: 1000px;
+    gap: 50px;
+    margin-bottom: 100px;
+    /* border: black solid; */
+    
+    
 
-    margin-bottom: 2rem;
+
 }
+
+.ulp__userAnimalsCard{
+
+    
+    flex: 50%;
+    max-width: 427px;
+    height: 648px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    background-color: #ffd428;
+    box-shadow: inset 1px 1px 5px 1px rgba(247, 255, 129, 0.35);
+    background-position: bottom;
+    background-size: 90%;
+    
+    
+
+}
+
+.borderLeavesTop{
+
+    margin-top: 0px;
+    
+
+
+
+}
+
+.grassBorderBottom{
+
+    mix-blend-mode: multiply;
+
+}
+
+.ulp__adoptedAnimals_header{
+
+    position: relative;
+    left: 76px;
+    top: 50px;
+    font-size: 25px;
+    border-bottom: solid black 2px;
+
+
+}
+
+
+
+.ulp__userApplicationsCard{
+
+    flex: 50%;
+    max-width: 427px;
+    height: 648px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    background-color: #ffd428;
+    box-shadow: inset 1px 1px 5px 1px rgba(247, 255, 129, 0.35);
+
+
+
+
+}
+
+.ulp__userAboutCard{
+
+    flex: 50%;
+    max-width: 427px;
+    height: 648px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    background-color: #ffd428;
+    box-shadow: inset 1px 1px 5px 1px rgba(247, 255, 129, 0.35);
+
+
+}
+
+.ulp__userAnimalsCard__rectangle{
+
+    
+    
+    max-width: 410px;
+    height: 560px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  
+    /* background-image: linear-gradient(#38B074,#5CCF95,#38B074);
+    background: -webkit-radial-gradient(50%,#5CCF95,#38B074,#38B074);
+    background: radial-gradient(at 50%,#5CCF95,#38B074,#38B074); */
+    top: 40px;
+    background-color: white;
+    position: relative;
+    left: 8px;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    box-shadow:  inset 1px 1px 5px 1px rgba(0, 0, 0, 0.35);
+    /* z-index: -1; */
+    /* position: absolute; */
+    
+
+}
+
+.ulp__ulpContainer2__rectangle{
+
+    max-width: 410px;
+    height: 560px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  
+    /* background-image: linear-gradient(#38B074,#5CCF95,#38B074);
+    background: -webkit-radial-gradient(50%,#5CCF95,#38B074,#38B074);
+    background: radial-gradient(at 50%,#5CCF95,#38B074,#38B074); */
+    top: 40px;
+    /* background-color: blue; */
+    position: relative;
+    left: 8px;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    box-shadow:  inset 1px 1px 5px 1px rgba(0, 0, 0, 0.35);
+    
+    /* z-index: -1; */
+    /* position: absolute; */
+
+
+
+}
+
+.ulp__container2__headerBox{
+
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+    
+    /* box-shadow:  1px 1px 5px 1px rgba(0, 0, 0, 0.35); */
+    
+
+
+}
+
+
+.ulp__container2__headerBox>h1{
+
+    font-size: 30px;
+
+}
+
+
+.ulp__container2{
+    
+    
+    
+    
+    flex: 50%;
+    max-width: 427px;
+    height: 648px;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 15%;
+    background-color: white;
+    box-shadow:  inset 1px 1px 10px 1px rgba(247, 170, 16, 0.835);
+    background-position: bottom;
+    background-size: 120%;
+    
+    
+
+
+}
+
+.ulp__container2__left{
+    
+    
+    
+    
+    flex: 50%;
+    max-width: 427px;
+    height: 648px;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 15%;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 5%;
+    background-color: white;
+    box-shadow:  inset 1px 1px 10px 1px rgba(247, 170, 16, 0.835);
+    background-position: bottom;
+    background-size: 120%;
+    
+    
+
+
+}
+@keyframes pawsLeft {
+
+    10%   {left:20px; top:440px;}
+  
+  30%  {left:115px; top:280px;}
+  
+  50% {left:175px; top:135px;}
+
+  70% {left:225px; top:15px;}
+  
+  /* 60% {left:15px; top:20px;} */
+  
+  90% {left: 1450px; top:90px}
+  
+  /* 100% {left:22500px; top:15px;} */
+    
+}
+
+@keyframes pawsRight {
+
+    
+    /* 10%  { left:80px; top:480px;} */
+  
+    20%  {left:120px; top:410px;}
+  
+    40% {left:190px; top:250px;}
+  
+    60% {left:250px; top: 100px}
+  
+    80% {left:2500px; top: 100px }
+    
+  
+    
+}
+
+.pawPrintLeft{
+
+    width: 50px;
+    position: relative;
+    left: 1000px;
+    top: 500px;
+    transform: rotate(33deg);
+    animation: pawsLeft 2s steps(1) infinite;
+    /* transform-origin: 100% 50%; */
+    mix-blend-mode: multiply;
+    
+
+}
+
+.pawPrintRight{
+
+    width: 50px;
+    position: relative;
+    left: 1000px;
+    top: 500px;
+    transform: rotate(33deg);
+    animation: pawsRight 2s steps(1) infinite;
+    /* transform-origin: 100% 50%; */
+    mix-blend-mode: multiply;
+
+
+}
+
+
+@keyframes email {
+
+    from{top: 80px;}
+    to{top: 560px}
+    
+}
+
+@keyframes email2 {
+
+    from{top: 560px;}
+    to{top: 80px;}
+    
+}
+
+.computer{
+     position: relative;
+    width: 170px;
+    left: 120px;
+    top: 40px;
+
+
+}
+
+.RSPCA{
+
+    position: relative;
+    width: 130px;
+    left: -75px;
+    top: 40px;
+
+
+
+}
+.email0{
+
+    position: relative;
+    width: 50px;
+    top: 80px;
+    left: 30px;
+    animation-name: email2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+}
+
+.email{
+    position: relative;
+    width: 50px;
+    top: 80px;
+    left: 150px;
+    animation-name: email;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.email2{
+
+    position: relative;
+    width: 50px;
+    top: 80px;
+    left: 250px;
+    animation-name: email2;
+    animation-duration: 2.1s;
+    animation-iteration-count: infinite;
+
+
+}
+
+.ulp__userAnimalsCard>h1{
+
+    position: relative;
+    top: 21px;
+    left: 82px;
+    font-size: 25px;
+    width: 270px;
+    
+    
+    
+   
+    
+}
+
+.ulp__userAboutCard>h1{
+
+    position: relative;
+    top: 21px;
+    left: 155px;
+    font-size: 25px;
+    width: 270px;
+    
+
+
+}
+
+.ulp__userApplicationsCard>h1{
+    position: relative;
+    top: 21px;
+    left: 108px;
+    font-size: 25px;
+
+}
+
+/* .ulp__container2>h1{
+
+    position: relative;
+    top: 21px;
+    left: 154px;
+    font-size: 25px;
+
+}
+
+.ulp__container2>h2{
+
+    position: relative;
+    top: 58px;
+    left: 105px;
+    font-size: 20px;
+
+} */
+.ulp__container2__preferredOrganisations__header2{
+
+    position: relative;
+    top: 40px;
+    left: 94px;
+    font-size: 20px;
+
+
+}
+.ulp__container2__preferredOrganisations__header3{
+
+    position: relative;
+    top: 58px;
+    left: 75px;
+    font-size: 20px;
+    
+    
+
+
+}
+
+
+.ulp__userApplicationsContainer{
+    /* border: black solid ; */
+    position: relative;
+    top: 20px;
+    
+}
+
+
+
+.ulp__userApplicationsList{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    gap: 50px;
+
+
+
+
+
+
+}
+
+.ulp__preferredSpeciesList{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    gap: 10px;
+    margin-top: 100px;
+    
+
+
+
+}
+
+.ulp__adoptedAnimal{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    gap: 30px;
+    /* border: solid black; */
+    margin-bottom: 310px;
+    margin-top: 120px;
+    scroll-snap-align: center;
+
+
+
+}
+
+.ulp__preferrredAnimals{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    /* border: solid black; */
+    
+    scroll-snap-align: center;
+
+
+
+}
+
+.ulp__applications{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    gap: 10px;
+    /* border: solid black; */
+    margin-bottom: 175px;
+    margin-top: 120px;
+    scroll-snap-align: center;
+
+
+}
+
+.ulp__applications__animalDetailsContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    gap: 30px;
+    /* border: solid black; */
+    margin-bottom: 175px;
+    margin-top: 120px;
+    
+
+
+
+}
+
+.ulp__animalToAdopt{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: double black 3px; */
+    gap: 10px;
+    /* border: solid black; */
+
+
+}
+
+.ulp__adoptedAnimalsList__adoptedAnimalPic{
+
+    width: 100px;
+    /* border: black solid 2px; */
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.35);
+
+
+
+
+}
+
+
+.ulp__adoptedapleAnimalsList__adoptedableAnimal_name{
+
+    
+}
+
+.ulp__adoptedAnimalsList__adoptedAnimal_name{
+
+    
+    font-size: 34px;
+}
+
+.ulp__prefferedANimals__Species{
+
+    font-size: 14px;
+
+}
+
+.ulp__applications__animalDetail_name{
+
+    font-size: 14px;
+}
+
+.ulp__adoptedAnimalsList__adoptedAnimal_species_breed{
+
+    font-size: 14px;
+
+}
+
+.ulp__applications__animalDetail_species_breed{
+
+    font-size: 14px;
+}
+
+.ulp__adoptedAnimalsList__adoptedAnimal_DOB{
+    font-size: 16px;
+
+}
+.ulp__applications__animalDetail_DOB{
+
+    font-size: 14px;
+}
+
+.ulp__adoptedAnimalsList__application_status{
+    font-size: 20px;
+    border-bottom: solid black;
+}
+
+.ulp__adoptedAnimalsList__application_statusReturn__approved{
+    font-size: 30px;
+    color: green;
+}
+
+.ulp__adoptedAnimalsList__application_statusReturn__rejected{
+    font-size: 30px;
+    color: rgba(255, 0, 0, 0.655);
+}
+
+.ulp__adoptedAnimalsList__application_statusReturn__pending{
+    font-size: 30px;
+    color: rgba(0, 0, 255, 0.736);
+}
+
+
 
 .ulp__header>h2 {
     font-size: 3rem;
