@@ -9,9 +9,9 @@ const DisplayCarousel = () => {
           <table>
           <tbody>
             <tr>
-              <td><img className="zoom_image" src={require("./images/Daisy.jpeg")}  alt="Daisy" width="90%" justify-content="center"/></td>
-              <td><img className="zoom_image" src={require("./images/Kallie.jpeg")}  alt="Kallie" width="90%" justify-content="center"/></td>
-              <td><img className="zoom_image" src={require("./images/Xander.jpeg")}  alt="Xander" width="90%" justify-content="center"/></td>
+              <td><a href="../adopt/1"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328739"  alt="TinyTim" width="90%" justify-content="center"/></a></td>
+              <td><a href="../adopt/2"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325652"  alt="Simba" width="90%" justify-content="center"/></a></td>
+              <td><a href="../adopt/3"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328636"  alt="Flame" width="90%" justify-content="center"/></a></td>
             </tr>
             </tbody>
           </table>
@@ -20,9 +20,9 @@ const DisplayCarousel = () => {
           <table>
           <tbody>
             <tr>
-              <td><img className="zoom_image" src={require("./images/Elody.jpeg")}  alt="Elody" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Kenan.jpeg")}  alt="Kenan" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Graham.jpeg")}  alt="Graham" width="90%"/></td>
+            <td><a href="../adopt/4"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330388"  alt="Fly" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/5"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A231334"  alt="Pops" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/6"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330093"  alt="Mr Lover Lover" width="90%" justify-content="center"/></a></td>
             </tr>
             </tbody>
           </table>
@@ -31,9 +31,9 @@ const DisplayCarousel = () => {
           <table>
             <tbody>
             <tr>
-              <td><img className="zoom_image" src={require("./images/Kel.jpeg")}  alt="Kel" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Lola.jpeg")}  alt="Lola" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Max.jpeg")}  alt="Max" width="90%"/></td>
+            <td><a href="../adopt/7"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"  alt="Snowdrop" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/8"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"  alt="Dobby" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/9"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"  alt="Sonny" width="90%" justify-content="center"/></a></td>
             </tr>
             </tbody>
           </table>
@@ -42,9 +42,9 @@ const DisplayCarousel = () => {
           <table>
             <tbody>
             <tr>
-              <td><img className="zoom_image" src={require("./images/Penny.jpeg")}  alt="Penny" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Simon.jpeg")}  alt="Simon" width="90%"/></td>
-              <td><img className="zoom_image" src={require("./images/Tango.jpeg")}  alt="Tango" width="90%"/></td>
+            <td><a href="../adopt/10"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"  alt="Snowdrop" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/11"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"  alt="Dobby" width="90%" justify-content="center"/></a></td>
+            <td><a href="../adopt/12"><img className="zoom_image" src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"  alt="Sonny" width="90%" justify-content="center"/></a></td>
             </tr>
             </tbody>
           </table>
