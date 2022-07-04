@@ -12,7 +12,7 @@ export function getAnimalsFilter(setAnimals, name, minAge, maxAge, sex, location
 }
 
 export function getAnimalByID(setAnimal, id){
-    axios.get(`http://127.0.0.1:8080/animal/${id}`)
+    axios.get(`http://127.0.0.1:8080/animal/findAnimalById/${id}`)
     .then(res => {
         const animal = res.data;
         setAnimal(animal);
@@ -40,6 +40,15 @@ export const deleteAnimal = async (id) => {
     } catch (err) {
         console.log(err);
     }
+}
+
+
+export function getAnimalPhotoUrlByID(setAnimal, id, photoUrl){
+    axios.get(`http://127.0.0.1:8080/animal/${id}/photourl`)
+    .then(res => {
+        const animal = res.data;
+        setAnimal(animal, photoUrl);
+    }).catch((err) => console.log(err))
 }
 
 
