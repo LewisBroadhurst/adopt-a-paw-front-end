@@ -74,13 +74,14 @@ function Home() {
 
 
           <div className='display_carousel'>
-            <h3>Success Stories</h3>
+            <h3>Adopt your new best friend now!</h3>
 
             <p>Click on the images below to find your new best friend!</p>
             <DisplayCarousel />
           </div>
 
         </section>
+        <br/>
         <Footer />
     </>
   )
