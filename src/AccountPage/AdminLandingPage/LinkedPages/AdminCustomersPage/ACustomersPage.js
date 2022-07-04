@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
+import { GoogleMap } from '@react-google-maps/api'
 
 
 
@@ -38,8 +39,24 @@ const ACustomersPage = () => {
 
     const customersFiltAdopted = customersFiltLocation.filter( customer => customer.previousAdoptions.toString().includes(prevAdoptSearch))
 
+
+    // Google Maps
+
+    const containerStyle = {
+        width: '300px',
+        height: '200px'
+      };
+      
+      const center = {
+        lat: 51.507351,
+        lng: -0.127758
+      };
+
+    
+
   return (
     <>  
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9__B5jrMhOlHYFHJ3U0SVFXPvO1_WpxM&callback=initMap" async defer></script>
         <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
@@ -73,7 +90,13 @@ const ACustomersPage = () => {
                                     </section>
                     
                                     <section className="aap__locationInfo">
-                                        <h3>Cem Location Map</h3>
+                                        <section>
+                                           <GoogleMap 
+                                           mapContainerClassName="google__map"
+                                           mapContainerStyle={containerStyle}
+                                           center={center}
+                                           zoom={12} />
+                                        </section>
                                     </section>
                                 </section>
                 })}
