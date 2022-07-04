@@ -42,6 +42,15 @@ export const deleteAnimal = async (id) => {
     }
 }
 
+export const addAnimal = async (animalData) => {
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/animal/addNewAnimal`, animalData)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // ORGANISATIONS
 

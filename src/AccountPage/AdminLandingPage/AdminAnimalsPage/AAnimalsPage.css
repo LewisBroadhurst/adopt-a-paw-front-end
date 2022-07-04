@@ -10,6 +10,8 @@
     justify-self: flex-end;
     grid-column: 3;
     font-size: 1.4rem;
+
+    transition: all 1s ease-in 0s;
 }
 
 #aap__header__addA>h3 {

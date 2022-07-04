@@ -1,5 +1,5 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations } from "../../../API";
+import { getAllAnimals, getOrganisations, addAnimal } from "../../../API";
 import { useEffect, useState } from "react";
 import AdminHeader from "../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,6 +45,30 @@ const AAnimalsPage = () => {
     //     await getAllApplications(setApplications);
     // }
 
+    // Add Animal
+
+    const [aaAnimalName, setAaAnimalName] = useState('');
+    const [aaDOB, setAaDOB] = useState('');
+    const [aaSex, setAaSex] = useState('');
+    const [aaLocation, setAaLocation] = useState('');
+
+
+    const handleAddAnimal = async () => {
+        
+        const animalData = {
+            "name": `${aaAnimalName}`,
+            "sex": `${aaSex}`,
+            "location": `${aaLocation}`,
+            "species": "Dog",
+            "breed": "Daschund",
+            "availableStatus": "Available"
+            }
+        
+        await addAnimal(animalData)
+
+        await getAllAnimals(setAnimals)
+    }
+
     // Menu Toggle
 
     const handleMenuToggle = (event) => {
@@ -57,6 +81,8 @@ const AAnimalsPage = () => {
         } else {
             element.style.display = "none";
         }
+
+
     }
 
     // Search Bar
@@ -65,20 +91,15 @@ const AAnimalsPage = () => {
         event.preventDefault();
 
         document.getElementById("aap__searchName").innerText = '';
-
-        // setAnimalAvailableStatus('')
-        // setAnimalLocationSearch('')
-        // setAnimalNameSearch('')
-        // setAnimalOrganisationSearch('')
     }
 
-    const getFilteredAnimalsByName = () => animals.filter( animal => animal.name.toLowerCase().includes(animalNameSearch.toLowerCase()));
+    const getFilteredAnimalsByName = () => animals.filter( (animal) => animal.name != null).filter( animal => animal.name.toLowerCase().includes(animalNameSearch.toLowerCase()));
 
-    const getFilteredAnimalsByLocation = () => getFilteredAnimalsByName().filter( animal => animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
+    const getFilteredAnimalsByLocation = () => getFilteredAnimalsByName().filter( (animal) => animal.location != null).filter( animal => animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
 
-    const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
+    const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( (animal) => animal.availableStatus != null).filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
 
-    const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
+    const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
   return (
     <>  
@@ -105,7 +126,7 @@ const AAnimalsPage = () => {
             <section className="aap__applicationList">
 
                 {
-                    getFilteredAnimalsByOrg().map( (animal, index) => {
+                    getFilteredAnimalsByStatus().map( (animal, index) => {
                         return <section key={index} className="aap__appContainer">
                         <section className="aap__customerInfo">
                             <h3>Animal Info.</h3>
@@ -113,7 +134,7 @@ const AAnimalsPage = () => {
                             <span>Name: {animal.name}</span>
                             <span>DOB: {animal.dateOfBirth}</span>
                             <span>Location: {animal.location}</span>
-                            <span>Organisation: {animal.organisation.name}</span>
+                            {/* <span>Organisation: {animal.organisation.name}</span> */}
                             <span>Adoption status: {animal.availableStatus}</span>
                         </section>
         
@@ -133,19 +154,12 @@ const AAnimalsPage = () => {
                         <span onClick={handleMenuToggle}><FontAwesomeIcon icon={faArrowUp} /></span>
                     </div>
                     <form id="aap__aaForm">
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
-                        <option value="default" disabled hidden>Animal Reference No.</option>
-                            {
-                                animals.map( (app, index) => {
-                                    return <option key={index}>{app.id}</option>
-                                })
-                            }
-                        </select>
                         
-                        <input type="text" placeholder="Name" required></input>
-                        <input type="text" placeholder="Date Of Birth" required></input>
-                        <input type="text" placeholder="Sex (Male or Female)" required></input>
-                        <input type="text" placeholder="Location" required></input>
+                        <input type="text" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
+                        <input type="text" placeholder="Date Of Birth" required onChange={(e) => setAaDOB(e.target.value)}></input>
+                        <input type="text" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
+                        <input type="text" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
+
                         <select defaultValue="default" onChange={(e) => (e.target.value) }>
                         <option value="default" disabled hidden>Organisation</option>
                             {
@@ -154,7 +168,7 @@ const AAnimalsPage = () => {
                                 })
                             }
                         </select>
-                        <button type="button" onClick="">Add Animal</button>
+                        <button type="button" onClick={handleAddAnimal}>Add Animal</button>
                     </form>
                 </section>
 
