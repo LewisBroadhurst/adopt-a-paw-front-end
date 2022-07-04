@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { getCustomers, getOrganisations, getAllAnimals } from "../../API.js";
-import ApplicationList from "./PostOrgUser Container/ApplicationAdmin/ApplicationList.js";
+import ApplicationList from "./Containers/ApplicationAdmin/ApplicationList.js";
 import { getAllApplications } from "../../API.js";
-import AnimalList from "./PostOrgUser Container/AnimalAdmin/AnimalList.js";
+import AnimalList from "./Containers/AnimalAdmin/AnimalList.js";
 import "./AdminContainers.css";
 import "./AdminLandPage.css";
-import CustomerList from "./PostOrgUser Container/CustomerAdmin/CustomerList.js";
-import OrgList from "./PostOrgUser Container/OrgAdmin/OrgList.js";
+import CustomerList from "./Containers/CustomerAdmin/CustomerList.js";
+import OrgList from "./Containers/OrgAdmin/OrgList.js";
+import AdminHeader from "./AdminHeader/AdminHeader.js";
 
 
 
@@ -21,11 +22,17 @@ const AdminLandPage = () => {
 
   
 
-  useEffect(() => {
-    getOrganisations(setOrganisations);
-    getAllApplications(setApplications);
-    getCustomers(setCustomers);
-    getAllAnimals(setAnimals)
+  useEffect( () => {
+
+    const forceSync = async () => {
+      await getOrganisations(setOrganisations);
+      await getAllApplications(setApplications);
+      await getCustomers(setCustomers);
+      await getAllAnimals(setAnimals)
+    }
+
+    forceSync()
+    
   }, []);
 
   
@@ -33,8 +40,9 @@ const AdminLandPage = () => {
 
   return (
     <>
+    <AdminHeader />
         <main id="AdminLandPage">
-
+          
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>
 
           <section className="alp__containers--positioning">

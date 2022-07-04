@@ -1,18 +1,35 @@
 .animalcards_item {
-    height: 200px;
+    height: 165px;
     width: 400px;
-    background-color: antiquewhite;
+    background-color: #ededed;
     display: flex;
     justify-content: center;
     align-items: center;
     border-style: solid;
-    border-color: black;
+    border-color: #E07A5F;
+    border-width: 0.15rem;
     border-radius: 0.5rem;
     transition: all 0.5s ease-in 0s;
+    box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .animalcards_item:hover{
     transform: scale(1.1);
+}
+
+.animalcards_item_heading{
+    font-size: 0.8rem;
+    color: #E07A5F;
+}
+
+.animalcards_item_text{
+    font-size: 0.8rem;
+    color: black;
+}
+
+.animalcards_item_name{
+    color: #E07A5F;
+    font-size: 1.4rem;
 }
 
 .animalcards_item_link {

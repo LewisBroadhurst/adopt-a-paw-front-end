@@ -1,0 +1,29 @@
+#aap__header__addA {
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#aap__header__addA>span {
+    justify-self: flex-end;
+    grid-column: 3;
+    font-size: 1.4rem;
+
+    transition: all 1s ease-in 0s;
+}
+
+#aap__header__addA>h3 {
+    grid-column: 1 / 2;
+    font-size: 1.4rem;
+}
+
+.aap__searchBar>input::placeholder {
+    color: #aeaeae;
+}
+
+.aap__searchBar>input {
+    border-radius: 0.25rem;
+    border: 0px solid black;
+}

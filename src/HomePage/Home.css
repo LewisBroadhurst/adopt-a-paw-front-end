@@ -154,6 +154,8 @@ div {
     align-items: center;
     max-width: 60%;
     margin: 0 auto;
+    background-color: #ededed;
+    border-radius: 1rem;
 }
 
 .homePage__ourMission--container,
@@ -163,12 +165,14 @@ div {
     justify-content: center;
     align-items: center;
     text-align: left;
-    margin-bottom: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
 }
 
 .homePage__ourMission--container>span,
 .homePage__ourPartners--container>span {
     font-size: 3rem;
+    color: #E07A5F;
 }
 
 .homePage__ourMission--container>p,
@@ -195,6 +199,10 @@ div {
     object-fit: cover;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+
+.homePage__logoContainer>h3{
+    color: #E07A5F;
 }
 
 .homePage__parentLogoCont {
@@ -234,11 +242,16 @@ div {
 
 .display_carousel>h3 {
     font-size: 3rem;
+    color: #E07A5F;
 }
 
 .display_carousel>p {
     font-size: 1.8rem;
     text-align: left;
+}
+
+.homepage>h3{
+    color: #E07A5F;
 }
 
 /* MEDIA QUERIES */

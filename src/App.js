@@ -1,6 +1,4 @@
 import "./App.css"
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./HomePage/Home"
 import OrganisationsPage from "./OrganisationsPage/OrganisationsPage";
@@ -15,13 +13,15 @@ import DonatePage from "./DonatePage/DonatePage";
 import AnimalPage from "./Components/Pages/AnimalPage";
 import CreateAccPage from "./CreateAccountPage/CreateAccPage";
 import UserLandPage from "./AccountPage/UserLandingPage/UserLandPage";
+import AApplicationsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminApplicationsPage/AApplicationsPage";
+import AAnimalsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminAnimalsPage/AAnimalsPage";
+import ACustomersPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminCustomersPage/ACustomersPage";
+import AOrganisationsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminOrganisationsPage/AOrganisationsPage"
 
 function App() {
   return (
     <>
       <Router>
-        <Header />
-
           <Routes>
             <Route path ='/' exact element={<Home />}/>
             <Route path='/advice' exact element={<AdvicePage />}/>
@@ -36,9 +36,11 @@ function App() {
             <Route path="/donate" exact element={<DonatePage />} />
             <Route path="/account/createAccount" exact element={<CreateAccPage />} />
             <Route path="/account/userLandpage" exact element={<UserLandPage />} />
+            <Route path="/account/admin/organisations" exact element={<AOrganisationsPage />} />
+            <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
+            <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
+            <Route path="/account/admin/customers" exact element={<ACustomersPage />} />
           </Routes>
-          
-        <Footer />
       </Router>
     </>
   );

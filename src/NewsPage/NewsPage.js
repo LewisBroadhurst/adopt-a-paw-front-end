@@ -1,8 +1,11 @@
 import "./NewsPage.css";
+import Header from "../Header/Header.js";
+import Footer from "../Footer/Footer.js";
 
 const NewsPage = () => {
   return (
     <>
+    <Header />
         <main id="News-Page-Main">
 
             <h2>News</h2>
@@ -92,10 +95,7 @@ const NewsPage = () => {
 
                 </section>
             </>
-
-            
-
-
+        <Footer />
         </main>
     </>
   )

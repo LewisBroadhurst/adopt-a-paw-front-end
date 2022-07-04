@@ -19,6 +19,7 @@ const AnimalCards = () => {
     getAnimalsFilter(setAnimals);
   }, []);
 
+
   // const [cards, setCards] = useState([animals]);
 
   const handleChangePage = (event, newPage) => {
@@ -44,7 +45,7 @@ const AnimalCards = () => {
       <div className='gridContainer'>
         <Grid container spacing={2} columns={3} alignItems="center" justifyContent="center">
           {animals && calculateCurrentCards().map(card => <Grid item>
-            <AnimalCardItem src={process.env.PUBLIC_URL + '/familydog.jpeg'} animalobj={card}/>
+            <AnimalCardItem animalobj={card}/>
           </Grid>)}
         </Grid>
       </div>

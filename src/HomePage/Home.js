@@ -7,10 +7,13 @@ import wwf_logo from "./images/wwf_logo.jpeg";
 // import rspca_logo from "./images/rspca_logo.png";
 import battersea_gif from "./images/battersea.gif";
 import paw_prints from "./images/clipart385352.png";
+import Header from "../Header/Header.js";
+import Footer from "../Footer/Footer.js";
 
 function Home() {
   return (
     <>
+      <Header />
         <section className='hero'>
 
           <div className='hero-shape'>
@@ -71,13 +74,15 @@ function Home() {
 
 
           <div className='display_carousel'>
-            <h3>Success Stories</h3>
+            <h3>Adopt your new best friend now!</h3>
 
-            <p>Click on the carousel pictures below to learn more about our many success stories!</p>
+            <p>Click on the images below to find your new best friend!</p>
             <DisplayCarousel />
           </div>
 
         </section>
+        <br/>
+        <Footer />
     </>
   )
 }

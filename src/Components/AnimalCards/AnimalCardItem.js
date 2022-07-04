@@ -2,9 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './AnimalCardItem.css';
 
+
+
+
 function AnimalCardItem(props) {
 
     const animal = props.animalobj;
+
+    const calculateAge = (DOB) => {
+        const ageDifMs = Date.now() - new Date(DOB).getTime();
+        const ageDate = new Date(ageDifMs);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
 
   return (
     <>
@@ -13,16 +22,18 @@ function AnimalCardItem(props) {
                 <div className='cardleft'>
                         <img
                         className='animalcards_item_img'
-                        src={props.src} alt=""
+                        src={animal.photoUrl}
+                        alt=""
+                        onError={(e)=>{e.target.onerror = null; e.target.src="./public/familydog.jpeg"}}
                         />
                 </div>
                 <div className='cardright'>
-                    <p className='animalcards_item_text'>Hi, my name is: {animal.name}</p>
-                        <p>Species: {animal.species}</p>
-                        <p>Breed: {animal.breed}</p>
-                        <p>Age: {animal.age}</p>
-                        <p>Sex: {animal.sex}</p>
-                        <p>Location: {animal.location}</p>
+                    <p className='animalcards_item_name'>{animal.name}</p>
+                        <p className='animalcards_item_text'>Species: {animal.species}</p>
+                        <p className='animalcards_item_text'>Breed: {animal.breed}</p>
+                        <p className='animalcards_item_text'>Age: {calculateAge(animal.dateOfBirth)}</p>
+                        <p className='animalcards_item_text'>Sex: {animal.sex}</p>
+                        <p className='animalcards_item_text'>Location: {animal.location}</p>
                 </div>
             </Link>
         </li>

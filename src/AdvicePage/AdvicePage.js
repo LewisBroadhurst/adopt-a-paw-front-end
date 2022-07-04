@@ -1,10 +1,12 @@
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import "./AdvicePage.css";
 
 const AdvicePage = () => {
     return (
 
         <>
-
+        <Header />
         <main id="Advice-Page-Main"></main>
 
         <h2 className="header">Advice</h2>
@@ -32,7 +34,7 @@ const AdvicePage = () => {
             </div>
 
          </section>
-
+        <Footer />
         </>
 
     )}

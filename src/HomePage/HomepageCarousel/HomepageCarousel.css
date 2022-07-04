@@ -2,11 +2,16 @@
   overflow: hidden;
   position: relative;
   align-items: center;
+  height: 300px;
+  vertical-align: middle;
+  background-color: #ededed;
+  border-radius: 1rem;
 }
 
 .inner {
   white-space: nowrap;
   transition: transform 2s;
+  background-color: #ededed;
 }
 
 .carousel_item {
@@ -15,6 +20,10 @@
   justify-content: center;
   background-color: white;
   color: white;
+  height: 300px;
+  vertical-align: middle;
+  background-color: #ededed;
+  border-radius: 1rem;
 }
 
 .indicators {
@@ -85,6 +94,8 @@
 .zoom_image {
   box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform .2s;
+  height: 200px;
+  border-radius: 1rem;
 }
 
 .zoom_image:hover {

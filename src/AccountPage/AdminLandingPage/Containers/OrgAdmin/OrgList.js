@@ -1,4 +1,7 @@
 import OrgContainer from "./OrgContainter/OrgContainer";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 
 const OrgList = ( {organisations, setOrganisations} ) => {
 
@@ -7,10 +10,15 @@ const OrgList = ( {organisations, setOrganisations} ) => {
     <>
         <section className='POU-Container'>
 
+          <div className="pou__headerElementCont">
             <h3>Organisations</h3>
 
+            <span className="LAP-Admin"><Link to="/account/admin/organisations">All Organisations <FontAwesomeIcon icon={faSquareArrowUpRight}/></Link></span>
+          </div>
+
+          <div className="pou__cardContainers pou__orgCardContainer">
             {
-                organisations.map( (org, index) => {
+                organisations.slice(0, 3).map( (org, index) => {
 
                     return <OrgContainer key={index} 
                                         name={org.name} 
@@ -21,9 +29,8 @@ const OrgList = ( {organisations, setOrganisations} ) => {
                     
                 })
             }
-
-            <span className="LAP-Admin">All Organisations</span>
-
+          </div>
+            
         </section>
     
     </>

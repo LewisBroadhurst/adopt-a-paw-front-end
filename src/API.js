@@ -2,21 +2,24 @@ import axios from 'axios';
 
 // ANIMALS
 
-export function getAnimalsFilter(setAnimals, name, minAge, maxAge, sex, location, availableOnly){
-    axios.get('http://127.0.0.1:8080/animal/filteranimals', null, {params: name, minAge, maxAge, sex, location, availableOnly})
-    .then(res => {
-        const animals = res.data;
-        console.log(animals)
-        setAnimals(animals)
-    }).catch((err) => console.log(err));
+export const getAnimalsFilter = async (setAnimals, name, minAge, maxAge, sex, location, availableOnly) => {
+    try {
+        const response = axios.get('http://127.0.0.1:8080/animal/filteranimals', null, {params: name, minAge, maxAge, sex, location, availableOnly});
+        const animals = (await response).data;
+        setAnimals(animals);
+    } catch (e) {
+        console.log(e)
+    }
 }
 
-export function getAnimalByID(setAnimal, id){
-    axios.get(`http://127.0.0.1:8080/animal/${id}`)
-    .then(res => {
-        const animal = res.data;
+export const getAnimalByID = async (setAnimal, id) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/animal/findAnimalById/${id}`);
+        const animal = response.data;
         setAnimal(animal);
-    }).catch((err) => console.log(err))
+    } catch (e) {
+        console.log(e)
+    }   
 }
 
 
@@ -42,8 +45,27 @@ export const deleteAnimal = async (id) => {
     }
 }
 
+export const addAnimal = async (animalData) => {
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/animal/addNewAnimal`, animalData)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export const updateAnimal = async (id, animalData) => {
+    try {
+        const response = await axios.put(`http://127.0.0.1:8080/animal/updateAnimal/${id}`, animalData)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // ORGANISATIONS
+
 
 export const getOrganisations = async (setOrganisations) => {
     try {
@@ -56,6 +78,17 @@ export const getOrganisations = async (setOrganisations) => {
     }   
 }
 
+export const getOrganisationById = async (id) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/organisation/findOrganisationByID/${id}`);
+        const organisation = response.data;
+        console.log(response.data);
+        return organisation;
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 export const deleteOrgansation = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/organisation/deleteOrganisation/${id}`);
@@ -65,10 +98,13 @@ export const deleteOrgansation = async (id) => {
     }  
 }
 
-export function changeOrganisationName(id, orgData) {
-    axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData)
-        .then(res => console.log(res.data))
-        .catch((err) => console.log(err))
+export const updateOrganisation = async (id, orgData) => {
+    try{
+        const response = await axios.put(`http://127.0.0.1:8080/organisation/updateOrganisation/${id}`, orgData);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 // CUSTOMERS
@@ -93,9 +129,12 @@ export const deleteCustomer = async (id) => {
 }
 
 export const addNewCustomer = async (custData) => {
-    axios.post(`http://127.0.0.1:8080/customer/addNewCustomer`, custData)
-        .then(res => console.log(res.data))
-        .catch(err => console.log(err))
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/customer/addNewCustomer`, custData);
+        console.log(response)
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 export const findCustomerByID = async (setCustomer, id) => {
@@ -124,6 +163,15 @@ export const getAllApplications = async (setApplications) => {
 export const deleteAdoptionApplication = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/application/deleteApplication/${id}`);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export const updateAdoptionApplication = async (id, application_status) => {
+    try {
+        const response = await axios.put(`http://127.0.0.1:8080/application/updateApplicationStatus/${id}`, null, {params: {application_status}});
         console.log(response.data);
     } catch (err) {
         console.log(err)
