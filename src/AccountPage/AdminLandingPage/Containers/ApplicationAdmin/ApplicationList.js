@@ -1,3 +1,5 @@
+import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import ApplicationContainer from "./ApplicationContainer/ApplicationContainer";
 import cat_thumbs_up from "./ApplicationContainer/cat_thumbs_up.jpeg";
@@ -8,7 +10,11 @@ const ApplicationList = ({applications, setApplications}) => {
     <>
         <section className='POU-Container'>
 
-            <h3>Adoption Applications</h3>
+          <div className="pou__headerElementCont">
+              <h3>Adoption Applications</h3>
+
+              <span className="LAP-Admin"><Link to="/account/admin/applications">All Applications <FontAwesomeIcon icon={faSquareArrowUpRight}/></Link></span>
+            </div>
 
             {
                 applications.length > 0 ?
@@ -24,12 +30,12 @@ const ApplicationList = ({applications, setApplications}) => {
                                                   setApplications={setApplications}/>
                   })
                   : <section className="AL__actioned">
-                      <img src={cat_thumbs_up} alt="" />
-                      <p>You have actioned all applications, great work!</p>
+                      {/* <img src={cat_thumbs_up} alt="" /> */}
+                      {/* <p>You have actioned all applications, great work!</p> */}
                     </section>
             }
 
-            <span className="LAP-Admin"><Link to="/account/admin/applications">All Adoption Applications</Link></span>
+            {/* <span className="LAP-Admin"><Link to="/account/admin/applications">All Adoption Applications</Link></span> */}
 
         </section>
     </>

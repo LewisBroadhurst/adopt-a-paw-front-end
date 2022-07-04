@@ -13,12 +13,12 @@ const OrgList = ( {organisations, setOrganisations} ) => {
           <div className="pou__headerElementCont">
             <h3>Organisations</h3>
 
-            <span className="LAP-Admin"><Link to="/account/admin/organisations">All Customers <FontAwesomeIcon icon={faSquareArrowUpRight}/></Link></span>
+            <span className="LAP-Admin"><Link to="/account/admin/organisations">All Organisations <FontAwesomeIcon icon={faSquareArrowUpRight}/></Link></span>
           </div>
 
           <div className="pou__cardContainers pou__orgCardContainer">
             {
-                organisations.map( (org, index) => {
+                organisations.slice(0, 3).map( (org, index) => {
 
                     return <OrgContainer key={index} 
                                         name={org.name} 

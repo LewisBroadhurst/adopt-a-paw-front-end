@@ -18,7 +18,7 @@ const CustomerList = ( {customers, setCustomers} ) => {
 
           <div className="pou__cardContainers">
             {
-                customers.map( (cust, index) => {
+                customers.slice(0, 4).map( (cust, index) => {
                     return <CustomerAdminContainer key={index} 
                                                   firstName={cust.firstName}
                                                   lastName={cust.lastName}
