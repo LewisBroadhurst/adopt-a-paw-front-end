@@ -59,6 +59,12 @@ const AOrganisationsPage = () => {
         await getOrganisations(setOrganisations);
     }
 
+    // ORG SEARCH
+
+    const [orgNameSearch, setOrgNameSearch] = useState('');
+
+    const orgFiltName = organisations.filter( (org) => org.name.toLowerCase().includes(orgNameSearch))
+
   return (
     <>  
     <AdminHeader />
@@ -70,8 +76,8 @@ const AOrganisationsPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Organisation Name" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Org. Ref. Number" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" placeholder="Organisation Name" onChange={(e) => setOrgNameSearch(e.target.value)}></input>
+                    {/* <input type="text" placeholder="Org. Ref. Number" onChange={(e) => (e.target.value)}></input> */}
             </form>
         </section>
 
@@ -81,7 +87,7 @@ const AOrganisationsPage = () => {
 
                 {
                    
-                    organisations.map( (org, index) => {
+                    orgFiltName.map( (org, index) => {
                         return  <section key={index} className="aap__appContainer">
                                     <section className="aap__customerInfo">
                                         <h3>Organisation Info.</h3>

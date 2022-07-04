@@ -24,9 +24,9 @@ const ApplicationList = ({applications, setApplications}) => {
                                                   id={app.id} 
                                                   firstName={app.customer.firstName}
                                                   lastName={app.customer.lastName}
-                                                  animalName={app.animal.name} 
-                                                  animalLocation={app.animal.location} 
-                                                  applicationStatus={app.application_type_id}
+                                                  animalName={app.application.animal.name} 
+                                                  animalLocation={app.application.animal.location} 
+                                                  applicationStatus={app.application.animal.applicationStatus}
                                                   setApplications={setApplications}/>
                   })
                   : <section className="AL__actioned">
