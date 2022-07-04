@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { getAnimalByID } from '../../API';
+import { getAnimalByID, getOrganisations } from '../../API';
 import {useEffect, useState} from 'react';
 import './AnimalPage.css';
 
@@ -13,6 +13,13 @@ function AnimalPage() {
         getAnimalByID(setAnimal, params.id);
     }, [])
 
+
+
+    const [organisation, setOrganisation] = useState({});
+
+    useEffect(() => {
+        getOrganisations(setOrganisation, params.id);
+    }, [])
 
     
     let gender = ""
@@ -38,7 +45,7 @@ function AnimalPage() {
         <h1 className='animalname'>{animal.name}</h1>
         <section className="animalpage_container">
             <br/>
-            <div>
+            <div className='left_align'>
                 <button className='back_button'><a href="../adopt">Back to results</a></button>
             </div>
             <div>
@@ -50,15 +57,15 @@ function AnimalPage() {
             <div className='org_info_container'>
                 <h3>Contact your local centre or branch to find out more about this animal:</h3>
                 <br/>
-                <p>Name: </p>
+                <p>Name: {organisation.name}</p>
                 <p>Email: </p>
                 <p>Contact Number:</p>
                 <br/>
                 <div className='center_text'>Or click here to enquire now</div>
-                <div className='adopt_button'><button className='center_text'><a href="../account/userLandPage">Adopt me!</a></button></div>
+                <div className='center_text'><button className='adopt_button'><a href="../account/userLandPage">Adopt me!</a></button></div>
                 <br/>
                 <div className='center_text'>Check out our advice page for more information on rehoming a pet</div>
-                <div className='advice_button'><button className='center_text'><a href="../advice">Rehoming Advice</a></button></div>
+                <div className='center_text'><button className='advice_button'><a href="../advice">Rehoming Advice</a></button></div>
             </div>
         </section>
         <br/>

@@ -48,6 +48,9 @@
     margin: 1rem;
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .org_info_container>h3{
@@ -63,6 +66,7 @@
 .center_text{
     font-size: 1.2rem;
     text-align: center;
+    
 }
 
 .picture_container{
@@ -119,4 +123,10 @@
 
 .advice_button:hover{
     background-color: #a3533d;
+}
+
+.left_align{
+    text-align: left;
+    align-items: left;
+    justify-content: left;
 }
