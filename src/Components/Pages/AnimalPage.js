@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import { getAnimalByID } from '../../API';
 import {useEffect, useState} from 'react';
 import './AnimalPage.css';
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer"
 
 function AnimalPage() {
 
@@ -14,7 +16,8 @@ function AnimalPage() {
     }, [])
 
   return (
-    <>
+    <>  
+        <Header />
         <h1 className='animalname'>{animal.name}</h1>
         <section className="animalpage_container">
             <div className='picture_container'>
@@ -22,6 +25,7 @@ function AnimalPage() {
             </div>
             <div className='basic_info_container'></div>
         </section>
+        <Footer />
     </>
   )
 }
