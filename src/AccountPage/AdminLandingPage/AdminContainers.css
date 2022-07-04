@@ -7,15 +7,29 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.POU-Container>h3 {
-    font-size: 1.6rem;
-    text-align: center;
-    padding-bottom: 0.5rem;
-    color: #4267B2;
+.pou__headerElementCont,
+.pou__cardContainers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.pou__headerElementCont {
+    justify-content: space-between;
+}
+
+.pou__headerElementCont>h3,
+.pou__headerElementCont>span {
+    color: #4267B2;
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+/* CARDS */
 
 .Post-Admin-Cont {
     background-color: #BBDBB4;
