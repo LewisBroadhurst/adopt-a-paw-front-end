@@ -22,8 +22,6 @@ function AnimalPage() {
         gender = "boy";
     } else if (animal.sex === "Female") {
         gender = "girl";
-    } else {
-        gender = "";
     }
 
 
