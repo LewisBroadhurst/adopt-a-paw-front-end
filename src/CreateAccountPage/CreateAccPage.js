@@ -1,6 +1,8 @@
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./CreateAccPage.css";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer"
 
 import gpMobForm from "./images/gpMobForm.jpeg";
 import { addNewCustomer } from "../API";
@@ -38,6 +40,7 @@ const CreateAccPage = () => {
 
   return (
     <>
+        <Header />
         <main className="cap__main--positioning">
 
             <section className="cap__nonFormContent">
@@ -84,7 +87,7 @@ const CreateAccPage = () => {
 
             <div className="empty__grid"></div>
 
-            
+            <Footer />
         </main>
     </>
   )

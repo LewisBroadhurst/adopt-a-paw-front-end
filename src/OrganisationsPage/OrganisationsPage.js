@@ -7,11 +7,14 @@ import battersea_gif from "./images/battersea_gif_crop.gif";
 import dogs_trust_logo from "./images/dogs_trust.webp";
 import blue_cross_logo from "./images/blue_cross_logo.png";
 import woodgreen_logo from "./images/woodgreen_logo.png";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 
 const OrganisationsPage = () => {
   return (
     <>
+      <Header />
         <main id="Organisation-Page-Main">
 
           <section className="orgPage__mainHeader--pos">
@@ -79,6 +82,7 @@ const OrganisationsPage = () => {
           </section>
 
         </main>
+        <Footer />
     </>
   )
 }

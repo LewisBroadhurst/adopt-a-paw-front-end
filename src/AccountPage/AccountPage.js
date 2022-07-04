@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import "./AccountPage.css";
 import { Link } from "react-router-dom";
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 
 
@@ -13,6 +15,7 @@ const AccountPage = () => {
 
   return (
     <>
+        <Header />
         <section className="ap__background--color">
             <h2>Join us, and begin your adoption journey...</h2>
             <main id="Account-Main-Page">
@@ -35,6 +38,7 @@ const AccountPage = () => {
                 </section>
             </main>
         </section>
+        <Footer />
     </>
   )
 }

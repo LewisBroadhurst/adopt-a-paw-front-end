@@ -7,10 +7,13 @@ import wwf_logo from "./images/wwf_logo.jpeg";
 // import rspca_logo from "./images/rspca_logo.png";
 import battersea_gif from "./images/battersea.gif";
 import paw_prints from "./images/clipart385352.png";
+import Header from "../Header/Header.js";
+import Footer from "../Footer/Footer.js";
 
 function Home() {
   return (
     <>
+      <Header />
         <section className='hero'>
 
           <div className='hero-shape'>
@@ -78,6 +81,7 @@ function Home() {
           </div>
 
         </section>
+        <Footer />
     </>
   )
 }

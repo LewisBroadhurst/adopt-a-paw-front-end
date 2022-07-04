@@ -24,8 +24,6 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
-
           <Routes>
             <Route path ='/' exact element={<Home />}/>
             <Route path='/advice' exact element={<AdvicePage />}/>
@@ -41,17 +39,10 @@ function App() {
             <Route path="/account/createAccount" exact element={<CreateAccPage />} />
             <Route path="/account/userLandpage" exact element={<UserLandPage />} />
             <Route path="/account/admin/organisations" exact element={<AOrganisationsPage />} />
+            <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
+            <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
+            <Route path="/account/admin/customers" exact element={<ACustomersPage />} />
           </Routes>
-          
-        <Footer />
-      </Router>
-
-      <Router>
-        <Routes>
-          <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
-          <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
-          <Route path="/account/admin/customers" exact element={<ACustomersPage />} />
-        </Routes>
       </Router>
     </>
   );

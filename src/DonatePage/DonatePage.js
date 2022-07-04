@@ -10,10 +10,13 @@ import Tab5 from "./images/tab2.jpeg";
 import Tab6 from "./images/tab6.jpeg";
 import Form1 from "./images/form1.jpeg";
 import Form2 from "./images/form2.jpeg";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const DonatePage = () => {
   return (
     <>
+        <Header />
         <main id="Donate-Page-Main">
             <img src={FamDog1} alt="family with dog" />
 
@@ -98,7 +101,7 @@ const DonatePage = () => {
             </section>
 
             
-
+        <Footer />
         </main>
     </>
   )

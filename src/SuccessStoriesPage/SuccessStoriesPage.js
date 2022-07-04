@@ -1,9 +1,12 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 import "./SuccessStories.css"
 
 const SuccessStoriesPage = () => {
   return (
     <>
+    <Header />
         <main id="SS-Page-Main">
 
             <h2 className='SuccessTitle'>Success Stories</h2>
@@ -64,10 +67,7 @@ const SuccessStoriesPage = () => {
                 </section>
                 
             </>
-
-            
-
-
+        <Footer />
         </main>
     </>
   )

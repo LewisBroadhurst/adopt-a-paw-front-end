@@ -1,8 +1,11 @@
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import "./GetInvolvedPage.css";
 
 const GetInvolvedPage = () => {
     return (
         <>
+        <Header />
        <section className="GIMain">
 
        <h2 className="header">Get Involved</h2>
@@ -20,7 +23,7 @@ const GetInvolvedPage = () => {
 
        </section>
 
-        
+        <Footer />
         
         </>
 
