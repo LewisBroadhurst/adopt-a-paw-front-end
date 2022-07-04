@@ -98,11 +98,22 @@ export const addNewCustomer = async (custData) => {
         .catch(err => console.log(err))
 }
 
+export const findCustomerByID = async (setCustomer, id) => {
+
+    axios.get(`http://127.0.0.1:8080/customer/findCustomerByID/${id}`)
+    .then(res => {
+        const customer = res.data;
+        setCustomer(customer);
+    }).catch((err) => console.log(err))
+
+
+}
+
 // APPLICATIONS
 
 export const getAllApplications = async (setApplications) => {
     try {
-        const response = await axios.get(`http://127.0.0.1:8080/application/findAllApplications`);
+        const response = await axios.get(`http://127.0.0.1:8080/application/findAll`);
         const applications = response.data;
         setApplications(applications);
     } catch (err) {
