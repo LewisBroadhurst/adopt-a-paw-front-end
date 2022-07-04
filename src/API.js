@@ -65,6 +65,17 @@ export const getOrganisations = async (setOrganisations) => {
     }   
 }
 
+export const getOrganisationById = async (id) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/organisation/findOrganisationByID/${id}`);
+        const organisation = response.data;
+        console.log(response.data);
+        return organisation;
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 export const deleteOrgansation = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/organisation/deleteOrganisation/${id}`);

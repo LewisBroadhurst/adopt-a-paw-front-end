@@ -1,5 +1,5 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations, addAnimal } from "../../../../API";
+import { getAllAnimals, getOrganisations, addAnimal,  } from "../../../../API";
 import { useEffect, useState } from "react";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,10 +45,19 @@ const AAnimalsPage = () => {
     //     await getAllApplications(setApplications);
     // }
 
+    // Update Animal Location
+
+    const [ulLocation, setUlLocation] = useState('');
+
+    const handleLocationUpdate = async (event) => {
+        event.preventDefault()
+        
+    }
+
     // Add Animal
 
     const [aaAnimalName, setAaAnimalName] = useState('');
-    const [aaDOB, setAaDOB] = useState('');
+    const [aaSpecies, setAaSpecies] = useState('');
     const [aaSex, setAaSex] = useState('');
     const [aaLocation, setAaLocation] = useState('');
 
@@ -59,9 +68,9 @@ const AAnimalsPage = () => {
             "name": `${aaAnimalName}`,
             "sex": `${aaSex}`,
             "location": `${aaLocation}`,
-            "species": "Dog",
-            "breed": "Daschund",
-            "availableStatus": "Available"
+            "species": `${aaSpecies}`,
+            // "breed": "Daschund",
+            "availableStatus": "Available",
             }
         
         await addAnimal(animalData)
@@ -99,7 +108,7 @@ const AAnimalsPage = () => {
 
     const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( (animal) => animal.availableStatus != null).filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
 
-    const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
+    // const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
   return (
     <>  
@@ -134,7 +143,7 @@ const AAnimalsPage = () => {
                             <span>Name: {animal.name}</span>
                             <span>DOB: {animal.dateOfBirth}</span>
                             <span>Location: {animal.location}</span>
-                            {/* <span>Organisation: {animal.organisation.name}</span> */}
+                            {/* <span>Organisation: {animal.organisation.name != null ? animal.organisation.name : "Not specified"}</span> */}
                             <span>Adoption status: {animal.availableStatus}</span>
                         </section>
         
@@ -156,7 +165,7 @@ const AAnimalsPage = () => {
                     <form id="aap__aaForm">
                         
                         <input type="text" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
-                        <input type="text" placeholder="Date Of Birth" required onChange={(e) => setAaDOB(e.target.value)}></input>
+                        <input type="text" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
                         <input type="text" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
                         <input type="text" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
 
@@ -174,7 +183,7 @@ const AAnimalsPage = () => {
 
                 <section className="aap__form">
                     <div className="ulp__form__header">
-                        <h3>Update Animal</h3>
+                        <h3>Update Location</h3>
                     </div>
                     <form>
                         <select defaultValue="default" onChange={(e) => (e.target.value) }>
@@ -186,14 +195,8 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
-                            <option value="default" disabled hidden>Application Status</option>
-                            <option>Rejected</option>
-                            <option>Pending</option>
-                            <option>Approved</option>
-                        </select>
-                        <input type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="">Update Animal</button>
+                        <input placeholder="Location" onChange={(e) => (e.target.value)}></input>
+                        <button type="button" onClick={handleLocationUpdate}>Update Animal</button>
                     </form>
                 </section>
 

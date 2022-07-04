@@ -36,7 +36,7 @@ const AdminLandPage = () => {
     <>
     <AdminHeader />
         <main id="AdminLandPage">
-
+          
           <h2 className="AdminWelcome">Welcome, Admin User <FontAwesomeIcon icon={faPaw} /></h2>
 
           <section className="alp__containers--positioning">
