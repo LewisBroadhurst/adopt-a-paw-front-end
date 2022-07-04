@@ -107,6 +107,12 @@ const AAnimalsPage = () => {
 
     // const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
+    const changeInputColour = (event) => {
+        event.preventDefault()
+
+        
+    }
+
   return (
     <>  
         <AdminHeader />

@@ -26,6 +26,17 @@ const ACustomersPage = () => {
         await getCustomers(setCustomers);
     }
 
+    // Search bar
+
+    const [nameSearch, setNameSearch] = useState('');
+    const [locationSearch, setLocationSearch] = useState([]);
+    const [prevAdoptSearch, setPrevAdoptSearch] = useState([]);
+
+    const customersFiltName = customers.filter( customer => customer.firstName.toLowerCase().includes(nameSearch.toLowerCase()));
+
+    const customersFiltLocation = customersFiltName.filter( customer => customer.location.toLowerCase().includes(locationSearch));
+
+    const customersFiltAdopted = customersFiltLocation.filter( customer => customer.previousAdoptions.toString().includes(prevAdoptSearch))
 
   return (
     <>  
@@ -38,9 +49,9 @@ const ACustomersPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Name" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Location" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Previously adopted?" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" placeholder="Name" onChange={(e) => setNameSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Location" onChange={(e) => setLocationSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Previously adopted?" onChange={(e) => setPrevAdoptSearch(e.target.value)}></input>
             </form>
         </section>
 
@@ -50,13 +61,14 @@ const ACustomersPage = () => {
 
                 {
                    
-                    customers.map( (customer, index) => {
+                    customersFiltAdopted.map( (customer, index) => {
                         return  <section key={index} className="aap__appContainer">
                                     <section className="aap__customerInfo">
                                         <h3>Customer Info.</h3>
                                         <span>Customer Ref. Number: {customer.id}</span>
                                         <span>Name: {customer.firstName} {customer.lastName}</span>
                                         <span>DOB: {customer.dateOfBirth}</span>
+                                        <span>Location: {customer.location}</span>
                                         <span>Previously adopted? {customer.previousAdoptions.toString()}</span>
                                     </section>
                     
