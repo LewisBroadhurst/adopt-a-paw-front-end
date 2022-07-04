@@ -72,13 +72,9 @@ const ACustomersPage = () => {
                                         <span>Previously adopted? {customer.previousAdoptions.toString()}</span>
                                     </section>
                     
-                                    {/* <section className="aap__animalInfo">
-                                        <h3>Animal Info.</h3>
-                                        <span>Name: </span>
-                                        <span>DOB: </span>
-                                        <span>Location: </span>
-                                        <span>Organisation: </span>
-                                    </section> */}
+                                    <section className="aap__locationInfo">
+                                        <h3>Cem Location Map</h3>
+                                    </section>
                                 </section>
                 })}
 
