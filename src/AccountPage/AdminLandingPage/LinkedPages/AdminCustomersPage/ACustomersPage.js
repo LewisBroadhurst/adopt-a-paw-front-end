@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
-import { GoogleMap } from '@react-google-maps/api'
+import { GoogleMap } from '@react-google-maps/api';
+// import cityInformation from "../../../../gb_cityInformation.json";
 
 
 
@@ -45,12 +46,42 @@ const ACustomersPage = () => {
     const containerStyle = {
         width: '300px',
         height: '200px'
-      };
+    };
+
+    // const findCity = async (location) => {
+    //     let output;
+
+    //     output = await cityInformation.find(city => {
+    //         if (city.city === location) {
+    //             output = {
+    //                 lat: city.lat,
+    //                 lng: city.lng
+    //             }
+    //         } else {
+    //             output = {
+    //                 lat: 51.507351,
+    //                 lng: -0.127758
+    //             }
+    //         }
+    //         return output;
+    //     });
+    // }
       
-      const center = {
-        lat: 51.507351,
-        lng: -0.127758
-      };
+    const center = (location) => {
+
+        if (location === "London") {
+            return {
+                lat: 51.507351,
+                lng: -0.127758
+            }
+        } else if (location === "Manchester") {
+            return {
+                lat: 40.507351,
+                lng: -0.127758
+            }
+        }
+    
+    };
 
     
 
@@ -94,7 +125,7 @@ const ACustomersPage = () => {
                                            <GoogleMap 
                                            mapContainerClassName="google__map"
                                            mapContainerStyle={containerStyle}
-                                           center={center}
+                                           center={center(customer.location)}
                                            zoom={12} />
                                         </section>
                                     </section>
