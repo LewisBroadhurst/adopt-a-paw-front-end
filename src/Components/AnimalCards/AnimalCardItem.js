@@ -2,9 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './AnimalCardItem.css';
 
+
+
+
 function AnimalCardItem(props) {
 
     const animal = props.animalobj;
+
 
   return (
     <>
@@ -13,7 +17,9 @@ function AnimalCardItem(props) {
                 <div className='cardleft'>
                         <img
                         className='animalcards_item_img'
-                        src={props.src} alt=""
+                        src={animal.photoUrl}
+                        alt=""
+                        onError={(e)=>{e.target.onerror = null; e.target.src="./public/familydog.jpeg"}}
                         />
                 </div>
                 <div className='cardright'>
