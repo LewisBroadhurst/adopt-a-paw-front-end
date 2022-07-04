@@ -15,14 +15,6 @@ function AnimalPage() {
         getAnimalByID(setAnimal, params.id);
     }, [])
 
-
-
-    const [organisation, setOrganisation] = useState({});
-
-    useEffect(() => {
-        getOrganisations(setOrganisation, params.id);
-    }, [])
-
     
     let gender = ""
 
