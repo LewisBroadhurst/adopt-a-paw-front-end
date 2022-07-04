@@ -9,7 +9,8 @@
     text-align: center;
     font-size: 1.6rem;
     padding: 0.5rem 0;
-    background-color: #BBDBB4;
+    background-color: #4267B2;
+    color: white;
 }
 
 @media (min-width: 750px) {
@@ -37,6 +38,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
+
+        max-width: 70%;
+        margin: 0 auto;
     }
 
 }

@@ -1,7 +1,7 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations, addAnimal } from "../../../API";
+import { getAllAnimals, getOrganisations, addAnimal, updateAnimal, deleteAnimal } from "../../../../API";
 import { useEffect, useState } from "react";
-import AdminHeader from "../AdminHeader/AdminHeader";
+import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,40 +15,46 @@ const AAnimalsPage = () => {
     const [animalNameSearch, setAnimalNameSearch] = useState('');
     const [animalLocationSearch, setAnimalLocationSearch] = useState('');
     const [animalAvailableStatus, setAnimalAvailableStatus] = useState('');
-    const [animalOrganisationSearch, setAnimalOrganisationSearch] = useState('');
+    // const [animalOrganisationSearch, setAnimalOrganisationSearch] = useState('');
 
     useEffect( () => {
         getAllAnimals(setAnimals)
         getOrganisations(setOrganisations)
     }, []);
 
-    // const handleApplicationDelete = async (event) => {
-    //     event.preventDefault()
+    // Delete Animal
 
-    //     if (appicationDeleteId === -1) {
-    //         return alert("Please select an ID");
-    //     }
+    const [raID, setRaID] = useState(-1);
 
-    //     await deleteAdoptionApplication(appicationDeleteId)
+    const handleAnimalDelete = async (event) => {
+        event.preventDefault()
 
-    //     await getAllApplications(setApplications)
+        await deleteAnimal(raID)
 
-    //     document.querySelector("select").value = "default";
-    //     document.querySelector("#aap_dr").innerText = "blank";
-    // }
+        await getAllAnimals(setAnimals)
+    }
 
-    // const handleApplicationUpdate = async (event) => {
-    //     event.preventDefault();
+    // Update Animal Location
 
-    //     await updateAdoptionApplication(applicationUpdateId, applicationStatus);
+    const [ulLocation, setUlLocation] = useState('');
+    const [ulID, setUlID] = useState(-1);
 
-    //     await getAllApplications(setApplications);
-    // }
+    const handleLocationUpdate = async (event) => {
+        event.preventDefault()
+
+        const animalData = {
+            "location": `${ulLocation}`
+        }
+
+        await updateAnimal(ulID ,animalData)
+
+        await getAllAnimals(setAnimals)
+    }
 
     // Add Animal
 
     const [aaAnimalName, setAaAnimalName] = useState('');
-    const [aaDOB, setAaDOB] = useState('');
+    const [aaSpecies, setAaSpecies] = useState('');
     const [aaSex, setAaSex] = useState('');
     const [aaLocation, setAaLocation] = useState('');
 
@@ -59,9 +65,9 @@ const AAnimalsPage = () => {
             "name": `${aaAnimalName}`,
             "sex": `${aaSex}`,
             "location": `${aaLocation}`,
-            "species": "Dog",
-            "breed": "Daschund",
-            "availableStatus": "Available"
+            "species": `${aaSpecies}`,
+            // "breed": "Daschund",
+            "availableStatus": "Available",
             }
         
         await addAnimal(animalData)
@@ -99,7 +105,7 @@ const AAnimalsPage = () => {
 
     const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( (animal) => animal.availableStatus != null).filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
 
-    const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
+    // const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
   return (
     <>  
@@ -115,7 +121,7 @@ const AAnimalsPage = () => {
                     <input id="aap__searchName" type="text" placeholder="Name" onChange={(e) => setAnimalNameSearch(e.target.value)}></input>
                     <input type="text" placeholder="Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
                     <input type="text" placeholder="Adoption Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
-                    <input type="text" placeholder="Organisation" onChange={(e) => setAnimalOrganisationSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Organisation" onChange={(e) => (e.target.value)}></input>
 
                     <button type="button" onClick={handleSearchReset}>Reset</button>
             </form>
@@ -134,7 +140,7 @@ const AAnimalsPage = () => {
                             <span>Name: {animal.name}</span>
                             <span>DOB: {animal.dateOfBirth}</span>
                             <span>Location: {animal.location}</span>
-                            {/* <span>Organisation: {animal.organisation.name}</span> */}
+                            {/* <span>Organisation: {animal.organisation.name != null ? animal.organisation.name : "Not specified"}</span> */}
                             <span>Adoption status: {animal.availableStatus}</span>
                         </section>
         
@@ -156,7 +162,7 @@ const AAnimalsPage = () => {
                     <form id="aap__aaForm">
                         
                         <input type="text" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
-                        <input type="text" placeholder="Date Of Birth" required onChange={(e) => setAaDOB(e.target.value)}></input>
+                        <input type="text" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
                         <input type="text" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
                         <input type="text" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
 
@@ -174,10 +180,10 @@ const AAnimalsPage = () => {
 
                 <section className="aap__form">
                     <div className="ulp__form__header">
-                        <h3>Update Animal</h3>
+                        <h3>Update Location</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <select defaultValue="default" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -186,14 +192,8 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
-                            <option value="default" disabled hidden>Application Status</option>
-                            <option>Rejected</option>
-                            <option>Pending</option>
-                            <option>Approved</option>
-                        </select>
-                        <input type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="">Update Animal</button>
+                        <input placeholder="Location" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
+                        <button type="button" onClick={handleLocationUpdate}>Update Location</button>
                     </form>
                 </section>
 
@@ -202,7 +202,7 @@ const AAnimalsPage = () => {
                         <h3>Remove Animal</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => (e.target.value)}>
+                         <select defaultValue="default" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -211,7 +211,7 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         <input id="aap_dr" type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="{handleApplicationDelete}">Delete Animal</button>
+                        <button type="button" onClick={handleAnimalDelete}>Delete Animal</button>
                     </form>
                 </section>
             </section>

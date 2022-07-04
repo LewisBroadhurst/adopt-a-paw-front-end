@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
+import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../../API";
 import "./AApplicationsPage.css";
 import memeAppCrop from "./Images/memeAppCrop.png";
-import AdminHeader from "../AdminHeader/AdminHeader.js"
+import AdminHeader from "../../AdminHeader/AdminHeader.js"
 
 
 

@@ -51,6 +51,15 @@ export const addAnimal = async (animalData) => {
     }
 }
 
+export const updateAnimal = async (id, animalData) => {
+    try {
+        const response = await axios.put(`http://127.0.0.1:8080/animal/updateAnimal/${id}`, animalData)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // ORGANISATIONS
 
@@ -63,6 +72,17 @@ export const getOrganisations = async (setOrganisations) => {
     } catch (err) {
         console.log(err);
     }   
+}
+
+export const getOrganisationById = async (id) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/organisation/findOrganisationByID/${id}`);
+        const organisation = response.data;
+        console.log(response.data);
+        return organisation;
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 export const deleteOrgansation = async (id) => {
