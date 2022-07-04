@@ -18,3 +18,12 @@
     grid-column: 1 / 2;
     font-size: 1.4rem;
 }
+
+.aap__searchBar>input::placeholder {
+    color: #aeaeae;
+}
+
+.aap__searchBar>input {
+    border-radius: 0.25rem;
+    border: 0px solid black;
+}

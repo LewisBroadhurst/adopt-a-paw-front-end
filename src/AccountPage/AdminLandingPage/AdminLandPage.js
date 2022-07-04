@@ -22,11 +22,17 @@ const AdminLandPage = () => {
 
   
 
-  useEffect(() => {
-    getOrganisations(setOrganisations);
-    getAllApplications(setApplications);
-    getCustomers(setCustomers);
-    getAllAnimals(setAnimals)
+  useEffect( () => {
+
+    const forceSync = async () => {
+      await getOrganisations(setOrganisations);
+      await getAllApplications(setApplications);
+      await getCustomers(setCustomers);
+      await getAllAnimals(setAnimals)
+    }
+
+    forceSync()
+    
   }, []);
 
   
