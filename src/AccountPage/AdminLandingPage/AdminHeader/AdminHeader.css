@@ -1,0 +1,27 @@
+.ah__container {
+    background-color: #0E2A62;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.ah__navBar>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.ah__navBar>ul>li,
+.ah__titleLogo>h1,
+.ah__logOut>span {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.ah__logOut>span,
+.ah__titleLogo>h1 {
+    padding: 0.5rem 1rem
+}

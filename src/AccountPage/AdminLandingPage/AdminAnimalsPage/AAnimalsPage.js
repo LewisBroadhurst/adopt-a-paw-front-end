@@ -1,6 +1,7 @@
 import "./AAnimalsPage.css";
 import { getAllAnimals, getOrganisations } from "../../../API";
 import { useEffect, useState } from "react";
+import AdminHeader from "../AdminHeader/AdminHeader";
 
 
 
@@ -45,6 +46,7 @@ const AAnimalsPage = () => {
 
   return (
     <>  
+        <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
                 <h2>Animals</h2>
