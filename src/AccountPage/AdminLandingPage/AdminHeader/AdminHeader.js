@@ -11,11 +11,11 @@ const AdminHeader = () => {
 
             <nav className="ah__navBar">
                 <ul>
-                    <li>Home</li>
-                    <li>Applications</li>
-                    <li>Animals</li>
-                    <li>Customers</li>
-                    <li>Organisations</li>
+                    <li><Link to="/account/admin/">Home</Link></li>
+                    <li><Link to="/account/admin/applications">Applications</Link></li>
+                    <li><Link to="/account/admin/animals">Animals</Link></li>
+                    <li><Link to="/account/admin/customers">Customers</Link></li>
+                    <li><Link to="/account/admin/organisations">Organisations</Link></li>
                 </ul>
             </nav>
 
