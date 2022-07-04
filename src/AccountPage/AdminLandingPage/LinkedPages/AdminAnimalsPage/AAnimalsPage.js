@@ -107,11 +107,6 @@ const AAnimalsPage = () => {
 
     // const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
 
-    const changeInputColour = (event) => {
-        event.preventDefault()
-
-        
-    }
 
   return (
     <>  
@@ -150,7 +145,8 @@ const AAnimalsPage = () => {
                             <span>Adoption status: {animal.availableStatus}</span>
                         </section>
         
-                        <section className="aap__animalInfo">
+                        <section className="aap__animalImg">
+                            <img src={animal.photoUrl} alt="" />
                         </section>
                     </section>
                     })
