@@ -254,6 +254,331 @@
     font-size: 30px;
 
 }
+.openApplicationSearchForm__button{
+
+    position: relative;
+    top: 50px;
+    left: 155px;
+    width: 100px;
+    height: 50px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    /* border: solid black 0.5px; */
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
+
+
+
+
+}
+
+.openApplicationSearchForm__button:hover{
+
+    box-shadow:   inset 0px 1px 8px 1px rgba(0, 0, 0, 0.35);
+
+}
+
+.applicationSearchForm{
+
+    position: relative;
+    top: 95px;
+    left: 0px;
+    /* border-bottom: solid black 2px; */
+    height: 100px ;
+    width: 410px;
+    /* box-shadow:    0px 20px 50px 1px rgba(247, 170, 16, 0.835); */
+
+
+
+
+}
+
+.searchApplicationForm__arrowUpButton__left{
+
+    position: relative;
+    top: -20px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+    
+
+
+
+
+}
+
+.searchApplicationForm__arrowUpButton__right{
+
+    position: relative;
+    top: -50px;
+    left: 348px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+
+
+}
+
+.searchApplicationForm__arrowUpButton__left:hover{
+
+    box-shadow:   inset 0px 1px 3px 1px rgba(0, 0, 0, 0.35);
+    
+
+
+
+
+}
+
+.searchApplicationForm__arrowUpButton__right:hover{
+
+    box-shadow:   inset 0px 1px 3px 1px rgba(0, 0, 0, 0.35);
+    
+
+
+
+
+}
+
+.ulp__applicationStatusInput{
+
+    position: relative;
+    left:105px;
+    color: gray;
+
+
+
+
+
+
+}
+
+.ulp__applicationStatusLabel{
+
+    position: relative;
+    left:100px;
+
+
+
+}
+
+.ulp__application_aniomalName_input{
+
+    position: relative;
+    top: 30px;
+    left: -95px;
+    color: gray;
+
+
+
+}
+
+.ulp__application_animalName_Label{
+
+    position: relative;
+    top: 31px;
+    left: -105px;
+
+
+
+}
+
+.openAnimalSearchForm__button{
+
+    position: relative;
+    top: 50px;
+    left: 155px;
+    width: 100px;
+    height: 50px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    /* border: solid black 0.5px; */
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
+
+
+
+}
+
+.openAnimalSearchForm__button:hover{
+
+    box-shadow:   inset 0px 1px 8px 1px rgba(0, 0, 0, 0.35);
+    
+}
+
+
+
+
+.animalSearchForm{
+
+    position: relative;
+    top: 95px;
+    left: 0px;
+    /* border-bottom: solid black 2px; */
+    height: 100px ;
+    width: 410px;
+    /* box-shadow:    0px 20px 50px 1px rgba(247, 170, 16, 0.835); */
+
+
+}
+
+.searchAnimalForm__arrowUpButton__left{
+
+    position: relative;
+    top: -20px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+    
+
+
+
+
+}
+
+.searchAnimalForm__arrowUpButton__right{
+
+    position: relative;
+    top: -50px;
+    left: 348px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffd428;
+    border-radius: 15%;
+    box-shadow:    0px 1px 5px 1px rgba(247, 170, 16, 0.835);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+
+
+}
+
+.searchAnimalForm__arrowUpButton__left:hover{
+
+    box-shadow:   inset 0px 1px 3px 1px rgba(0, 0, 0, 0.35);
+    
+
+
+
+
+}
+
+.searchAnimalForm__arrowUpButton__right:hover{
+
+    box-shadow:   inset 0px 1px 3px 1px rgba(0, 0, 0, 0.35);
+    
+
+
+
+
+}
+
+.ulp__adoptedAnimalnameInput{
+
+    position: relative;
+    left:110px;
+    color: gray;
+
+
+
+
+}
+
+.ulp__adoptedAnimalnameLabel{
+
+    position: relative;
+    left:110px;
+
+
+}
+
+.ulp__adoptedAnimalDOBInput{
+     position: relative;
+    top: 30px;
+    left: -80px;
+    color: gray;
+
+
+}
+
+.ulp__adoptedAnimalDOBLabel{
+
+    position: relative;
+    top: 31px;
+    left: -90px;
+
+
+
+
+}
+
+.ulp__adoptedAnimalBreedInput{
+
+    position: relative;
+    top: 35px;
+    left: 107px;
+    
+    color: gray;
+
+
+
+}
+
+
+
+.ulp__adoptedAnimalBreedLabel{
+
+    position: relative;
+    top: 36px;
+    left: 109px;
+
+
+
+}
 
 
 .ulp__container2{
@@ -273,6 +598,16 @@
     background-position: bottom;
     background-size: 120%;
     
+    
+
+
+}
+
+.findByNameButton{
+
+    position: relative;
+    left: 20px;
+    top: 1px;
     
 
 

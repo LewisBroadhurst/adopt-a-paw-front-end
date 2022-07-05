@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./UserLandPage.css";
 import { getAllAnimals, getAllApplications, findCustomerByID } from "../../API";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faPaw, faStar, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faPaw, faStar, faArrowDown, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 import HappyDog from "../happyDog.jpeg"
 import Cat from "../catPortrait.jpeg"
 import Ferret from "../ferret.jpeg"
@@ -19,12 +19,25 @@ const UserLandPage = () => {
 
     const [animals, setAnimals] = useState([]);
     const [applications, setApplications] = useState([]);
-    const [customer, setCustomer] = useState({adoptedAnimals : [{}]});
+    const [customer, setCustomer] = useState([]);
+    
+    const [userInput, setUserInput] = useState("null");
+    const [userInputApp, setUserInputApp] = useState("null");
+    
+    const [animalInputType, setAnimalInputType] = useState("");
+    const [applicationInputType, setApplicationInputType] = useState("");
+    
+    const[openAnimalSearchForm,setOpenAnimalSearchForm] = useState(false);
+    const [animalSearchButtonDisplay, setAnimalSearchButtonDisplay] = useState("visible");
+    
+    const [openApplicationSearchForm, setOpenApplicationForm] = useState(false);
+    const [applicationSearchButtonDisplay, setApplicationSearchButtonDisplay] = useState("visible");
 
     useEffect( () => {
         getAllAnimals(setAnimals);
         getAllApplications(setApplications)
         findCustomerByID(setCustomer, 1);
+        
     }, []);
 
     const toggleWishlistStar = () => {
@@ -39,7 +52,9 @@ const UserLandPage = () => {
     }
 
     
-    const speciesChecker = (species) => {
+    const speciesChecker =  (species) => {
+
+        
 
         if(species === 'Dog'){
 
@@ -97,7 +112,7 @@ const UserLandPage = () => {
         const counts = {};
         const favouriteOrganisationsArray = [];
 
-        customer.adoptedAnimals.map( (animal) => {
+        customer.adoptedAnimals?.map( (animal) => {
 
             organisationArray.push(animal["organisation"]["name"]);
 
@@ -119,6 +134,378 @@ const UserLandPage = () => {
         return favouriteOrganisationsArray;
 
     }
+
+    const clearHandler = (e) => {
+
+        e.preventDefault();
+
+        alert("clicked");
+
+        
+
+    }
+
+    const turnSearchFormOnAnimal = (e) => {
+
+        e.preventDefault();
+
+        setOpenAnimalSearchForm(true);
+
+        setAnimalSearchButtonDisplay("hidden");
+
+
+
+    }
+
+    const turnSearchFormOffAnimal = (e) => {
+
+        e.preventDefault();
+
+        setOpenAnimalSearchForm(false);
+
+        setAnimalSearchButtonDisplay("visible");
+
+
+
+    }
+
+    const turnSearchFormOnApplication = (e) => {
+
+        e.preventDefault();
+
+        setOpenApplicationForm(true);
+
+        setApplicationSearchButtonDisplay("hidden");
+
+
+
+    }
+
+    const turnSearchFormOffApplication = (e) => {
+
+        e.preventDefault();
+
+        setOpenApplicationForm(false);
+
+        setApplicationSearchButtonDisplay("visible");
+
+
+
+    }
+
+    const returnAdoptedAnimals = (userInput) => {
+
+        if(userInput === "null"){
+
+            return(
+
+
+            customer.adoptedAnimals?.map( (animal, index) => {
+
+                return <>
+            
+                <li key={index} className="ulp__adoptedAnimal">
+    
+    
+                    
+                    <span className="ulp__adoptedAnimalsList__adoptedAnimal_name">Name: {animal["name"]}</span>
+                    <span className="ulp__adoptedAnimalsList__adoptedAnimal_DOB">Date of birth: {animal["dateOfBirth"]}</span>
+                    <span className="ulp__adoptedAnimalsList__adoptedAnimal_species_breed"> {animal.breed}</span>
+                
+                    
+                    {speciesChecker(animal["species"])}
+                    
+                </li>
+                
+                    
+                    
+    
+    
+                </>
+    
+         }))
+
+
+
+            
+        }else if(userInput != "null" && animalInputType === "name"){
+
+            
+
+
+            return(
+
+
+                customer.adoptedAnimals?.filter(animal => animal["name"].toLowerCase().match(userInput.toLowerCase())).map( (animal, index) => {
+
+                    
+
+                    
+
+                        return <>
+                
+                        <li key={index} className="ulp__adoptedAnimal">
+        
+        
+                        
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_name">Name: {animal["name"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_DOB">Date of birth: {animal["dateOfBirth"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_species_breed"> {animal.breed}</span>
+                    
+                        
+                            {speciesChecker(animal["species"])}
+                        
+                        </li>
+                    
+                        
+                        
+        
+        
+                    </>
+ 
+        
+             }))
+
+
+
+        }else if(userInput != "null" && animalInputType === "DOB"){
+
+            return(
+
+
+                customer.adoptedAnimals?.filter(animal => animal["dateOfBirth"].toLowerCase().match(userInput.toLowerCase())).map( (animal, index) => {
+
+                    
+
+                        return <>
+                
+                        <li key={index} className="ulp__adoptedAnimal">
+        
+        
+                        
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_name">Name: {animal["name"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_DOB">Date of birth: {animal["dateOfBirth"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_species_breed"> {animal.breed}</span>
+                    
+                        
+                            {speciesChecker(animal["species"])}
+                        
+                        </li>
+                    
+                        
+                        
+        
+        
+                    </>
+ 
+        
+             }))
+
+
+
+        }else if(userInput != "null" && animalInputType === "breed"){
+
+            return(
+
+
+                customer.adoptedAnimals?.filter(animal => animal["breed"].toLowerCase().match(userInput.toLowerCase())).map( (animal, index) => {
+
+                    
+
+                        return <>
+                
+                        <li key={index} className="ulp__adoptedAnimal">
+        
+        
+                        
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_name">Name: {animal["name"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_DOB">Date of birth: {animal["dateOfBirth"]}</span>
+                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_species_breed"> {animal.breed}</span>
+                    
+                        
+                            {speciesChecker(animal["species"])}
+                        
+                        </li>
+                    
+                        
+                        
+        
+        
+                    </>
+ 
+        
+             }))
+
+
+
+        }
+
+        
+
+
+
+    
+
+    }
+
+    const displaySearchFormAnimal = () => {
+
+        if(openAnimalSearchForm === true){
+
+            return(
+                <>
+                <form className = "animalSearchForm">
+
+                    <label className="ulp__adoptedAnimalnameLabel">Name:</label> <input type="text" onChange={(e)=>{setUserInput(e.target.value); setAnimalInputType("name")}} className="ulp__adoptedAnimalnameInput"
+                        placeholder="search by name"></input> 
+                    <label className="ulp__adoptedAnimalDOBLabel">DOB:</label> <input type="text" onChange={(e)=>{setUserInput(e.target.value); setAnimalInputType("DOB") }} className="ulp__adoptedAnimalDOBInput"
+                        placeholder="search by DOB"></input> 
+                    <label className="ulp__adoptedAnimalBreedLabel">Breed:</label> <input type="text" onChange={(e)=>{setUserInput(e.target.value); setAnimalInputType("breed") }} className="ulp__adoptedAnimalBreedInput"
+                        placeholder="search by breed"></input> 
+                        <button className= "searchAnimalForm__arrowUpButton__left" onClick={turnSearchFormOffAnimal}><FontAwesomeIcon icon = {faArrowUp} /></button>
+                        <button className= "searchAnimalForm__arrowUpButton__right" onClick={turnSearchFormOffAnimal}><FontAwesomeIcon icon = {faArrowUp} /></button>
+
+                    </form>
+
+                    
+
+
+                </>
+                
+            )
+
+
+
+
+        }
+
+
+
+
+    }
+
+    const returnApplicationsList = (userInputApp) => {
+
+        if(userInputApp === "null"){
+
+            return(
+            customer.application?.map((application, index) => {
+
+                return <>
+                
+                    <li key={index} className="ulp__applications">
+                        
+                    
+                    {speciesChecker(application["animal"]["species"])}
+                    <span className="ulp__adoptedAnimalsList__application_status">Application Status:</span>
+                    <span className={`ulp__adoptedAnimalsList__application_statusReturn__${applicationStatusSetter(application["applicationStatus"])}`}>{application["applicationStatus"]}</span>
+
+                    
+
+                        <span className="ulp__applications__animalDetail_name">Animal Name: {application["animal"]["name"]}</span>
+    
+                        
+
+                   
+                    
+                        
+                        
+                        
+                        </li>
+                
+                
+                
+                
+                </>
+
+            }))
+
+
+
+        }
+
+        if(userInputApp != "null" && applicationInputType === "name"){
+
+            return(
+                customer.application?.filter(application => application["animal"]["name"].toLowerCase().match(userInput.toLowerCase())).map((application, index) => {
+    
+                    return <>
+                    
+                        <li key={index} className="ulp__applications">
+                            
+                        
+                        {speciesChecker(application["animal"]["species"])}
+                        <span className="ulp__adoptedAnimalsList__application_status">Application Status:</span>
+                        <span className={`ulp__adoptedAnimalsList__application_statusReturn__${applicationStatusSetter(application["applicationStatus"])}`}>{application["applicationStatus"]}</span>
+    
+                        
+    
+                            <span className="ulp__applications__animalDetail_name">Animal Name: {application["animal"]["name"]}</span>
+        
+                            
+    
+                       
+                        
+                            
+                            
+                            
+                            </li>
+                    
+                    
+                    
+                    
+                    </>
+    
+                }))
+
+        }
+
+
+    }
+
+    const displaySearchFormApplications = () => {
+
+        if(openApplicationSearchForm === true){
+
+            return(
+                <>
+                <form className = "applicationSearchForm">
+
+                    <label className="ulp__applicationStatusLabel">Status:</label> <input type="text" onChange={(e)=>{setUserInputApp(e.target.value); setApplicationInputType("status")}} className="ulp__applicationStatusInput"
+                        placeholder="search by app status"></input> 
+                    <label className="ulp__application_animalName_Label">Name:</label> <input type="text" onChange={(e)=>{setUserInputApp(e.target.value); setApplicationInputType("name") }} className="ulp__application_aniomalName_input"
+                        placeholder="search by animal name"></input> 
+                    
+                        <button className= "searchApplicationForm__arrowUpButton__left" onClick={turnSearchFormOffApplication}><FontAwesomeIcon icon = {faArrowUp} /></button>
+                        <button className= "searchApplicationForm__arrowUpButton__right" onClick={turnSearchFormOffApplication}><FontAwesomeIcon icon = {faArrowUp} /></button>
+
+                    </form>
+
+                    
+
+
+                </>
+                
+            )
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    }
+
+    
+    
+    
     
     
     
@@ -145,8 +532,8 @@ const UserLandPage = () => {
             </section>
         </section>
 
-        <h1 className="ulp__header__welcome">Welcome Lewis!</h1>
-        <button type = "button" onClick={console.log("hi")}><FontAwesomeIcon icon={faArrowDown} /></button>
+        
+        
         
 
             
@@ -205,8 +592,10 @@ const UserLandPage = () => {
 
                     <section className="ulp__userAnimalsCard__rectangle">
 
-                        
-                        
+                    <button className="openAnimalSearchForm__button" onClick={turnSearchFormOnAnimal} style={{visibility:animalSearchButtonDisplay}}><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /></button>
+
+                    
+                    {displaySearchFormAnimal()}
                         
 
                     
@@ -216,35 +605,16 @@ const UserLandPage = () => {
 
                         <section className="ulp__adoptedAnimalsContainer">
 
+                        
+
+                        
+
                             
                         
                             <ul className="ulp__adoptedAnimalsList">
 
                                 {
-                                    customer.adoptedAnimals.map( (animal, index) => {
-
-                                        return <>
-                                    
-                                        <li key={index} className="ulp__adoptedAnimal">
-
-
-                                            
-                                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_name">Name: {animal["name"]}</span>
-                                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_DOB">Date of birth: {animal["dateOfBirth"]}</span>
-                                            <span className="ulp__adoptedAnimalsList__adoptedAnimal_species_breed"> {animal.breed}</span>
-                                        
-                                            
-                                            {speciesChecker(animal["species"])}
-                                            
-                                        </li>
-                                        
-                                            
-                                            
-
-
-                                        </>
-
-                                 })
+                                    returnAdoptedAnimals(userInput)
 
                                 }
 
@@ -265,6 +635,11 @@ const UserLandPage = () => {
                     <img src={PawPrint} className = "pawPrintLeft"/>
                     <img src={PawPrint} className = "pawPrintRight"/>
                     </section>
+
+
+
+
+                    
 
                     
 
@@ -294,7 +669,10 @@ const UserLandPage = () => {
                 
 
                     <section className="ulp__userAnimalsCard__rectangle">
+                             
+                    <button className="openApplicationSearchForm__button" onClick={turnSearchFormOnApplication} style={{visibility:applicationSearchButtonDisplay}}><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /><FontAwesomeIcon icon = {faArrowDown} /></button>
 
+                                {displaySearchFormApplications()}
                         
                         
                         
@@ -311,39 +689,7 @@ const UserLandPage = () => {
                             <ul className="ulp__userApplicationsList">
 
                                 {
-                                    customer.application.map((application, index) => {
-
-                                        return <>
-                                        
-                                            <li key={index} className="ulp__applications">
-                                                
-                                            
-                                            {speciesChecker(application["animal"]["species"])}
-                                            <span className="ulp__adoptedAnimalsList__application_status">Application Status:</span>
-                                            <span className={`ulp__adoptedAnimalsList__application_statusReturn__${applicationStatusSetter(application["applicationStatus"])}`}>{application["applicationStatus"]}</span>
-
-                                            
-
-                                                <span className="ulp__applications__animalDetail_name">Animal Name: {application["animal"]["name"]}</span>
-                            
-                                                
-
-                                           
-                                            
-                                                
-                                                
-                                                
-                                                </li>
-                                        
-                                        
-                                        
-                                        
-                                        </>
-
-
-
-
-                                    })
+                                    returnApplicationsList(userInputApp)
 
                                 }
 
@@ -375,7 +721,7 @@ const UserLandPage = () => {
                                 <ul className="ulp__preferredSpeciesList">
 
                                 {
-                                    customer.customerPreferredSpecies.map( (species, index) => {
+                                    customer.customerPreferredSpecies?.map( (species, index) => {
 
                                         return <>
 

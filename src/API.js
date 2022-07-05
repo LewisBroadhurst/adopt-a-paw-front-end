@@ -139,6 +139,22 @@ export const addNewCustomer = async (custData) => {
 
 export const findCustomerByID = async (setCustomer, id) => {
 
+    // try {
+
+    //     const response = await axios.get(`http://127.0.0.1:8080/customer/findCustomerByID/${id}`);
+    //     const customer = response;
+    //     setCustomer(customer);
+
+    // } catch (e){
+    //     console.log(e);
+
+
+    // }
+
+
+
+
+
     axios.get(`http://127.0.0.1:8080/customer/findCustomerByID/${id}`)
     .then(res => {
         const customer = res.data;
