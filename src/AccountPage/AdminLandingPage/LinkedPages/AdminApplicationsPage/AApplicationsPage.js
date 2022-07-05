@@ -79,7 +79,7 @@ const AApplicationsPage = () => {
                 {
                    
                     getFilteredApplicationsByStatus().length > 0 ? getFilteredApplicationsByStatus().map( (app, index) => {
-                        return  <section key={index} className="aap__appContainer">
+                        return  <section key={index} className="aap__appContainer aap__appContainerImage">
                                     <section className="aap__customerInfo">
                                         <h3>Customer Info.</h3>
                                         <span>Application number: {app.id}</span>
@@ -92,9 +92,14 @@ const AApplicationsPage = () => {
                                     <section className="aap__animalInfo">
                                         <h3>Animal Info.</h3>
                                         <span>Name: {app.customer.application[0].animal.name}</span>
+                                        <span>Sex: {app.customer.application[0].animal.sex}</span>
                                         <span>DOB: {app.customer.application[0].animal.dateOfBirth}</span>
                                         <span>Location: {app.customer.application[0].animal.location}</span>
                                         <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
+                                    </section>
+
+                                    <section className="aap__applicationImg">
+                                        <img src={app.customer.application[0].animal.photoUrl} alt=""/>
                                     </section>
                                 </section>
                 }) : <><p>No applications match your search filters!</p> <img src={memeAppCrop} className="aap__noAppSearch" alt="" /></>}

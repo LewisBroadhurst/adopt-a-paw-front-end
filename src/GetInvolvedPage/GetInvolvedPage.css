@@ -1,7 +1,12 @@
 .header{
-    font-size: 3rem;
-    padding: 1rem 0;
     text-align: center;
+    background-color: #003E1F;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: sticky;
+    top: 0px;
 }
 
 .GIMain {
@@ -31,7 +36,7 @@
 .flexbox_div{
     width: 300px;
     height: 400px;
-    background-color: #BBDBB4;
+    background-color: #ededed;
     margin-bottom: 1rem;
     margin: 1rem;
     border-radius: 1rem;
@@ -51,7 +56,7 @@
 }
 
 .title {
-    color: #E07A5F;
+    color: #A3320B;
     font-size: 1.4rem;
     padding-bottom: 0.125rem;
     text-align: center;

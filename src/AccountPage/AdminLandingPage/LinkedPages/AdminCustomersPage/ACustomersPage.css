@@ -205,3 +205,7 @@
     height: 50px;
     background-color: #0E2A62;
 }
+
+.google__map {
+    border-radius: 0.5rem;
+}

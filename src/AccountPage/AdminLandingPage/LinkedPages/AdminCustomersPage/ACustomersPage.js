@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
+// import { GoogleMap } from '@react-google-maps/api';
+// import cityInformation from "../../../../gb_cityInformation.json";
 
 
 
@@ -38,8 +40,54 @@ const ACustomersPage = () => {
 
     const customersFiltAdopted = customersFiltLocation.filter( customer => customer.previousAdoptions.toString().includes(prevAdoptSearch))
 
+
+    // Google Maps
+
+    const containerStyle = {
+        width: '300px',
+        height: '200px'
+    };
+
+    // const findCity = async (location) => {
+    //     let output;
+
+    //     output = await cityInformation.find(city => {
+    //         if (city.city === location) {
+    //             output = {
+    //                 lat: city.lat,
+    //                 lng: city.lng
+    //             }
+    //         } else {
+    //             output = {
+    //                 lat: 51.507351,
+    //                 lng: -0.127758
+    //             }
+    //         }
+    //         return output;
+    //     });
+    // }
+      
+    const center = (location) => {
+
+        if (location === "London") {
+            return {
+                lat: 51.507351,
+                lng: -0.127758
+            }
+        } else if (location === "Manchester") {
+            return {
+                lat: 40.507351,
+                lng: -0.127758
+            }
+        }
+    
+    };
+
+    
+
   return (
     <>  
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9__B5jrMhOlHYFHJ3U0SVFXPvO1_WpxM&callback=initMap" async defer></script>
         <AdminHeader />
         <section className="aap__headContainer">
             <section className="aap__header">
@@ -72,13 +120,15 @@ const ACustomersPage = () => {
                                         <span>Previously adopted? {customer.previousAdoptions.toString()}</span>
                                     </section>
                     
-                                    {/* <section className="aap__animalInfo">
-                                        <h3>Animal Info.</h3>
-                                        <span>Name: </span>
-                                        <span>DOB: </span>
-                                        <span>Location: </span>
-                                        <span>Organisation: </span>
-                                    </section> */}
+                                    <section className="aap__locationInfo">
+                                        <section>
+                                           {/* <GoogleMap 
+                                           mapContainerClassName="google__map"
+                                           mapContainerStyle={containerStyle}
+                                           center={center(customer.location)}
+                                           zoom={12} /> */}
+                                        </section>
+                                    </section>
                                 </section>
                 })}
 

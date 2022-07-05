@@ -1,0 +1,27 @@
+.orgHeader__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #3F1651;
+    color: white;
+    font-size: 2rem;
+
+    padding: 0.5rem 0;
+}
+
+.orgHeader__container>nav>ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.orgHeader__container>nav>ul>li {
+    padding: 0 1rem;
+}
+
+.orgHeader__container>h2,
+.orgHeader__container>span {
+    padding: 0 1rem;
+}

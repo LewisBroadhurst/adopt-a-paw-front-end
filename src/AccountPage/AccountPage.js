@@ -17,7 +17,7 @@ const AccountPage = () => {
     <>
         <Header />
         <section className="ap__background--color">
-            <h2>Join us, and begin your adoption journey...</h2>
+            <h2><Link to="/account/organisation">Join us, and begin your adoption journey...</Link></h2>
             <main id="Account-Main-Page">
                 <section className="LogIn-Section">
                     <h3>Adopt A Paw <FontAwesomeIcon icon={faPaw} /> </h3>

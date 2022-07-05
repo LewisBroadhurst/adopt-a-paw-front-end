@@ -45,7 +45,7 @@
 }
 
 .Menu-Button-Header:hover {
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 /* Colouring and Text */
@@ -63,7 +63,7 @@
 
 .text_link:hover {
     background-color: #003E1F;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .standard_text {
@@ -72,7 +72,7 @@
 
 .AAP-Header-Title {
     font-size: 1.6rem;
-    color: #E07A5F;
+    color: #A3320B;
     text-align: center;
 
     justify-content: center
@@ -87,7 +87,7 @@
     width: 2.5rem;
 
     border-radius: 50%;
-    background-color: #E07A5F;
+    background-color: #A3320B;
     padding: 0.25rem;
     border: 2px black solid;
 
@@ -142,7 +142,7 @@
     .AAP-Header-Title-Desktop {
         display: flex;
         font-size: 1.4rem;
-        color: #E07A5F;
+        color: #A3320B;
         padding-left: 0.5rem;
     }
 

@@ -95,6 +95,10 @@ const AOrganisationsPage = () => {
                                         <span>Organisation Ref. Number: {org.id}</span>
                                         <span>{org.slogan}</span>
                                     </section>
+
+                                    <section className="aap__orgLogo">
+                                        <h3>Org Logo</h3>
+                                    </section>
                                 </section>
                 })}
 

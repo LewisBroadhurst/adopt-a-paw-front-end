@@ -1,9 +1,28 @@
 .adoptTitle{
     text-align: center;
-    font-size: 60px;
+    background-color: #003E1F;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .adoptPageContainer{
     width: 100%;
     margin: 0 auto;
+}
+
+.filtersContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 20px;
+    background-color: #ededed;
+}
+
+.filtersContainer>button{
+    border: #E07A5F;;
 }

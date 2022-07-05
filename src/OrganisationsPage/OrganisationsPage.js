@@ -1,8 +1,8 @@
 import "./OrganisationsPage.css";
-import rspca_1 from "./images/rspca_1.jpeg";
+import rspca_1 from "./images/rspca_1.png";
 import dogs_trust1 from "./images/dogs_trust1.jpeg";
 import battersea_1 from "./images/battersea_1.jpeg";
-import wwf_logo from "./images/wwf_logo1.jpg";
+import dog from "./images/rspca_1.jpeg";
 import battersea_gif from "./images/battersea_gif_crop.gif";
 import dogs_trust_logo from "./images/dogs_trust.webp";
 import blue_cross_logo from "./images/blue_cross_logo.png";
@@ -22,11 +22,11 @@ const OrganisationsPage = () => {
 
             <section className="orgPage__logoBar--pos">
               <ul className="op_lb_pos">
-                <li><img src={wwf_logo} alt='' /></li>
+                <li><img src={rspca_1} alt='' /></li>
                 <li><img src={battersea_gif} alt='' /></li>
                 <li><img src={dogs_trust_logo} alt='' /></li>
                 <li><img src={blue_cross_logo} alt='' /></li>
-                <li> <img src={woodgreen_logo} alt='' /></li>
+                <li><img src={woodgreen_logo} alt='' /></li>
               </ul>
             </section>
   
@@ -35,7 +35,7 @@ const OrganisationsPage = () => {
           <section className="orgPage__orgList--pos">
 
             <section className="orgPage__orgContV1">
-              <h2>RSPCA</h2>
+              <h2 className="org_header">RSPCA</h2>
               <p>A world where all animals are respected and treated with kindness and compassion.</p>
 
               <p>We're the Royal Society for the Prevention of Cruelty to Animals (RSPCA) and we've been here for animals since 1824. We're the world's oldest and largest animal welfare charity, with the primary focus of rescuing, rehabilitating and rehoming or releasing animals across England and Wales.</p> 
@@ -44,7 +44,7 @@ const OrganisationsPage = () => {
             </section>
 
             <div className="OP__imgCont--pos">
-              <img src={rspca_1} alt="" />
+              <img src={dog} alt="" />
             </div>
 
             <div className="OP__imgCont--pos">
@@ -52,7 +52,7 @@ const OrganisationsPage = () => {
             </div>
 
             <section className="orgPage__orgContV1">
-              <h2>Dogs Trust</h2>
+              <h2 className="org_header">Dogs Trust</h2>
 
               <p>Today, many dog owners think of their pet as a member of the family. But when we were founded in the nineteenth century, attitudes were very different.</p>
 
@@ -68,7 +68,7 @@ const OrganisationsPage = () => {
             </section>
 
             <section className="orgPage__orgContV1">
-              <h2>Battersea</h2>
+              <h2 className="org_header">Battersea</h2>
 
               <p>From the moment we welcomed our first stray dog in 1860 we have been placing our animals at the centre of everything we do. More than three million animals later, we're still working hard to achieve our vision that every dog and cat should live in a home where they are treated with love, care and respect.</p>
 

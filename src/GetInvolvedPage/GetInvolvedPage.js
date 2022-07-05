@@ -8,7 +8,7 @@ const GetInvolvedPage = () => {
         <Header />
        <section className="GIMain">
 
-       <h2 className="header">Get Involved</h2>
+       <div className="header">Get Involved</div>
 
         <section className="flexbox">
 

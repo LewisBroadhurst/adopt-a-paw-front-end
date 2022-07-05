@@ -11,8 +11,8 @@ const OrganisationCardContainer = () => {
                 <img className="Organ-Img" src={BatterseaLogo} alt="Battersea Logo" />
             </div>
 
-            <div className="Organ-Text-Div">
-                <h3>Battersea Dogs & Cats Home</h3>
+            <div>
+                <div className="Organ-Text-Div">Battersea Dogs & Cats Home</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet blandit lectus, id sodales nunc.</p>
             </div>
 

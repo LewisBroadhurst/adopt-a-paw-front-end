@@ -89,6 +89,7 @@ div {
     justify-content: flex-start;
     height: 100%;
     padding-top: 250px;
+
 }
 
 .hero-content {
@@ -102,6 +103,8 @@ div {
     max-width: 622px;
     border-radius: 12px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .hero-title {
@@ -172,7 +175,7 @@ div {
 .homePage__ourMission--container>span,
 .homePage__ourPartners--container>span {
     font-size: 3rem;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .homePage__ourMission--container>p,
@@ -202,7 +205,7 @@ div {
 }
 
 .homePage__logoContainer>h3{
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .homePage__parentLogoCont {
@@ -242,7 +245,7 @@ div {
 
 .display_carousel>h3 {
     font-size: 3rem;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .display_carousel>p {
@@ -251,7 +254,7 @@ div {
 }
 
 .homepage>h3{
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 /* MEDIA QUERIES */

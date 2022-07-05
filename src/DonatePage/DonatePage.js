@@ -17,12 +17,20 @@ const DonatePage = () => {
   return (
     <>
         <Header />
+
+        <h2 className="donate_header">Donate</h2>
         <main id="Donate-Page-Main">
+            
+
+            
+
             <img src={FamDog1} alt="family with dog" />
 
-            <h2>Donate</h2>
+            <br/>
 
             <p className="Donate-Cause">We rely on donations to continue our work across the country. Every pound raised enables us to continue to help pets and people who need our support. Your donation supports our community partner across the UK to achieve the following:</p>
+
+            <br/>
 
             <p className="Donate-LL">What does your donation look like?</p>
 
@@ -101,8 +109,9 @@ const DonatePage = () => {
             </section>
 
             
-        <Footer />
+        
         </main>
+        <Footer />
     </>
   )
 }

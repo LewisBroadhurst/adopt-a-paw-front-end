@@ -29,9 +29,9 @@ function Home() {
               <h2 className='hero-subtitle'>
                 You never know who you'll meet and bond with.
                 <br></br>
-                Because you can't choose the perfect pet.
+                Because you can't choose the perfect pet,
                 <br></br>
-                You find each other.
+                your perfect pet will choose you!
               </h2>
               <div className='hero-adopt-button'>
                 <a href='http://localhost:3000/adopt' className='hero-button'>Adopt today!</a>

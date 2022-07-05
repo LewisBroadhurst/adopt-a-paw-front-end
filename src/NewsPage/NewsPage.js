@@ -5,10 +5,11 @@ import Footer from "../Footer/Footer.js";
 const NewsPage = () => {
   return (
     <>
+    
     <Header />
+    <h2 className="news_title">News</h2>
         <main id="News-Page-Main">
 
-            <h2>News</h2>
 
             <>
                 <section className="News-Container">
@@ -95,8 +96,9 @@ const NewsPage = () => {
 
                 </section>
             </>
-        <Footer />
+        
         </main>
+        <Footer />
     </>
   )
 }

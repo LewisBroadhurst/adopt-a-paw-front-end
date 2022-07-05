@@ -41,20 +41,31 @@ const CreateAccPage = () => {
   return (
     <>
         <Header />
-        <main className="cap__main--positioning">
 
-            <section className="cap__nonFormContent">
-                <section className="cap__para--section">
-                    <p>This is your first step to taking a happy Animal home!</p>
-                    <p>Thank you, from us, our partner organisations, and most importantly, our animals <FontAwesomeIcon icon={faPaw} /></p>
-                </section>
-                
-                <section className="cap__imgCont--positioning">
-                    <img className="" src={gpMobForm} alt="happy doge" />
-                </section>
-            </section>
+        <section className='create-hero'>
 
-            <form className="cap__form--positioning">
+          <div className='create-hero-shape'>
+            <div className='create-hero-video'>
+              <video autoPlay muted loop poster='https://woodgreen.org.uk/wp-content/uploads/2022/05/tokyo-summer-banner-img.jpg' id="html5_video_gc9ibputb4" src="https://cdn.videvo.net/videvo_files/video/free/2021-08/large_watermarked/210804_01_Dog%20Walk_4k_031_preview.mp4">
+              </video>
+            </div>
+          </div>
+
+          <div className='create-hero__content-container'>
+            <div className='create-hero-content'>
+              <h1 className='create-hero-title'>This is your first step to taking a happy animal home!</h1>
+              <h2 className='create-hero-subtitle'>
+                  Thank you, from us, our
+                  <br></br>
+                  partner organisations, and
+                  <br></br>
+                  most importantly, our animals  <FontAwesomeIcon icon={faPaw} />
+              </h2>
+            </div>
+
+            <br></br>
+
+            <form className="create-account-form">
 
                 <div className="cap__form--firstName">
                     {/* <label>First Name</label> */}
@@ -81,14 +92,17 @@ const CreateAccPage = () => {
                     <input type="text" placeholder="Adopted before?"></input>
                 </div>
 
+                <br></br>
+
                 <button type="submit" onClick={handleCreateNewCustomer}>Create Account</button>
 
             </form>
 
-            <div className="empty__grid"></div>
 
-            <Footer />
-        </main>
+          </div>
+        </section>
+
+        <Footer />
     </>
   )
 }

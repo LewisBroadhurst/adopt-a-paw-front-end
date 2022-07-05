@@ -205,3 +205,12 @@
     height: 50px;
     background-color: #0E2A62;
 }
+
+.aap__applicationImg {
+    align-self: center;
+    max-width: 20%;
+}
+
+.aap__applicationImg>img {
+    border-radius: 0.25rem;
+}

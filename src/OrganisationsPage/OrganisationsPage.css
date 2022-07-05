@@ -12,6 +12,8 @@
     color: white;
     font-size: 5rem;
     /* padding-bottom: 1rem; */
+    position: sticky;
+    top: 0px;
 }
 
 .orgPage__mainHeader--pos>span {
@@ -47,19 +49,28 @@
     font-size: 1.4rem;
 }
 
+
+
 .OP__imgCont--pos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
 }
 
 /* LOGO HEADER */
 
 .orgPage__logoBar--pos {
     /* background-color: black; */
-    background-color: #0E2A62;
+    background-color: #EDEDED;
     padding: 1rem 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
 }
 
 .orgPage__logoBar--pos>ul {
@@ -68,13 +79,17 @@
     grid-template-rows: 1fr;
 
     max-width: 80%;
-    margin: 0 auto;
-
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 0 1rem;
 }
 
 .OP__imgCont--pos>img {
-    border-radius: 0.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .orgPage__logoBar--pos>ul>li {
@@ -88,6 +103,14 @@
     width: 200px;
     height: auto;
     width: auto;
-    border: 6px solid #4267B2;
+    border: 6px solid #A3320B;
     object-fit: cover;
+}
+
+.org_header{
+    color:#A3320B;
+}
+
+.OP_DT{
+    border-radius: 1rem;
 }

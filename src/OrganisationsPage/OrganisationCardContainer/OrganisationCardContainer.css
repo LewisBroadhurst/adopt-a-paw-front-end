@@ -6,8 +6,8 @@
     padding: 1rem 2rem;
     margin: 0.5rem 2rem;
     border-radius: 0.5rem;
-    color: black;
     transition: all 1s ease-in 0s;
+    color: #A3320B;
 }
 
 .Organ-Container:hover {
@@ -16,13 +16,21 @@
 
 .Organ-Img {
     height: 150px;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
 }
 
 .Organ-Text-Div>h3 {
     font-size: 1.4rem;
     text-decoration: underline;
     padding-bottom: 0.4rem;
+    color: #A3320B
+}
+
+.Organ-Text-Div {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    padding-bottom: 0.4rem;
+    color: #A3320B
 }
 
 .Organ-Text-Div>p {
@@ -58,6 +66,7 @@
 
     .Organ-Text-Div>h3 {
         font-size: 2rem;
+        color: #A3320B;
     }
 
     .Organ-Text-Div>p {

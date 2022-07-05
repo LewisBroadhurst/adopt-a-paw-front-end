@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     border-style: solid;
-    border-color: #E07A5F;
+    border-color: #A3320B;
     border-width: 0.15rem;
     border-radius: 0.5rem;
     transition: all 0.5s ease-in 0s;
@@ -19,7 +19,7 @@
 
 .animalcards_item_heading{
     font-size: 0.8rem;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .animalcards_item_text{
@@ -28,7 +28,7 @@
 }
 
 .animalcards_item_name{
-    color: #E07A5F;
+    color: #A3320B;
     font-size: 1.4rem;
 }
 

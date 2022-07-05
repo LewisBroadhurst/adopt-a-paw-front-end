@@ -1,6 +1,12 @@
 .animalname {
-    font-size: 50px;
     text-align: center;
+    background-color: #003E1F;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .animalpage_container{
@@ -20,7 +26,7 @@
 
 .basic_info_container{
     width: 400px;
-    height: 200px;
+    height: auto;
     background-color: white;
     border-radius: 1rem;
     margin: 1rem;
@@ -42,7 +48,7 @@
 
 .org_info_container{
     width: 400px;
-    height: 400px;
+    height: auto;
     background-color: white;
     border-radius: 1rem;
     margin: 1rem;
@@ -60,7 +66,7 @@
 .org_info_container>p{
     font-size: 1rem;
     text-align: left;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .center_text{
@@ -87,46 +93,50 @@
     align-items: left;
     text-align: center;
     color: white;
-    background-color: #E07A5F;
+    background-color: #A3320B;
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
 }
 
 .back_button:hover{
-    background-color: #a3533d;
+    background-color: #A3320B;
 }
 
 .adopt_button{
     color: white;
     align-items: center;
     text-align: center;
-    background-color: #E07A5F;
+    background-color: #A3320B;
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
 }
 
 .adopt_button:hover{
-    background-color: #a3533d;
+    background-color: #A3320B;
 }
 
 .advice_button{
     color: white;
     align-items: center;
     text-align: center;
-    background-color: #E07A5F;
+    background-color: #A3320B;
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
 }
 
 .advice_button:hover{
-    background-color: #a3533d;
+    background-color: #A3320B;
 }
 
 .left_align{
     text-align: left;
     align-items: left;
     justify-content: left;
+}
+
+.logo_image{
+    height: 4rem;
 }
