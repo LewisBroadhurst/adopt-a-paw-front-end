@@ -14,6 +14,8 @@ const OrgUpdateForms = ({getOrg}) => {
         getOrganisations(setOrganisations)
     }, [])
 
+    // Name Update
+
     const handleOrgNameUpdate = async (event) => {
         event.preventDefault()
 
@@ -26,7 +28,11 @@ const OrgUpdateForms = ({getOrg}) => {
         await getOrganisations(setOrganisations)
 
         await getOrg()
+
+        resetForm()
     }
+
+    // Slogan Update
 
     const handleOrgSloganUpdate = async (event) => {
         event.preventDefault()
@@ -40,7 +46,11 @@ const OrgUpdateForms = ({getOrg}) => {
         await getOrganisations(setOrganisations)
 
         await getOrg()
+
+        resetForm()
     }
+
+    // Address Update
 
     const handleOrgAddressUpdate = async (event) => {
         event.preventDefault()
@@ -54,7 +64,11 @@ const OrgUpdateForms = ({getOrg}) => {
         await getOrganisations(setOrganisations)
 
         await getOrg()
+
+        resetForm()
     }
+
+    // Logo Update
 
     const handleOrgLogoUpdate = async (event) => {
         event.preventDefault()
@@ -68,6 +82,24 @@ const OrgUpdateForms = ({getOrg}) => {
         await getOrganisations(setOrganisations)
 
         await getOrg()
+
+        resetForm()
+    }
+
+    // Reset values
+
+    const resetForm = () => {
+        setNewOrgEmail('');
+        setNewOrgLogo('');
+        setNewOrgName('');
+        setNewOrgSlogan('');
+        setUpdateOrgId('');
+
+        document.getElementById('oup__nameInput').value= '';
+        document.getElementById('oup__sloganInput').value= '';
+        document.getElementById('oup__logoInput').value= '';
+        document.getElementById('oup__emailInput').value= '';
+        document.getElementById('oup__idInput').value= 'default';
     }
 
   return (
@@ -76,7 +108,7 @@ const OrgUpdateForms = ({getOrg}) => {
 
         <section className="olp__form--container">
             <h3>Organisation ID</h3>
-            <select defaultValue="default" onChange={(e) => setUpdateOrgId(e.target.value)}>
+            <select defaultValue="default" id="oup__idInput" onChange={(e) => setUpdateOrgId(e.target.value)}>
                 <option value="default" hidden disabled> Org. Ref. ID</option>
                 {
                 organisations.map( (org, index) => {
@@ -89,7 +121,7 @@ const OrgUpdateForms = ({getOrg}) => {
         <section className="olp__form--container">
             <h3>Update Name</h3>
             <form>
-                <input type="text" placeholder="Org. Name" onChange={(e) => setNewOrgName(e.target.value)}></input>
+                <input type="text" id="oup__nameInput" placeholder="Org. Name" onChange={(e) => setNewOrgName(e.target.value)}></input>
                 <button type="button" onClick={handleOrgNameUpdate}>Confirm</button>
             </form>
         </section>
@@ -97,7 +129,7 @@ const OrgUpdateForms = ({getOrg}) => {
         <section className="olp__form--container">
             <h3>Update Slogan</h3>
             <form>
-                <input type="text" placeholder="Org. Slogan" onChange={(e) => setNewOrgSlogan(e.target.value)}></input>
+                <input type="text" id="oup__sloganInput" placeholder="Org. Slogan" onChange={(e) => setNewOrgSlogan(e.target.value)}></input>
                 <button type="button" onClick={handleOrgSloganUpdate}>Confirm</button>
             </form>
         </section>
@@ -105,7 +137,7 @@ const OrgUpdateForms = ({getOrg}) => {
         <section className="olp__form--container">
             <h3>Update Address</h3>
             <form>
-                <input type="text" placeholder="Org. Address" onChange={(e) => setNewOrgEmail(e.target.value)}></input>
+                <input type="text" id="oup__emailInput" placeholder="Org. Address" onChange={(e) => setNewOrgEmail(e.target.value)}></input>
                 <button type="button" onClick={handleOrgAddressUpdate}>Confirm</button>
             </form>
         </section>
@@ -113,7 +145,7 @@ const OrgUpdateForms = ({getOrg}) => {
         <section className="olp__form--container">
             <h3>Update Logo</h3>
             <form>
-                <input type="text" placeholder="Logo URL" onChange={(e) => setNewOrgLogo(e.target.value)}></input>
+                <input type="text" id="oup__logoInput" placeholder="Logo URL" onChange={(e) => setNewOrgLogo(e.target.value)}></input>
                 <button type="button" onClick={handleOrgLogoUpdate}>Confirm</button>
             </form>
         </section>

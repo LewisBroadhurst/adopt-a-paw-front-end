@@ -2,7 +2,7 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 import OrgHeader from "../../components/OrgHeader/OrgHeader.js";
-import { getAllAnimals, addAnimal, getOrganisations, updateAnimal, deleteAnimal } from "../../../API.js";
+import { getAllAnimals, addAnimal, updateAnimal, deleteAnimal } from "../../../API.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,11 +10,11 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 const OrgAnimalsPage = () => {
 
     const [animals, setAnimals] = useState([]);
-    const [organisations, setOrganisations] = useState([]);
+    // const [organisations, setOrganisations] = useState([]);
 
     useEffect( () => {
         getAllAnimals(setAnimals);
-        getOrganisations(setOrganisations);
+        // getOrganisations(setOrganisations);
     }, []);
 
     // Delete Animal

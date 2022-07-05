@@ -35,6 +35,8 @@ const OrgApplicationsPage = () => {
 
         document.querySelector("select").value = "default";
         document.querySelector("#aap_dr").innerText = "blank";
+
+        resetForms()
     }
 
     // Update Application
@@ -45,6 +47,8 @@ const OrgApplicationsPage = () => {
         await updateAdoptionApplication(applicationUpdateId, applicationStatus);
 
         await getAllApplications(setApplications);
+
+        resetForms()
     }
 
     // Search bar
@@ -55,6 +59,14 @@ const OrgApplicationsPage = () => {
 
     const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
 
+    // Reset Forms
+
+    const resetForms = () => {
+        document.getElementById("oap__appUpdateId").value = 'default';
+        document.getElementById("oap__appUpdateStatus").value = 'default';
+        document.getElementById("oap__appUpdateReason").value = '';
+        document.getElementById("oap__appDeleteId").value = 'default';
+    }
 
   return (
     <>
@@ -113,7 +125,7 @@ const OrgApplicationsPage = () => {
                         <h3>Update Application</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
+                        <select id="oap__appUpdateId" defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications?.map( (app, index) => {
@@ -122,13 +134,13 @@ const OrgApplicationsPage = () => {
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
+                        <select id="oap__appUpdateStatus" defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
                             <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>
                             <option>Approved</option>
                         </select>
-                        <input type="text" placeholder="Reason" required></input>
+                        <input type="text" id="oap__appUpdateReason" placeholder="Reason" required></input>
                         <button type="button" onClick={handleApplicationUpdate}>Update Application</button>
                     </form>
                 </section>
@@ -138,7 +150,7 @@ const OrgApplicationsPage = () => {
                         <h3>Delete Application</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
+                         <select defaultValue="default" id="oap__appDeleteId" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications?.map((app, index) => {

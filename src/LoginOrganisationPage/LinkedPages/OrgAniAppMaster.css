@@ -86,6 +86,11 @@
     max-width: 200px;
     text-align: center;
     margin-right: 0.5rem;
+    color: black;
+}
+
+.oaap__searchBar>input::placeholder {
+    color: #c5c1c1;
 }
 
 /* APPLICATION CONTAINERS */
@@ -205,10 +210,17 @@
     margin-bottom: 1rem;
 }
 
-.oaap__footer {
-    height: 50px;
-    background-color: #0E2A62;
+/* Form Inputs */
+
+.oaap__forms>.oaap__form>form>input::placeholder {
+    color: #c5c1c1;
 }
+
+.oaap__forms>.oaap__form>form>input {
+    color: black;
+}
+
+/* Animal Image */
 
 .oaap__applicationImg {
     align-self: center;
