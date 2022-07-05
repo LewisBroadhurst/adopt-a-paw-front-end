@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import "./OrganisationLandingPage.css";
 import { getAllAnimals } from "../API";
 import { useEffect, useState } from "react";
-import AnimalContainer from "../AccountPage/AdminLandingPage/Containers/AnimalAdmin/AnimalContainer/AnimalContainer";
 import OrgAnimalContainer from "./components/OrgAnimalContainer/OrgAnimalContainer";
 import OrgApplicationContainer from "./components/OrgApplicationContainer/OrgApplicationContainer";
 
