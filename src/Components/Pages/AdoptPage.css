@@ -9,3 +9,16 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.filtersContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 20px;
+    background-color: #ededed;
+}
+
+.filtersContainer>button{
+    border: #E07A5F;;
+}

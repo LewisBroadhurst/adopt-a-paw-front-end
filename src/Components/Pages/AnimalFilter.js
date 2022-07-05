@@ -57,8 +57,8 @@ function AnimalFilter(props) {
 
     console.log("allsSPecies", allSpecies)
     return (
-        <>
-            <form>
+        <div className='filtersContainer'>
+            <form className='filterForm'>
                 <label>Select species
                     <select 
                     name="selectedSpecies"
@@ -105,8 +105,8 @@ function AnimalFilter(props) {
                     </input>
                 </label>
             </form>
-            <button onClick={handleSubmit}>Update</button>
-        </>
+            <button class="selectFilterButton" onClick={handleSubmit}>Update</button>
+        </div>
     )
 }
 
