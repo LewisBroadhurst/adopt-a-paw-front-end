@@ -114,7 +114,7 @@
 .olp__form--container>form>button:hover {
     background-color: white;
     color: #653780;
-    transform: scale(0.95);
+    transform: scale(0.9);
     cursor: pointer;
 }
 
