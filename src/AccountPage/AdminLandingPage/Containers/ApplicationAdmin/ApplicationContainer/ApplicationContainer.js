@@ -47,7 +47,7 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
             <span>Location: {animalLocation}</span>
 
-            <span>Application Status: {appStatusConverter()}</span>
+            <span>Application Status: {applicationStatus}</span>
 
             <div className='AC__form--formContainer'>
                 <div className="AC__form--updateApp">

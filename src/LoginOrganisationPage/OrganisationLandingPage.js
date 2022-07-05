@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OrgHeader from "./components/OrgHeader/OrgHeader";
 import Footer from "../Footer/Footer";
 import "./OrganisationLandingPage.css";
-import { getAllAnimals, getOrganisationById } from "../API";
+import { getAllAnimals, getAllApplications, getOrganisationById } from "../API";
 import { useEffect, useState } from "react";
 import OrgAnimalContainer from "./components/OrgAnimalContainer/OrgAnimalContainer";
 import OrgApplicationContainer from "./components/OrgApplicationContainer/OrgApplicationContainer";
@@ -13,10 +13,12 @@ import OrgUpdateForms from "./components/OrgUpdateForms/OrgUpdateForms";
 const OrganisationLandingPage = () => {
 
     const [animals, setAnimals] = useState([]);
+    const [applications, setApplications] = useState([])
     const [organisation, setOrganisation] = useState({});
 
     useEffect( () => {
         getAllAnimals(setAnimals);
+        getAllApplications(setApplications);
         getOrg()
     }, [])
 
@@ -50,7 +52,7 @@ const OrganisationLandingPage = () => {
 
                 <OrgAnimalContainer animals={animals} />
 
-                <OrgApplicationContainer animals={animals} />
+                <OrgApplicationContainer applications={applications} />
 
             </section>
 

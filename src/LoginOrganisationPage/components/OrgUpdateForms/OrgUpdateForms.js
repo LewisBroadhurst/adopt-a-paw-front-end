@@ -75,7 +75,7 @@ const OrgUpdateForms = ({getOrg}) => {
         <h2>Update Details</h2>
 
         <section className="olp__form--container">
-            <h3>Organisation Ref. ID</h3>
+            <h3>Organisation ID</h3>
             <select defaultValue="default" onChange={(e) => setUpdateOrgId(e.target.value)}>
                 <option value="default" hidden disabled> Org. Ref. ID</option>
                 {
