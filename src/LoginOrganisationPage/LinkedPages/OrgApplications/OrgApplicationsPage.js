@@ -1,14 +1,25 @@
-import React from 'react'
+import "../OrgAniAppMaster.css";
+import OrgHeader from "../../components/OrgHeader/OrgHeader.js";
+import { useState, useEffect } from "react";
+import { getAllAnimals, getAllApplications } from "../../../API";
 
 const OrgApplicationsPage = () => {
+
+    const [animals, setAnimals] = useState([]);
+
+    useEffect( () => {
+        getAllApplications(setAnimals)
+    }, []);
+
   return (
     <>
-        <section className="aap__headContainer">
-            <section className="aap__header">
+        <OrgHeader />
+        <section className="oaap__headContainer">
+            <section className="oaap__header ">
                 <h2>Applications</h2>
             </section>
 
-            <form className="aap__searchBar">
+            <form className="oaap__searchBar">
                     <span>Filter by:</span>
 
                     <input type="text" placeholder="Adoptee Name" onChange={(e) => (e.target.value)}></input>
@@ -17,15 +28,15 @@ const OrgApplicationsPage = () => {
             </form>
         </section>
 
-        <main className="aap__mainContent">
+        <main className="oaap__mainContent">
 
-            <section className="aap__applicationList">
+            <section className="oaap__applicationList">
 
                 {
                    
-                    ( (app, index) => {
-                        return  <section key={index} className="aap__appContainer aap__appContainerImage">
-                                    <section className="aap__customerInfo">
+                    animals.map( (app, index) => {
+                        return  <section key={index} className="oaap__appContainer oaap__appContainerImage">
+                                    <section className="oaap__customerInfo">
                                         <h3>Customer Info.</h3>
                                         <span>Application number: {app.id}</span>
                                         <span>{app.customer.firstName} {app.customer.lastName}</span>
@@ -34,7 +45,7 @@ const OrgApplicationsPage = () => {
                                         <span>App. Status: {app.customer.application[0].applicationStatus}</span>
                                     </section>
                     
-                                    <section className="aap__animalInfo">
+                                    <section className="oaap__animalInfo">
                                         <h3>Animal Info.</h3>
                                         <span>Name: {app.customer.application[0].animal.name}</span>
                                         <span>Sex: {app.customer.application[0].animal.sex}</span>
@@ -43,7 +54,7 @@ const OrgApplicationsPage = () => {
                                         <span>Organisation: {app.customer.application[0].animal.organisation.name}</span>
                                     </section>
 
-                                    <section className="aap__applicationImg">
+                                    <section className="oaap__applicationImg">
                                         <img src={app.customer.application[0].animal.photoUrl} alt=""/>
                                     </section>
                                 </section>
@@ -51,8 +62,8 @@ const OrgApplicationsPage = () => {
 
             </section>
 
-            <section className="aap__forms">
-                <section className="aap__form">
+            <section className="oaap__forms">
+                <section className="oaap__form">
                     <div className="ulp__form__header">
                         <h3>Update Application</h3>
                     </div>
@@ -77,7 +88,7 @@ const OrgApplicationsPage = () => {
                     </form>
                 </section>
 
-                <section className="aap__form">
+                <section className="oaap__form">
                     <div className="ulp__form__header">
                         <h3>Delete Application</h3>
                     </div>
