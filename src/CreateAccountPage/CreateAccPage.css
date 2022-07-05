@@ -156,11 +156,11 @@
     align-items: flex-start;
 
     font-size: 1.2em;
-    color: #007d00;
+    color: #006935;
 }
 
 .cap__form--prevAdopted>ul {
-    margin-right: 0;
+    margin-right: 450px;
     display: flex;
     flex-direction: column;
 }

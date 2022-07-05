@@ -89,17 +89,9 @@ const CreateAccPage = () => {
 
                 <div className="cap__form--prevAdopted">
                     <label>Previously Adopted?</label>
-                        <ul>
-                          <li>
-                        <input type="checkbox" value={true} onChange={(e) => setPrevAdopted(e.target.value)}></input>
-                        <label>Yes</label>
-                          </li>
-
-                          <li>
-                        <input type="checkbox" value={false} onChange={(e) => setPrevAdopted(e.target.value)}></input>
-                        <label>No</label>
-                          </li>
-                        </ul>
+                        <input type="checkbox" value={true} onChange={(e) => setPrevAdopted(e.target.value)}></input>Yes
+                        
+                        <input type="checkbox" value={false} onChange={(e) => setPrevAdopted(e.target.value)}></input>No
                 </div>
 
                 <br></br>
