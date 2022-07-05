@@ -58,7 +58,7 @@ function AnimalPage() {
                 <p>Contact Number:</p>
                 <br/>
                 <div className='center_text'>Or click here to enquire now</div>
-                <div className='center_text'><button className='adopt_button'><a href="../account/userLandPage">Adopt me!</a></button></div>
+                <div className='center_text'><button className='adopt_button'><a href="../account">Adopt me!</a></button></div>
                 <br/>
                 <div className='center_text'>Check out our advice page for more information on rehoming a pet</div>
                 <div className='center_text'><button className='advice_button'><a href="../advice">Rehoming Advice</a></button></div>
