@@ -122,11 +122,11 @@ const ACustomersPage = () => {
                     
                                     <section className="aap__locationInfo">
                                         <section>
-                                           <GoogleMap 
+                                           {/* <GoogleMap 
                                            mapContainerClassName="google__map"
                                            mapContainerStyle={containerStyle}
                                            center={center(customer.location)}
-                                           zoom={12} />
+                                           zoom={12} /> */}
                                         </section>
                                     </section>
                                 </section>
