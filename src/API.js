@@ -76,6 +76,18 @@ export const getAllSpecies = async (setSpecies) => {
     }
 }
 
+// ENUMS
+
+export const getAllSexes = async (setSexes) => {
+    try{
+        const response = await axios.get(`http://127.0.0.1:8080/enums/getAllSexes`);
+        console.log(response);
+        setSexes(response.data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 
 // ORGANISATIONS
 
