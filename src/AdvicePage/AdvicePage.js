@@ -34,6 +34,7 @@ const AdvicePage = () => {
             </div>
 
          </section>
+         <br/>
         <Footer />
         </>
 
