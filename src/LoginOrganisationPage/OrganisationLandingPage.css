@@ -55,3 +55,24 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
+.olp__form--container>form>button {
+    align-self: center;
+}
+
+.olp__updateDetails--container {
+    margin: 1rem;
+    position: sticky;
+    top: 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.olp__form--container {
+    margin: 0.5rem 0;
+}
