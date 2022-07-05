@@ -40,6 +40,7 @@ const CreateAccPage = () => {
 
   return (
     <>
+    <div className=".fill-window">
         <Header />
 
         <section className='create-hero'>
@@ -103,6 +104,7 @@ const CreateAccPage = () => {
         </section>
 
         <Footer />
+      </div>
     </>
   )
 }

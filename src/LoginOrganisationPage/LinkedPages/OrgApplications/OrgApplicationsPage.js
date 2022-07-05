@@ -44,9 +44,15 @@ const OrgApplicationsPage = () => {
     const handleApplicationUpdate = async (event) => {
         event.preventDefault();
 
+        if (!applicationUpdateId) {
+            return alert ("Please choose an Organisation ID");
+        }
+
         await updateAdoptionApplication(applicationUpdateId, applicationStatus);
 
         await getAllApplications(setApplications);
+
+        console.log(applicationStatus);
 
         resetForms()
     }

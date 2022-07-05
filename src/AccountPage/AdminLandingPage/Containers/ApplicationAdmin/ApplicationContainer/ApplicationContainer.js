@@ -12,7 +12,7 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
         deleteAdoptionApplication(animalId);
 
-        getAllApplications(setApplications)
+        getAllApplications(setApplications);
     }
 
     const getId = () => {
