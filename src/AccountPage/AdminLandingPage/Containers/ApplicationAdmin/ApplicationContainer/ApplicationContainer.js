@@ -22,20 +22,6 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
         })
     }
 
-
-    const appStatusConverter = (id) => {
-        if (applicationStatus === 1) {
-            return "Pending";
-        } 
-        else if (applicationStatus === 2) {
-            return "Accepted";
-        }
-        else {
-            return "Rejected";
-        }
-    }
-
-
   return (
 
     <>

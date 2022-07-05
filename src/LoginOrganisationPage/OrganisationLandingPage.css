@@ -1,3 +1,5 @@
+/* MAJOR PAGE COMPONENTS */
+
 .olpMain__header {
     background-color: #653780;
     text-align: center;
@@ -5,6 +7,12 @@
 
     font-size: 2rem;
     padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .olp__background {
@@ -56,28 +64,29 @@
 
 /* FORMS */
 
-.olp__updateDetails--container,
+.olp__updateDetails--container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr 3fr 3fr 3fr;
+}
+
 .olp__form--container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .olp__form--container>form {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-}
-
-.olp__form--container>form>button {
-    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .olp__updateDetails--container {
     margin: 1rem;
     position: sticky;
-    top: 2rem;
+    top: 14rem;
     bottom: 0;
     left: 0;
     right: 0;
@@ -89,6 +98,7 @@
 
 .olp__updateDetails--container>h2 {
     color: #653780;
+    text-decoration: underline;
 }
 
 .olp__form--container {
@@ -97,13 +107,14 @@
 
 .olp__form--container>form>input {
     text-align: center;
+    align-self: stretch;
 }
 
 .olp__form--container>form>button {
     margin-top: 0.5rem;
     background-color: #653780;
     color: white;
-    padding: 0.25rem 0.5rem;
+    padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
 }
 
@@ -118,22 +129,10 @@
 .olp__form--container>select,
 .olp__form--container>h3 {
     align-self: stretch;
-
+    text-align: center;
 }
 
-.olp__form--container>form>button {
-    font-size: 1rem;
-    border: 3px solid #653780;
-    transition: all 0.5s ease 0s;
 
-}
-
-.olp__form--container>form>button:hover {
-    background-color: white;
-    color: #653780;
-    transform: scale(0.9);
-    cursor: pointer;
-}
 
 .olp__welcomeSlogan>h1 {
     font-size: 2.4rem;
@@ -153,4 +152,20 @@
 
 .olp__headerElementCont {
     padding-bottom: 0.5rem;
+}
+
+/* BUTTONS */
+
+.olp__form--container>form>button {
+    font-size: 1rem;
+    border: 3px solid #653780;
+    transition: all 0.5s ease 0s;
+
+}
+
+.olp__form--container>form>button:hover {
+    background-color: white;
+    color: #653780;
+    transform: scale(0.9);
+    cursor: pointer;
 }
