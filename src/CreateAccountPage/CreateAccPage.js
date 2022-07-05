@@ -14,7 +14,7 @@ const CreateAccPage = () => {
     const [lastName, setLastName] = useState('');
     const [age, setAge] = useState(0);
     const [location, setLocation] = useState('');
-    // const [prevAdopted, setPrevAdopted] = useState(false);
+    const [prevAdopted, setPrevAdopted] = useState(false);
 
 
 
@@ -29,7 +29,7 @@ const CreateAccPage = () => {
             "lastName": `${lastName}`,
             "age": `${age}`,
             "location": `${location}`,
-            "previousAdoptions": false
+            "prevAdopted": `${prevAdopted}`
         }
 
         addNewCustomer(custData);
@@ -88,8 +88,18 @@ const CreateAccPage = () => {
                 </div>
 
                 <div className="cap__form--prevAdopted">
-                    {/* <label>Previously Adopted?</label> */}
-                    <input type="text" placeholder="Adopted before?"></input>
+                    <label>Previously Adopted?</label>
+                        <ul>
+                          <li>
+                        <input type="checkbox" value={true} onChange={(e) => setPrevAdopted(e.target.value)}></input>
+                        <label>Yes</label>
+                          </li>
+
+                          <li>
+                        <input type="checkbox" value={false} onChange={(e) => setPrevAdopted(e.target.value)}></input>
+                        <label>No</label>
+                          </li>
+                        </ul>
                 </div>
 
                 <br></br>
