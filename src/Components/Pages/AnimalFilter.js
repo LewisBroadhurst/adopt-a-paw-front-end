@@ -96,7 +96,7 @@ function AnimalFilter(props) {
                     >
                     </input>
                 </label>
-                <label>Show only available animals
+                <label>Show available only:
                     <input
                     name="availableOnly"
                     type="checkbox"
