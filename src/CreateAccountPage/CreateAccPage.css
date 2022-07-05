@@ -1,52 +1,139 @@
-.cap__main--positioning {
-    background-color: #DEDEE0;
-    padding: 1rem 1rem;
-}
-
-.cap__form--positioning {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr;
-
+.create-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin-top: 0;
+    overflow: hidden;
     background-color: white;
-    margin: 1rem 2rem 0rem 2rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
 }
 
-.cap__para--section>p {
-    padding: 0.5rem;
-    font-size: 1.4rem;
+.create-hero-shape {
+    max-height: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #006935;
+    margin: 0;
 }
 
-.cap__para--section>p+p {
-    text-align: left;
-    padding-bottom: 0.75rem;
+.create-hero-video {
+    position: relative;
+    object-fit: fill;
+    margin: 0;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    width: 100%;
 }
 
-.cap__imgCont--positioning>img {
-    border-radius: 0.5rem;
+.create-hero__content-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    padding-top: 275px;
+    padding-left: 0px;
+    padding-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
-.cap__form--positioning>div>input {
+.create-hero-content {
+    padding-top: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 25px;
+    background-color: #BBDBB4;
+    width: 100%;
+    max-width: 622px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.create-hero-title {
+    text-align: center;
+    color: #002714;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    line-height: 3.15rem;
+    letter-spacing: -.02em;
+    font-weight: 700;
+}
+
+.create-hero-subtitle {
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    letter-spacing: -.01em;
+    color: #006935;
+    font-weight: 500;
+}
+
+.create-account-form {
+    padding-top: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 25px;
+    background-color: #EDEDED;
+
+    color: #002714;
+    width: 100%;
+    max-width: 622px;
+
+    border-radius: 12px;
+    border-color: #006935;
+    border-width: 1cm;
+    
+    text-align: center;
+}
+
+
+
+
+/* .cap__main--positioning {
+    background-color: #EDEDED;
+    padding: 1rem 1rem;
+} */
+
+
+.create-account-form>div>input {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    /* width: 500px; */
 
-    border: 1px solid green;
-    border-radius: 0.25rem;
+    border: 0.2rem solid green;
+    border-radius: 0.3rem;
 
     padding: 0.25rem;
     padding-left: 0.25rem;
 
-    font-size: 1.2rem;
-    color: #DEDEE0;
+    font-size: 1.32rem;
+    color: #006935;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    height: 30px;
 }
 
-.cap__form--positioning>div>label {
+.create-account-form>div>label {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -55,48 +142,41 @@
     font-size: 1.4rem;
 }
 
-.cap__form--positioning>div {
+.create-account-form>div {
     display: flex;
     flex-direction: column;
     padding: 0.25rem 0;
     align-items: stretch;
 }
 
-.cap__form--positioning>button {
-    background-color: greenyellow;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    margin: 0.5rem 2rem;
+.create-account-form>button {
+    background-color: #fff;
+    border: 5px solid #006935;
+    color: #007d00;
+
+    transition: .4s;
+
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-radius: 16px;
+
+    font-weight: 500;
+    line-height: 1;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.create-account-form>button:hover {
+    background-color: #003E1F;
+    color: #fff;
 }
 
 @media (min-width: 700px) {
 
-    .cap__main--positioning {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
-    }
-
-    .cap__form--positioning {
+    .create-account-form {
         min-width: 40%;
     }
-
-    .cap__nonFormContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 50%;
-    }
-
-    .cap__para--section>p {
-        font-size: 2rem;
-    }
-
-
 
 }
