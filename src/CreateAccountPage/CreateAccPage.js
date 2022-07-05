@@ -32,7 +32,7 @@ const CreateAccPage = () => {
             "previousAdoptions": false
         }
 
-        addNewCustomer(custData)
+        addNewCustomer(custData);
 
         alert("Successfully created a new account! You will now be re-directed to the sign in page.")
     }

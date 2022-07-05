@@ -1,15 +1,60 @@
 import "../OrgAniAppMaster.css";
 import OrgHeader from "../../components/OrgHeader/OrgHeader.js";
 import { useState, useEffect } from "react";
-import { getAllApplications } from "../../../API";
+import { getAllApplications, deleteAdoptionApplication, updateAdoptionApplication } from "../../../API";
+import "./OrgAppPage.css";
+
 
 const OrgApplicationsPage = () => {
 
-    const [animals, setAnimals] = useState([]);
+    const [applications, setApplications] = useState([]);
+    const [appicationDeleteId, setApplicationDeleteId] = useState(-1);
+    const [applicationUpdateId, setApplicationUpdateId] = useState(-1);
+    const [applicationStatus, setApplicationStatus] = useState('');
+    const [adopteeNameSearch, setAdopteeNameSearch] = useState('');
+    const [animalLocationSearch, setAnimalLocationSearch] = useState('');
+    const [applicationStatusSearch, setApplicationStatusSearch] = useState('');
+
 
     useEffect( () => {
-        getAllApplications(setAnimals)
+        getAllApplications(setApplications)
     }, []);
+
+    // Delete Application
+
+    const handleApplicationDelete = async (event) => {
+        event.preventDefault()
+
+        if (appicationDeleteId === -1) {
+            return alert("Please select an ID");
+        }
+
+        await deleteAdoptionApplication(appicationDeleteId)
+
+        await getAllApplications(setApplications)
+
+        document.querySelector("select").value = "default";
+        document.querySelector("#aap_dr").innerText = "blank";
+    }
+
+    // Update Application
+
+    const handleApplicationUpdate = async (event) => {
+        event.preventDefault();
+
+        await updateAdoptionApplication(applicationUpdateId, applicationStatus);
+
+        await getAllApplications(setApplications);
+    }
+
+    // Search bar
+
+    const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
+
+    const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
+
+    const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
+
 
   return (
     <>
@@ -22,9 +67,9 @@ const OrgApplicationsPage = () => {
             <form className="oaap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => (e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
             </form>
         </section>
 
@@ -34,7 +79,7 @@ const OrgApplicationsPage = () => {
 
                 {
                    
-                    animals.map( (app, index) => {
+                    getFilteredApplicationsByStatus()?.map( (app, index) => {
                         return  <section key={index} className="oaap__appContainer oaap__appContainerImage">
                                     <section className="oaap__customerInfo">
                                         <h3>Customer Info.</h3>
@@ -68,23 +113,23 @@ const OrgApplicationsPage = () => {
                         <h3>Update Application</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
                             {
-                                (app, index) => {
+                                applications?.map( (app, index) => {
                                     return <option key={index}>{app.id}</option>
-                                }
+                                })
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <select defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
                             <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>
                             <option>Approved</option>
                         </select>
                         <input type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="">Update Application</button>
+                        <button type="button" onClick={handleApplicationUpdate}>Update Application</button>
                     </form>
                 </section>
 
@@ -93,16 +138,16 @@ const OrgApplicationsPage = () => {
                         <h3>Delete Application</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => (e.target.value)}>
+                         <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>
                             {
-                                (app, index) => {
+                                applications?.map((app, index) => {
                                     return <option key={index}>{app.id}</option>
-                                }
+                                })
                             }
                         </select>
                         <input id="aap_dr" type="text" placeholder="Reason" required></input>
-                        <button type="button" onClick="">Delete Application</button>
+                        <button type="button" onClick={handleApplicationDelete}>Delete Application</button>
                     </form>
                 </section>
             </section>
