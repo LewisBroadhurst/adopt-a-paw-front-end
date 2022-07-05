@@ -57,7 +57,7 @@ const OrgApplicationsPage = () => {
 
     const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
 
-    const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
+    const getFilteredApplicationsByStatus = getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
 
     // Reset Forms
 
@@ -67,12 +67,18 @@ const OrgApplicationsPage = () => {
         document.getElementById("oap__appUpdateReason").value = '';
         document.getElementById("oap__appDeleteId").value = 'default';
         document.getElementById("aap_dr").value = '';
+        document.getElementById("oap____nameSB").value = '';
+        document.getElementById("oap____locationSB").value = '';
+        document.getElementById("oap____statusSB").value = '';
+        setAdopteeNameSearch('');
+        setAnimalLocationSearch('');
+        setApplicationStatusSearch('');
     }
 
   return (
     <>
         <OrgHeader />
-        <section className="oaap__headContainer">
+        <section className="oaap__headContainer" id="top">
             <section className="oaap__header ">
                 <h2>Applications</h2>
             </section>
@@ -80,9 +86,11 @@ const OrgApplicationsPage = () => {
             <form className="oaap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
+                    <input type="text" id="oap____nameSB" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
+                    <input type="text" id="oap____locationSB" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" id="oap____statusSB" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
+
+                    <button type="button" onClick={resetForms}>Reset</button>
             </form>
         </section>
 
@@ -92,7 +100,7 @@ const OrgApplicationsPage = () => {
 
                 {
                    
-                    getFilteredApplicationsByStatus()?.map( (app, index) => {
+                    getFilteredApplicationsByStatus?.map( (app, index) => {
                         return  <section key={index} className="oaap__appContainer oaap__appContainerImage">
                                     <section className="oaap__customerInfo">
                                         <h3>Customer Info.</h3>

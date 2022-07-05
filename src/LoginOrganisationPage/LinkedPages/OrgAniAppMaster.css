@@ -126,6 +126,22 @@
     transition: all 1s 0s;
 }
 
+.oaap__searchBar>button {
+    background-color: #9C3587;
+    padding: 0.125rem 1rem;
+    border-radius: 0.125rem;
+    border: 3px solid #3F1651;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.oaap__searchBar>button:hover {
+    background-color: #E53F71;
+    border: 3px solid #3F1651;
+    color: #3F1651;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
 /* FORMS */
 
 .oaap__forms {

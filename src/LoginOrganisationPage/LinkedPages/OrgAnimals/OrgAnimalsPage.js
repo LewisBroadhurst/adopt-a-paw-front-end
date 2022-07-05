@@ -27,6 +27,8 @@ const OrgAnimalsPage = () => {
         await deleteAnimal(raID)
 
         await getAllAnimals(setAnimals)
+
+        resetForms()
     }
 
     // Update Animal Location
@@ -44,6 +46,8 @@ const OrgAnimalsPage = () => {
         await updateAnimal(ulID ,animalData)
 
         await getAllAnimals(setAnimals)
+
+        resetForms()
     }
 
 
@@ -95,6 +99,25 @@ const OrgAnimalsPage = () => {
         await addAnimal(animalData)
 
         await getAllAnimals(setAnimals)
+
+        resetForms()
+    }
+
+    const resetForms = () => {
+        document.getElementById("oap___animalSpecies").value = '';
+        document.getElementById("oap___animalName").value = '';
+        document.getElementById("oap___animalSex").value = '';
+        document.getElementById("oap___animalLocation").value = '';
+        document.getElementById("oap___animalULocation").value = '';
+        document.getElementById("oap___animalUid").value = 'default';
+        document.getElementById("oap___animalDid").value = 'default';
+        document.getElementById("aap_dr").value = '';
+        document.getElementById("oap___nameSB").value = '';
+        document.getElementById("oap___locationSB").value = '';
+        document.getElementById("oap___availableSB").value = '';
+        setAnimalLocationSearch('');
+        setAnimalAvailableStatus('');
+        setAnimalNameSearch('');
     }
 
   return (
@@ -108,9 +131,11 @@ const OrgAnimalsPage = () => {
             <form className="oaap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAnimalNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
+                    <input type="text" id="oap___nameSB" placeholder="Adoptee Name" onChange={(e) => setAnimalNameSearch(e.target.value)}></input>
+                    <input type="text" id="oap___locationSB" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" id="oap___availableSB" placeholder="Application Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
+
+                    <button type="button" onClick={resetForms}>Reset</button>
             </form>
         </section>
 
@@ -149,10 +174,10 @@ const OrgAnimalsPage = () => {
                     </div>
                     <form id="oaap__aaForm">
                         
-                        <input type="text" placeholder="Name*" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
-                        <input type="text" placeholder="Species*" required onChange={(e) => setAaSpecies(e.target.value)}></input>
-                        <input type="text" placeholder="Sex* (M/F)" required onChange={(e) => setAaSex(e.target.value)}></input>
-                        <input type="text" placeholder="Location*" required onChange={(e) => setAaLocation(e.target.value)}></input>
+                        <input type="text" id="oap___animalName" placeholder="Name*" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
+                        <input type="text" id="oap___animalSpecies" placeholder="Species*" required onChange={(e) => setAaSpecies(e.target.value)}></input>
+                        <input type="text" id="oap___animalSex" placeholder="Sex* (M/F)" required onChange={(e) => setAaSex(e.target.value)}></input>
+                        <input type="text" id="oap___animalLocation" placeholder="Location*" required onChange={(e) => setAaLocation(e.target.value)}></input>
 
                         {/* <select defaultValue="default" onChange={(e) => (e.target.value) }>
                         <option value="default" disabled hidden>Organisation</option>
@@ -171,7 +196,7 @@ const OrgAnimalsPage = () => {
                         <h3>Update Location</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setUlID(e.target.value) }>
+                        <select defaultValue="default" id="oap___animalUid" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Ref. No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -180,7 +205,7 @@ const OrgAnimalsPage = () => {
                             }
                         </select>
                         
-                        <input placeholder="Location*" onChange={(e) => setUlLocation((e.target.value))}></input>
+                        <input placeholder="Location*" id="oap___animalULocation" onChange={(e) => setUlLocation((e.target.value))}></input>
                         <button type="button" onClick={handleLocationUpdate}>Update Location</button>
                     </form>
                 </section>
@@ -190,7 +215,7 @@ const OrgAnimalsPage = () => {
                         <h3>Delete Animal</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setRaID(e.target.value)}>
+                         <select defaultValue="default" id="oap___animalDid" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal ID</option>
                             {
                                 animals.map((animal, index) => {
