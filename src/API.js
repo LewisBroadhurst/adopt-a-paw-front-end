@@ -2,9 +2,10 @@ import axios from 'axios';
 
 // ANIMALS
 
-export const getAnimalsFilter = async (setAnimals, name, minAge, maxAge, sex, location, availableOnly) => {
+export const getAnimalsFilter = async (setAnimals, filter) => {
+    console.log("Filter method", filter)
     try {
-        const response = axios.get('http://127.0.0.1:8080/animal/filteranimals', null, {params: name, minAge, maxAge, sex, location, availableOnly});
+        const response = axios.get('http://127.0.0.1:8080/animal/filteranimals', {params: filter});
         const animals = (await response).data;
         setAnimals(animals);
     } catch (e) {
@@ -58,6 +59,30 @@ export const updateAnimal = async (id, animalData) => {
     try {
         const response = await axios.put(`http://127.0.0.1:8080/animal/updateAnimal/${id}`, animalData)
         console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// SPECIES
+
+export const getAllSpecies = async (setSpecies) => {
+    try{
+        const response = await axios.get(`http://127.0.0.1:8080/species/getAll`);
+        console.log(response);
+        setSpecies(response.data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// ENUMS
+
+export const getAllSexes = async (setSexes) => {
+    try{
+        const response = await axios.get(`http://127.0.0.1:8080/enums/getAllSexes`);
+        console.log(response);
+        setSexes(response.data);
     } catch (err) {
         console.log(err);
     }
