@@ -19,6 +19,8 @@
 
     max-width: 75%;
     margin: 0 auto;
+
+    flex: 3;
 }
 
 .olp__cardContainers {
@@ -106,11 +108,32 @@
     font-size: 1rem;
     border: 3px solid #653780;
     transition: all 0.5s ease 0s;
+
 }
 
 .olp__form--container>form>button:hover {
     background-color: white;
     color: #653780;
-
+    transform: scale(0.95);
     cursor: pointer;
+}
+
+.olp__welcomeSlogan>h1 {
+    font-size: 2.4rem;
+}
+
+.olp__welcomeSlogan>span {
+    font-size: 1.6rem;
+}
+
+.olp__sectionContainer {
+    transition: all 1s ease-in-out 0s;
+}
+
+.olp__sectionContainer:hover {
+    transform: scale(1.05);
+}
+
+.olp__headerElementCont {
+    padding-bottom: 0.5rem;
 }

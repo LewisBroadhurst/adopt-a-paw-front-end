@@ -55,7 +55,7 @@ const OrganisationLandingPage = () => {
             </section>
 
             <section className="olp__updateDetails--container">
-                <OrgUpdateForms />
+                <OrgUpdateForms getOrg={getOrg}/>
             </section>
 
         </main>

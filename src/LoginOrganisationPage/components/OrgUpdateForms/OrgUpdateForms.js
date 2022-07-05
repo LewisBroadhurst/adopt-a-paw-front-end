@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { updateOrganisation, getOrganisations } from "../../../API"
 
-const OrgUpdateForms = () => {
+const OrgUpdateForms = ({getOrg}) => {
 
     const [organisations, setOrganisations] = useState([]);
     const [newOrgName, setNewOrgName] = useState('');
@@ -24,6 +24,8 @@ const OrgUpdateForms = () => {
         await updateOrganisation(updateOrgId, orgData)
 
         await getOrganisations(setOrganisations)
+
+        await getOrg()
     }
 
     const handleOrgSloganUpdate = async (event) => {
@@ -36,6 +38,8 @@ const OrgUpdateForms = () => {
         await updateOrganisation(updateOrgId, orgData)
 
         await getOrganisations(setOrganisations)
+
+        await getOrg()
     }
 
     const handleOrgAddressUpdate = async (event) => {
@@ -48,6 +52,8 @@ const OrgUpdateForms = () => {
         await updateOrganisation(updateOrgId, orgData)
 
         await getOrganisations(setOrganisations)
+
+        await getOrg()
     }
 
     const handleOrgLogoUpdate = async (event) => {
@@ -60,6 +66,8 @@ const OrgUpdateForms = () => {
         await updateOrganisation(updateOrgId, orgData)
 
         await getOrganisations(setOrganisations)
+
+        await getOrg()
     }
 
   return (
