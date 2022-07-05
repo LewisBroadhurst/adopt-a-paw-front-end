@@ -2,7 +2,7 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 import OrgHeader from "../../components/OrgHeader/OrgHeader.js";
-import { getAllAnimals, getAllApplications } from "../../../API.js";
+import { getAllAnimals } from "../../../API.js";
 
 
 const OrgAnimalsPage = () => {

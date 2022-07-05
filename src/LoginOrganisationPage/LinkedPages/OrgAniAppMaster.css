@@ -1,7 +1,8 @@
 /* POSITIONING */
 
 .oaap__header {
-    background-color: #4267B2;
+    background-color: #9C3587;
+    background-color: #653780;
     color: white;
     display: flex;
     flex-direction: column;
@@ -66,7 +67,7 @@
 }
 
 .oaap__searchBar {
-    background-color: #0E2A62;
+    background-color: #3F1651;
     color: white;
     display: flex;
     justify-content: center;
@@ -149,18 +150,21 @@
 
 .oaap__form>form>button {
     background-color: #4267B2;
+    background-color: #3F1651;
     color: white;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     align-self: center;
     border: 3px solid #4267B2;
+    border: 3px solid #3F1651;
     transition: all 0.75s 0s;
 }
 
 .oaap__form>form>button:hover {
     background-color: white;
     color: #4267B2;
+    color: #3F1651;
     cursor: pointer;
 }
 

@@ -1,7 +1,7 @@
 import "../OrgAniAppMaster.css";
 import OrgHeader from "../../components/OrgHeader/OrgHeader.js";
 import { useState, useEffect } from "react";
-import { getAllAnimals, getAllApplications } from "../../../API";
+import { getAllApplications } from "../../../API";
 
 const OrgApplicationsPage = () => {
 
