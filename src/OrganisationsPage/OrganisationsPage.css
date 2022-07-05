@@ -65,6 +65,11 @@
     /* background-color: black; */
     background-color: #EDEDED;
     padding: 1rem 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     
 }
 
@@ -74,8 +79,10 @@
     grid-template-rows: 1fr;
 
     max-width: 80%;
-    margin: 0 auto;
-
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 0 1rem;
 }
 

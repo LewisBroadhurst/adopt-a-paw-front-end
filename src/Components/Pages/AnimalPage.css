@@ -26,7 +26,7 @@
 
 .basic_info_container{
     width: 400px;
-    height: 200px;
+    height: auto;
     background-color: white;
     border-radius: 1rem;
     margin: 1rem;
@@ -48,7 +48,7 @@
 
 .org_info_container{
     width: 400px;
-    height: 400px;
+    height: auto;
     background-color: white;
     border-radius: 1rem;
     margin: 1rem;
@@ -135,4 +135,8 @@
     text-align: left;
     align-items: left;
     justify-content: left;
+}
+
+.logo_image{
+    height: 4rem;
 }

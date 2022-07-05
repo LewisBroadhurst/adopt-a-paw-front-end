@@ -1,8 +1,8 @@
 import "./OrganisationsPage.css";
-import rspca_1 from "./images/rspca_1.jpeg";
+import rspca_1 from "./images/rspca_1.png";
 import dogs_trust1 from "./images/dogs_trust1.jpeg";
 import battersea_1 from "./images/battersea_1.jpeg";
-import wwf_logo from "./images/wwf_logo1.jpg";
+import dog from "./images/rspca_1.jpeg";
 import battersea_gif from "./images/battersea_gif_crop.gif";
 import dogs_trust_logo from "./images/dogs_trust.webp";
 import blue_cross_logo from "./images/blue_cross_logo.png";
@@ -22,11 +22,11 @@ const OrganisationsPage = () => {
 
             <section className="orgPage__logoBar--pos">
               <ul className="op_lb_pos">
-                <li><img src={wwf_logo} alt='' /></li>
+                <li><img src={rspca_1} alt='' /></li>
                 <li><img src={battersea_gif} alt='' /></li>
                 <li><img src={dogs_trust_logo} alt='' /></li>
                 <li><img src={blue_cross_logo} alt='' /></li>
-                <li> <img src={woodgreen_logo} alt='' /></li>
+                <li><img src={woodgreen_logo} alt='' /></li>
               </ul>
             </section>
   
@@ -44,7 +44,7 @@ const OrganisationsPage = () => {
             </section>
 
             <div className="OP__imgCont--pos">
-              <img src={rspca_1} alt="" />
+              <img src={dog} alt="" />
             </div>
 
             <div className="OP__imgCont--pos">
