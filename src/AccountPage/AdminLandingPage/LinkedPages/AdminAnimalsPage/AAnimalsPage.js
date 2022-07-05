@@ -87,8 +87,6 @@ const AAnimalsPage = () => {
         } else {
             element.style.display = "none";
         }
-
-
     }
 
     // Search Bar

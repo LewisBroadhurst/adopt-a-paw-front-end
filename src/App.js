@@ -18,6 +18,8 @@ import AAnimalsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminAnimal
 import ACustomersPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminCustomersPage/ACustomersPage";
 import AOrganisationsPage from "./AccountPage/AdminLandingPage/LinkedPages/AdminOrganisationsPage/AOrganisationsPage"
 import OrganisationLandingPage from "./LoginOrganisationPage/OrganisationLandingPage";
+import OrgAnimalsPage from "./LoginOrganisationPage/LinkedPages/OrgAnimals/OrgAnimalsPage";
+import OrgApplicationsPage from "./LoginOrganisationPage/LinkedPages/OrgApplications/OrgApplicationsPage";
 
 function App() {
   return (
@@ -42,6 +44,9 @@ function App() {
             <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />
             <Route path="/account/admin/customers" exact element={<ACustomersPage />} />
             <Route path="/account/organisation" exact element={<OrganisationLandingPage />} />
+            <Route path="/account/organisation/animals" exact element={<OrgAnimalsPage />} />
+            <Route path="/account/organisation/applications" exact element={<OrgApplicationsPage />} />
+
           </Routes>
       </Router>
     </>

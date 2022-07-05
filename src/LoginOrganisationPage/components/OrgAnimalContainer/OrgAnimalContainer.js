@@ -1,6 +1,7 @@
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import AnimalContainer from '../../../AccountPage/AdminLandingPage/Containers/AnimalAdmin/AnimalContainer/AnimalContainer'
 
 const OrgAnimalContainer = ({animals}) => {
@@ -9,7 +10,7 @@ const OrgAnimalContainer = ({animals}) => {
     <section className="olp__sectionContainer">
         <div className="olp__headerElementCont">
             <h3>Animals</h3>
-            <span>All Animals <FontAwesomeIcon icon={faSquareArrowUpRight} /></span>
+            <span><Link to="/account/organisation/animals">All Animals <FontAwesomeIcon icon={faSquareArrowUpRight} /></Link></span>
         </div>
         
         <div className="olp__cardContainers">
