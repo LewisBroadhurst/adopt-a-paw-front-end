@@ -89,6 +89,7 @@ div {
     justify-content: flex-start;
     height: 100%;
     padding-top: 250px;
+
 }
 
 .hero-content {
@@ -102,6 +103,8 @@ div {
     max-width: 622px;
     border-radius: 12px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(228, 224, 224, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .hero-title {
