@@ -38,6 +38,11 @@
     padding: 0 1rem;
     font-size: 2rem;
     color: #653780;
+    transition: 0.5s all ease-in-out 0s;
+}
+
+.olp__headerElementCont>span:hover {
+    color: #E53F71;
 }
 
 .olp__sectionContainer {
@@ -106,5 +111,6 @@
 .olp__form--container>form>button:hover {
     background-color: white;
     color: #653780;
+
     cursor: pointer;
 }
