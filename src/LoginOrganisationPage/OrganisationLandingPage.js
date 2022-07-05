@@ -43,24 +43,32 @@ const OrganisationLandingPage = () => {
                 <section className="olp__form--container">
                     <h3>Update Name</h3>
                     <form>
-                        <input type="text"></input>
-                        <button type="button">Bacon</button>
+                        <input type="text" placeholder="Org. Name"></input>
+                        <button type="button">Confirm</button>
                     </form>
                 </section>
 
                 <section className="olp__form--container">
                     <h3>Update Slogan</h3>
                     <form>
-                        <input type="text"></input>
-                        <button type="button">Bacon</button>
+                        <input type="text" placeholder="Org. Slogan"></input>
+                        <button type="button">Confirm</button>
                     </form>
                 </section>
 
                 <section className="olp__form--container">
                     <h3>Update Address</h3>
                     <form>
-                        <input type="text"></input>
-                        <button type="button">Bacon</button>
+                        <input type="text" placeholder="Org. Address"></input>
+                        <button type="button">Confirm</button>
+                    </form>
+                </section>
+
+                <section className="olp__form--container">
+                    <h3>Update Logo</h3>
+                    <form>
+                        <input type="text" placeholder="Logo URL"></input>
+                        <button type="button">Confirm</button>
                     </form>
                 </section>
             </section>

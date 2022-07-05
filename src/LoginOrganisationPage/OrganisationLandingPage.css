@@ -53,7 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .olp__form--container>form>button {
@@ -75,4 +75,36 @@
 
 .olp__form--container {
     margin: 0.5rem 0;
+}
+
+.olp__form--container>form>input {
+    text-align: center;
+}
+
+.olp__form--container>form>button {
+    margin-top: 0.5rem;
+    background-color: #653780;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.olp__updateDetails--container>h2 {
+    font-size: 1.6rem;
+}
+
+.olp__form--container>h3 {
+    font-size: 1.2rem;
+}
+
+.olp__form--container>form>button {
+    font-size: 1rem;
+    border: 3px solid #653780;
+    transition: all 0.5s ease 0s;
+}
+
+.olp__form--container>form>button:hover {
+    background-color: white;
+    color: #653780;
+    cursor: pointer;
 }
