@@ -121,7 +121,7 @@ const OrgAnimalsPage = () => {
                 {
                    
                     getFilteredAnimalsByStatus()?.map( (animal, index) => {
-                        return <section key={index} className="aap__appContainer">
+                        return <section key={index} className="oaap__appContainer">
                                     <section className="aap__customerInfo">
                                         <h3>Animal Info.</h3>
                                         <span>Reference number: {animal.id}</span>

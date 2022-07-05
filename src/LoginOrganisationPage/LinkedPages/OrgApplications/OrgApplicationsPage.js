@@ -66,6 +66,7 @@ const OrgApplicationsPage = () => {
         document.getElementById("oap__appUpdateStatus").value = 'default';
         document.getElementById("oap__appUpdateReason").value = '';
         document.getElementById("oap__appDeleteId").value = 'default';
+        document.getElementById("aap_dr").value = '';
     }
 
   return (

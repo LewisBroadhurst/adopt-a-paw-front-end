@@ -171,6 +171,7 @@
     color: #4267B2;
     color: #3F1651;
     cursor: pointer;
+    transform: scale(0.95);
 }
 
 .oulp__form__header {

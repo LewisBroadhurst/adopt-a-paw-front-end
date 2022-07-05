@@ -28,4 +28,12 @@
     border-radius: 0.25rem;
     padding: 1rem;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+    transition: all 1s ease-in-out 0s;
+}
+
+.oaap__applicationList>.oaap__appContainer:hover {
+    transform: translateX(-20px);
+    background-color: #c7c4c4;
+    cursor: pointer;
 }
