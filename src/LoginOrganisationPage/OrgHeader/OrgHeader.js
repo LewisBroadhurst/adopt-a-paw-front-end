@@ -11,7 +11,6 @@ const OrgHeader = () => {
                 <ul>
                     <li>Animals</li>
                     <li>Applications</li>
-                    <li>Account</li>
                 </ul>
             </nav>
 
