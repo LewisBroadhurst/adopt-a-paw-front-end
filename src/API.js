@@ -64,11 +64,11 @@ export const updateAnimal = async (id, animalData) => {
     }
 }
 
-// SPECIES
+// ENUMS
 
 export const getAllSpecies = async (setSpecies) => {
     try{
-        const response = await axios.get(`http://127.0.0.1:8080/species/getAll`);
+        const response = await axios.get(`http://127.0.0.1:8080/enums/getAllSpecies`);
         console.log(response);
         setSpecies(response.data);
     } catch (err) {
@@ -76,13 +76,31 @@ export const getAllSpecies = async (setSpecies) => {
     }
 }
 
-// ENUMS
-
 export const getAllSexes = async (setSexes) => {
     try{
         const response = await axios.get(`http://127.0.0.1:8080/enums/getAllSexes`);
         console.log(response);
         setSexes(response.data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export const getAllAppStatuses = async (setAppStatuses) => {
+    try{
+        const response = await axios.get(`http://127.0.0.1:8080/enums/getAllAppStatuses`);
+        console.log(response);
+        setAppStatuses(response.data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export const getAllAvlStatuses = async (setAvlStatuses) => {
+    try{
+        const response = await axios.get(`http://127.0.0.1:8080/enums/getAllAvlStatuses`);
+        console.log(response);
+        setAvlStatuses(response.data);
     } catch (err) {
         console.log(err);
     }

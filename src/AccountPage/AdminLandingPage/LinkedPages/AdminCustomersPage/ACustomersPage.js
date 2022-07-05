@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
-import { GoogleMap } from '@react-google-maps/api';
+// import { GoogleMap } from '@react-google-maps/api';
 // import cityInformation from "../../../../gb_cityInformation.json";
 
 
