@@ -29,13 +29,13 @@
 }
 
 .Generic-Footer h3 {
-    color: #E07A5F;
+    color: #A3320B;
     font-size: 1.4rem;
     padding-bottom: 0.125rem;
 }
 
 .Subscribe-Footer-Form>button {
-    background-color: #E07A5F;
+    background-color: #A3320B;
     padding: 0.25rem;
     border-radius: 0.125rem;
 }
@@ -46,7 +46,7 @@
 }
 
 .Subscribe-Footer-Form>button:hover {
-    background-color: #e3562f;
+    background-color: #A3320B;
     cursor: pointer;
 }
 
@@ -66,7 +66,7 @@
 
 .text_link:hover {
     background-color: #003E1F;
-    color: #E07A5F;
+    color: #A3320B;
     font-family: 'Mitr', sans-serif;
 }
 

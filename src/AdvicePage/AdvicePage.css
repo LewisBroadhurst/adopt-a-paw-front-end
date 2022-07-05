@@ -1,18 +1,19 @@
 #Advice-Page-Main>h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     padding: 1rem 0;
     text-align: center;
 }
 
 #Advice-Page-Main {
-    margin: 0rem 5rem;
+    margin: auto;
+    justify-content: center;
 }
 
 .advice_text_div>h3 {
     font-size: 1.4rem;
     padding-bottom: 0.4rem;
     text-decoration: solid;
-    color: #E07A5F;
+    color: #A3320B;
     text-align: left;
 }
 
@@ -28,25 +29,28 @@
 }
 
 .advice_text_div {
-    margin: 0 5rem;
+    margin: 0 1rem;
 }
 
 .header {
-    font-size: 3rem;
-    padding: 1rem 0;
     text-align: center;
+    background-color: #003E1F;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
 .advice_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
-    background-color: #BBDBB4;
+    justify-content: center;
+    background-color: #ededed;
     padding: 1rem 2rem;
-    margin: 0.5rem 3rem;
     border-radius: 0.5rem;
     color: black;
+    width: 70%;
+    margin: auto;
 }
 
 .advice_image {
@@ -63,7 +67,7 @@
     font-size: 1.4rem;
     padding-bottom: 0.4rem;
     text-decoration: solid;
-    color: #E07A5F;
+    color: #A3320B;
     text-align: left;
 }
 
@@ -76,7 +80,7 @@
         align-content: left;
 
         padding: 1rem 1rem;
-        margin: 1rem 5rem;
+        margin: auto;
     }
 
     .advice_text_div {
@@ -90,7 +94,7 @@
 @media (min-width: 1200px) {
 
     .advice_container.class {
-        margin: 1rem 10rem;
+        margin: auto;
     }
 
     .advice_text_div>h3 {

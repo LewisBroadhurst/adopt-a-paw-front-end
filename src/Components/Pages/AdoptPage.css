@@ -1,6 +1,12 @@
 .adoptTitle{
     text-align: center;
-    font-size: 60px;
+    background-color: #003E1F;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .adoptPageContainer{

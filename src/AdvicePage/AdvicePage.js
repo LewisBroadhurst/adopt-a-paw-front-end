@@ -9,7 +9,7 @@ const AdvicePage = () => {
         <Header />
         <main id="Advice-Page-Main"></main>
 
-        <h2 className="header">Advice</h2>
+        <h1 className="header">Advice</h1>
         
         <section className="advice_container class">
         

@@ -172,7 +172,7 @@ div {
 .homePage__ourMission--container>span,
 .homePage__ourPartners--container>span {
     font-size: 3rem;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .homePage__ourMission--container>p,
@@ -202,7 +202,7 @@ div {
 }
 
 .homePage__logoContainer>h3{
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .homePage__parentLogoCont {
@@ -242,7 +242,7 @@ div {
 
 .display_carousel>h3 {
     font-size: 3rem;
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 .display_carousel>p {
@@ -251,7 +251,7 @@ div {
 }
 
 .homepage>h3{
-    color: #E07A5F;
+    color: #A3320B;
 }
 
 /* MEDIA QUERIES */
