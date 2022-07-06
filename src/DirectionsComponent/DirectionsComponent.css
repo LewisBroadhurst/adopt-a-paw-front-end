@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30%;
+    max-width: 60%;
 
     background-color: #EDEDED;
-    padding: 0.75rem;
+    padding: 0.75rem 2rem;
+    padding-bottom: 2.1rem;
     border-radius: 0.5rem;
     margin: 1rem;
 }
@@ -20,9 +21,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    margin-top: 1rem;
 }
 
 .googleMapRoute>input,
@@ -31,14 +31,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0 2rem;
-    flex: 1;
     max-width: 100px;
+    text-align: center;
+}
+
+.googleMapRoute>input::placeholder {
+    color: #a2a2a2;
 }
 
 .googleMapRoute>button {
     flex: 2;
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .googleMapRoute>button,
@@ -51,16 +54,13 @@
     border-radius: 0.25rem;
 
     padding: 0.25rem 0.5rem;
+
+    transition: 0.5s all ease-in-out 0s;
 }
 
 .googleMapRoute>input::placeholder {
     color: #a2a2a2;
-}
-
-.routeInfo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    font-size: 1.1rem;
 }
 
 .routeInfo>span {
@@ -68,13 +68,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0.25rem 2rem;
-}
-
-.clearReset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
 }
 
 .clearReset>button {
@@ -82,5 +75,52 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 2rem;
+}
+
+.routeInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.googleMapRoute {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.clearReset,
+.googleMapRoute {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.routeInfo>span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.clearReset,
+.routeInfo>span,
+.googleMapRoute {
+    margin-top: 1rem;
+}
+
+/* UX... */
+
+.clearReset>button,
+.googleMapRoute>button {
+    transition: 0.5s all ease-in-out 0;
+    border: solid 3px #9C3587;
+}
+
+.clearReset>button:hover,
+.googleMapRoute>button:hover {
+    background-color: white;
+    color: #3F1651;
+    cursor: pointer;
+    transform: scale(0.95);
+    border: solid 3px #3F1651;
 }

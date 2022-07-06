@@ -15,16 +15,20 @@ const RoutePlanner = () => {
     }, []);
 
     const getApplication = async () => {
-        
-        getApplicationByID(applicationID, setApplication)
-
+        await getApplicationByID(applicationID, setApplication)
     }
+
+    const onLoad = async () => {
+        
+        await getApplicationByID(1, setApplication)
+    }
+
 
   return (
     <>
         <OrgHeader />
 
-        <header className="rp__header">
+        <header className="rp__header" onLoad={onLoad}>
             <h2>Route Planner</h2>
             <div>
                 <h3>Application Required: </h3>
@@ -49,8 +53,6 @@ const RoutePlanner = () => {
 
             <section className="applicationBar">
                 
-                {/* {!application ? <span>Loading...</span> :} */}
-
                 <section className="rp__applicationInfo">
                     <h3>Application Ref. ID: {application.id}</h3>
                     <section className="rp__adopteeInfo">
@@ -76,6 +78,7 @@ const RoutePlanner = () => {
                     </section>
                     <span></span>
                 </section>
+                
             </section>
         </main>
     </>

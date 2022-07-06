@@ -67,7 +67,7 @@ const DirectionsPage = () => {
                 <GoogleMap mapContainerClassName="google__direct" 
                             center={center} 
                             zoom={6} 
-                            mapContainerStyle={{width: '500px', height: '500px'}}
+                            mapContainerStyle={{width: '600px', height: '500px'}}
                             options={{
                                 mapTypeControl: false
                             }}
@@ -78,20 +78,22 @@ const DirectionsPage = () => {
                 </GoogleMap>
             </section>
 
-            <section className="googleMapRoute">
-                <input placeholder="Origin" ref={originRef}></input>
-                <input placeholder="Destination" ref={destinationRef}></input>
-                <button type="button" onClick={calculateRoute}>calculate route</button>
-            </section>
-
             <section className="routeInfo">
-                <span>Distance: {distance}</span>
-                <span>Duration: {duration}</span>
-            </section>
 
-            <section className="clearReset">
-                <button type="button" onClick={clearRoute}>clear route</button>
-                <button type="button" onClick={() => map.panTo(center)}>Reset Map</button>
+                <section className="googleMapRoute">
+                    <input placeholder="Origin" ref={originRef}></input>
+                    <input placeholder="Destination" ref={destinationRef}></input>
+                    <button type="button" onClick={calculateRoute}>Calculate Route</button>
+                </section>
+
+                <span>Distance: {distance}</span>
+
+                <span>Duration: {duration}</span>
+            
+                <section className="clearReset">
+                    <button type="button" onClick={clearRoute}>Clear route</button>
+                    <button type="button" onClick={() => map.panTo(center)}>Reset Map & Form</button>
+                </section>
             </section>
         </section>
     </>
