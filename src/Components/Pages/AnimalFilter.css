@@ -1,0 +1,46 @@
+.label {
+    color: #A3320B;
+    margin-right: 1rem;
+    font-size: 1rem;
+    
+}
+
+.input {
+    margin-left: 1rem;
+    width: 5rem;
+}
+
+.update_button {
+    background-color: #A3320B;
+    color: white;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease 0s;
+    border: 3px solid #A3320B;
+    height: 3rem;
+    font-size: 1rem;
+    
+}
+
+.update_button:hover{
+    background-color: white;
+    color: #A3320B;
+    transform: scale(0.9);
+    cursor: pointer;
+    border: 3px solid #A3320B;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 8rem;
+    height: 3rem;
+    vertical-align: middle;
+    
+}
+
+.filtersContainer {
+    background-color: #ededed;
+    border-radius: 0.5rem;
+
+}

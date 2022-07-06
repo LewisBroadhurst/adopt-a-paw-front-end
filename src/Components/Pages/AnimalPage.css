@@ -97,10 +97,16 @@
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
+    transition: all 0.5s ease 0s;
+    border: 3px solid #A3320B;
 }
 
 .back_button:hover{
-    background-color: #A3320B;
+    background-color: white;
+    color: #A3320B;
+    transform: scale(0.9);
+    cursor: pointer;
+    border: 3px solid #A3320B;
 }
 
 .adopt_button{
@@ -111,10 +117,17 @@
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
+    transition: all 0.5s ease 0s;
+    border: 3px solid #A3320B;
 }
 
 .adopt_button:hover{
     background-color: #A3320B;
+    background-color: white;
+    color: #A3320B;
+    transform: scale(0.9);
+    cursor: pointer;
+    border: 3px solid #A3320B;
 }
 
 .advice_button{
@@ -125,10 +138,16 @@
     border-radius: 0.5rem;
     width: 200px;
     justify-content: center;
+    transition: all 0.5s ease 0s;
+    border: 3px solid #A3320B;
 }
 
 .advice_button:hover{
-    background-color: #A3320B;
+    background-color: white;
+    color: #A3320B;
+    transform: scale(0.9);
+    cursor: pointer;
+    border: 3px solid #A3320B;
 }
 
 .left_align{

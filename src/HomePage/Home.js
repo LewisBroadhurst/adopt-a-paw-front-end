@@ -9,6 +9,7 @@ import battersea_gif from "./images/battersea.gif";
 import paw_prints from "./images/clipart385352.png";
 import Header from "../Header/Header.js";
 import Footer from "../Footer/Footer.js";
+import PawPrint from "./images/pawPrint.jpeg"
 
 function Home() {
   return (
@@ -49,6 +50,12 @@ function Home() {
           </section>
 
           <img className='joining_pawPrints' src={paw_prints} alt='' />
+
+          <section>
+          <img src={PawPrint} className = "pawPrintLeftHome" alt=""/>
+          <img src={PawPrint} className = "pawPrintRightHome" alt=""/>
+          </section>
+          
 
           <section className='homePage__ourPartners--container'>
 

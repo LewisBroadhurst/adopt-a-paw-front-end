@@ -12,7 +12,7 @@ const Footer = () => {
                 
                 <form className="Subscribe-Footer-Form">
                     <input type="email" placeholder="Enter your email here" />
-                    <button type="submit">Subscribe!</button>
+                    <button className="subscribe_button" type="submit">Subscribe!</button>
                 </form>
             </section>
 

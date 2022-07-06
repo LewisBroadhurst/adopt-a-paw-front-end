@@ -38,6 +38,8 @@
     background-color: #A3320B;
     padding: 0.25rem;
     border-radius: 0.125rem;
+    transition: all 0.5s ease 0s;
+    border: 3px solid #A3320B;
 }
 
 .Subscribe-Footer-Form>button,
@@ -46,8 +48,12 @@
 }
 
 .Subscribe-Footer-Form>button:hover {
-    background-color: #A3320B;
+    background-color: white;
+    color: #A3320B;
+    transform: scale(0.9);
     cursor: pointer;
+    border: 3px solid #A3320B;
+    border-radius: 0.25rem;
 }
 
 .Subscribe-Footer-Form>input {

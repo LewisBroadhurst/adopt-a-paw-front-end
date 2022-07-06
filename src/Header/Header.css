@@ -146,6 +146,10 @@
         padding-left: 0.5rem;
     }
 
+    .AAP-Header-Title-Desktop:hover{
+        color: #A3320B;
+    }
+
     .Expanded-Navbar-Header {
         display: flex;
     }
@@ -192,6 +196,10 @@
 
         padding: 0.5rem;
         padding-left: 2rem;
+    }
+
+    .Desktop-Logo:hover {
+        color: #A3320B;
     }
 
     .Expanded-Navbar-Header {

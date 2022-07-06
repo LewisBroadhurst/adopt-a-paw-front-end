@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getAllSexes, getAllSpecies } from '../../API';
+import './AnimalFilter.css'
 
 function AnimalFilter(props) {
 
@@ -59,8 +60,8 @@ function AnimalFilter(props) {
     return (
         <div className='filtersContainer'>
             <form className='filterForm'>
-                <label>Select species
-                    <select 
+                <label className='label'>Select species:
+                    <select className='input' 
                     name="selectedSpecies"
                     value={selectedSpecies} 
                     onChange={handleChangeSelectedSpecies}>
@@ -68,8 +69,8 @@ function AnimalFilter(props) {
                         {allSpecies.map(s => <option value={s}>{s}</option>)}
                     </select>
                 </label>
-                <label>Sex
-                    <select
+                <label className='label'>Sex:
+                    <select className='input' 
                     name="selectedSex"
                     value={selectedSex}
                     onChange={handleChangeSelectedSex}
@@ -78,8 +79,8 @@ function AnimalFilter(props) {
                         {allSexes.map(s => <option value={s}>{s}</option>)}
                     </select>
                 </label>
-                <label>Minimum age
-                    <input 
+                <label className='label'>Minimum age:
+                    <input className='input' 
                     name="minAge"
                     type="number"
                     value={selectedMinAge}
@@ -87,8 +88,8 @@ function AnimalFilter(props) {
                     >
                     </input>
                 </label>
-                <label>Maximum age
-                    <input 
+                <label className='label'>Maximum age:
+                    <input className='input' 
                     name="maxAge"
                     type="number"
                     value={selectedMaxAge}
@@ -96,8 +97,8 @@ function AnimalFilter(props) {
                     >
                     </input>
                 </label>
-                <label>Show available only:
-                    <input
+                <label className='label'>Show available only:
+                    <input className='input' 
                     name="availableOnly"
                     type="checkbox"
                     onChange={handleChangeAvailableOnly}
@@ -105,7 +106,7 @@ function AnimalFilter(props) {
                     </input>
                 </label>
             </form>
-            <button class="selectFilterButton" onClick={handleSubmit}>Update</button>
+            <button class="update_button" onClick={handleSubmit}>Update</button>
         </div>
     )
 }
