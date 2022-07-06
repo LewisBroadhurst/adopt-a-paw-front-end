@@ -529,9 +529,11 @@ const UserLandPage = () => {
         
         
         <section className="ulp__header" >
-        
-            <section className="ulp__header__picture">       
-            </section>
+            <h2 className="UserWelcome">Welcome, {`${customer.firstName}`} <FontAwesomeIcon icon={faPaw} />
+            </h2>
+
+            {/* <section className="ulp__header__picture">       
+            </section> */}
             <section className="ulp__header__catTable">
             </section>
         </section>

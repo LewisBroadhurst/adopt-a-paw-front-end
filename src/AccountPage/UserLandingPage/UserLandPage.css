@@ -1,3 +1,12 @@
+
+.UserWelcome {
+    text-align: center;
+    font-size: 1.6rem;
+    color: white;
+    margin-top: 10px;
+    z-index: 1;
+}
+
 /* DESKTOP POSITIONING */
 
 .backgroundPage{
@@ -27,7 +36,7 @@
 .ulp__header{
 
     
-    height: 220px;
+    height: 150px;
     width: 1020px;
     margin-bottom: 4rem;
     background-color: #ecbb00;
@@ -40,7 +49,8 @@
 .ulp__header__catTable{
 
     background-color: white;
-    z-index: 1;
+    /* position: absolute; */
+    /* z-index: 101; */
     height: 124px;
     width: 1020px;
     margin-top: 9.9rem;
@@ -50,23 +60,18 @@
 .ulp__header__picture{
     
     
-    margin-top: 5rem;
-    /* position: sticky; */
+    margin-top: -6.6rem;
     top: 10;
     left: 0;
     right: 0;
     height: 200px;
-    /* background-color: blue; */
-    z-index: 100;
-    background-image: url("../paws.jpeg");
+    background-image: url("../paws.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     position: absolute;
-    overflow-y: hidden;
-    
-    
-    
-    
+    z-index: 1;
+
+    overflow-y: hidden;        
     
 }
 
