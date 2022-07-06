@@ -37,8 +37,7 @@ const AApplicationsPage = () => {
 
         await getAllApplications(setApplications)
 
-        document.querySelector("select").value = "default";
-        document.querySelector("#aap_dr").innerText = "blank";
+        resetForms()
     }
 
     const handleApplicationUpdate = async (event) => {
@@ -47,6 +46,8 @@ const AApplicationsPage = () => {
         await updateAdoptionApplication(applicationUpdateId, applicationStatus);
 
         await getAllApplications(setApplications);
+
+        resetForms()
     }
 
     const getFilteredApplicationsByName = () => applications.filter( app => app.customer.firstName.toLowerCase().includes(adopteeNameSearch.toLowerCase()) || app.customer.lastName.toLowerCase().includes(adopteeNameSearch.toLowerCase()));
@@ -54,6 +55,24 @@ const AApplicationsPage = () => {
     const getFilteredApplicationsByLocation = () => getFilteredApplicationsByName().filter( app => app.customer.application[0].animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
 
     const getFilteredApplicationsByStatus = () => getFilteredApplicationsByLocation().filter( app => app.customer.application[0].applicationStatus.toLowerCase().includes(applicationStatusSearch.toLowerCase()));
+
+    // Reset Forms 
+
+    const resetForms = () => {
+        setAdopteeNameSearch('');
+        setAnimalLocationSearch('');
+        setApplicationStatusSearch('');
+        document.getElementById("aap_nameSB").value = '';
+        document.getElementById("aap_locationSB").value = '';
+        document.getElementById("aap_statusSB").value = '';
+
+        document.getElementById("aapUAreason").value = '';
+        document.getElementById("aapAUid").value = 'default';
+        document.getElementById("aapASid").value = 'default';
+
+        document.getElementById("aapDAid").value = 'default';
+        document.getElementById("aap_dr").value = '';
+    }
 
   return (
     <>  
@@ -66,9 +85,11 @@ const AApplicationsPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
+                    <input type="text" id="aap_nameSB" placeholder="Adoptee Name" onChange={(e) => setAdopteeNameSearch(e.target.value)}></input>
+                    <input type="text" id="aap_locationSB" placeholder="Animal Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" id="aap_statusSB" placeholder="Application Status" onChange={(e) => setApplicationStatusSearch(e.target.value)}></input>
+
+                    <button type="button" onClick={resetForms}>Reset</button>
             </form>
         </section>
 
@@ -112,7 +133,7 @@ const AApplicationsPage = () => {
                         <h3>Update Application</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
+                        <select defaultValue="default" id="aapAUid" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
@@ -121,13 +142,13 @@ const AApplicationsPage = () => {
                             }
                         </select>
                         
-                        <select defaultValue="default" onChange={(e) => setApplicationStatus(e.target.value) }>
+                        <select defaultValue="default" id="aapASid" onChange={(e) => setApplicationStatus(e.target.value) }>
                             <option value="default" disabled hidden>Application Status</option>
                             <option>Rejected</option>
                             <option>Pending</option>
                             <option>Approved</option>
                         </select>
-                        <input type="text" placeholder="Reason" required></input>
+                        <input type="text" id="aapUAreason" placeholder="Reason" required></input>
                         <button type="button" onClick={handleApplicationUpdate}>Update Application</button>
                     </form>
                 </section>
@@ -137,7 +158,7 @@ const AApplicationsPage = () => {
                         <h3>Delete Application</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setApplicationDeleteId(e.target.value)}>
+                         <select defaultValue="default" id="aapDAid" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>
                             {
                                 applications.map( (app, index) => {
