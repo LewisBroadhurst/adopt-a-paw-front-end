@@ -1,3 +1,5 @@
+/* Structuring */
+
 .rp__header {
     background-color: purple;
     color: white;
@@ -6,7 +8,6 @@
 }
 
 .rp__header>div {
-    height: 20px;
     background-color: aqua;
 }
 
@@ -15,4 +16,68 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+}
+
+.rp__applicationInfo,
+.rp__adopteeInfo,
+.rp__animalInfo,
+.applicationBar,
+.applicationBar>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rp__header>div,
+.rp__header>div>form {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Details */
+
+.applicationBar>h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.rp__applicationInfo>h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.rp__adopteeInfo>h3,
+.rp__animalInfo>h3 {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.rp__adopteeInfo>span,
+.rp__animalInfo>span,
+.applicationBar>form>select,
+.applicationBar>form>button {
+    font-size: 1.2rem;
+}
+
+.rp__animalImg>img {
+    max-height: 200px;
+}
+
+.applicationBar {
+    background-color: #EDEDED;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.rp__animalImg,
+.rp__animalInfo,
+.rp__adopteeInfo,
+.rp__applicationInfo {
+    padding: 0.5rem 1rem;
 }
