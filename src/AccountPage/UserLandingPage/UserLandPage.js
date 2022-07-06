@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./UserLandPage.css";
-import { getAllAnimals, getAllApplications, findCustomerByID } from "../../API";
+import { getAllAnimals, getAllApplications, findCustomerByID, addNewApplication } from "../../API";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faPaw, faStar, faArrowDown, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 import HappyDog from "../happyDog.jpeg"
