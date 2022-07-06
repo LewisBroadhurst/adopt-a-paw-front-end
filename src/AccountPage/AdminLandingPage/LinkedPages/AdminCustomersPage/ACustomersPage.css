@@ -209,3 +209,7 @@
 .google__map {
     border-radius: 0.5rem;
 }
+
+.aap__locationInfo {
+    align-self: center;
+}
