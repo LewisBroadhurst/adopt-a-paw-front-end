@@ -2,7 +2,7 @@ import "./OrgContainer.css";
 import { getOrganisations, deleteOrgansation } from "../../../../../API";
 
 
-const OrgContainer = ( {name, id, setOrganisations, slogan} ) => {
+const OrgContainer = ( {name, id, setOrganisations, slogan, logo_url} ) => {
 
     const handleDeleteOrganisation = async (event) => {
         event.preventDefault();

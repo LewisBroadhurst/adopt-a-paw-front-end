@@ -39,6 +39,15 @@
     justify-content: space-around;
 }
 
+.olp__cardContainers>.Post-Admin-Cont {
+    transition: 0.5s all ease-in-out 0s;
+}
+
+.olp__cardContainers>.Post-Admin-Cont:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
 .olp__headerElementCont {
     display: flex;
     flex-direction: row;
@@ -150,7 +159,8 @@
 }
 
 .olp__sectionContainer:hover {
-    transform: scale(1.05);
+    transform: translatex(-20px);
+    background-color: #EDEDED;
 }
 
 .olp__headerElementCont {

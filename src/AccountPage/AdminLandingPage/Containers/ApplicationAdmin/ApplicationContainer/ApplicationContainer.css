@@ -21,12 +21,12 @@
 }
 
 .AC__form--updateApp>button {
-    background-color: #fff9ae;
+    background-color: #48bf53;
     transition: all 0.5s ease-in-out 0s;
 }
 
 .AC__form--updateApp>button:hover {
-    background-color: #dab600;
+    background-color: #11823b;
     cursor: pointer;
     color: white;
     transform: scale(0.95);
