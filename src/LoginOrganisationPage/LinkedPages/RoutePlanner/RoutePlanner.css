@@ -1,0 +1,18 @@
+.rp__header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.rp__header>div {
+    height: 20px;
+    background-color: aqua;
+}
+
+.rp__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}

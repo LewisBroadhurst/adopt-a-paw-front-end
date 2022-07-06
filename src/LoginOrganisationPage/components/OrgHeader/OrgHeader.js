@@ -11,8 +11,9 @@ const OrgHeader = () => {
             <nav>
                 <ul>
                   <li><Link to="/account/organisation/">Home</Link></li>
-                    <li><Link to="/account/organisation/animals">Animals</Link></li>
-                    <li><Link to="/account/organisation/applications">Applications</Link></li>
+                  <li><Link to="/account/organisation/animals">Animals</Link></li>
+                  <li><Link to="/account/organisation/applications">Applications</Link></li>
+                  <li><Link to="account/organisation/routePlanner">Route Planner</Link></li>
                 </ul>
             </nav>
 

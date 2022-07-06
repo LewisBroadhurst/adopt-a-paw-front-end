@@ -237,6 +237,16 @@ export const updateAdoptionApplication = async (id, application_status) => {
     }
 }
 
+export const getApplicationByID = async (id, setApplication) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/application/${id}`)
+        console.log(response.data);
+        setApplication(response.data)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 // REGISTRATIONS
 
 export const RegisterNewUser = async (registrationRequest) => {
