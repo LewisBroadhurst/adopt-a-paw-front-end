@@ -219,6 +219,15 @@ export const getAllApplications = async (setApplications) => {
     }
 }
 
+export const addNewApplication = async (application) => {
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`, application);
+        console.log(response)
+    } catch (e) {
+        console.log(e)
+    }
+}
+
 export const deleteAdoptionApplication = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/application/deleteApplication/${id}`);
