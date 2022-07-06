@@ -3,7 +3,7 @@ import { getAllAnimals, getOrganisations, addAnimal, updateAnimal, deleteAnimal 
 import { useEffect, useState } from "react";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -77,19 +77,6 @@ const AAnimalsPage = () => {
         resetForms()
     }
 
-    // Menu Toggle
-
-    const handleMenuToggle = (event) => {
-        event.preventDefault()
-
-        const element = document.getElementById("aap__aaForm");
-
-        if (element.style.display === "none") {
-            element.style.display = "flex";
-        } else {
-            element.style.display = "none";
-        }
-    }
 
     // Search Bar
 
@@ -129,6 +116,24 @@ const AAnimalsPage = () => {
         document.getElementById("aap_raD").value = 'default';
         setRaID(-1);
         setUlID(-1);
+    }
+
+    // Menu Toggle
+
+    const handleMenuToggle = (event) => {
+        event.preventDefault()
+
+        const element = document.getElementById("aap__aaForm");
+        const arrow = document.getElementById("menuToggleAA")
+
+
+        if (element.style.display === "none") {
+            element.style.display = "flex";
+            arrow.style.transform = "rotate(0deg)";
+        } else {
+            element.style.display = "none";
+            arrow.style.transform = "rotate(180deg)";
+        }
     }
 
 
@@ -183,7 +188,7 @@ const AAnimalsPage = () => {
                 <section className="aap__form">
                     <div id="aap__header__addA" className="ulp__form__header aap__arrow">
                         <h3>Add Animal</h3>
-                        <span onClick={handleMenuToggle}><FontAwesomeIcon icon={faArrowUp} /></span>
+                        <span onClick={handleMenuToggle}><FontAwesomeIcon id="menuToggleAA" className="FAI" icon={faArrowDown} /></span>
                     </div>
                     <form id="aap__aaForm">
                         
@@ -191,15 +196,6 @@ const AAnimalsPage = () => {
                         <input type="text" id="aap_aaSpec" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
                         <input type="text" id="aap_aaSex" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
                         <input type="text" id="aap_aaLoc" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
-
-                        <select defaultValue="default" id="aap_aaOrg" onChange={(e) => (e.target.value) }>
-                        <option value="default" disabled hidden>Organisation</option>
-                            {
-                                organisations.map( (org, index) => {
-                                    return <option key={index}>{org.name}, ID: {org.id}</option>
-                                })
-                            }
-                        </select>
                         <button type="button" onClick={handleAddAnimal}>Add Animal</button>
                     </form>
                 </section>

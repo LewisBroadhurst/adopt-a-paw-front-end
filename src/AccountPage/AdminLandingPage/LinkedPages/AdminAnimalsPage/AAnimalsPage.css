@@ -2,16 +2,33 @@
     align-self: center;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
 }
 
 #aap__header__addA>span {
-    justify-self: flex-end;
     grid-column: 3;
     font-size: 1.4rem;
+    transition: all 0.3s ease-in 0s;
+    background-color: #8ECAE6;
+    padding: 0 1rem;
+    border-radius: 0.125rem;
+    border: 3px solid #8ECAE6;
+}
 
-    transition: all 1s ease-in 0s;
+#aap__header__addA>span:hover {
+    background-color: black;
+    color: #8ECAE6;
+}
+
+#menuToggleAA {
+    transition: all 0.3s ease-in 0s;
+}
+
+#menuToggleAA:hover {
+    cursor: pointer;
+    transform: rotate(15deg);
+    color: #8ECAE6;
 }
 
 #aap__header__addA>h3 {
