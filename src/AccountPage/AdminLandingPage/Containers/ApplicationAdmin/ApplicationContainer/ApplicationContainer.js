@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
-import { deleteAdoptionApplication, getAllApplications } from "../../../../../API";
+import { deleteAdoptionApplication, getAllApplications, updateAdoptionApplication } from "../../../../../API";
 import "./ApplicationContainer.css";
+import { useState } from "react";
 
 const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus, firstName, lastName} ) => {
 
@@ -10,9 +11,9 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
         const animalId = await getId();
 
-        deleteAdoptionApplication(animalId);
+        await deleteAdoptionApplication(animalId);
 
-        getAllApplications(setApplications);
+        await getAllApplications(setApplications);
     }
 
     const getId = () => {
@@ -20,6 +21,24 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
             const outputId = id;
             resolve(outputId);
         })
+    }
+
+    // Update App
+
+    const [status, setStatus] = useState('');
+
+    const handleApplicationUpdate = async (event) => {
+        event.preventDefault()
+
+        const animalId = await getId()
+
+        const statusData = {
+            "applicationStatus": `${status}`
+        }
+
+        await updateAdoptionApplication(animalId, statusData);
+
+        await getAllApplications(setApplications);
     }
 
   return (
@@ -37,8 +56,8 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
             <div className='AC__form--formContainer'>
                 <div className="AC__form--updateApp">
-                    <button type='button'>Update <FontAwesomeIcon icon={faPaw} /></button>
-                    <select defaultValue='default'>
+                    <button type='button' onClick={handleApplicationUpdate}>Update <FontAwesomeIcon icon={faPaw} /></button>
+                    <select defaultValue='default' onChange={(e) => setStatus(e.target.value)}>
                         <option value='default' hidden disabled>Status</option>
                         <option>Accepted</option>
                         <option>Rejected</option>
