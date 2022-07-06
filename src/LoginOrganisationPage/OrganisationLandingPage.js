@@ -3,27 +3,45 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OrgHeader from "./components/OrgHeader/OrgHeader";
 import Footer from "../Footer/Footer";
 import "./OrganisationLandingPage.css";
-import { getAllAnimals } from "../API";
+import { getAllAnimals, getAllApplications, getOrganisationById } from "../API";
 import { useEffect, useState } from "react";
-import AnimalContainer from "../AccountPage/AdminLandingPage/Containers/AnimalAdmin/AnimalContainer/AnimalContainer";
 import OrgAnimalContainer from "./components/OrgAnimalContainer/OrgAnimalContainer";
 import OrgApplicationContainer from "./components/OrgApplicationContainer/OrgApplicationContainer";
+import OrgUpdateForms from "./components/OrgUpdateForms/OrgUpdateForms";
 
 
 const OrganisationLandingPage = () => {
 
     const [animals, setAnimals] = useState([]);
+    const [applications, setApplications] = useState([])
+    const [organisation, setOrganisation] = useState({});
 
     useEffect( () => {
-        getAllAnimals(setAnimals)
+        getAllAnimals(setAnimals);
+        getAllApplications(setApplications);
+        getOrg()
     }, [])
+
+    const getOrg = async () => {
+
+        const org = await getOrganisationById(1);
+
+        setOrganisation(org);
+
+        console.log(org);
+    }
 
   return (
     <>
         <OrgHeader />
 
         <div className="olpMain__header">
-            <h1>Welcome to Adopt A Paw, RSPCA <FontAwesomeIcon icon={faPaw} /></h1>
+            <div className="olp__welcomeSlogan">
+                <h1>Welcome to Adopt A Paw, {organisation.name} <FontAwesomeIcon icon={faPaw} /></h1>
+                <span>{organisation.slogan}</span>
+            </div>
+            
+            <img src={organisation.logo_url} alt=""/>
         </div>
 
         <section className="olp__background">
@@ -34,43 +52,12 @@ const OrganisationLandingPage = () => {
 
                 <OrgAnimalContainer animals={animals} />
 
-                <OrgApplicationContainer animals={animals} />
+                <OrgApplicationContainer applications={applications} />
 
             </section>
 
             <section className="olp__updateDetails--container">
-                <h2>Update Details</h2>
-                <section className="olp__form--container">
-                    <h3>Update Name</h3>
-                    <form>
-                        <input type="text" placeholder="Org. Name"></input>
-                        <button type="button">Confirm</button>
-                    </form>
-                </section>
-
-                <section className="olp__form--container">
-                    <h3>Update Slogan</h3>
-                    <form>
-                        <input type="text" placeholder="Org. Slogan"></input>
-                        <button type="button">Confirm</button>
-                    </form>
-                </section>
-
-                <section className="olp__form--container">
-                    <h3>Update Address</h3>
-                    <form>
-                        <input type="text" placeholder="Org. Address"></input>
-                        <button type="button">Confirm</button>
-                    </form>
-                </section>
-
-                <section className="olp__form--container">
-                    <h3>Update Logo</h3>
-                    <form>
-                        <input type="text" placeholder="Logo URL"></input>
-                        <button type="button">Confirm</button>
-                    </form>
-                </section>
+                <OrgUpdateForms getOrg={getOrg}/>
             </section>
 
         </main>

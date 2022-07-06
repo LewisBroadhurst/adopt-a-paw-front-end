@@ -1,4 +1,5 @@
 import "./OrgHeader.css";
+import { Link } from "react-router-dom";
 
 const OrgHeader = () => {
   return (
@@ -9,12 +10,13 @@ const OrgHeader = () => {
 
             <nav>
                 <ul>
-                    <li>Animals</li>
-                    <li>Applications</li>
+                  <li><Link to="/account/organisation/">Home</Link></li>
+                    <li><Link to="/account/organisation/animals">Animals</Link></li>
+                    <li><Link to="/account/organisation/applications">Applications</Link></li>
                 </ul>
             </nav>
 
-            <span>Log Out</span>
+            <span><Link to="/">Log Out</Link></span>
         </header>
     </>
   )

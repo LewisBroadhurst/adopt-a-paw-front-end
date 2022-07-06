@@ -1,0 +1,39 @@
+/* APPLICATION CONTAINERS */
+
+.oaap__customerInfo>h3,
+.oaap__animalInfo>h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+    padding-bottom: 0.25rem;
+}
+
+.oaap__customerInfo>span,
+.oaap__animalInfo>span {
+    font-size: 1.4rem;
+}
+
+.ooap__customerInfo,
+.oaap__animalInfo {
+    padding: 0 0.5rem;
+}
+
+.oaap__applicationList>.oaap__appContainer {
+    background-color: #EDEDED;
+    color: black;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+    transition: all 1s ease-in-out 0s;
+}
+
+.oaap__applicationList>.oaap__appContainer:hover {
+    transform: translateX(-20px);
+    background-color: #c7c4c4;
+    cursor: pointer;
+}

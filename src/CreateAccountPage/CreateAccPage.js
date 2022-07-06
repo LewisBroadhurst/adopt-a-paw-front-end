@@ -32,7 +32,7 @@ const CreateAccPage = () => {
             "previousAdoptions": false
         }
 
-        addNewCustomer(custData)
+        addNewCustomer(custData);
 
         alert("Successfully created a new account! You will now be re-directed to the sign in page.")
     }
@@ -40,6 +40,7 @@ const CreateAccPage = () => {
 
   return (
     <>
+    <div className=".fill-window">
         <Header />
 
         <section className='create-hero'>
@@ -103,6 +104,7 @@ const CreateAccPage = () => {
         </section>
 
         <Footer />
+      </div>
     </>
   )
 }

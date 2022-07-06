@@ -25,3 +25,13 @@
 .orgHeader__container>span {
     padding: 0 1rem;
 }
+
+.orgHeader__container>nav>ul>li,
+.orgHeader__container>span {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.orgHeader__container>nav>ul>li:hover,
+.orgHeader__container>span:hover {
+    color: #E53F71;
+}

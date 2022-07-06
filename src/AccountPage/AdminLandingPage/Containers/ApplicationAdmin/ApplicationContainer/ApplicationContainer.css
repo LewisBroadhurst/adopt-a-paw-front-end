@@ -21,12 +21,15 @@
 }
 
 .AC__form--updateApp>button {
-    background-color: lightgoldenrodyellow;
+    background-color: #48bf53;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .AC__form--updateApp>button:hover {
-    background-color: yellow;
+    background-color: #11823b;
     cursor: pointer;
+    color: white;
+    transform: scale(0.95);
 }
 
 .AC__form--updateApp>select {
@@ -34,13 +37,15 @@
 }
 
 .AC__form--formContainer>button {
-    background-color: lightcoral;
+    background-color: #F1202B;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .AC__form--formContainer>button:hover {
-    background-color: red;
+    background-color: #BD1628;
     color: white;
     cursor: pointer;
+    transform: scale(0.95);
 }
 
 .AL__actioned {

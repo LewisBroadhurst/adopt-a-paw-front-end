@@ -1,14 +1,17 @@
 .AC__form--animalCont>button {
-    background-color: lightcoral;
+    background-color: #F63C41;
     margin: 0.5rem 0.5rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .AC__form--animalCont>button:hover {
-    background-color: red;
+    background-color: #BD1628;
     color: white;
     cursor: pointer;
+    transform: scale(0.95);
+
 }
 
 .AC__form--animalCont {

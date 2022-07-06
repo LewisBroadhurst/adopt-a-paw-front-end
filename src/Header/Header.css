@@ -72,7 +72,7 @@
 
 .AAP-Header-Title {
     font-size: 1.6rem;
-    color: #A3320B;
+    color: white;
     text-align: center;
 
     justify-content: center
@@ -83,11 +83,11 @@
 
 
 .Logo-Header {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
 
     border-radius: 50%;
-    background-color: #A3320B;
+    background-color: white;
     padding: 0.25rem;
     border: 2px black solid;
 
@@ -141,8 +141,8 @@
 
     .AAP-Header-Title-Desktop {
         display: flex;
-        font-size: 1.4rem;
-        color: #A3320B;
+        font-size: 2rem;
+        color: white;
         padding-left: 0.5rem;
     }
 
@@ -158,7 +158,7 @@
 
     .Expanded-Navbar-Header>ul>li {
         padding: 0 0.5rem;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .Account-Link {
@@ -210,11 +210,13 @@
         grid-row: 1;
 
         display: flex;
+        flex-direction: row;
         justify-content: flex-end;
-        align-items: center;
-
-        padding: 0.5rem;
+        padding: 1rem 0;
         padding-right: 2rem;
+        align-items: stretch;
+
+        font-size: 1.6rem;
     }
 
 

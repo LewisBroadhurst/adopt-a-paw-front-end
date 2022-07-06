@@ -12,7 +12,7 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
         deleteAdoptionApplication(animalId);
 
-        getAllApplications(setApplications)
+        getAllApplications(setApplications);
     }
 
     const getId = () => {
@@ -21,20 +21,6 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
             resolve(outputId);
         })
     }
-
-
-    const appStatusConverter = (id) => {
-        if (applicationStatus === 1) {
-            return "Pending";
-        } 
-        else if (applicationStatus === 2) {
-            return "Accepted";
-        }
-        else {
-            return "Rejected";
-        }
-    }
-
 
   return (
 
@@ -47,12 +33,13 @@ const ApplicationContainer = ( {animalName, animalLocation, id, setApplications,
 
             <span>Location: {animalLocation}</span>
 
-            <span>Application Status: {appStatusConverter()}</span>
+            <span>Application Status: {applicationStatus}</span>
 
             <div className='AC__form--formContainer'>
                 <div className="AC__form--updateApp">
                     <button type='button'>Update <FontAwesomeIcon icon={faPaw} /></button>
-                    <select>
+                    <select defaultValue='default'>
+                        <option value='default' hidden disabled>Status</option>
                         <option>Accepted</option>
                         <option>Rejected</option>
                         <option>Pending</option>
