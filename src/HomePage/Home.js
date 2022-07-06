@@ -51,10 +51,10 @@ function Home() {
 
           <img className='joining_pawPrints' src={paw_prints} alt='' />
 
-          <section>
+          {/* <section>
           <img src={PawPrint} className = "pawPrintLeftHome" alt=""/>
           <img src={PawPrint} className = "pawPrintRightHome" alt=""/>
-          </section>
+          </section> */}
           
 
           <section className='homePage__ourPartners--container'>
