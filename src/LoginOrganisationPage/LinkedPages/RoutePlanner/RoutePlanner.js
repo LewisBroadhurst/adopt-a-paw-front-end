@@ -51,7 +51,7 @@ const RoutePlanner = async () => {
         <main className="rp__main">
             <DirectionsComponent />
 
-            <section className="applicationBar">
+            {/* <section className="applicationBar">
                 
                 <section className="rp__applicationInfo">
                     <h3>Application Ref. ID: {application.id}</h3>
@@ -79,7 +79,7 @@ const RoutePlanner = async () => {
                     <span></span> 
                 </section>
                 
-            </section>
+            </section> */}
         </main>
     </>
   )
