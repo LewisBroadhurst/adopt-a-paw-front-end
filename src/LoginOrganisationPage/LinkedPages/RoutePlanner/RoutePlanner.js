@@ -76,7 +76,7 @@ const RoutePlanner = () => {
                     <section className="rp__animalImg">
                         <img src={application?.customer.application[0].animal.photoUrl} alt=""/>
                     </section>
-                    <span></span>
+                    <span></span> 
                 </section>
                 
             </section>

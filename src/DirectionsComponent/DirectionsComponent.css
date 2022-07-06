@@ -124,3 +124,9 @@
     transform: scale(0.95);
     border: solid 3px #3F1651;
 }
+
+.routeInfo>.googleMapRoute>input,
+.routeInfo>.googleMapRoute>button {
+    align-items: center;
+    margin: 0.25rem;
+}
