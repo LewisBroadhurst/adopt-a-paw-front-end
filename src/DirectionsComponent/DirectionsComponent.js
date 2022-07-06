@@ -2,6 +2,8 @@
 import "./DirectionsComponent.css";
 import { GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
 import { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
 
 const DirectionsPage = () => {
 
@@ -57,7 +59,10 @@ const DirectionsPage = () => {
 
   return (
     <>
-        <section>
+        <section className="directionsComponent">
+
+            <h2>Route Planner <FontAwesomeIcon icon={faPaw} /></h2>
+
             <section className="googleMapDirections">
                 <GoogleMap mapContainerClassName="google__direct" 
                             center={center} 
