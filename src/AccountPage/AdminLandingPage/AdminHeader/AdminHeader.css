@@ -19,9 +19,17 @@
 .ah__logOut>span {
     padding: 0.5rem;
     font-size: 1.8rem;
+
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .ah__logOut>span,
 .ah__titleLogo>h1 {
     padding: 0.5rem 1rem
+}
+
+.ah__navBar>ul>li:hover,
+.ah__logOut>span:hover {
+    color: #8ecae6;
+    transform: scale(1.05);
 }

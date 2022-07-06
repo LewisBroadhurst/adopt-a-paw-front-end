@@ -2,8 +2,16 @@ import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import ApplicationContainer from "./ApplicationContainer/ApplicationContainer";
+import { getAllApplications } from "../../../../API";
+import { useEffect, useState } from "react";
 
-const ApplicationList = ({applications, setApplications}) => {
+const ApplicationList = () => {
+
+  const [applications, setApplications] = useState([]);
+
+  useEffect( () => {
+    getAllApplications(setApplications)
+  }, [])
 
   return (
     <>
@@ -17,14 +25,14 @@ const ApplicationList = ({applications, setApplications}) => {
 
             <div className="pou__cardContainers">
             {
-                  applications.slice(0, 3).map( (app, index) => {
+                  applications?.slice(0, 3).map( (app, index) => {
                       return <ApplicationContainer key={index} 
                                                   id={app.id} 
                                                   firstName={app.customer.firstName}
                                                   lastName={app.customer.lastName}
-                                                  // animalName={app.application.animal.name} 
-                                                  // animalLocation={app.application.animal.location} 
-                                                  // applicationStatus={app.application.animal.applicationStatus}
+                                                  animalName={app.customer.application[0].animal.name} 
+                                                  animalLocation={app.customer.application[0].animal.location} 
+                                                  applicationStatus={app.customer.application[0].applicationStatus}
                                                   setApplications={setApplications}/>
                   })
             }

@@ -73,6 +73,8 @@ const AAnimalsPage = () => {
         await addAnimal(animalData)
 
         await getAllAnimals(setAnimals)
+
+        resetForms()
     }
 
     // Menu Toggle
@@ -91,12 +93,6 @@ const AAnimalsPage = () => {
 
     // Search Bar
 
-    const handleSearchReset = (event) => {
-        event.preventDefault();
-
-        document.getElementById("aap__searchName").innerText = '';
-    }
-
     const getFilteredAnimalsByName = () => animals.filter( (animal) => animal.name != null).filter( animal => animal.name.toLowerCase().includes(animalNameSearch.toLowerCase()));
 
     const getFilteredAnimalsByLocation = () => getFilteredAnimalsByName().filter( (animal) => animal.location != null).filter( animal => animal.location.toLowerCase().includes(animalLocationSearch.toLowerCase()));
@@ -104,6 +100,21 @@ const AAnimalsPage = () => {
     const getFilteredAnimalsByStatus = () => getFilteredAnimalsByLocation().filter( (animal) => animal.availableStatus != null).filter( animal => animal.availableStatus.toLowerCase().includes(animalAvailableStatus.toLowerCase()));
 
     // const getFilteredAnimalsByOrg = () => getFilteredAnimalsByStatus().filter( (animal) => animal.organisation != null).filter( animal => animal.organisation.name.toLowerCase().includes(animalOrganisationSearch.toLowerCase()));
+
+    // Reset Forms
+
+    const resetForms = () => {
+
+        document.getElementById("aap__searchName").value = '';
+        document.getElementById("aap__searchL").value = '';
+        document.getElementById("aap__searchAA").value = '';
+        document.getElementById("aap__searchO").value = '';
+        setAnimalNameSearch('')
+        setAnimalLocationSearch('')
+        setAnimalAvailableStatus('')
+
+        document.querySelector('input').value= "";
+    }
 
 
   return (
@@ -118,11 +129,11 @@ const AAnimalsPage = () => {
                     <span>Filter by:</span>
 
                     <input id="aap__searchName" type="text" placeholder="Name" onChange={(e) => setAnimalNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Adoption Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
-                    <input type="text" placeholder="Organisation" onChange={(e) => (e.target.value)}></input>
+                    <input type="text" id="aap__searchL" placeholder="Location" onChange={(e) => setAnimalLocationSearch(e.target.value)}></input>
+                    <input type="text" id="aap__searchAA" placeholder="Adoption Status" onChange={(e) => setAnimalAvailableStatus(e.target.value)}></input>
+                    <input type="text" id="aap__searchO" placeholder="Organisation" onChange={(e) => (e.target.value)}></input>
 
-                    <button type="button" onClick={handleSearchReset}>Reset</button>
+                    <button type="button" onClick={resetForms}>Reset</button>
             </form>
         </section>
 

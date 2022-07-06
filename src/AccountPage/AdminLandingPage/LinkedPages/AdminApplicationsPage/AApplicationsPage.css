@@ -120,6 +120,11 @@
     transition: all 1s 0s;
 }
 
+.aap__appContainer:hover {
+    cursor: pointer;
+    transform: translateX(-20px);
+}
+
 /* FORMS */
 
 .aap__forms {
@@ -162,6 +167,7 @@
     background-color: white;
     color: #4267B2;
     cursor: pointer;
+    transform: scale(0.95);
 }
 
 .ulp__form__header {
@@ -188,8 +194,12 @@
     margin-bottom: 2rem;
 }
 
-.aap__form input {
+.aap__form input::placeholder {
     color: #c5c1c1;
+}
+
+.aap__form>form>input {
+    color: black;
 }
 
 .aap__noAppSearch {
@@ -213,4 +223,21 @@
 
 .aap__applicationImg>img {
     border-radius: 0.25rem;
+}
+
+.aap__searchBar>button {
+    color: black;
+    background-color: #8ECAE6;
+    border: 3px solid #8ECAE6;
+
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.aap__searchBar>button:hover {
+    transform: scale(0.95);
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }

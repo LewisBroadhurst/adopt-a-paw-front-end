@@ -17,7 +17,6 @@ const AdminLandPage = () => {
 
   const [organisations, setOrganisations] = useState([]);
   const [customers, setCustomers] = useState([]);
-  const [applications, setApplications] = useState([])
   const [animals, setAnimals] = useState([]);
 
   
@@ -26,7 +25,6 @@ const AdminLandPage = () => {
 
     const forceSync = async () => {
       await getOrganisations(setOrganisations);
-      await getAllApplications(setApplications);
       await getCustomers(setCustomers);
       await getAllAnimals(setAnimals)
     }
@@ -47,7 +45,7 @@ const AdminLandPage = () => {
 
           <section className="alp__containers--positioning">
 
-            <ApplicationList className="al1__container--p" applications={applications} setApplications={setApplications}/>
+            <ApplicationList className="al1__container--p"/>
 
             <AnimalList className="al2__container--p" animals={animals} setAnimals={setAnimals}/>
           
