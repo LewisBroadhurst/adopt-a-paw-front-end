@@ -21,22 +21,26 @@
 }
 
 .OC__form--updateName>button {
-    background-color: lightgoldenrodyellow;
+    background-color: #48bf53;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .OC__form--updateName>button:hover {
-    background-color: yellow;
+    background-color: #11823b;
     cursor: pointer;
-    text-align: center;
+    color: white;
+    transform: scale(0.95);
 }
 
 .OC__form--formContainer>button {
-    background-color: lightcoral;
     text-align: center;
+    background-color: #F1202B;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .OC__form--formContainer>button:hover {
-    background-color: red;
+    background-color: #BD1628;
     color: white;
     cursor: pointer;
+    transform: scale(0.95);
 }

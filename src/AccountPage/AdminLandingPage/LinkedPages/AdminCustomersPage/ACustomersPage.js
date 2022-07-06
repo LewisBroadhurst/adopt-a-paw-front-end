@@ -100,6 +100,8 @@ const ACustomersPage = () => {
                     <input type="text" placeholder="Name" onChange={(e) => setNameSearch(e.target.value)}></input>
                     <input type="text" placeholder="Location" onChange={(e) => setLocationSearch(e.target.value)}></input>
                     <input type="text" placeholder="Previously adopted?" onChange={(e) => setPrevAdoptSearch(e.target.value)}></input>
+
+                    <button>Reset</button>
             </form>
         </section>
 
