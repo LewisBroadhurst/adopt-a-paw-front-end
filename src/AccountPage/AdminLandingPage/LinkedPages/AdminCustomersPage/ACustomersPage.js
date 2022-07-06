@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCustomers, deleteCustomer } from "../../../../API";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import "./ACustomersPage.css";
-// import { GoogleMap } from '@react-google-maps/api';
+import { GoogleMap } from '@react-google-maps/api';
 // import cityInformation from "../../../../gb_cityInformation.json";
 
 
@@ -26,6 +26,8 @@ const ACustomersPage = () => {
         await deleteCustomer(dcID);
 
         await getCustomers(setCustomers);
+
+        resetForms()
     }
 
     // Search bar
@@ -83,6 +85,21 @@ const ACustomersPage = () => {
     
     };
 
+    // Reset Forms
+
+    const resetForms = () => {
+        setNameSearch('');
+        setLocationSearch('');
+        setPrevAdoptSearch('');
+        document.getElementById("acp__name").value = '';
+        document.getElementById("acp__Loc").value = '';
+        document.getElementById("acp__Prev").value = '';
+
+        document.getElementById("aap_dr").value = '';
+        document.getElementById("acp__id").value = 'default';
+        setDcID('');
+    }
+
     
 
   return (
@@ -97,11 +114,11 @@ const ACustomersPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Name" onChange={(e) => setNameSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Location" onChange={(e) => setLocationSearch(e.target.value)}></input>
-                    <input type="text" placeholder="Previously adopted?" onChange={(e) => setPrevAdoptSearch(e.target.value)}></input>
+                    <input type="text" id="acp__name" placeholder="Name" onChange={(e) => setNameSearch(e.target.value)}></input>
+                    <input type="text" id="acp__Loc" placeholder="Location" onChange={(e) => setLocationSearch(e.target.value)}></input>
+                    <input type="text" id="acp__Prev" placeholder="Previously adopted?" onChange={(e) => setPrevAdoptSearch(e.target.value)}></input>
 
-                    <button>Reset</button>
+                    <button onClick={resetForms}>Reset</button>
             </form>
         </section>
 
@@ -124,11 +141,11 @@ const ACustomersPage = () => {
                     
                                     <section className="aap__locationInfo">
                                         <section>
-                                           {/* <GoogleMap 
+                                           <GoogleMap 
                                            mapContainerClassName="google__map"
                                            mapContainerStyle={containerStyle}
                                            center={center(customer.location)}
-                                           zoom={12} /> */}
+                                           zoom={12} />
                                         </section>
                                     </section>
                                 </section>
@@ -142,7 +159,7 @@ const ACustomersPage = () => {
                         <h3>Delete Customer</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setDcID(e.target.value)}>
+                         <select id="acp__id" defaultValue="default" onChange={(e) => setDcID(e.target.value)}>
                             <option value="default" disabled hidden>Customer ID</option>
                             {
                                 customers.map( (customer, index) => {

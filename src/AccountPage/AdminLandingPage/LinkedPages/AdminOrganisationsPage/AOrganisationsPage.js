@@ -45,6 +45,8 @@ const AOrganisationsPage = () => {
         await updateOrganisation(uoID, orgData);
 
         await getOrganisations(setOrganisations)
+
+        resetForm()
     }
 
     // Delete Organisation
@@ -57,6 +59,8 @@ const AOrganisationsPage = () => {
         await deleteOrgansation(doID);
 
         await getOrganisations(setOrganisations);
+
+        resetForm()
     }
 
     // ORG SEARCH
@@ -64,6 +68,22 @@ const AOrganisationsPage = () => {
     const [orgNameSearch, setOrgNameSearch] = useState('');
 
     const orgFiltName = organisations.filter( (org) => org.name.toLowerCase().includes(orgNameSearch))
+
+    // Reset Forms
+
+    const resetForm = () => {
+        document.getElementById("aop__nameS").value = ''
+        setOrgNameSearch('')
+
+        document.getElementById('aap_dr').value = ''
+        document.getElementById("aop_doID").value = 'default'
+        setDoID('');
+
+        document.getElementById('acp_uoSlogan').value = ''
+        document.getElementById("acp_uoID").value = 'default'
+        document.getElementById('acp_uoName').value = ''
+        
+    }
 
   return (
     <>  
@@ -76,8 +96,9 @@ const AOrganisationsPage = () => {
             <form className="aap__searchBar">
                     <span>Filter by:</span>
 
-                    <input type="text" placeholder="Organisation Name" onChange={(e) => setOrgNameSearch(e.target.value)}></input>
+                    <input type="text" id="aop__nameS" placeholder="Organisation Name" onChange={(e) => setOrgNameSearch(e.target.value)}></input>
                     {/* <input type="text" placeholder="Org. Ref. Number" onChange={(e) => (e.target.value)}></input> */}
+                    <button type="button" onClick={resetForm}>Reset</button>
             </form>
         </section>
 
@@ -110,7 +131,7 @@ const AOrganisationsPage = () => {
                         <h3>Update Organisation</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setUoID(e.target.value) }>
+                        <select defaultValue="default" id="acp_uoID" onChange={(e) => setUoID(e.target.value) }>
                         <option value="default" disabled hidden>Organisation Ref. ID</option>
                             {
                                 organisations.map( (org, index) => {
@@ -119,9 +140,9 @@ const AOrganisationsPage = () => {
                             }
                         </select>
                         
-                        <input type="text" placeholder="Name" onChange={(e) => setNewOrgName(e.target.value)}></input>
-                        <input type="text" placeholder="Slogan" onChange={(e) => setNewOrgSlogan(e.target.value)}></input>
-                        <button type="button" onClick={handleUpdateOrganisation}>Update Organisation</button>
+                        <input type="text" id="acp_uoName"  placeholder="Name" onChange={(e) => setNewOrgName(e.target.value)}></input>
+                        <input type="text" id="acp_uoSlogan" placeholder="Slogan" onChange={(e) => setNewOrgSlogan(e.target.value)}></input>
+                        <button type="button"  onClick={handleUpdateOrganisation}>Update Organisation</button>
                     </form>
                 </section>
 
@@ -130,7 +151,7 @@ const AOrganisationsPage = () => {
                         <h3>Delete Organisation</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setDoID(e.target.value)}>
+                         <select defaultValue="default" id="aop_doID" onChange={(e) => setDoID(e.target.value)}>
                             <option value="default" disabled hidden>Organisation Ref. ID</option>
                             {
                                 organisations.map( (org, index) => {
