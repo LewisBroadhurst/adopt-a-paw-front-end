@@ -120,9 +120,11 @@
     transition: all 1s 0s;
 }
 
-.aap__appContainer:hover {
+.aap__mainContent>.aap__applicationList>.aap__appContainer:hover {
     cursor: pointer;
     transform: translateX(-20px);
+    background-color: #4267B2;
+    color: white;
 }
 
 /* FORMS */

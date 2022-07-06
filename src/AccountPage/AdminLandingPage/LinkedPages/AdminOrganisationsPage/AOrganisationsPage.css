@@ -245,4 +245,5 @@
 .aap__orgLogo>img {
     padding-right: 1rem;
     max-height: 150px;
+    border-radius: 0.5rem;
 }

@@ -13,7 +13,7 @@ const OrgApplicationContainer = ( {applications}) => {
                 <span><Link to="/account/organisation/applications">All Applications <FontAwesomeIcon icon={faSquareArrowUpRight} /></Link></span>
             </div>
             
-            <div className="olp__cardContainers">
+            <div className="olp__cardContainers purple">
             {
                 applications.slice(0, 2).map((app, index) => {
                 return <ApplicationContainer key={index}

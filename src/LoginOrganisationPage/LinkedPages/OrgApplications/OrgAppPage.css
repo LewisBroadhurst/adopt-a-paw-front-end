@@ -34,6 +34,7 @@
 
 .oaap__applicationList>.oaap__appContainer:hover {
     transform: translateX(-20px);
-    background-color: #c7c4c4;
+    background-color: #9C3587;
     cursor: pointer;
+    color: white;
 }
