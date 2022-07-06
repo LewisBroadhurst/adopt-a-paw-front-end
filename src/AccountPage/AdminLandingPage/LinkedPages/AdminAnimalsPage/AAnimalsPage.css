@@ -53,3 +53,7 @@
 .aap__animalImg>img {
     border-radius: 0.125rem;
 }
+
+.removeHeight {
+    height: 0;
+}

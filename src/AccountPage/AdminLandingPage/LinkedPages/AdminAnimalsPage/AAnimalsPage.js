@@ -1,16 +1,16 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations, addAnimal, updateAnimal, deleteAnimal } from "../../../../API";
+import { getAllAnimals, addAnimal, updateAnimal, deleteAnimal } from "../../../../API";
 import { useEffect, useState } from "react";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
 const AAnimalsPage = () => {
 
     const [animals, setAnimals] = useState([]);
-    const [organisations, setOrganisations] = useState([]);
+    // const [organisations, setOrganisations] = useState([]);
 
     const [animalNameSearch, setAnimalNameSearch] = useState('');
     const [animalLocationSearch, setAnimalLocationSearch] = useState('');
@@ -19,7 +19,7 @@ const AAnimalsPage = () => {
 
     useEffect( () => {
         getAllAnimals(setAnimals)
-        getOrganisations(setOrganisations)
+        // getOrganisations(setOrganisations)
     }, []);
 
     // Delete Animal
@@ -188,9 +188,9 @@ const AAnimalsPage = () => {
                 <section className="aap__form">
                     <div id="aap__header__addA" className="ulp__form__header aap__arrow">
                         <h3>Add Animal</h3>
-                        <span onClick={handleMenuToggle}><FontAwesomeIcon id="menuToggleAA" className="FAI" icon={faArrowDown} /></span>
+                        <span onClick={handleMenuToggle}><FontAwesomeIcon id="menuToggleAA" className="FAI" icon={faArrowUp} /></span>
                     </div>
-                    <form id="aap__aaForm">
+                    <form id="aap__aaForm" className="aap__aaForm">
                         
                         <input type="text" id="aap_aaName" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
                         <input type="text" id="aap_aaSpec" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
