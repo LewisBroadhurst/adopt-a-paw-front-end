@@ -136,6 +136,17 @@ const AAnimalsPage = () => {
         }
     }
 
+    // Quotes
+
+    // async function getapi() {
+    //     const api_url ="https://zenquotes.io/api/random?";
+    //     const response = await fetch(api_url)
+    //     const data = await response.json();
+    //     console.log(data.q);
+    // }
+
+    
+
 
   return (
     <>  

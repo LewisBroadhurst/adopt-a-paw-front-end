@@ -78,8 +78,18 @@ const ACustomersPage = () => {
             }
         } else if (location === "Manchester") {
             return {
-                lat: 40.507351,
-                lng: -0.127758
+                lat: 53.480759,
+                lng: -2.242631
+            }
+        } else if (location === "St Albans") {
+            return {
+                lat: 51.752239,
+                lng: -0.338650
+            }
+        } else if (location === "Birmingham") {
+            return {
+                lat: 52.486244,
+                lng: -1.890401
             }
         }
     
