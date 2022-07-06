@@ -3,8 +3,9 @@ import OrgHeader from "../../components/OrgHeader/OrgHeader";
 import DirectionsComponent from "../../../DirectionsComponent/DirectionsComponent";
 import { useEffect, useState } from "react";
 import { getAllApplications, getApplicationByID } from "../../../API.js";
+import JSON from "./response_1657147026156.json"
 
-const RoutePlanner = () => {
+const RoutePlanner = async () => {
 
     const [applications, setApplications] = useState([]);
     const [application, setApplication] = useState({});
@@ -18,17 +19,16 @@ const RoutePlanner = () => {
         await getApplicationByID(applicationID, setApplication)
     }
 
-    const onLoad = async () => {
-        
-        await getApplicationByID(1, setApplication)
-    }
+   
+    const onLoad = JSON;
 
-
+    
+    
   return (
     <>
         <OrgHeader />
 
-        <header className="rp__header" onLoad={onLoad}>
+        <header className="rp__header">
             <h2>Route Planner</h2>
             <div>
                 <h3>Application Required: </h3>
