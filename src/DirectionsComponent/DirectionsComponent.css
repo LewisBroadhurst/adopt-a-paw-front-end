@@ -5,14 +5,14 @@
     max-width: 30%;
 
     background-color: #EDEDED;
-    padding: 1.5rem;
-    margin: 1.5rem;
+    padding: 0.75rem;
     border-radius: 0.5rem;
+    margin: 1rem;
 }
 
 .directionsComponent>h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-top: -0.5rem;
 
 }
 
@@ -43,10 +43,14 @@
 
 .googleMapRoute>button,
 .clearReset>button {
-    background-color: blue;
+    background-color: #3F1651;
+    background-color: #653780;
+    background-color: #9C3587;
     color: white;
 
     border-radius: 0.25rem;
+
+    padding: 0.25rem 0.5rem;
 }
 
 .googleMapRoute>input::placeholder {
@@ -64,7 +68,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 2rem;
+    margin: 0.25rem 2rem;
 }
 
 .clearReset {
