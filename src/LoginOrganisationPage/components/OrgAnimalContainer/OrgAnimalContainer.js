@@ -2,7 +2,7 @@ import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AnimalContainer from '../../../AccountPage/AdminLandingPage/Containers/AnimalAdmin/AnimalContainer/AnimalContainer'
+import OrgAnimalCard from './OrgAnimalCard'
 
 const OrgAnimalContainer = ({animals}) => {
   return (
@@ -16,7 +16,7 @@ const OrgAnimalContainer = ({animals}) => {
         <div className="olp__cardContainers">
         {
             animals.slice(0, 3).map((animal, index) => {
-            return <AnimalContainer key={index}
+            return <OrgAnimalCard key={index}
                                     id={animal.id}
                                     organisationId={animal.organisation_id}
                                     name={animal.name}

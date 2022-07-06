@@ -1,0 +1,31 @@
+.olp__form--animalCont>button {
+    background-color: #F63C41;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.olp__form--animalCont>button:hover {
+    background-color: #BD1628;
+    color: white;
+    cursor: pointer;
+    transform: scale(0.95);
+
+}
+
+.AC__form--animalCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.olp__details--animalCont>span {
+    text-align: center;
+}
+
+.purpleMePlease:hover,
+#hello_world:hover {
+    background-color: purple !important;
+    color: white !important;
+}
