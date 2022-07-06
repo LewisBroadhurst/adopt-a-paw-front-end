@@ -14,6 +14,8 @@ import GrassBorderBottom from "../grassBorderBottom.jpeg"
 import Computer from "../computer.jpeg"
 import RSPCA from "../RSPCA.jpeg"
 import Email from "../email.jpeg"
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 const UserLandPage = () => {
 
@@ -198,6 +200,7 @@ const UserLandPage = () => {
         if(userInput === "null"){
 
             return(
+
 
 
             customer.adoptedAnimals?.map( (animal, index) => {
@@ -514,7 +517,8 @@ const UserLandPage = () => {
   return (
     <>
 
-    
+        <Header />
+
         <main className= 'backgroundPage'>
 
         
@@ -630,30 +634,17 @@ const UserLandPage = () => {
                 </section>
 
                 <section className= "ulp__container2" >
-                    <section classname = "ulp__ulpContainer2__rectangle">
 
-                    <img src={PawPrint} className = "pawPrintLeft"/>
-                    <img src={PawPrint} className = "pawPrintRight"/>
-                    </section>
-
-
-
-
-                    
-
-                    
-
-                    
-
+                    <video autoPlay muted loop poster='https://woodgreen.org.uk/wp-content/uploads/2022/05/tokyo-summer-banner-img.jpg' src="https://vod-progressive.akamaized.net/exp=1657114792~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1854%2F17%2F434273934%2F1891403396.mp4~hmac=ea25fb9a8dc6773a9153db1e7af6d0ab60c98c499d074ee291549154e5dc1891/vimeo-prod-skyfire-std-us/01/1854/17/434273934/1891403396.mp4">
+                    </video>
 
                 </section>
 
                 <section className= "ulp__container2__left" >
                 <section classname = "ulp__ulpContainer2__rectangle">
 
-                    <img src={Email} className="email0"/>
-                    <img src={Email} className="email"/>
-                    <img src={Email} className="email2"/>
+                <img src={PawPrint} className = "pawPrintLeft"/>
+                <img src={PawPrint} className = "pawPrintRight"/>
                     
 
                     
@@ -781,9 +772,9 @@ const UserLandPage = () => {
                 </section>
                 
                 <section className= "ulp__container2" >
-
                     
-
+                    <video autoPlay muted loop poster='https://woodgreen.org.uk/wp-content/uploads/2022/05/tokyo-summer-banner-img.jpg' src="https://vod-progressive.akamaized.net/exp=1657112758~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4661%2F18%2F473308772%2F2109393304.mp4~hmac=472d3c14cd2f9c14930d880a0dff178f94001e922c9b937fc9202461ba1a6412/vimeo-prod-skyfire-std-us/01/4661/18/473308772/2109393304.mp4">
+                    </video>
 
                 </section>
                 
@@ -845,6 +836,8 @@ const UserLandPage = () => {
         
         </section>
         </main>
+
+        <Footer />
     </>
   )
 }
