@@ -133,6 +133,57 @@
     height: 30px;
 }
 
+.password__input{
+
+    font: bold 100% "Lucida Sans Unicode",sans-serif;
+
+
+
+
+}
+
+.whoAreYouLabel{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 0.25rem;
+
+    font-size: 1.4rem;
+
+    
+
+    
+
+    
+    /* color: #006935; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+
+
+
+}
+
+.userRolesDropdown{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.2rem solid green;
+    border-radius: 0.3rem;
+
+    padding: 0.25rem;
+    padding-left: 0.25rem;
+
+    font-size: 1.32rem;
+    color: #006935;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+
+}
+
 .create-account-form>div>label {
     display: flex;
     flex-direction: row;

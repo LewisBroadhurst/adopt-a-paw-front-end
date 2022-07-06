@@ -236,3 +236,18 @@ export const updateAdoptionApplication = async (id, application_status) => {
         console.log(err)
     }
 }
+
+// REGISTRATIONS
+
+export const RegisterNewUser = async (registrationRequest) => {
+
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/api/v1/registration`, registrationRequest)
+        console.log(response)
+    } catch (err) {
+        console.log(err);
+    }
+
+
+
+}
