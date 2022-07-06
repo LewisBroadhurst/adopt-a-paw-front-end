@@ -51,7 +51,7 @@ const RoutePlanner = () => {
         <main className="rp__main">
             <DirectionsComponent />
 
-            <section className="applicationBar">
+            {/* <section className="applicationBar">
                 
                 <section className="rp__applicationInfo">
                     <h3>Application Ref. ID: {application.id}</h3>
@@ -79,7 +79,7 @@ const RoutePlanner = () => {
                     <span></span> 
                 </section>
                 
-            </section>
+            </section> */}
         </main>
     </>
   )
