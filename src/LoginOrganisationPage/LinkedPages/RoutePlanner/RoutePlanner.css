@@ -1,14 +1,19 @@
 /* Structuring */
 
 .rp__header {
-    background-color: purple;
+    background-color: #9C3587;
     color: white;
     text-align: center;
     font-size: 3rem;
 }
 
 .rp__header>div {
-    background-color: aqua;
+    background-color: #3F1651;
+    background-color: #653780;
+}
+
+.rp__header>h2 {
+    padding: 1rem 0;
 }
 
 .rp__main {
@@ -36,6 +41,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+/* Search Bar */
+
+.rp__header>div>h3,
+.rp__header>div>form>button {
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+}
+
+.rp__header>div>form>select {
+    text-align: center;
+    max-width: 50px;
+    margin-right: 0.5rem;
+}
+
+.rp__header>div>form>button {
+    background-color: #9C3587;
+    padding: 0 0.75rem;
+    border-radius: 0.125rem;
 }
 
 

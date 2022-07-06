@@ -27,10 +27,10 @@ const RoutePlanner = () => {
         <header className="rp__header">
             <h2>Route Planner</h2>
             <div>
-                <h3>Application Info.</h3>
+                <h3>Application Required: </h3>
                 <form>
-                    <select onChange={(e) => setApplicationID(e.target.value)}>
-                        <option>Application ID</option>
+                    <select defaultValue="value" onChange={(e) => setApplicationID(e.target.value)}>
+                        <option value="value" disabled hidden>Application ID</option>
                         {
                             applications?.map( (app, index) => {
                                 return <option key={index}>{app.id}</option>
@@ -49,6 +49,7 @@ const RoutePlanner = () => {
 
             <section className="applicationBar">
                 
+                {/* {!application ? <span>Loading...</span> :} */}
 
                 <section className="rp__applicationInfo">
                     <h3>Application Ref. ID: {application.id}</h3>
