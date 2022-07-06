@@ -110,7 +110,7 @@ const AOrganisationsPage = () => {
                    
                     orgFiltName.map( (org, index) => {
                         return  <section key={index} className="aap__appContainer">
-                                    <section className="aap__customerInfo">
+                                    <section className="aop__customerInfo">
                                         <h3>Organisation Info.</h3>
                                         <span>Name: {org.name}</span>
                                         <span>Organisation Ref. Number: {org.id}</span>
@@ -118,7 +118,7 @@ const AOrganisationsPage = () => {
                                     </section>
 
                                     <section className="aap__orgLogo">
-                                        <h3>Org Logo</h3>
+                                        <img src={org.logo_url} alt=""/>
                                     </section>
                                 </section>
                 })}
