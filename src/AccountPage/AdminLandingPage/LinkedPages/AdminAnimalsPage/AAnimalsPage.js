@@ -109,11 +109,26 @@ const AAnimalsPage = () => {
         document.getElementById("aap__searchL").value = '';
         document.getElementById("aap__searchAA").value = '';
         document.getElementById("aap__searchO").value = '';
-        setAnimalNameSearch('')
-        setAnimalLocationSearch('')
-        setAnimalAvailableStatus('')
+        setAnimalNameSearch('');
+        setAnimalLocationSearch('');
+        setAnimalAvailableStatus('');
 
-        document.querySelector('input').value= "";
+        document.getElementById("aap_aaName").value = '';
+        document.getElementById("aap_aaLoc").value = '';
+        document.getElementById("aap_aaSex").value = '';
+        document.getElementById("aap_aaSpec").value = '';
+        document.getElementById("aap_aaOrg").value = 'default';
+        setAaAnimalName('');
+        setAaLocation('');
+        setAaSex('');
+        setAaSpecies('');
+        
+        document.getElementById("aap_ulL").value = '';
+        document.getElementById("aap_ulId").value = 'default';
+        document.getElementById("aap_dr").value = '';
+        document.getElementById("aap_raD").value = 'default';
+        setRaID(-1);
+        setUlID(-1);
     }
 
 
@@ -172,12 +187,12 @@ const AAnimalsPage = () => {
                     </div>
                     <form id="aap__aaForm">
                         
-                        <input type="text" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
-                        <input type="text" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
-                        <input type="text" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
-                        <input type="text" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
+                        <input type="text" id="aap_aaName" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
+                        <input type="text" id="aap_aaSpec" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
+                        <input type="text" id="aap_aaSex" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
+                        <input type="text" id="aap_aaLoc" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
 
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
+                        <select defaultValue="default" id="aap_aaOrg" onChange={(e) => (e.target.value) }>
                         <option value="default" disabled hidden>Organisation</option>
                             {
                                 organisations.map( (org, index) => {
@@ -194,7 +209,7 @@ const AAnimalsPage = () => {
                         <h3>Update Location</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setUlID(e.target.value) }>
+                        <select defaultValue="default" id="aap_ulId" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -203,7 +218,7 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         
-                        <input placeholder="Location" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
+                        <input placeholder="Location" id="aap_ulL" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
                         <button type="button" onClick={handleLocationUpdate}>Update Location</button>
                     </form>
                 </section>
@@ -213,7 +228,7 @@ const AAnimalsPage = () => {
                         <h3>Remove Animal</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setRaID(e.target.value)}>
+                         <select defaultValue="default" id="aap_raD" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
