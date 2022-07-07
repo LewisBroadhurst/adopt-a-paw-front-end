@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import memeAppCrop from "./memeAppCrop.png";
 
 
 
@@ -49,6 +50,8 @@ const AAnimalsPage = () => {
         await updateAnimal(ulID ,animalData)
 
         await getAllAnimals(setAnimals)
+
+        resetForms()
     }
 
     // Add Animal
@@ -110,8 +113,8 @@ const AAnimalsPage = () => {
         setAaSex('');
         setAaSpecies('');
         
-        document.getElementById("aap_ulL").value = '';
-        document.getElementById("aap_ulId").value = 'default';
+        document.getElementById("ulLx").value = '';
+        document.getElementById("ulIdx").value = 'default';
         document.getElementById("aap_dr").value = '';
         document.getElementById("aap_raD").value = 'default';
         setRaID(-1);
@@ -173,7 +176,10 @@ const AAnimalsPage = () => {
             <section className="aap__applicationList">
 
                 {
-                    getFilteredAnimalsByStatus().map( (animal, index) => {
+                    getFilteredAnimalsByStatus().length === 0 ? <><p>No applications match your search filters!</p> <img src={memeAppCrop} className="aap__noAppSearch" alt="" /></>
+                    
+                    
+                    : getFilteredAnimalsByStatus().map( (animal, index) => {
                         return <section key={index} className="aap__appContainer">
                         <section className="aap__customerInfo">
                             <h3>Animal Info.</h3>
@@ -215,7 +221,7 @@ const AAnimalsPage = () => {
 
                     <h3>Update Location</h3>
                     <form>
-                        <select defaultValue="default" id="aap_ulId" onChange={(e) => setUlID(e.target.value) }>
+                        <select defaultValue="default" id="ulIdx" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -224,7 +230,7 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         
-                        <input placeholder="Location" id="aap_ulL" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
+                        <input placeholder="Location" id="ulLx" onChange={(e) => setUlLocation((e.target.value))}></input>
                         <button type="button" onClick={handleLocationUpdate}>Update Location</button>
                     </form>
                 </section>
