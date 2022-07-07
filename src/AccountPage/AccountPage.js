@@ -19,6 +19,9 @@ const AccountPage = () => {
 
     useEffect(()=>{
 
+
+        
+
         FindUserBy_email_password(setAppUser, email, password);
 
 
@@ -30,6 +33,12 @@ const AccountPage = () => {
         
         e.preventDefault();
         console.log(appUser);
+
+        
+        
+
+
+
         if(appUser.data?.enabled === false){
             alert("please verify your email to login");
         }
@@ -46,6 +55,8 @@ const AccountPage = () => {
         }else if(appUser.data?.appUserRole === "ORGANISATION"){
 
             navigate('/account/organisation');
+        }else if(appUser === ''){
+            alert("Invalid email/password");
         }
 
 
