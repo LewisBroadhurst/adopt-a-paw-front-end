@@ -47,7 +47,7 @@ function AnimalFilter(props) {
         //     filter2Send.species = selectedSpecies
         // }
 
-        props.setFilter({ 
+        props.setFilter({
             species: selectedSpecies,
             sex: selectedSex,
             minAge: parseInt(selectedMinAge),
@@ -60,51 +60,52 @@ function AnimalFilter(props) {
     return (
         <div className='filtersContainer'>
             <form className='filterForm'>
-                <label className='label'>Select species:
-                    <select className='input' 
-                    name="selectedSpecies"
-                    value={selectedSpecies} 
-                    onChange={handleChangeSelectedSpecies}>
-                        <option value={null}></option>
-                        {allSpecies.map(s => <option value={s}>{s}</option>)}
-                    </select>
-                </label>
-                <label className='label'>Sex:
-                    <select className='input' 
-                    name="selectedSex"
-                    value={selectedSex}
-                    onChange={handleChangeSelectedSex}
-                    >
-                        <option value={null}></option>
-                        {allSexes.map(s => <option value={s}>{s}</option>)}
-                    </select>
-                </label>
-                <label className='label'>Minimum age:
-                    <input className='input' 
-                    name="minAge"
-                    type="number"
-                    value={selectedMinAge}
-                    onChange={handleChangeSelectedMinAge}
-                    >
-                    </input>
-                </label>
-                <label className='label'>Maximum age:
-                    <input className='input' 
-                    name="maxAge"
-                    type="number"
-                    value={selectedMaxAge}
-                    onChange={handleChangeSelectedMaxAge}
-                    >
-                    </input>
-                </label>
-                <label className='label'>Show available only:
-                    <input className='input' 
-                    name="availableOnly"
-                    type="checkbox"
-                    onChange={handleChangeAvailableOnly}
-                    >
-                    </input>
-                </label>
+                <ul>
+                    <li>
+                        <label className='label'>Select species:
+                            <select className='input'
+                                name="selectedSpecies"
+                                value={selectedSpecies}
+                                onChange={handleChangeSelectedSpecies}>
+                                <option value={null}></option>
+                                {allSpecies.map(s => <option value={s}>{s}</option>)}
+                            </select>
+                        </label>
+                    </li>
+                    <li>
+                        <label className='label'>Sex:
+                            <select className='input'
+                                name="selectedSex"
+                                value={selectedSex}
+                                onChange={handleChangeSelectedSex}
+                            >
+                                <option value={null}></option>
+                                {allSexes.map(s => <option value={s}>{s}</option>)}
+                            </select>
+                        </label>
+                    </li>
+                    <li>
+                        <label className='label'>Maximum age:
+                            <input className='input'
+                                name="maxAge"
+                                type="number"
+                                value={selectedMaxAge}
+                                onChange={handleChangeSelectedMaxAge}
+                            >
+                            </input>
+                        </label>
+                    </li>
+                    <li>
+                        <label className='label'>Show available only:
+                            <input className='input'
+                                name="availableOnly"
+                                type="checkbox"
+                                onChange={handleChangeAvailableOnly}
+                            >
+                            </input>
+                        </label>
+                    </li>
+                </ul>
             </form>
             <button class="update_button" onClick={handleSubmit}>Update</button>
         </div>

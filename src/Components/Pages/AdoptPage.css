@@ -16,11 +16,24 @@
 
 .filtersContainer{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 1rem;
     font-size: 20px;
     background-color: #ededed;
+}
+
+@media (min-width: 1100px){
+    .filterForm>ul{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.filtersForm{
+    display: none;
+    flex-direction: column;
 }
 
 .filtersContainer>button{
