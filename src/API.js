@@ -237,7 +237,7 @@ export const updateAdoptionApplication = async (id, application_status) => {
     }
 }
 
-// REGISTRATIONS
+// SECURITY 
 
 export const RegisterNewUser = async (registrationRequest) => {
 
@@ -248,6 +248,49 @@ export const RegisterNewUser = async (registrationRequest) => {
         console.log(err);
     }
 
+}
+
+export const FindUserBy_email_password = async (setAppUser, email, password) => {
+
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/AppUser/findUserBy_email_password?email=${email}&password=${password}`)
+        setAppUser(response);
+        console.log(response);
+    } catch (err) {
+        console.log(err);
+    }
+
 
 
 }
+
+
+//bot
+
+export const getAllBotKeyWords = async (setBotKeyWords) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/bot/getAllBotKeyWords`);
+        
+        const botKeyWordsresponse = response.data;
+        
+        setBotKeyWords(botKeyWordsresponse);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    } 
+}
+
+export const getAllAnimalKeyWords = async (setAnimalKeyWords) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/animalKeyWords/getAllAnimalKeyWords`);
+        
+        const animalKeyWordsresponse = response.data;
+        
+        setAnimalKeyWords(animalKeyWordsresponse);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    } 
+}
+
+
