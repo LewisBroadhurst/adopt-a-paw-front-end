@@ -61,7 +61,7 @@ const UserLandPage = () => {
 
         await addNewApplication(animal_id, customer.id)
 
-         getAllApplications(setApplications)
+        await getAllApplications(setApplications)
 
         resetForms()
     }

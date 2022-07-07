@@ -39,9 +39,7 @@ const AccountPage = () => {
         if(appUser.data?.enabled === false){
             alert("please verify your email to login");
             
-        }
-        
-        else if(appUser.data?.appUserRole === "ADMIN"){
+        } else if(appUser.data?.appUserRole === "ADMIN"){
 
             navigate('/account/admin');
 
