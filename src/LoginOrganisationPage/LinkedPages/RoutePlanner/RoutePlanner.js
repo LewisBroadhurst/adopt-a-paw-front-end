@@ -85,7 +85,7 @@ const RoutePlanner = () => {
             <DirectionsComponent />
 
             {
-                returnApplicationBar
+                returnApplicationBar()
             }
 
         </main>
