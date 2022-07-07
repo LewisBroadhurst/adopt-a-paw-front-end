@@ -39,6 +39,7 @@ const UserLandPage = () => {
         getAllAnimals(setAnimals);
         getAllApplications(setApplications);
         findCustomerByID(setCustomer, 1);
+        addNewApplication(setApplications)
         
     }, []);
 
@@ -51,14 +52,14 @@ const UserLandPage = () => {
 
     const handleAddNewApplication = async () => {
         
-        const application = {
-            "animalId": `${animal_id}`,
-            "customerId": `${customer_id}`,
-        }
-        
-        await addNewApplication(application)
+        // const application = {
+        //     "animalId": `${animal_id}`,
+        //     "customerId": `${customer_id}`,
+        // }
 
-        await getAllApplications(setApplications)
+        await addNewApplication(animal_id, customer_id)
+
+         getAllApplications(setApplications)
 
         resetForms()
     }
@@ -566,8 +567,12 @@ const UserLandPage = () => {
 
             {/* <section className="ulp__header__picture">       
             </section> */}
-            <section className="ulp__header__catTable">
-            </section>
+            {/* <section className="ulp__header__catTable">
+            </section> */}
+        </section>
+
+        <section>
+            <h2 className="user-id-tag">User id: {customer.id}</h2>
         </section>
 
         
@@ -582,7 +587,7 @@ const UserLandPage = () => {
                         
                     <input type="number" id="AnimalId" placeholder="Animal Ref Number" required onChange={(e) => setAnimal_id(e.target.value)}></input>
 
-                    <input value={`${customer.id}`} id="CustomerId" placeholder="Customer Id" required onChange={(e) => setCustomer_id(e.target.value)}></input>
+                    <input value={`${customer_id}`} id="CustomerId" placeholder="User Id" required onChange={(e) => setCustomer_id(e.target.value)}></input>
 
                     <button type="button" className="submit_application_button" onClick={handleAddNewApplication}>Submit</button>
                 </form>
