@@ -37,10 +37,42 @@ const UserLandPage = () => {
 
     useEffect( () => {
         getAllAnimals(setAnimals);
-        getAllApplications(setApplications)
+        getAllApplications(setApplications);
         findCustomerByID(setCustomer, 1);
         
     }, []);
+
+
+    // Add New Application
+
+    const [animal_id, setAnimal_id] = useState('');
+    const [customer_id, setCustomer_id] = useState('');
+
+
+    const handleAddNewApplication = async () => {
+        
+        const application = {
+            "animalId": `${animal_id}`,
+            "customerId": `${customer_id}`,
+        }
+        
+        await addNewApplication(application)
+
+        await getAllApplications(setApplications)
+
+        resetForms()
+    }
+
+    // Reset Forms
+
+    const resetForms = () => {
+
+        document.getElementById("animalId").value = '';
+        document.getElementById("customerId").value = '';
+        setAnimal_id('');
+        setCustomer_id('');
+    }
+
 
     const toggleWishlistStar = () => {
         const star = document.querySelector(".ulp__starCont");
@@ -539,13 +571,26 @@ const UserLandPage = () => {
         </section>
 
         
-        
-        
+        <section className="aap__forms">
 
-            
-        
-             
+            <section className="aap__form">
+                <div id="aap__header__addA" className="ulp__form__header">
+                    <h3>Add New Application</h3>
+                </div>
 
+                <form id="aap__aaForm" className="aap__aaForm">
+                        
+                    <input type="number" id="AnimalId" placeholder="Animal Ref Number" required onChange={(e) => setAnimal_id(e.target.value)}></input>
+
+                    <input value={`${customer.id}`} id="CustomerId" placeholder="Customer Id" required onChange={(e) => setCustomer_id(e.target.value)}></input>
+
+                    <button type="button" className="submit_application_button" onClick={handleAddNewApplication}>Submit</button>
+                </form>
+            </section>
+        </section>
+
+        <br></br>
+        <br></br>
         
         
 

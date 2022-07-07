@@ -44,9 +44,15 @@ function AnimalPage() {
             <div className='left_align'>
                 <button className='back_button'><a href="../adopt">Back to results</a></button>
             </div>
+
+            <div>
+                <h2 className='animalid'>Reference Number: {animal.id}</h2>
+            </div>
+
             <div>
                 <img className='picture_container' src={animal.photoUrl} onError={(e)=>{e.target.onerror = null; e.target.src="../../familydog.jpeg"}}/>
             </div>
+
             <div className='basic_info_container'><h3>Hi, I'm a little {gender} called {animal.name}. I'm a {calculateAge(animal.dateOfBirth)} year old {animal.breed} {animal.species} from {animal.location} and I'm looking for my forever home!</h3>
             <br></br>
             </div>

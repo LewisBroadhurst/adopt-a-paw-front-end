@@ -219,7 +219,7 @@ export const getAllApplications = async (setApplications) => {
     }
 }
 
-export const addNewApplication = async (application) => {
+export const addNewApplication = async (animal_id, customer_id, application) => {
     try {
         const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`, application);
         console.log(response)
