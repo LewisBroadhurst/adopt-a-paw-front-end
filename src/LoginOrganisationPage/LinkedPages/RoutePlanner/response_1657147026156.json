@@ -1,0 +1,936 @@
+{
+  "id": 3,
+  "customer": {
+    "id": 1,
+    "firstName": "Cem",
+    "lastName": "Gurhan",
+    "dateOfBirth": "1999-12-05",
+    "location": "London",
+    "previousAdoptions": true,
+    "application": [
+      {
+        "id": 3,
+        "animal": {
+          "id": 14,
+          "name": "Mischief",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "organisation": {
+            "id": 1,
+            "name": "RSPCA",
+            "email": "enquiries@rspca.co.uk",
+            "phone": "0800 343 4242",
+            "slogan": "A world where all animals are respected and treated with kindness and compassion.",
+            "logo_url": "https://www.rspca.org.uk/o/ptl2017Theme/images/img/rspca.png",
+            "animals": [
+              {
+                "id": 14,
+                "name": "Mischief",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Ferret",
+                "breed": "Albino",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+              },
+              {
+                "id": 25,
+                "name": "Hercules",
+                "dateOfBirth": "2020-01-01",
+                "sex": "Male",
+                "location": "Birchington",
+                "species": "Guineapig",
+                "breed": "Domestic",
+                "availableStatus": "Reserved",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=319458"
+              },
+              {
+                "id": 24,
+                "name": "Tom and Jerry",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Walsall",
+                "species": "Guineapig",
+                "breed": "Domestic",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322545"
+              },
+              {
+                "id": 23,
+                "name": "Almond",
+                "dateOfBirth": "2020-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Guineapig",
+                "breed": "Domestic",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A230059"
+              },
+              {
+                "id": 22,
+                "name": "Antonio",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Stalmine",
+                "species": "Guineapig",
+                "breed": "Domestic",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326826"
+              },
+              {
+                "id": 21,
+                "name": "Kitkat Lady",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Female",
+                "location": "Manchester",
+                "species": "Guineapig",
+                "breed": "Domestic",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325717"
+              },
+              {
+                "id": 20,
+                "name": "Pablo",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Blackpool",
+                "species": "Rabbit",
+                "breed": "Crossbreed",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325633"
+              },
+              {
+                "id": 19,
+                "name": "Thelma",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Female",
+                "location": "Wimblington",
+                "species": "Rabbit",
+                "breed": "Lionhead",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A228086"
+              },
+              {
+                "id": 18,
+                "name": "Humphrey",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Manchester",
+                "species": "Rabbit",
+                "breed": "Dwarf Lop",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329749"
+              },
+              {
+                "id": 17,
+                "name": "Tammy",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Female",
+                "location": "Northumberland",
+                "species": "Rabbit",
+                "breed": "Domestic",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329295"
+              },
+              {
+                "id": 16,
+                "name": "Champ",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Accrington",
+                "species": "Rabbit",
+                "breed": "Lop",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329570"
+              },
+              {
+                "id": 15,
+                "name": "Sneaky Pete",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Ferret",
+                "breed": "Fitch",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329384"
+              },
+              {
+                "id": 13,
+                "name": "Bandit",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Ferret",
+                "breed": "Polecat",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A226439"
+              },
+              {
+                "id": 12,
+                "name": "Rascal",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Ferret",
+                "breed": "Polecat",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222427"
+              },
+              {
+                "id": 11,
+                "name": "Spaghetti",
+                "dateOfBirth": "2021-01-01",
+                "sex": "Male",
+                "location": "Conwy",
+                "species": "Ferret",
+                "breed": "Albino",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A224734_3"
+              },
+              {
+                "id": 10,
+                "name": "Biggles",
+                "dateOfBirth": "2006-01-01",
+                "sex": "Male",
+                "location": "Cheltenham",
+                "species": "Cat",
+                "breed": "Domestic Shorthair",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322418"
+              },
+              {
+                "id": 9,
+                "name": "Sonny",
+                "dateOfBirth": "2009-01-01",
+                "sex": "Male",
+                "location": "Potters Bar",
+                "species": "Cat",
+                "breed": "Domestic Semi",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"
+              },
+              {
+                "id": 8,
+                "name": "Dobby",
+                "dateOfBirth": "2019-01-01",
+                "sex": "Male",
+                "location": "Barrow-in-Furness",
+                "species": "Cat",
+                "breed": "Domestic Shorthair",
+                "availableStatus": "Reserved",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"
+              },
+              {
+                "id": 7,
+                "name": "Snowdrop",
+                "dateOfBirth": "2014-01-01",
+                "sex": "Female",
+                "location": "Northamptonshire",
+                "species": "Cat",
+                "breed": "Domestic Shorthair",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"
+              },
+              {
+                "id": 6,
+                "name": "Mr Lover Lover",
+                "dateOfBirth": "2018-01-01",
+                "sex": "Male",
+                "location": "Northamptonshire",
+                "species": "Cat",
+                "breed": "Domestic Shorthair",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330093"
+              },
+              {
+                "id": 5,
+                "name": "Pops",
+                "dateOfBirth": "2016-01-01",
+                "sex": "Male",
+                "location": "Aylesbury",
+                "species": "Dog",
+                "breed": "German Shepherd",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A231334"
+              },
+              {
+                "id": 4,
+                "name": "Fly",
+                "dateOfBirth": "2016-01-01",
+                "sex": "Female",
+                "location": "Southport",
+                "species": "Dog",
+                "breed": "Crossbreed",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330388"
+              },
+              {
+                "id": 3,
+                "name": "Flame",
+                "dateOfBirth": "2010-01-01",
+                "sex": "Male",
+                "location": "Coventry",
+                "species": "Dog",
+                "breed": "Staffordshire Bull Terrier",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328636"
+              },
+              {
+                "id": 2,
+                "name": "Simba",
+                "dateOfBirth": "2020-01-01",
+                "sex": "Male",
+                "location": "Birchington",
+                "species": "Dog",
+                "breed": "Staffordshire Bull Terrier",
+                "availableStatus": "Reserved",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325652"
+              },
+              {
+                "id": 1,
+                "name": "Tiny Tim",
+                "dateOfBirth": "2018-01-01",
+                "sex": "Male",
+                "location": "Hillingdon",
+                "species": "Dog",
+                "breed": "Chihuahua",
+                "availableStatus": "Available",
+                "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328739"
+              }
+            ],
+            "locations": [
+              {
+                "id": 1,
+                "country": "UK",
+                "city": "London",
+                "address": "19 Landor Avenue",
+                "postcode": "N12 3RE"
+              }
+            ]
+          },
+          "species": "Ferret",
+          "breed": "Albino",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+        },
+        "applicationStatus": "Approved"
+      }
+    ],
+    "adoptedAnimals": [
+      {
+        "id": 14,
+        "name": "Mischief",
+        "dateOfBirth": "2021-01-01",
+        "sex": "Male",
+        "location": "Conwy",
+        "organisation": {
+          "id": 1,
+          "name": "RSPCA",
+          "email": "enquiries@rspca.co.uk",
+          "phone": "0800 343 4242",
+          "slogan": "A world where all animals are respected and treated with kindness and compassion.",
+          "logo_url": "https://www.rspca.org.uk/o/ptl2017Theme/images/img/rspca.png",
+          "animals": [
+            {
+              "id": 14,
+              "name": "Mischief",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Ferret",
+              "breed": "Albino",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+            },
+            {
+              "id": 25,
+              "name": "Hercules",
+              "dateOfBirth": "2020-01-01",
+              "sex": "Male",
+              "location": "Birchington",
+              "species": "Guineapig",
+              "breed": "Domestic",
+              "availableStatus": "Reserved",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=319458"
+            },
+            {
+              "id": 24,
+              "name": "Tom and Jerry",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Walsall",
+              "species": "Guineapig",
+              "breed": "Domestic",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322545"
+            },
+            {
+              "id": 23,
+              "name": "Almond",
+              "dateOfBirth": "2020-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Guineapig",
+              "breed": "Domestic",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A230059"
+            },
+            {
+              "id": 22,
+              "name": "Antonio",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Stalmine",
+              "species": "Guineapig",
+              "breed": "Domestic",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326826"
+            },
+            {
+              "id": 21,
+              "name": "Kitkat Lady",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Female",
+              "location": "Manchester",
+              "species": "Guineapig",
+              "breed": "Domestic",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325717"
+            },
+            {
+              "id": 20,
+              "name": "Pablo",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Blackpool",
+              "species": "Rabbit",
+              "breed": "Crossbreed",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325633"
+            },
+            {
+              "id": 19,
+              "name": "Thelma",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Female",
+              "location": "Wimblington",
+              "species": "Rabbit",
+              "breed": "Lionhead",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A228086"
+            },
+            {
+              "id": 18,
+              "name": "Humphrey",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Manchester",
+              "species": "Rabbit",
+              "breed": "Dwarf Lop",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329749"
+            },
+            {
+              "id": 17,
+              "name": "Tammy",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Female",
+              "location": "Northumberland",
+              "species": "Rabbit",
+              "breed": "Domestic",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329295"
+            },
+            {
+              "id": 16,
+              "name": "Champ",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Accrington",
+              "species": "Rabbit",
+              "breed": "Lop",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329570"
+            },
+            {
+              "id": 15,
+              "name": "Sneaky Pete",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Ferret",
+              "breed": "Fitch",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329384"
+            },
+            {
+              "id": 13,
+              "name": "Bandit",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Ferret",
+              "breed": "Polecat",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A226439"
+            },
+            {
+              "id": 12,
+              "name": "Rascal",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Ferret",
+              "breed": "Polecat",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222427"
+            },
+            {
+              "id": 11,
+              "name": "Spaghetti",
+              "dateOfBirth": "2021-01-01",
+              "sex": "Male",
+              "location": "Conwy",
+              "species": "Ferret",
+              "breed": "Albino",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A224734_3"
+            },
+            {
+              "id": 10,
+              "name": "Biggles",
+              "dateOfBirth": "2006-01-01",
+              "sex": "Male",
+              "location": "Cheltenham",
+              "species": "Cat",
+              "breed": "Domestic Shorthair",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322418"
+            },
+            {
+              "id": 9,
+              "name": "Sonny",
+              "dateOfBirth": "2009-01-01",
+              "sex": "Male",
+              "location": "Potters Bar",
+              "species": "Cat",
+              "breed": "Domestic Semi",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"
+            },
+            {
+              "id": 8,
+              "name": "Dobby",
+              "dateOfBirth": "2019-01-01",
+              "sex": "Male",
+              "location": "Barrow-in-Furness",
+              "species": "Cat",
+              "breed": "Domestic Shorthair",
+              "availableStatus": "Reserved",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"
+            },
+            {
+              "id": 7,
+              "name": "Snowdrop",
+              "dateOfBirth": "2014-01-01",
+              "sex": "Female",
+              "location": "Northamptonshire",
+              "species": "Cat",
+              "breed": "Domestic Shorthair",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"
+            },
+            {
+              "id": 6,
+              "name": "Mr Lover Lover",
+              "dateOfBirth": "2018-01-01",
+              "sex": "Male",
+              "location": "Northamptonshire",
+              "species": "Cat",
+              "breed": "Domestic Shorthair",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330093"
+            },
+            {
+              "id": 5,
+              "name": "Pops",
+              "dateOfBirth": "2016-01-01",
+              "sex": "Male",
+              "location": "Aylesbury",
+              "species": "Dog",
+              "breed": "German Shepherd",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A231334"
+            },
+            {
+              "id": 4,
+              "name": "Fly",
+              "dateOfBirth": "2016-01-01",
+              "sex": "Female",
+              "location": "Southport",
+              "species": "Dog",
+              "breed": "Crossbreed",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330388"
+            },
+            {
+              "id": 3,
+              "name": "Flame",
+              "dateOfBirth": "2010-01-01",
+              "sex": "Male",
+              "location": "Coventry",
+              "species": "Dog",
+              "breed": "Staffordshire Bull Terrier",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328636"
+            },
+            {
+              "id": 2,
+              "name": "Simba",
+              "dateOfBirth": "2020-01-01",
+              "sex": "Male",
+              "location": "Birchington",
+              "species": "Dog",
+              "breed": "Staffordshire Bull Terrier",
+              "availableStatus": "Reserved",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325652"
+            },
+            {
+              "id": 1,
+              "name": "Tiny Tim",
+              "dateOfBirth": "2018-01-01",
+              "sex": "Male",
+              "location": "Hillingdon",
+              "species": "Dog",
+              "breed": "Chihuahua",
+              "availableStatus": "Available",
+              "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328739"
+            }
+          ],
+          "locations": [
+            {
+              "id": 1,
+              "country": "UK",
+              "city": "London",
+              "address": "19 Landor Avenue",
+              "postcode": "N12 3RE"
+            }
+          ]
+        },
+        "species": "Ferret",
+        "breed": "Albino",
+        "availableStatus": "Available",
+        "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+      }
+    ],
+    "customerPreferredSpecies": []
+  },
+  "animal": {
+    "id": 14,
+    "name": "Mischief",
+    "dateOfBirth": "2021-01-01",
+    "sex": "Male",
+    "location": "Conwy",
+    "organisation": {
+      "id": 1,
+      "name": "RSPCA",
+      "email": "enquiries@rspca.co.uk",
+      "phone": "0800 343 4242",
+      "slogan": "A world where all animals are respected and treated with kindness and compassion.",
+      "logo_url": "https://www.rspca.org.uk/o/ptl2017Theme/images/img/rspca.png",
+      "animals": [
+        {
+          "id": 14,
+          "name": "Mischief",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Ferret",
+          "breed": "Albino",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+        },
+        {
+          "id": 25,
+          "name": "Hercules",
+          "dateOfBirth": "2020-01-01",
+          "sex": "Male",
+          "location": "Birchington",
+          "species": "Guineapig",
+          "breed": "Domestic",
+          "availableStatus": "Reserved",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=319458"
+        },
+        {
+          "id": 24,
+          "name": "Tom and Jerry",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Walsall",
+          "species": "Guineapig",
+          "breed": "Domestic",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322545"
+        },
+        {
+          "id": 23,
+          "name": "Almond",
+          "dateOfBirth": "2020-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Guineapig",
+          "breed": "Domestic",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A230059"
+        },
+        {
+          "id": 22,
+          "name": "Antonio",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Stalmine",
+          "species": "Guineapig",
+          "breed": "Domestic",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326826"
+        },
+        {
+          "id": 21,
+          "name": "Kitkat Lady",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Female",
+          "location": "Manchester",
+          "species": "Guineapig",
+          "breed": "Domestic",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325717"
+        },
+        {
+          "id": 20,
+          "name": "Pablo",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Blackpool",
+          "species": "Rabbit",
+          "breed": "Crossbreed",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325633"
+        },
+        {
+          "id": 19,
+          "name": "Thelma",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Female",
+          "location": "Wimblington",
+          "species": "Rabbit",
+          "breed": "Lionhead",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A228086"
+        },
+        {
+          "id": 18,
+          "name": "Humphrey",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Manchester",
+          "species": "Rabbit",
+          "breed": "Dwarf Lop",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329749"
+        },
+        {
+          "id": 17,
+          "name": "Tammy",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Female",
+          "location": "Northumberland",
+          "species": "Rabbit",
+          "breed": "Domestic",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329295"
+        },
+        {
+          "id": 16,
+          "name": "Champ",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Accrington",
+          "species": "Rabbit",
+          "breed": "Lop",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329570"
+        },
+        {
+          "id": 15,
+          "name": "Sneaky Pete",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Ferret",
+          "breed": "Fitch",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=329384"
+        },
+        {
+          "id": 13,
+          "name": "Bandit",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Ferret",
+          "breed": "Polecat",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A226439"
+        },
+        {
+          "id": 12,
+          "name": "Rascal",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Ferret",
+          "breed": "Polecat",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222427"
+        },
+        {
+          "id": 11,
+          "name": "Spaghetti",
+          "dateOfBirth": "2021-01-01",
+          "sex": "Male",
+          "location": "Conwy",
+          "species": "Ferret",
+          "breed": "Albino",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A224734_3"
+        },
+        {
+          "id": 10,
+          "name": "Biggles",
+          "dateOfBirth": "2006-01-01",
+          "sex": "Male",
+          "location": "Cheltenham",
+          "species": "Cat",
+          "breed": "Domestic Shorthair",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=322418"
+        },
+        {
+          "id": 9,
+          "name": "Sonny",
+          "dateOfBirth": "2009-01-01",
+          "sex": "Male",
+          "location": "Potters Bar",
+          "species": "Cat",
+          "breed": "Domestic Semi",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A223403"
+        },
+        {
+          "id": 8,
+          "name": "Dobby",
+          "dateOfBirth": "2019-01-01",
+          "sex": "Male",
+          "location": "Barrow-in-Furness",
+          "species": "Cat",
+          "breed": "Domestic Shorthair",
+          "availableStatus": "Reserved",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=326414"
+        },
+        {
+          "id": 7,
+          "name": "Snowdrop",
+          "dateOfBirth": "2014-01-01",
+          "sex": "Female",
+          "location": "Northamptonshire",
+          "species": "Cat",
+          "breed": "Domestic Shorthair",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330095"
+        },
+        {
+          "id": 6,
+          "name": "Mr Lover Lover",
+          "dateOfBirth": "2018-01-01",
+          "sex": "Male",
+          "location": "Northamptonshire",
+          "species": "Cat",
+          "breed": "Domestic Shorthair",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330093"
+        },
+        {
+          "id": 5,
+          "name": "Pops",
+          "dateOfBirth": "2016-01-01",
+          "sex": "Male",
+          "location": "Aylesbury",
+          "species": "Dog",
+          "breed": "German Shepherd",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A231334"
+        },
+        {
+          "id": 4,
+          "name": "Fly",
+          "dateOfBirth": "2016-01-01",
+          "sex": "Female",
+          "location": "Southport",
+          "species": "Dog",
+          "breed": "Crossbreed",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=330388"
+        },
+        {
+          "id": 3,
+          "name": "Flame",
+          "dateOfBirth": "2010-01-01",
+          "sex": "Male",
+          "location": "Coventry",
+          "species": "Dog",
+          "breed": "Staffordshire Bull Terrier",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328636"
+        },
+        {
+          "id": 2,
+          "name": "Simba",
+          "dateOfBirth": "2020-01-01",
+          "sex": "Male",
+          "location": "Birchington",
+          "species": "Dog",
+          "breed": "Staffordshire Bull Terrier",
+          "availableStatus": "Reserved",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=325652"
+        },
+        {
+          "id": 1,
+          "name": "Tiny Tim",
+          "dateOfBirth": "2018-01-01",
+          "sex": "Male",
+          "location": "Hillingdon",
+          "species": "Dog",
+          "breed": "Chihuahua",
+          "availableStatus": "Available",
+          "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=328739"
+        }
+      ],
+      "locations": [
+        {
+          "id": 1,
+          "country": "UK",
+          "city": "London",
+          "address": "19 Landor Avenue",
+          "postcode": "N12 3RE"
+        }
+      ]
+    },
+    "species": "Ferret",
+    "breed": "Albino",
+    "availableStatus": "Available",
+    "photoUrl": "https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A222429"
+  },
+  "applicationStatus": "Approved"
+}

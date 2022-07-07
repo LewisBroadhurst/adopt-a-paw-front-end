@@ -205,3 +205,45 @@
     height: 50px;
     background-color: #0E2A62;
 }
+
+.aop__customerInfo {
+    flex: 2;
+}
+
+.aap__orgLogo {
+    align-self: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aap__appContainer>.aop__customerInfo {
+    display: flex;
+}
+
+.aop__customerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.aop__customerInfo>h3 {
+    font-size: 2rem;
+}
+
+.aop__customerInfo>span {
+    font-size: 1.4rem;
+}
+
+.aap__orgLogo>img {
+    padding-right: 1rem;
+    max-height: 150px;
+    border-radius: 0.5rem;
+}

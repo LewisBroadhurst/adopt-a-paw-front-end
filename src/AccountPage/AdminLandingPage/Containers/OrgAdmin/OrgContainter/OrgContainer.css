@@ -44,3 +44,7 @@
     cursor: pointer;
     transform: scale(0.95);
 }
+
+.Post-Admin-Cont {
+    flex: 1;
+}

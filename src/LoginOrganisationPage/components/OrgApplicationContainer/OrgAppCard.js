@@ -3,8 +3,9 @@ import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { deleteAdoptionApplication, getAllApplications, updateAdoptionApplication } from "../../../../../API";
 import "./ApplicationContainer.css";
 import { useState } from "react";
+import "../OrgAnimalContainer/OrgAnimalCard.css";
 
-const OrgAppCard = ( {animalName, animalLocation, id, setApplications, applicationStatus, firstName, lastName} ) => {
+const ApplicationContainer = ( {animalName, animalLocation, id, setApplications, applicationStatus, firstName, lastName} ) => {
 
     const handleApplicationDelete = async event => {
         event.preventDefault();
@@ -55,7 +56,7 @@ const OrgAppCard = ( {animalName, animalLocation, id, setApplications, applicati
             <span>Application Status: {applicationStatus}</span>
 
             <div className='AC__form--formContainer'>
-                <div className="AC__form--updateApp">
+                <div className="AC__form--updateApp" id="hello_world">
                     <button type='button' onClick={handleApplicationUpdate}>Update <FontAwesomeIcon icon={faPaw} /></button>
                     <select defaultValue='default' onChange={(e) => setStatus(e.target.value)}>
                         <option value='default' hidden disabled>Status</option>
@@ -73,4 +74,4 @@ const OrgAppCard = ( {animalName, animalLocation, id, setApplications, applicati
   )
 }
 
-export default OrgAppCard
+export default ApplicationContainer

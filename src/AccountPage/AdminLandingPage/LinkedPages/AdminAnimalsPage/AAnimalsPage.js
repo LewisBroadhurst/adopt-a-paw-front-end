@@ -1,5 +1,5 @@
 import "./AAnimalsPage.css";
-import { getAllAnimals, getOrganisations, addAnimal, updateAnimal, deleteAnimal } from "../../../../API";
+import { getAllAnimals, addAnimal, updateAnimal, deleteAnimal } from "../../../../API";
 import { useEffect, useState } from "react";
 import AdminHeader from "../../AdminHeader/AdminHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +10,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 const AAnimalsPage = () => {
 
     const [animals, setAnimals] = useState([]);
-    const [organisations, setOrganisations] = useState([]);
+    // const [organisations, setOrganisations] = useState([]);
 
     const [animalNameSearch, setAnimalNameSearch] = useState('');
     const [animalLocationSearch, setAnimalLocationSearch] = useState('');
@@ -19,7 +19,7 @@ const AAnimalsPage = () => {
 
     useEffect( () => {
         getAllAnimals(setAnimals)
-        getOrganisations(setOrganisations)
+        // getOrganisations(setOrganisations)
     }, []);
 
     // Delete Animal
@@ -77,19 +77,6 @@ const AAnimalsPage = () => {
         resetForms()
     }
 
-    // Menu Toggle
-
-    const handleMenuToggle = (event) => {
-        event.preventDefault()
-
-        const element = document.getElementById("aap__aaForm");
-
-        if (element.style.display === "none") {
-            element.style.display = "flex";
-        } else {
-            element.style.display = "none";
-        }
-    }
 
     // Search Bar
 
@@ -109,12 +96,56 @@ const AAnimalsPage = () => {
         document.getElementById("aap__searchL").value = '';
         document.getElementById("aap__searchAA").value = '';
         document.getElementById("aap__searchO").value = '';
-        setAnimalNameSearch('')
-        setAnimalLocationSearch('')
-        setAnimalAvailableStatus('')
+        setAnimalNameSearch('');
+        setAnimalLocationSearch('');
+        setAnimalAvailableStatus('');
 
-        document.querySelector('input').value= "";
+        document.getElementById("aap_aaName").value = '';
+        document.getElementById("aap_aaLoc").value = '';
+        document.getElementById("aap_aaSex").value = '';
+        document.getElementById("aap_aaSpec").value = '';
+        document.getElementById("aap_aaOrg").value = 'default';
+        setAaAnimalName('');
+        setAaLocation('');
+        setAaSex('');
+        setAaSpecies('');
+        
+        document.getElementById("aap_ulL").value = '';
+        document.getElementById("aap_ulId").value = 'default';
+        document.getElementById("aap_dr").value = '';
+        document.getElementById("aap_raD").value = 'default';
+        setRaID(-1);
+        setUlID(-1);
     }
+
+    // Menu Toggle
+
+    const handleMenuToggle = (event) => {
+        event.preventDefault()
+
+        const element = document.getElementById("aap__aaForm");
+        const arrow = document.getElementById("menuToggleAA")
+
+
+        if (element.style.display === "none") {
+            element.style.display = "flex";
+            arrow.style.transform = "rotate(0deg)";
+        } else {
+            element.style.display = "none";
+            arrow.style.transform = "rotate(180deg)";
+        }
+    }
+
+    // Quotes
+
+    // async function getapi() {
+    //     const api_url ="https://zenquotes.io/api/random?";
+    //     const response = await fetch(api_url)
+    //     const data = await response.json();
+    //     console.log(data.q);
+    // }
+
+    
 
 
   return (
@@ -168,23 +199,14 @@ const AAnimalsPage = () => {
                 <section className="aap__form">
                     <div id="aap__header__addA" className="ulp__form__header aap__arrow">
                         <h3>Add Animal</h3>
-                        <span onClick={handleMenuToggle}><FontAwesomeIcon icon={faArrowUp} /></span>
+                        <span onClick={handleMenuToggle}><FontAwesomeIcon id="menuToggleAA" className="FAI" icon={faArrowUp} /></span>
                     </div>
-                    <form id="aap__aaForm">
+                    <form id="aap__aaForm" className="aap__aaForm">
                         
-                        <input type="text" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
-                        <input type="text" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
-                        <input type="text" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
-                        <input type="text" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
-
-                        <select defaultValue="default" onChange={(e) => (e.target.value) }>
-                        <option value="default" disabled hidden>Organisation</option>
-                            {
-                                organisations.map( (org, index) => {
-                                    return <option key={index}>{org.name}, ID: {org.id}</option>
-                                })
-                            }
-                        </select>
+                        <input type="text" id="aap_aaName" placeholder="Name" required onChange={(e) => setAaAnimalName(e.target.value)}></input>
+                        <input type="text" id="aap_aaSpec" placeholder="Species" required onChange={(e) => setAaSpecies(e.target.value)}></input>
+                        <input type="text" id="aap_aaSex" placeholder="Sex (Male or Female)" required onChange={(e) => setAaSex(e.target.value)}></input>
+                        <input type="text" id="aap_aaLoc" placeholder="Location" required onChange={(e) => setAaLocation(e.target.value)}></input>
                         <button type="button" onClick={handleAddAnimal}>Add Animal</button>
                     </form>
                 </section>
@@ -194,7 +216,7 @@ const AAnimalsPage = () => {
                         <h3>Update Location</h3>
                     </div>
                     <form>
-                        <select defaultValue="default" onChange={(e) => setUlID(e.target.value) }>
+                        <select defaultValue="default" id="aap_ulId" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {
@@ -203,7 +225,7 @@ const AAnimalsPage = () => {
                             }
                         </select>
                         
-                        <input placeholder="Location" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
+                        <input placeholder="Location" id="aap_ulL" onChange={(e) => setUlLocation(parseInt(e.target.value))}></input>
                         <button type="button" onClick={handleLocationUpdate}>Update Location</button>
                     </form>
                 </section>
@@ -213,7 +235,7 @@ const AAnimalsPage = () => {
                         <h3>Remove Animal</h3>
                     </div>
                     <form>
-                         <select defaultValue="default" onChange={(e) => setRaID(e.target.value)}>
+                         <select defaultValue="default" id="aap_raD" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal Reference No.</option>
                             {
                                 animals.map( (app, index) => {

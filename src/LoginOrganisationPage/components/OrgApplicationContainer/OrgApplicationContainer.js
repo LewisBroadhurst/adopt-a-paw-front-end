@@ -2,7 +2,7 @@ import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ApplicationContainer from '../../../AccountPage/AdminLandingPage/Containers/ApplicationAdmin/ApplicationContainer/ApplicationContainer'
+import OrgAppCard from '../../../AccountPage/AdminLandingPage/Containers/ApplicationAdmin/ApplicationContainer/ApplicationContainer'
 
 const OrgApplicationContainer = ( {applications}) => {
   return (
@@ -16,7 +16,7 @@ const OrgApplicationContainer = ( {applications}) => {
             <div className="olp__cardContainers">
             {
                 applications.slice(0, 2).map((app, index) => {
-                return <ApplicationContainer key={index}
+                return <OrgAppCard key={index}
                                         id={app.id}
                                         firstName={app.customer.firstName}
                                         lastName={app.customer.lastName}

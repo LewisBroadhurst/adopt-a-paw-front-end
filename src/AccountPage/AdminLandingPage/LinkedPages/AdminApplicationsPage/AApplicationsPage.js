@@ -105,7 +105,7 @@ const AApplicationsPage = () => {
                                         <h3>Customer Info.</h3>
                                         <span>Application number: {app.id}</span>
                                         <span>{app.customer.firstName} {app.customer.lastName}</span>
-                                        <span>{app.customer.location}</span>
+                                        <span>Location: {app.customer.location}</span>
                                         <span>Previously adopted? {app.customer.previousAdoptions.toString()}</span>
                                         <span>App. Status: {app.customer.application[0].applicationStatus}</span>
                                     </section>

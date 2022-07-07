@@ -1,0 +1,141 @@
+/* Structuring */
+
+.rp__header {
+    background-color: #9C3587;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.5s all ease-in-out 0;
+}
+
+.rp__header>div {
+    background-color: #3F1651;
+    background-color: #653780;
+    background-color: #3F1651;
+    transition: 0.5s all ease-in-out 0;
+}
+
+.rp__header>h2 {
+    padding: 1rem 0;
+}
+
+.rp__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rp__applicationInfo,
+.rp__adopteeInfo,
+.rp__animalInfo,
+.applicationBar,
+.applicationBar>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rp__header>div,
+.rp__header>div>form {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s, ease-in-out 0;
+}
+
+/* Search Bar */
+
+.rp__header>div>h3,
+.rp__header>div>form>button {
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    transition: 0.5s all ease-in-out 0;
+}
+
+.rp__header>div>form>select {
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.rp__header>div>form>button {
+    background-color: #9C3587;
+    padding: 0 0.75rem;
+    border-radius: 0.125rem;
+    transition: all 0.5s ease-in-out 0;
+}
+
+
+/* Details */
+
+.applicationBar>h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.rp__applicationInfo>h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.rp__adopteeInfo>h3,
+.rp__animalInfo>h3 {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.rp__adopteeInfo>span,
+.rp__animalInfo>span,
+.applicationBar>form>select,
+.applicationBar>form>button {
+    font-size: 1.2rem;
+}
+
+.rp__animalImg>img {
+    max-height: 200px;
+}
+
+.applicationBar {
+    background-color: #EDEDED;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    margin: 1rem;
+}
+
+.rp__animalImg,
+.rp__animalInfo,
+.rp__adopteeInfo,
+.rp__applicationInfo {
+    padding: 0.5rem 1rem;
+}
+
+/* UX... */
+
+.rp__header>div>form>button {
+    border: 3px solid #9C3587;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.rp__header>div>form>button:hover {
+    border: 3px solid #9C3587;
+    background-color: white;
+    color: #9C3587;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.applicationBar {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.applicationBar:hover {
+    transform: translateX(20px) scale(1.02);
+    background-color: #9C3587;
+    color: white;
+    cursor: pointer;
+}

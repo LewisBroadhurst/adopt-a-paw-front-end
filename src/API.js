@@ -219,6 +219,15 @@ export const getAllApplications = async (setApplications) => {
     }
 }
 
+export const addNewApplication = async (animal_id, customer_id, application) => {
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`, application);
+        console.log(response)
+    } catch (e) {
+        console.log(e)
+    }
+}
+
 export const deleteAdoptionApplication = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/application/deleteApplication/${id}`);
@@ -238,6 +247,17 @@ export const updateAdoptionApplication = async (id, application_status) => {
 }
 
 // SECURITY 
+export const getApplicationByID = async (id, setApplication) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/application/${id}`)
+        console.log(response.data);
+        setApplication(response.data)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+// REGISTRATIONS
 
 export const RegisterNewUser = async (registrationRequest) => {
 

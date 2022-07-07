@@ -19,8 +19,6 @@ const OrgContainer = ( {name, id, setOrganisations, slogan, logo_url} ) => {
 
             <p>{slogan}</p>
 
-            <p>A world where all animals are respected and treated with kindness and compassion.</p>
-
             <span>Posted: 11/22/3333</span>
 
             <div className='OC__form--formContainer'>
