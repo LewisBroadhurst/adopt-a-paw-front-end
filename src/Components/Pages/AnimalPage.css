@@ -24,6 +24,11 @@
     vertical-align: middle;
 }
 
+.animalid {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
 .basic_info_container{
     width: 400px;
     height: auto;
