@@ -219,9 +219,9 @@ export const getAllApplications = async (setApplications) => {
     }
 }
 
-export const addNewApplication = async (animal_id, customer_id, application) => {
+export const addNewApplication = async (animal_id, customer_id) => {
     try {
-        const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`, application);
+        const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`);
         console.log(response)
     } catch (e) {
         console.log(e)
