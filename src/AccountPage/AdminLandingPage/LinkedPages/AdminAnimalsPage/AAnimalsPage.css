@@ -8,12 +8,14 @@
 
 #aap__header__addA>span {
     grid-column: 3;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease-in 0s;
     background-color: #8ECAE6;
     padding: 0 1rem;
     border-radius: 0.125rem;
     border: 3px solid #8ECAE6;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
 }
 
 #aap__header__addA>span:hover {
@@ -52,8 +54,4 @@
 
 .aap__animalImg>img {
     border-radius: 0.125rem;
-}
-
-.removeHeight {
-    height: 0;
 }

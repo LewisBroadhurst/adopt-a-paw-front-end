@@ -136,9 +136,7 @@ const OrgApplicationsPage = () => {
 
             <section className="oaap__forms">
                 <section className="oaap__form">
-                    <div className="ulp__form__header">
-                        <h3>Update Application</h3>
-                    </div>
+                    <h3>Update Application</h3>
                     <form>
                         <select id="oap__appUpdateId" defaultValue="default" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
@@ -161,9 +159,7 @@ const OrgApplicationsPage = () => {
                 </section>
 
                 <section className="oaap__form">
-                    <div className="ulp__form__header">
-                        <h3>Delete Application</h3>
-                    </div>
+                    <h3>Delete Application</h3>
                     <form>
                          <select defaultValue="default" id="oap__appDeleteId" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>

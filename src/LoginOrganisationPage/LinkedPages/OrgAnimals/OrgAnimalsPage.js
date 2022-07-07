@@ -168,9 +168,8 @@ const OrgAnimalsPage = () => {
             <section className="oaap__forms">
 
                 <section className="oaap__form">
-                    <div id="oaap__header__addA" className="ulp__form__header aap__arrow">
+                    <div id="oaap__header__addA">
                         <h3>Add Animal</h3>
-                        <span onClick={handleMenuToggle}><FontAwesomeIcon icon={faArrowUp} /></span>
                     </div>
                     <form id="oaap__aaForm">
                         
@@ -178,21 +177,12 @@ const OrgAnimalsPage = () => {
                         <input type="text" id="oap___animalSpecies" placeholder="Species*" required onChange={(e) => setAaSpecies(e.target.value)}></input>
                         <input type="text" id="oap___animalSex" placeholder="Sex* (M/F)" required onChange={(e) => setAaSex(e.target.value)}></input>
                         <input type="text" id="oap___animalLocation" placeholder="Location*" required onChange={(e) => setAaLocation(e.target.value)}></input>
-
-                        {/* <select defaultValue="default" onChange={(e) => (e.target.value) }>
-                        <option value="default" disabled hidden>Organisation</option>
-                            {
-                                organisations.map( (org, index) => {
-                                    return <option key={index}>{org.name}, ID: {org.id}</option>
-                                })
-                            }
-                        </select> */}
                         <button type="button" onClick={handleAddAnimal}>Add Animal</button>
                     </form>
                 </section>
 
                 <section className="oaap__form">
-                    <div className="ulp__form__header">
+                    <div id="oaap__formUL">
                         <h3>Update Location</h3>
                     </div>
                     <form>
@@ -211,9 +201,9 @@ const OrgAnimalsPage = () => {
                 </section>
 
                 <section className="oaap__form">
-                    <div className="ulp__form__header">
-                        <h3>Delete Animal</h3>
-                    </div>
+                    
+                    <h3>Delete Animal</h3>
+                    
                     <form>
                          <select defaultValue="default" id="oap___animalDid" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal ID</option>

@@ -24,7 +24,7 @@
 }
 
 
-.LogIn-Section>form>input{
+.LogIn-Section>form>input {
 
     background-color: white;
     margin: 0.25rem 1rem;
@@ -32,7 +32,7 @@
     border-radius: 0.25rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     color: grey;
-    
+
 }
 
 
@@ -151,6 +151,18 @@
     .ap__background--color>h2 {
         font-size: 3rem;
         padding: 2rem;
+    }
+
+    .ap__background--color {
+        padding: 5rem 0;
+    }
+
+    .LogIn-Section>form>input {
+        color: black;
+    }
+
+    .LogIn-Section>form>input::placeholder {
+        color: #919191;
     }
 
 }
