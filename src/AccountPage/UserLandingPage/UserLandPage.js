@@ -423,14 +423,10 @@ const UserLandPage = () => {
                                         
                                         <li key={index} className="ulp__preferrredAnimals">
                                             <span className="ulp__prefferedANimals__Species">{species["species"]}s</span>
-                
-                                            
+        
                                         </li>
-       
                                         </>
-
                                  })
-
                                 }
 
                             </ul>
