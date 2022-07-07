@@ -1,0 +1,47 @@
+.mainContainer{
+
+    display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+}
+
+
+
+
+.conversationContaier{
+
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: left;
+    width: 400px;
+    height: 500px;
+    margin-top: 20px;
+    border: solid black 2px;
+    gap: 20px;
+}
+
+.conversation{
+
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: left;
+
+
+
+}
+
+.userInputScreen{
+    
+    margin-left: auto;
+    margin-right: 10px;
+
+}
+
+.botResponse{
+
+    margin-left: 10px;
+}

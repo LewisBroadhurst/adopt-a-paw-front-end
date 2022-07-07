@@ -219,6 +219,15 @@ export const getAllApplications = async (setApplications) => {
     }
 }
 
+export const addNewApplication = async (animal_id, customer_id, application) => {
+    try {
+        const response = await axios.post(`http://127.0.0.1:8080/application/addNewApplication/${animal_id}/${customer_id}`, application);
+        console.log(response)
+    } catch (e) {
+        console.log(e)
+    }
+}
+
 export const deleteAdoptionApplication = async (id) => {
     try {
         const response = await axios.delete(`http://127.0.0.1:8080/application/deleteApplication/${id}`);
@@ -237,6 +246,7 @@ export const updateAdoptionApplication = async (id, application_status) => {
     }
 }
 
+// SECURITY 
 export const getApplicationByID = async (id, setApplication) => {
     try {
         const response = await axios.get(`http://127.0.0.1:8080/application/${id}`)
@@ -258,6 +268,49 @@ export const RegisterNewUser = async (registrationRequest) => {
         console.log(err);
     }
 
+}
+
+export const FindUserBy_email_password = async (setAppUser, email, password) => {
+
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/AppUser/findUserBy_email_password?email=${email}&password=${password}`)
+        setAppUser(response);
+        console.log(response);
+    } catch (err) {
+        console.log(err);
+    }
+
 
 
 }
+
+
+//bot
+
+export const getAllBotKeyWords = async (setBotKeyWords) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/bot/getAllBotKeyWords`);
+        
+        const botKeyWordsresponse = response.data;
+        
+        setBotKeyWords(botKeyWordsresponse);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    } 
+}
+
+export const getAllAnimalKeyWords = async (setAnimalKeyWords) => {
+    try {
+        const response = await axios.get(`http://127.0.0.1:8080/animalKeyWords/getAllAnimalKeyWords`);
+        
+        const animalKeyWordsresponse = response.data;
+        
+        setAnimalKeyWords(animalKeyWordsresponse);
+        console.log(response.data);
+    } catch (err) {
+        console.log(err)
+    } 
+}
+
+
