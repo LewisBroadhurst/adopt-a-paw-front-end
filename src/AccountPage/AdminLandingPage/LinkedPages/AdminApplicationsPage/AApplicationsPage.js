@@ -129,9 +129,7 @@ const AApplicationsPage = () => {
 
             <section className="aap__forms">
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Update Application</h3>
-                    </div>
+                    <h3>Update Application</h3>
                     <form>
                         <select defaultValue="default" id="aapAUid" onChange={(e) => setApplicationUpdateId(e.target.value) }>
                         <option value="default" disabled hidden>Application ID</option>
@@ -154,9 +152,9 @@ const AApplicationsPage = () => {
                 </section>
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Delete Application</h3>
-                    </div>
+
+                    <h3>Delete Application</h3>
+
                     <form>
                          <select defaultValue="default" id="aapDAid" onChange={(e) => setApplicationDeleteId(e.target.value)}>
                             <option value="default" disabled hidden>Application ID</option>
@@ -174,7 +172,6 @@ const AApplicationsPage = () => {
 
         </main>
 
-        <div className="aap__footer"></div>
     </>
   )
 }

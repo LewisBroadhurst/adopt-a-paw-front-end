@@ -127,9 +127,7 @@ const AOrganisationsPage = () => {
 
             <section className="aap__forms">
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Update Organisation</h3>
-                    </div>
+                    <h3>Update Organisation</h3>
                     <form>
                         <select defaultValue="default" id="acp_uoID" onChange={(e) => setUoID(e.target.value) }>
                         <option value="default" disabled hidden>Organisation Ref. ID</option>
@@ -147,9 +145,7 @@ const AOrganisationsPage = () => {
                 </section>
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Delete Organisation</h3>
-                    </div>
+                    <h3>Delete Organisation</h3>
                     <form>
                          <select defaultValue="default" id="aop_doID" onChange={(e) => setDoID(e.target.value)}>
                             <option value="default" disabled hidden>Organisation Ref. ID</option>
@@ -167,7 +163,6 @@ const AOrganisationsPage = () => {
 
         </main>
 
-        <div className="aap__footer"></div>
     </>
   )
 }

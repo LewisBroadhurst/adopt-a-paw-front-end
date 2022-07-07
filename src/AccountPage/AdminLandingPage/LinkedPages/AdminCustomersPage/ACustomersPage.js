@@ -165,9 +165,7 @@ const ACustomersPage = () => {
 
             <section className="aap__forms">
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Delete Customer</h3>
-                    </div>
+                    <h3>Delete Customer</h3>
                     <form>
                          <select id="acp__id" defaultValue="default" onChange={(e) => setDcID(e.target.value)}>
                             <option value="default" disabled hidden>Customer ID</option>
@@ -184,8 +182,6 @@ const ACustomersPage = () => {
             </section>
 
         </main>
-
-        <div className="aap__footer"></div>
     </>
   )
 }
