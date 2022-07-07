@@ -207,6 +207,8 @@ export const findCustomerByID = async (setCustomer, id) => {
 
 }
 
+
+
 // APPLICATIONS
 
 export const getAllApplications = async (setApplications) => {

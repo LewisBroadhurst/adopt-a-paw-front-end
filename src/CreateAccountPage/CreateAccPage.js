@@ -5,8 +5,8 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer"
 
 import gpMobForm from "./images/gpMobForm.jpeg";
-import { addNewCustomer, RegisterNewUser } from "../API";
-import { useState } from "react";
+import { addNewCustomer, RegisterNewUser, getCustomers } from "../API";
+import { useState , useEffect} from "react";
 
 const CreateAccPage = () => {
 
@@ -16,6 +16,7 @@ const CreateAccPage = () => {
     const [password, setPassword] = useState('');
     const [userRole, setUserRole] = useState('');
     const [showPassword, setShowPassword] = useState("password");
+    const [customers, setCustomers] = useState([]);
     // const [age, setAge] = useState(0);
     // const [location, setLocation] = useState('');
     // const [prevAdopted, setPrevAdopted] = useState(false);
@@ -38,8 +39,19 @@ const CreateAccPage = () => {
 
         // addNewCustomer(custData);
 
-        alert("Successfully created a new account! You will now be re-directed to the sign in page.")
+        alert("Successfully created a new account!")
     }
+
+    useEffect(()=>{
+
+
+        
+
+      getCustomers(setCustomers);
+      console.log(customers);
+
+
+  })
 
 
     const registerUser = event => {
@@ -60,7 +72,7 @@ const CreateAccPage = () => {
       RegisterNewUser(request);
 
 
-      alert("Successfully created a new account! You will now be re-directed to the sign in page.")
+      alert("Successfully created a new account!")
 
 
 
@@ -86,10 +98,12 @@ const CreateAccPage = () => {
       setUserRole(e.target.value);
 
 
-
-
-
     }
+
+    
+
+
+
 
 
   return (

@@ -42,6 +42,7 @@ function App() {
             <Route path="/donate" exact element={<DonatePage />} />
             <Route path="/account/createAccount" exact element={<CreateAccPage />} />
             <Route path="/account/userLandpage" exact element={<UserLandPage />} />
+            <Route path="account/userLandpage/:id" exact element={<UserLandPage />} />
             <Route path="/account/admin/organisations" exact element={<AOrganisationsPage />} />
             <Route path="/account/admin/applications" exact element={<AApplicationsPage />} />
             <Route path="/account/admin/animals" exact element={<AAnimalsPage />} />

@@ -16,6 +16,7 @@ import RSPCA from "../RSPCA.jpeg"
 import Email from "../email.jpeg"
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
+import { useParams } from "react-router-dom";
 
 const UserLandPage = () => {
 
@@ -35,10 +36,12 @@ const UserLandPage = () => {
     const [openApplicationSearchForm, setOpenApplicationForm] = useState(false);
     const [applicationSearchButtonDisplay, setApplicationSearchButtonDisplay] = useState("visible");
 
+    const params = useParams();
+
     useEffect( () => {
         getAllAnimals(setAnimals);
         getAllApplications(setApplications);
-        findCustomerByID(setCustomer, 1);
+        findCustomerByID(setCustomer, sessionStorage.getItem('customer_id'));
         
     }, []);
 
@@ -53,7 +56,7 @@ const UserLandPage = () => {
         
         const application = {
             "animalId": `${animal_id}`,
-            "customerId": `${customer_id}`,
+            "customerId": `${customer.id}`,
         }
         
         await addNewApplication(application)
@@ -504,6 +507,7 @@ const UserLandPage = () => {
 
             return(
                 <>
+               
                 <form className = "applicationSearchForm">
 
                     <label className="ulp__applicationStatusLabel">Status:</label> <input type="text" onChange={(e)=>{setUserInputApp(e.target.value); setApplicationInputType("status")}} className="ulp__applicationStatusInput"
@@ -549,6 +553,8 @@ const UserLandPage = () => {
   return (
     <>
 
+        
+
         <Header />
 
         <main className= 'backgroundPage'>
@@ -582,7 +588,7 @@ const UserLandPage = () => {
                         
                     <input type="number" id="AnimalId" placeholder="Animal Ref Number" required onChange={(e) => setAnimal_id(e.target.value)}></input>
 
-                    <input value={`${customer.id}`} id="CustomerId" placeholder="Customer Id" required onChange={(e) => setCustomer_id(e.target.value)}></input>
+                    {/* <input value={`${customer.id}`} id="CustomerId" placeholder="Customer Id" required onChange={(e) => setCustomer_id(e.target.value)}></input> */}
 
                     <button type="button" className="submit_application_button" onClick={handleAddNewApplication}>Submit</button>
                 </form>

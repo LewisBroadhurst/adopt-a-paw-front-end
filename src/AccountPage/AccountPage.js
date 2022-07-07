@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import { faJarWheat, faPaw } from "@fortawesome/free-solid-svg-icons";
 import "./AccountPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../Header/Header"
@@ -15,6 +15,7 @@ const AccountPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [appUser, setAppUser] = useState('');
+    
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -34,29 +35,34 @@ const AccountPage = () => {
         e.preventDefault();
         console.log(appUser);
 
-        
-        
-
-
 
         if(appUser.data?.enabled === false){
             alert("please verify your email to login");
+            
         }
         
         else if(appUser.data?.appUserRole === "ADMIN"){
 
             navigate('/account/admin');
 
-        }else if(appUser.data?.appUserRole === "USER"){
 
-            navigate('/account/userLandPage');
+        }else if(appUser.data?.appUserRole === "USER"){
+            
+          
+            // navigate(`/account/userLandPage/${appUser.data?.customer.id}`);
+            navigate(`/account/userLandPage`);
+            sessionStorage.setItem('customer_id',appUser.data?.customer.id);
+           
 
 
         }else if(appUser.data?.appUserRole === "ORGANISATION"){
 
             navigate('/account/organisation');
+
         }else if(appUser === ''){
+
             alert("Invalid email/password");
+
         }
 
 
