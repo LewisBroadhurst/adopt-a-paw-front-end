@@ -129,7 +129,7 @@ const AApplicationsPage = () => {
 
             <section className="aap__forms">
                 <section className="aap__form">
-                    <div className="ulp__form__header">
+                    <div className="ulp__form__header straight">
                         <h3>Update Application</h3>
                     </div>
                     <form>
@@ -154,7 +154,7 @@ const AApplicationsPage = () => {
                 </section>
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
+                    <div className="ulp__form__header straight">
                         <h3>Delete Application</h3>
                     </div>
                     <form>
@@ -174,7 +174,6 @@ const AApplicationsPage = () => {
 
         </main>
 
-        <div className="aap__footer"></div>
     </>
   )
 }

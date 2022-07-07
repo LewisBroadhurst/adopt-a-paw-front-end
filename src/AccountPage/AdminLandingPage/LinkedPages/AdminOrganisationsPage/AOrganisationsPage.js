@@ -167,7 +167,6 @@ const AOrganisationsPage = () => {
 
         </main>
 
-        <div className="aap__footer"></div>
     </>
   )
 }
