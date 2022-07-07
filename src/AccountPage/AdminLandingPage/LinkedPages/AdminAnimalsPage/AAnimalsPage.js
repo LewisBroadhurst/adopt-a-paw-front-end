@@ -197,7 +197,7 @@ const AAnimalsPage = () => {
             <section className="aap__forms">
 
                 <section className="aap__form">
-                    <div id="aap__header__addA" className="ulp__form__header aap__arrow">
+                    <div id="aap__header__addA">
                         <h3>Add Animal</h3>
                         <span onClick={handleMenuToggle}><FontAwesomeIcon id="menuToggleAA" className="FAI" icon={faArrowUp} /></span>
                     </div>
@@ -212,9 +212,8 @@ const AAnimalsPage = () => {
                 </section>
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Update Location</h3>
-                    </div>
+
+                    <h3>Update Location</h3>
                     <form>
                         <select defaultValue="default" id="aap_ulId" onChange={(e) => setUlID(e.target.value) }>
                         <option value="default" disabled hidden>Animal Reference No.</option>
@@ -231,9 +230,8 @@ const AAnimalsPage = () => {
                 </section>
 
                 <section className="aap__form">
-                    <div className="ulp__form__header">
-                        <h3>Remove Animal</h3>
-                    </div>
+
+                    <h3>Remove Animal</h3>
                     <form>
                          <select defaultValue="default" id="aap_raD" onChange={(e) => setRaID(e.target.value)}>
                             <option value="default" disabled hidden>Animal Reference No.</option>

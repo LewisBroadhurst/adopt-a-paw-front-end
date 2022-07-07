@@ -192,10 +192,6 @@
     text-align: center;
 }
 
-.aap__form {
-    margin-bottom: 2rem;
-}
-
 .aap__form input::placeholder {
     color: #c5c1c1;
 }
@@ -242,4 +238,9 @@
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+.aap__forms>.aap__form {
+    padding: 0;
+    margin: 0.5rem;
 }
