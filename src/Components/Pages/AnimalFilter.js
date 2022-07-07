@@ -62,7 +62,7 @@ function AnimalFilter(props) {
             <form className='filterForm'>
                 <ul>
                     <li>
-                        <label className='label'>Select species:
+                        <label className='label'>Species:
                             <select className='input'
                                 name="selectedSpecies"
                                 value={selectedSpecies}
