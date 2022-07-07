@@ -23,7 +23,21 @@
     font-size: 1.6rem;
 }
 
-.LogIn-Section>form>input,
+
+.LogIn-Section>form>input{
+
+    background-color: white;
+    margin: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: grey;
+    
+}
+
+
+
+
 .LogIn-Section>form>button,
 .New-Acc-BTN {
     background-color: white;
