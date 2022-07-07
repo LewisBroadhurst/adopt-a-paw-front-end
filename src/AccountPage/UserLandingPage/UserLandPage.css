@@ -7,6 +7,13 @@
     z-index: 1;
 }
 
+.user-id-tag {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ecbb00;
+    z-index: 1;    
+}
+
 
 /* ADD APPILCATION */
 .ulp__form__header {

@@ -54,14 +54,14 @@ const UserLandPage = () => {
 
     const handleAddNewApplication = async () => {
         
-        const application = {
-            "animalId": `${animal_id}`,
-            "customerId": `${customer.id}`,
-        }
-        
-        await addNewApplication(application)
+        // const application = {
+        //     "animalId": `${animal_id}`,
+        //     "customerId": `${customer_id}`,
+        // }
 
-        await getAllApplications(setApplications)
+        await addNewApplication(animal_id, customer_id)
+
+         getAllApplications(setApplications)
 
         resetForms()
     }
@@ -572,8 +572,12 @@ const UserLandPage = () => {
 
             {/* <section className="ulp__header__picture">       
             </section> */}
-            <section className="ulp__header__catTable">
-            </section>
+            {/* <section className="ulp__header__catTable">
+            </section> */}
+        </section>
+
+        <section>
+            <h2 className="user-id-tag">User id: {customer.id}</h2>
         </section>
 
         

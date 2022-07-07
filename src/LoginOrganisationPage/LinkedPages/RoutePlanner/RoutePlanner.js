@@ -12,15 +12,48 @@ const RoutePlanner = () => {
 
     useEffect( () => {
         getAllApplications(setApplications)
+
     }, []);
 
     const getApplication = async () => {
         await getApplicationByID(applicationID, setApplication)
+        returnApplicationBar()
     }
 
-    const onLoad = async () => {
-        
-        await getApplicationByID(1, setApplication)
+    const returnApplicationBar = () => {
+        try {
+            return <section className="applicationBar">
+                
+            <section className="rp__applicationInfo">
+                <h3>Application Ref. ID: {application.id}</h3>
+                <section className="rp__adopteeInfo">
+                    <h3>Customer Info.</h3>
+                    <span>Application number: {application?.id}</span>
+                    <span>Adoptee: {application?.customer.firstName} {application?.customer.lastName}</span>
+                    <span>Location: {application?.customer.location}</span>
+                    <span>Previously adopted? {application?.customer.previousAdoptions.toString()}</span>
+                    <span>App. Status: {application?.customer.application[0].applicationStatus}</span>
+                </section>
+
+                <section className="rp__animalInfo">
+                    <h3>Animal Info.</h3>
+                    <span>Name: {application?.customer.application[0].animal.name}</span>
+                    <span>Sex: {application?.customer.application[0].animal.sex}</span>
+                    <span>DOB: {application?.customer.application[0].animal.dateOfBirth}</span>
+                    <span>Location: {application?.customer.application[0].animal.location}</span>
+                    <span>Organisation: {application?.customer.application[0].animal.organisation.name}</span>
+                </section>
+
+                <section className="rp__animalImg">
+                    <img src={application?.customer.application[0].animal.photoUrl} alt=""/>
+                </section>
+                <span></span> 
+            </section>
+            
+        </section> 
+        } catch (e) {
+            return <></>
+        }
     }
 
 
@@ -28,7 +61,7 @@ const RoutePlanner = () => {
     <>
         <OrgHeader />
 
-        <header className="rp__header" onLoad={onLoad}>
+        <header className="rp__header">
             <h2>Route Planner</h2>
             <div>
                 <h3>Application Required: </h3>
@@ -51,35 +84,10 @@ const RoutePlanner = () => {
         <main className="rp__main">
             <DirectionsComponent />
 
-            {/* <section className="applicationBar">
-                
-                <section className="rp__applicationInfo">
-                    <h3>Application Ref. ID: {application.id}</h3>
-                    <section className="rp__adopteeInfo">
-                        <h3>Customer Info.</h3>
-                        <span>Application number: {application?.id}</span>
-                        <span>Adoptee: {application?.customer.firstName} {application?.customer.lastName}</span>
-                        <span>Location: {application?.customer.location}</span>
-                        <span>Previously adopted? {application?.customer.previousAdoptions.toString()}</span>
-                        <span>App. Status: {application?.customer.application[0].applicationStatus}</span>
-                    </section>
-    
-                    <section className="rp__animalInfo">
-                        <h3>Animal Info.</h3>
-                        <span>Name: {application?.customer.application[0].animal.name}</span>
-                        <span>Sex: {application?.customer.application[0].animal.sex}</span>
-                        <span>DOB: {application?.customer.application[0].animal.dateOfBirth}</span>
-                        <span>Location: {application?.customer.application[0].animal.location}</span>
-                        <span>Organisation: {application?.customer.application[0].animal.organisation.name}</span>
-                    </section>
+            {
+                returnApplicationBar()
+            }
 
-                    <section className="rp__animalImg">
-                        <img src={application?.customer.application[0].animal.photoUrl} alt=""/>
-                    </section>
-                    <span></span> 
-                </section>
-                
-            </section> */}
         </main>
     </>
   )
