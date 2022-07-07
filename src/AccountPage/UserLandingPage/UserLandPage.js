@@ -59,7 +59,7 @@ const UserLandPage = () => {
         //     "customerId": `${customer_id}`,
         // }
 
-        await addNewApplication(animal_id, customer_id)
+        await addNewApplication(animal_id, customer.id)
 
          getAllApplications(setApplications)
 
